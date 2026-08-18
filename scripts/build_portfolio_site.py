@@ -25,6 +25,8 @@ SOURCE_FILES = (
     "simulations/quadruped_security/README.md",
     "simulations/new_robot_npi/README.md",
     "simulations/support_lab/README.md",
+    "simulations/restroom_cleaning/README.md",
+    "simulations/warehouse_capability/README.md",
 )
 GOVERNANCE_FILES = (
     "governance/README.md",
@@ -254,7 +256,8 @@ def demo_markup(scenario: dict) -> str:
     else:
         player = '<div class="video-placeholder"><span>Demo recording in production</span><strong>No terminal or software installation is required.</strong><p>The final MP4 will play directly in this panel.</p></div>'
     steps = "".join(f'<li><span>{i}</span>{esc(step)}</li>' for i, step in enumerate(scenario["demo"]["sequence"], 1))
-    return f'<div class="demo-grid"><div>{player}</div><div><h3>{esc(scenario["demo"]["title"])}</h3><p>{esc(scenario["demo"]["caption"])}</p><ol class="sequence">{steps}</ol></div></div>'
+    model_link = artifact_url(scenario["demo"]["model_source"])
+    return f'<div class="demo-grid"><div>{player}</div><div><h3>{esc(scenario["demo"]["title"])}</h3><p>{esc(scenario["demo"]["caption"])}</p><p><a href="{model_link}">Open MuJoCo model notes →</a></p><ol class="sequence">{steps}</ol></div></div>'
 
 
 def build_dashboard(scenario: dict) -> None:
@@ -277,7 +280,7 @@ def build_dashboard(scenario: dict) -> None:
 <section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 <section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
-<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable workflow demonstration</h2></div></div>{demo_markup(scenario)}</section>
+<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable MuJoCo simulation</h2></div></div>{demo_markup(scenario)}</section>
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
 </div></main>"""
     write(DOCS / "scenarios" / f"{scenario['slug']}.html", shell(scenario["title"], body, depth=1, description=scenario["summary"]))
@@ -293,8 +296,8 @@ def build_index(data: dict, count: int) -> None:
 <div class="button-row"><a class="button" href="#cases">Explore four scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
 <main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>Four complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable workflow evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
-<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch the workflow</strong><p>Play browser-based simulation clips—no terminal commands or software installation.</p></article></div></section></main>"""
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>Four complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch MuJoCo</strong><p>Play browser-based MuJoCo-rendered clips—no terminal commands or software installation.</p></article></div></section></main>"""
     write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
 
 
@@ -325,20 +328,34 @@ def build_about() -> None:
 
 def build_videos(data: dict) -> None:
     cards = []
-    for scenario in data["scenarios"]:
-        source = ROOT / "media" / "videos" / scenario["demo"]["filename"]
+    entries = [
+        {
+            "code": scenario["code"],
+            "title": scenario["demo"]["title"],
+            "caption": scenario["demo"]["caption"],
+            "filename": scenario["demo"]["filename"],
+            "href": f'scenarios/{scenario["slug"]}.html#demo',
+            "model_source": scenario["demo"]["model_source"],
+            "label": "Open case dashboard",
+        }
+        for scenario in data["scenarios"]
+    ] + data.get("capability_demos", [])
+    for entry in entries:
+        source = ROOT / "media" / "videos" / entry["filename"]
         if source.exists():
             target = DOCS / "media" / "videos" / source.name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
             media = f'<video controls preload="metadata"><source src="media/videos/{esc(source.name)}" type="video/mp4">Your browser does not support embedded video.</video>'
-            label = "Play in browser"
         else:
             media = '<div class="video-placeholder compact"><span>Recording in production</span><strong>Browser playback will appear here.</strong></div>'
-            label = "Open dashboard and sequence"
-        cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(scenario["code"])}</span><h2>{esc(scenario["demo"]["title"])}</h2><p>{esc(scenario["demo"]["caption"])}</p><a href="scenarios/{esc(scenario["slug"])}.html#demo">{label} →</a></div></article>')
-    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>Workflow demonstrations</h1><p class="section-intro">Recruiters and hiring managers can play completed operational animations directly in the browser. No command line, Python installation, or MuJoCo setup is required.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
-    write(DOCS / "videos.html", shell("Simulation Demonstrations", body))
+        model_url = (Path("library") / Path(entry["model_source"]).with_suffix(".html")).as_posix()
+        links = f'<a href="{esc(entry["href"])}">{esc(entry["label"])} →</a>'
+        if entry["href"] != model_url:
+            links += f' · <a href="{esc(model_url)}">MuJoCo model notes →</a>'
+        cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(entry["code"])}</span><h2>{esc(entry["title"])}</h2><p>{esc(entry["caption"])}</p><p>{links}</p></div></article>')
+    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>MuJoCo Simulation Gallery</h1><p class="section-intro">All six clips on this page are rendered from MuJoCo models in this repository. The motions are scripted operational visualizations—not learned locomotion, grasp-performance validation, certified controls, or vendor digital twins. Recruiters and hiring managers can play them directly in the browser without Python, a terminal, or MuJoCo.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
+    write(DOCS / "videos.html", shell("MuJoCo Simulation Gallery", body))
 
 
 def main() -> None:

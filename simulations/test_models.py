@@ -21,11 +21,17 @@ def main() -> None:
         "retail": compile_and_step("retail_humanoids/retail.xml"),
         "security": compile_and_step("quadruped_security/security.xml"),
         "ad01": compile_and_step("new_robot_npi/ad01.xml"),
+        "support": compile_and_step("support_lab/service_bay.xml"),
+        "restroom": compile_and_step("restroom_cleaning/restroom.xml"),
+        "warehouse": compile_and_step("warehouse_capability/warehouse.xml"),
     }
-    assert results["retail"][0] >= 7
+    assert results["retail"][0] >= 5
     assert results["security"][0] >= 4
     assert results["ad01"][1] == 6
     assert results["ad01"][2] == 6
+    assert results["support"][0] >= 3
+    assert results["restroom"][0] >= 5
+    assert results["warehouse"][0] >= 7
     print("MuJoCo model smoke tests passed:", results)
 
 

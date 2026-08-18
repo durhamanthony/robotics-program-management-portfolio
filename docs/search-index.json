@@ -388,7 +388,7 @@
     "path": "library/portfolio/EXECUTIVE_PORTFOLIO.html"
   },
   {
-    "title": "MuJoCo Demo \u2014 AD-01 New Product Introduction",
+    "title": "MuJoCo Demo \u2014 AD-01 Autonomous Tote Transfer Robot",
     "path": "library/simulations/new_robot_npi/README.html"
   },
   {
@@ -396,16 +396,24 @@
     "path": "library/simulations/quadruped_security/README.html"
   },
   {
-    "title": "MuJoCo Operations Demonstrations",
+    "title": "MuJoCo Operations and Capability Demonstrations",
     "path": "library/simulations/README.html"
+  },
+  {
+    "title": "Public Restroom Humanoid Cleaning \u2014 MuJoCo Capability Demo",
+    "path": "library/simulations/restroom_cleaning/README.html"
   },
   {
     "title": "MuJoCo Demo \u2014 Retail Backroom Humanoid Fulfillment",
     "path": "library/simulations/retail_humanoids/README.html"
   },
   {
-    "title": "Support Lab \u2014 Robotics Incident Triage",
+    "title": "MuJoCo Support Lab \u2014 Robotics Field-Service Bay",
     "path": "library/simulations/support_lab/README.html"
+  },
+  {
+    "title": "Warehouse Palletizing and Truck Loading \u2014 MuJoCo Capability Demo",
+    "path": "library/simulations/warehouse_capability/README.html"
   },
   {
     "title": "Robotics Support Reference Architecture",

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MuJoCo Operations Demonstrations | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<title>MuJoCo Operations and Capability Demonstrations | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
 <link rel="stylesheet" href="../../styles.css"><script defer src="../../app.js"></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html">Anthony Durham</a>
@@ -8,16 +8,18 @@
 <div class="nav-links"><a class="home-link" href="../../index.html">⌂ Home</a><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></div></nav></header>
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../index.html">⌂ Home</a><a class="button" href="../../downloads/source/simulations/README.md" download>Download MD</a></div></div>
-<article class="article"><h1 id="mujoco-operations-demonstrations">MuJoCo Operations Demonstrations</h1>
+<article class="article"><h1 id="mujoco-operations-and-capability-demonstrations">MuJoCo Operations and Capability Demonstrations</h1>
 <p>These small, explainable simulations support project/program discussions by exposing operating states, faults, telemetry, acceptance evidence, and service handoffs. They are not production controllers, certified safety systems, learned locomotion policies, or vendor-accurate digital twins.</p>
 <h2 id="demonstrations">Demonstrations</h2>
 <ul>
-<li><code>retail_humanoids</code> — two humanoid visual agents follow tablet-driven retail backroom retrieval routes through existing human-scale aisles, a door, and a short split-level area.</li>
-<li><code>quadruped_security</code> — three quadruped visual agents patrol a campus route while network, sensor, battery, and human-supervision events are exercised.</li>
-<li><code>new_robot_npi</code> — an actuated mobile-manipulator concept runs a repeatable two-station verification sequence and injected controlled stop.</li>
-<li><code>support_lab</code> — converts robot fault telemetry into deduplicated service cases and a support scorecard.</li>
+<li><code>retail_humanoids</code> — two humanoid visual agents follow tablet-driven retail backroom retrieval routes through existing human-scale aisles, a receiving zone, garment rack, four-step stock platform, shoe shelves, and employee handoff.</li>
+<li><code>quadruped_security</code> — three quadruped visual agents move through a fenced industrial site with pavement, rough ground, steps, a loading platform, a vehicle gate, and charging docks. Abstract colored route lines are intentionally excluded.</li>
+<li><code>new_robot_npi</code> — the AD-01 Autonomous Tote Transfer Robot, a fictional actuated wheeled mobile manipulator, runs a repeatable transfer between two fixed stations.</li>
+<li><code>support_lab</code> — a physical field-service bay shows fault intake, local diagnosis, a staged replacement module, verification, and return to service. The companion Python lab produces synthetic service-case evidence.</li>
+<li><code>restroom_cleaning</code> — a humanoid visual agent follows a restroom servicing route across toilets, sinks, mirrors, floors, paper supplies, and trash. Electrical work and light-bulb replacement are excluded.</li>
+<li><code>warehouse_capability</code> — two humanoid visual agents move cartons from conveyors to a seven-carton pallet load before a robot-operated forklift transfers the load into a truck and an empty pallet is staged.</li>
 </ul>
-<p>The retail and security models use MuJoCo mocap bodies for operations visualization. The new-product model uses physical joints and position actuators. Browser videos are operational animations built for recruiters; they are not labeled as MuJoCo renders.</p>
+<p>All six browser videos are rendered directly from the MuJoCo XML models in this repository. Retail, security, support, restroom, and warehouse use scripted mocap bodies for operations visualization. AD-01 uses physical joints and position actuators. These scenes do not establish learned locomotion, grasp reliability, collision-safe autonomy, certified controls, or vendor-equivalent performance.</p>
 <h2 id="run-locally">Run locally</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> simulations/requirements.txt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/retail_humanoids/run_demo.py <span class="at">--viewer</span> <span class="at">--duration</span> 36</span>
@@ -25,7 +27,7 @@
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/new_robot_npi/run_demo.py <span class="at">--viewer</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/support_lab/triage.py</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/test_models.py</span></code></pre></div>
-<p>Use <code>--viewer</code> only on a graphical desktop. Website visitors need no terminal, Python, or MuJoCo.</p>
+<p>To regenerate all six browser videos on Windows, double-click <code>RENDER_ALL_MUJOCO_VIDEOS_WINDOWS.bat</code>. Use interactive viewers only on a graphical desktop. Website visitors need no terminal, Python, or MuJoCo.</p>
 </article></main>
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>

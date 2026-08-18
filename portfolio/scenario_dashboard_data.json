@@ -1,5 +1,25 @@
 {
   "portfolio_notice": "These simulations are fictitious generic scenarios for demonstration purposes only.",
+  "capability_demos": [
+    {
+      "code": "CAPABILITY LAB 01",
+      "title": "MuJoCo Restroom Cleaning Humanoid",
+      "filename": "restroom-cleaning-humanoid.mp4",
+      "caption": "A scripted MuJoCo operations visualization of a humanoid moving through a public restroom to service toilets, sinks, mirrors, floors, paper supplies, and trash. Electrical work and light-bulb replacement remain outside the robot task scope.",
+      "href": "library/simulations/restroom_cleaning/README.html",
+      "label": "Open capability notes",
+      "model_source": "simulations/restroom_cleaning/README.md"
+    },
+    {
+      "code": "CAPABILITY LAB 02",
+      "title": "MuJoCo Warehouse Palletizing and Truck Loading",
+      "filename": "warehouse-palletizing-truck-loading.mp4",
+      "caption": "A scripted MuJoCo operations visualization of humanoids moving cartons from conveyors to a seven-carton pallet stack, followed by robot-operated forklift transfer into a green delivery truck and empty-pallet reset.",
+      "href": "library/simulations/warehouse_capability/README.html",
+      "label": "Open capability notes",
+      "model_source": "simulations/warehouse_capability/README.md"
+    }
+  ],
   "scenarios": [
     {
       "slug": "retail-humanoid-backroom",
@@ -76,9 +96,10 @@
         {"label": "Closeout and benefits", "path": "scenarios/01-humanoid-retail-backroom/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
       ],
       "demo": {
-        "title": "Retail backroom fulfillment workflow animation",
+        "title": "MuJoCo Retail Backroom Humanoid Simulation",
         "filename": "retail-humanoid-fulfillment.mp4",
-        "caption": "A browser-playable operational animation shows a tablet request, walking through an unchanged stockroom, stair traversal, shoe-box retrieval, employee handoff, and inventory confirmation. It demonstrates the program workflow; it is not a robot-performance test.",
+        "caption": "Rendered from a MuJoCo backroom model with human-scale aisles, a receiving area, garment rack, four-step stock platform, shoe shelving, tablet station, and employee handoff. Scripted robot motion shows the workflow; it is not locomotion, grasp, or safety-performance validation.",
+        "model_source": "simulations/retail_humanoids/README.md",
         "sequence": ["Receive tablet request", "Confirm item and location", "Walk existing aisle and stair route", "Retrieve approved item", "Deliver to employee handoff", "Update inventory and accept next mission"]
       },
       "closure": {
@@ -160,9 +181,10 @@
         {"label": "Closeout and benefits", "path": "scenarios/02-quadruped-security-deployment/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
       ],
       "demo": {
-        "title": "Human-supervised quadruped night-patrol simulation",
+        "title": "MuJoCo Quadruped Security-Site Simulation",
         "filename": "quadruped-night-security.mp4",
-        "caption": "Two quadrupeds patrol independent routes while a third remains available for charging rotation. The run demonstrates rough terrain, steps, anomaly escalation, human verification, network safe stop, sensor degradation, and low-battery docking.",
+        "caption": "Rendered from a MuJoCo fenced industrial site with a building, guard booth, vehicle gate, pavement, rough-ground test area, steps, loading platform, lights, and charging docks. The earlier colored route lines were removed; robot position and the physical site now show the patrol sequence directly.",
+        "model_source": "simulations/quadruped_security/README.md",
         "sequence": ["Dispatch two routes", "Traverse uneven ground and steps", "Detect gate anomaly", "Send evidence to human", "Enter safe state on fault", "Return low-battery robot to dock"]
       },
       "closure": {
@@ -175,7 +197,7 @@
     {
       "slug": "ad01-new-robot-first-sale",
       "code": "CASE 03",
-      "title": "AD-01 — New Robot Through First Sale",
+      "title": "AD-01 Autonomous Tote Transfer Robot — First Sale",
       "client": "HarborPoint Fulfillment",
       "program_type": "New Product Introduction",
       "status": "Closed — limited availability approved",
@@ -244,10 +266,11 @@
         {"label": "Closeout and lessons", "path": "scenarios/03-new-robot-first-sale/CLOSEOUT_AND_LESSONS.md", "category": "Close"}
       ],
       "demo": {
-        "title": "AD-01 tote-transfer product simulation",
+        "title": "MuJoCo AD-01 Autonomous Tote Transfer Robot",
         "filename": "ad01-new-robot-npi.mp4",
-        "caption": "A narrow product demonstration of the AD-01 two-station tote-transfer workflow, including transfer, route travel, placement, and a controlled fault state.",
-        "sequence": ["Receive approved tote", "Verify payload", "Travel mapped route", "Place at second station", "Return for next mission", "Enter controlled state on fault"]
+        "caption": "AD-01 means Autonomous Delivery, product concept 01. It is the fictional product developed in Case 03: a compact wheeled mobile manipulator for one approved tote up to 15 kilograms on an 18-meter indoor route between two fixed stations. This clip is rendered from its actuated MuJoCo model.",
+        "model_source": "simulations/new_robot_npi/README.md",
+        "sequence": ["Stage at Station A", "Receive the approved tote", "Carry the tote along the guarded route", "Place it at Station B", "Confirm the transfer", "Return for the next mission"]
       },
       "closure": {
         "schedule": "Completed at the month-18 release gate",
@@ -327,10 +350,11 @@
         {"label": "Closeout and maturity roadmap", "path": "scenarios/04-robotics-support-operations/CLOSEOUT_AND_MATURITY_ROADMAP.md", "category": "Close"}
       ],
       "demo": {
-        "title": "Robotics support triage and evidence demonstration",
+        "title": "MuJoCo Robotics Field-Service Bay Simulation",
         "filename": "robotics-support-triage.mp4",
-        "caption": "A support workflow demonstration showing a robot alert correlated to fleet telemetry, customer case, severity decision, diagnostic evidence, engineering escalation, field action, and controlled return to service.",
-        "sequence": ["Detect fleet alert", "Correlate robot and customer", "Assign severity", "Collect evidence", "Restore or dispatch", "Close with customer confirmation"]
+        "caption": "Rendered from a MuJoCo field-service bay with a faulted quadruped, technician, diagnostic laptop, spare module, status lights, and verification zone. The dashboard and artifacts carry the broader case, telemetry, escalation, dispatch, and customer-communication workflow.",
+        "model_source": "simulations/support_lab/README.md",
+        "sequence": ["Receive faulted robot", "Move to diagnostic bay", "Collect local evidence", "Replace the staged module", "Run verification", "Return the robot to service"]
       },
       "closure": {
         "schedule": "Completed on day 180",

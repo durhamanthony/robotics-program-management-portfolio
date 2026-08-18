@@ -13,6 +13,11 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
+IGNORED_PARTS = {".git", ".venv", ".render-venv", "__pycache__"}
+
+
+def ignored(path: Path) -> bool:
+    return any(part in IGNORED_PARTS for part in path.parts)
 
 
 class Links(HTMLParser):
@@ -54,7 +59,7 @@ def check_public_safety(errors: list[str], warnings: list[str]) -> None:
     }
     extensions = {".md", ".txt", ".csv", ".html", ".json", ".py", ".bat"}
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts or path.suffix.lower() not in extensions:
+        if not path.is_file() or ignored(path) or path.suffix.lower() not in extensions:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for label, pattern in blocked.items():
@@ -64,7 +69,7 @@ def check_public_safety(errors: list[str], warnings: list[str]) -> None:
     for path in ROOT.rglob("*"):
         if path.resolve() == Path(__file__).resolve():
             continue
-        if path.is_file() and path.suffix.lower() in extensions and "YOUR-GITHUB-USERNAME" in path.read_text(encoding="utf-8", errors="replace"):
+        if path.is_file() and not ignored(path) and path.suffix.lower() in extensions and "YOUR-GITHUB-USERNAME" in path.read_text(encoding="utf-8", errors="replace"):
             placeholders.append(str(path.relative_to(ROOT)))
     if placeholders:
         warnings.append("Replace GitHub username before publishing: " + ", ".join(placeholders))
@@ -81,7 +86,7 @@ def check_public_boundaries(errors: list[str]) -> None:
         "INSTALL_PORTFOLIO_V6.txt",
     }
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts:
+        if not path.is_file() or ignored(path):
             continue
         rel = path.relative_to(ROOT)
         if rel.parts[0] in blocked_top_level:
@@ -133,7 +138,7 @@ def check_recruiter_corrections(errors: list[str]) -> None:
         "contracted threshold",
     )
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts or path.suffix.lower() not in {".md", ".txt", ".csv", ".html", ".py"}:
+        if not path.is_file() or ignored(path) or path.suffix.lower() not in {".md", ".txt", ".csv", ".html", ".py"}:
             continue
         if path.resolve() == Path(__file__).resolve():
             continue
@@ -149,7 +154,7 @@ def check_recruiter_corrections(errors: list[str]) -> None:
 
 def check_csv(errors: list[str]) -> None:
     for path in ROOT.rglob("*.csv"):
-        if "docs" in path.parts:
+        if "docs" in path.parts or ignored(path):
             continue
         with path.open(newline="", encoding="utf-8-sig") as handle:
             rows = list(csv.reader(handle))
@@ -177,7 +182,7 @@ def check_media(errors: list[str], warnings: list[str]) -> None:
         if row["status"].upper() != "READY":
             warnings.append(f"Video still {row['status']}: {row['title']}")
     for path in ROOT.rglob("*"):
-        if path.is_file() and path.stat().st_size > 50 * 1024 * 1024:
+        if path.is_file() and not ignored(path) and path.stat().st_size > 50 * 1024 * 1024:
             errors.append(f"File exceeds 50 MB public-portfolio guardrail: {path.relative_to(ROOT)}")
 
 

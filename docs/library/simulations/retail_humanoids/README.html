@@ -9,12 +9,12 @@
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/simulations/retail_humanoids/README.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="mujoco-demo--retail-backroom-humanoid-fulfillment">MuJoCo Demo — Retail Backroom Humanoid Fulfillment</h1>
-<p>This simplified MuJoCo operations visualization mirrors Case 01. Two mocap humanoid figures receive employee tablet requests, move through existing backroom aisles and a short split-level route, retrieve approved shoe boxes, deliver them to an employee handoff counter, and return to staging.</p>
+<p>This MuJoCo operations visualization mirrors Case 01. It uses a coherent department-store backroom: a ground-floor receiving table, tablet station, human-scale aisles, garment rack, a guarded four-step stock platform, upper shoe shelving, and an employee handoff point. Two scripted humanoid figures perform retrieval and put-away routes without requiring the store to rebuild the backroom for a wheeled robot.</p>
 <p>The model demonstrates route ownership, item handoff, exception-safe sequence, and telemetry states. It does not claim a commercial humanoid can autonomously perform the task, and it is not a dynamics, grasp, stair-safety, or certified-control validation.</p>
 <h2 id="windows-run">Windows run</h2>
 <p>From the repository folder:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\python.exe simulations\retail_humanoids\run_demo.py -<span class="at">-viewer</span> -<span class="at">-duration</span> 36</span></code></pre></div>
-<p>The browser-playable portfolio video is a separate operational workflow animation so recruiters do not need Python or MuJoCo.</p>
+<p>The browser-playable portfolio video is rendered from <code>retail.xml</code>. Motion is scripted for program-workflow communication and is not locomotion, grasp, or safety-performance validation.</p>
 </article></main>
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>

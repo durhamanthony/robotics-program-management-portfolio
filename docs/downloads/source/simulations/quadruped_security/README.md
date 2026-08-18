@@ -2,7 +2,7 @@
 
 ## What the viewer shows
 
-The scene is a fenced industrial campus with a warehouse, guard station, vehicle gate, stairs, raised loading platform, rough-terrain section, three charging docks, perimeter lighting, and a human Security Operations Center responder.
+The scene is a fenced industrial campus with a warehouse, guard station, vehicle gate, pavement, stairs, raised loading platform, rough-terrain section, three charging docks, perimeter lighting, and a human Security Operations Center responder. Earlier colored map-like route lines were removed because they were visually ambiguous; the physical pavement, terrain, robot positions, gate beacon, and docks now communicate the patrol sequence.
 
 The 60-second sequence demonstrates:
 

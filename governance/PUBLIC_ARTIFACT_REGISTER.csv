@@ -96,11 +96,13 @@ PUB-094,Portfolio controls,Govern / Reference,Robotics Program Governance Librar
 PUB-095,Portfolio controls,Plan / Control,Resource and Capacity Plan,governance/RESOURCE_AND_CAPACITY_PLAN.md,Completed scenario evidence,Program Manager,Yes
 PUB-096,Portfolio controls,Execute / Deploy,"Training, Change, and Adoption Plan",governance/TRAINING_CHANGE_ADOPTION.md,Completed scenario evidence,Program Manager,Yes
 PUB-097,Portfolio controls,Govern / Reference,Portfolio purpose,portfolio/EXECUTIVE_PORTFOLIO.md,Completed scenario evidence,Program Manager,Yes
-PUB-098,Portfolio controls,Govern / Reference,MuJoCo Demo — AD-01 New Product Introduction,simulations/new_robot_npi/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-098,Portfolio controls,Govern / Reference,MuJoCo Demo — AD-01 Autonomous Tote Transfer Robot,simulations/new_robot_npi/README.md,Completed scenario evidence,Program Manager,Yes
 PUB-099,Portfolio controls,Govern / Reference,Quadruped Night-Security Operations Demo,simulations/quadruped_security/README.md,Completed scenario evidence,Program Manager,Yes
-PUB-100,Portfolio controls,Govern / Reference,MuJoCo Operations Demonstrations,simulations/README.md,Completed scenario evidence,Program Manager,Yes
-PUB-101,Portfolio controls,Govern / Reference,MuJoCo Demo — Retail Backroom Humanoid Fulfillment,simulations/retail_humanoids/README.md,Completed scenario evidence,Program Manager,Yes
-PUB-102,Portfolio controls,Govern / Reference,Support Lab — Robotics Incident Triage,simulations/support_lab/README.md,Completed scenario evidence,Program Manager,Yes
-PUB-103,Portfolio controls,Plan / Design,Robotics Support Reference Architecture,tools/REFERENCE_ARCHITECTURE.md,Completed scenario evidence,Program Manager,Yes
-PUB-104,Portfolio controls,Govern / Reference,Research Sources,tools/RESEARCH_SOURCES.md,Completed scenario evidence,Program Manager,Yes
-PUB-105,Portfolio controls,Govern / Reference,Robotics Support and Troubleshooting Tool Comparison,tools/TOOL_COMPARISON.md,Completed scenario evidence,Program Manager,Yes
+PUB-100,Portfolio controls,Govern / Reference,MuJoCo Operations and Capability Demonstrations,simulations/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-101,Portfolio controls,Govern / Reference,Public Restroom Humanoid Cleaning — MuJoCo Capability Demo,simulations/restroom_cleaning/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-102,Portfolio controls,Govern / Reference,MuJoCo Demo — Retail Backroom Humanoid Fulfillment,simulations/retail_humanoids/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-103,Portfolio controls,Govern / Reference,MuJoCo Support Lab — Robotics Field-Service Bay,simulations/support_lab/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-104,Portfolio controls,Govern / Reference,Warehouse Palletizing and Truck Loading — MuJoCo Capability Demo,simulations/warehouse_capability/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-105,Portfolio controls,Plan / Design,Robotics Support Reference Architecture,tools/REFERENCE_ARCHITECTURE.md,Completed scenario evidence,Program Manager,Yes
+PUB-106,Portfolio controls,Govern / Reference,Research Sources,tools/RESEARCH_SOURCES.md,Completed scenario evidence,Program Manager,Yes
+PUB-107,Portfolio controls,Govern / Reference,Robotics Support and Troubleshooting Tool Comparison,tools/TOOL_COMPARISON.md,Completed scenario evidence,Program Manager,Yes
