@@ -1,0 +1,5 @@
+video_id,title,filename,scenario,duration_target_seconds,status,hosting_url,public_caption
+warehouse,"Warehouse Humanoid Deployment Simulation",warehouse-humanoid-deployment.mp4,01-humanoid-warehouse-deployment,65,READY,,"Fictional MuJoCo operations simulation showing a five-robot palletizing and forklift-to-truck workflow."
+security,"Quadruped Night-Security Simulation",quadruped-night-security.mp4,02-quadruped-security-deployment,60,TO_RECORD,,"Fictional MuJoCo patrol and exception-response simulation with human-in-the-loop operations."
+npi,"AD-01 First-Sale NPI Simulation",ad01-new-robot-npi.mp4,03-new-robot-first-sale,60,TO_RECORD,,"Fictional MuJoCo product-development and validation scenario for a compact mobile manipulator."
+support,"Robotics Support Triage Walkthrough",robotics-support-triage.mp4,04-robotics-support-operations,90,TO_RECORD,,"Fictional evidence-to-case-to-engineering support workflow using synthetic telemetry."

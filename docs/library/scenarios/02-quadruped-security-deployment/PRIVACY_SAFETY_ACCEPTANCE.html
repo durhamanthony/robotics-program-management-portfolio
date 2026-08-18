@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy, Safety, and Acceptance | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 02 — Security</span> <span class="tag muted-tag">Assure / Validate</span></div>
+<a class="button" href="../../../downloads/source/scenarios/02-quadruped-security-deployment/PRIVACY_SAFETY_ACCEPTANCE.md" download>Download MD</a></div>
+<article class="article"><h1 id="privacy-safety-and-acceptance">Privacy, Safety, and Acceptance</h1>
+<h2 id="human-authority">Human authority</h2>
+<p>The robot produces observations and alerts. A trained human verifies alerts and decides whether to dispatch, notify, or escalate. The system must show uncertainty and health status; an unavailable or degraded sensor cannot silently imply “all clear.”</p>
+<h2 id="data-controls">Data controls</h2>
+<p>Purpose limitation; approved camera/thermal zones; restricted-area masks; least-privilege access; encryption; audit log; retention and deletion; export/evidence approval; incident hold; third-party/cloud terms; signage and workforce notice; privacy escalation; periodic review.</p>
+<h2 id="acceptance-tests">Acceptance tests</h2>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Test</th>
+<th>Expected result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q-SAT-001</td>
+<td>Approved route and geofence</td>
+<td>Robot remains within boundary and stops before exclusion zone</td>
+</tr>
+<tr class="even">
+<td>Q-SAT-010</td>
+<td>Stair/drop-off/obstacle</td>
+<td>Detects or safely stops; operator receives usable alert</td>
+</tr>
+<tr class="odd">
+<td>Q-SAT-020</td>
+<td>Low-light/thermal observation</td>
+<td>All 20 staged observation tests are detected and presented with robot, time, route segment, confidence, and sensor-health status</td>
+</tr>
+<tr class="even">
+<td>Q-SAT-030</td>
+<td>Network degradation/loss</td>
+<td>Defined degraded mode and safe stop/return; no unsafe remote behavior</td>
+</tr>
+<tr class="odd">
+<td>Q-SAT-040</td>
+<td>Low battery/dock</td>
+<td>Safe return and verified charge; alternate coverage starts</td>
+</tr>
+<tr class="even">
+<td>Q-SAT-050</td>
+<td>Localization uncertainty</td>
+<td>Robot stops or executes approved recovery within boundary</td>
+</tr>
+<tr class="odd">
+<td>Q-SAT-060</td>
+<td>Camera/thermal degradation</td>
+<td>Health alert identifies reduced capability; mission rule applied</td>
+</tr>
+<tr class="even">
+<td>Q-SAT-070</td>
+<td>Critical security observation</td>
+<td>All 50 witnessed alerts arrive at the Security Operations Center within 15 seconds and a human records verification and disposition</td>
+</tr>
+<tr class="odd">
+<td>Q-SAT-080</td>
+<td>Privacy mask/retention</td>
+<td>Restricted area excluded and deletion/audit verified</td>
+</tr>
+<tr class="even">
+<td>Q-SAT-090</td>
+<td>Remote access</td>
+<td>Multi-Factor Authentication (MFA), authorization, audit, and session expiry validated</td>
+</tr>
+<tr class="odd">
+<td>Q-SAT-100</td>
+<td>Field retrieval/return to service</td>
+<td>Safe retrieval and post-repair checklist pass</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gono-go-blockers">Go/no-go blockers</h2>
+<p>Geofence failure; uncontrolled motion; unresolved critical privacy/security issue; missing human supervision; route completion below 98%; any witnessed critical alert over 15 seconds or lost; more than six operator-reviewed false alerts per night after tuning; missing safe retrieval; or unavailable support/on-call coverage.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

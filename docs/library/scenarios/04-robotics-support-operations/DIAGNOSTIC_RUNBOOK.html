@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnostic and Troubleshooting Runbook | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Execute / Deploy</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/DIAGNOSTIC_RUNBOOK.md" download>Download MD</a></div>
+<article class="article"><h1 id="diagnostic-and-troubleshooting-runbook">Diagnostic and Troubleshooting Runbook</h1>
+<h2 id="first-five-actions">First five actions</h2>
+<ol type="1">
+<li>Confirm people/area safety and robot state. Do not restart or remotely move a robot without authorization and a clear area.</li>
+<li>Identify customer, site, robot serial/model, installed configuration, software/firmware, mission, and exact time window.</li>
+<li>Describe impact and expected/actual behavior; assign provisional severity.</li>
+<li>Preserve evidence before changes: MCAP/logs, metrics, faults, relevant video/images under policy, and recent change history.</li>
+<li>Choose the narrowest safe diagnostic branch and record every action.</li>
+</ol>
+<h2 id="diagnostic-branches">Diagnostic branches</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Check</th>
+<th>Tool/evidence</th>
+<th>Safe escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Robot offline</td>
+<td>Power, network, device identity, last heartbeat, site outage</td>
+<td>Fleet platform, Grafana, edge mgmt, network logs</td>
+<td>Field if power/hardware; IT if network; L3 if reproducible software</td>
+</tr>
+<tr class="even">
+<td>Mission failure</td>
+<td>State transitions, localization, perception, planner, payload/environment</td>
+<td>MCAP/Foxglove, event log, mission record</td>
+<td>L3 with reproduction; ops if envelope violation</td>
+</tr>
+<tr class="odd">
+<td>Joint/actuator fault</td>
+<td>Fault code, temperature/current, calibration, load, recent maintenance</td>
+<td>Time-series plots, manufacturer diagnostics</td>
+<td>Safe stop; qualified field service; RMA/engineering</td>
+</tr>
+<tr class="even">
+<td>Sensor degradation</td>
+<td>Health, obstruction/contamination, timestamps, calibration, environment</td>
+<td>Foxglove, images, diagnostics</td>
+<td>Suspend dependent mission; field clean/calibrate/replace</td>
+</tr>
+<tr class="odd">
+<td>Battery/charging</td>
+<td>State of charge/health, temperature, dock contact, charger/power</td>
+<td>Fleet dashboard, charger logs, inspection</td>
+<td>Recall/isolate per procedure; field/battery safety owner</td>
+</tr>
+<tr class="even">
+<td>Software/update issue</td>
+<td>Version, rollout ring, signature, config, rollback status</td>
+<td>Mender/balena, release record, logs</td>
+<td>Freeze rollout, rollback under change authority, L3 defect</td>
+</tr>
+<tr class="odd">
+<td>Repeated alert</td>
+<td>Correlation, threshold, version/site concentration</td>
+<td>Grafana/fleet analytics, problem record</td>
+<td>Problem management and product action</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evidence-bundle-naming">Evidence bundle naming</h2>
+<p><code>SITE_ROBOTID_YYYYMMDDThhmmssZ_CORRELATIONID</code> with manifest, checksums where required, collection method, access classification, retention, and links to case/work order/defect.</p>
+<h2 id="return-to-service">Return to service</h2>
+<p>Authorized repair/change complete; configuration and serial updated; visual/mechanical inspection; calibration/diagnostic pass; safety-related checks by qualified owner; nominal and fault-recovery test; telemetry/alerts restored; area/customer notified; case evidence and knowledge updated.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

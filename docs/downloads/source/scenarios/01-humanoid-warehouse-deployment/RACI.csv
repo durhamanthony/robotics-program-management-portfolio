@@ -1,0 +1,13 @@
+Deliverable,Sponsor,Program Manager,Customer Ops,Robot Engineering,Safety EHS,IT Security,Field Service,Support
+Charter and scope,A,R,C,C,C,I,I,I
+Use-case and site survey,I,R,A,C,C,C,C,I
+Safety risk assessment,I,C,C,C,A,C,C,I
+Solution and interface design,I,A,C,R,C,C,C,I
+Site readiness,I,R,A,C,C,R,C,I
+FAT and configuration release,I,A,I,R,C,C,C,C
+Installation and commissioning,I,A,C,R,C,C,R,C
+Safety validation,I,C,C,C,A,I,C,I
+Customer acceptance,A,R,R,C,C,I,C,C
+Go-live and hypercare,A,R,R,C,C,C,R,R
+Operations handoff,A,R,R,C,C,I,R,R
+

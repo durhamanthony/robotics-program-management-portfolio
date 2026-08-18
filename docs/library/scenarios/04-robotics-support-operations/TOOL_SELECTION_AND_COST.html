@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool Selection and Cost Model — Robotics Support | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Govern / Reference</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.md" download>Download MD</a></div>
+<article class="article"><h1 id="tool-selection-and-cost-model--robotics-support">Tool Selection and Cost Model — Robotics Support</h1>
+<p>Abbreviations used below are Customer Relationship Management (CRM), Customer Service Management (CSM), Field Service Management (FSM), Over-the-Air software delivery (OTA), Continuous Integration (CI), Application Programming Interface (API), and Total Cost of Ownership (TCO). MCAP is the name of the robotics log-container format.</p>
+<h2 id="recommended-target-stack">Recommended target stack</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Preferred pattern</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Customer/installed base</td>
+<td>Salesforce</td>
+<td>Existing CRM; owns account, site, asset, contract and entitlement</td>
+</tr>
+<tr class="even">
+<td>Case/field work</td>
+<td>ServiceNow CSM/FSM when enterprise field/asset complexity dominates; Zendesk plus field module for faster support setup</td>
+<td>Owns customer case, communication, work order and dispatch</td>
+</tr>
+<tr class="odd">
+<td>Engineering</td>
+<td>Jira</td>
+<td>Owns reproducible defects, changes and releases—not customer communication</td>
+</tr>
+<tr class="even">
+<td>Robot evidence</td>
+<td>MCAP + Foxglove</td>
+<td>Time-aligned robotics log capture, visualization and replay</td>
+</tr>
+<tr class="odd">
+<td>Fleet operations</td>
+<td>InOrbit or Formant after structured proof</td>
+<td>Multi-robot health, mission and diagnostic operations</td>
+</tr>
+<tr class="even">
+<td>Observability</td>
+<td>Prometheus + Grafana/Loki</td>
+<td>Metrics, service/infrastructure dashboards and alerting</td>
+</tr>
+<tr class="odd">
+<td>OTA/device</td>
+<td>Mender or balena after architecture/security review</td>
+<td>Inventory, controlled release rings and rollback</td>
+</tr>
+<tr class="even">
+<td>Remote access</td>
+<td>Enterprise zero-trust access; Tailscale only for approved noncommercial lab use</td>
+<td>Named identity, least privilege and audited path</td>
+</tr>
+<tr class="odd">
+<td>Source/portfolio</td>
+<td>GitHub</td>
+<td>Code, docs, issues, CI and public portfolio</td>
+</tr>
+</tbody>
+</table>
+<p>Detailed current price snapshots and free/lab options are maintained in <a href="../../tools/TOOL_COMPARISON.html"><code>../../tools/TOOL_COMPARISON.md</code></a>. Prices must be revalidated during procurement.</p>
+<h2 id="selection-method">Selection method</h2>
+<p>Score each candidate 1–5 for functional fit, safety/security, evidence/data portability, integrations/API, field/parts/asset depth, deployment model, admin burden, vendor viability, total cost, and exit risk. Weight requirements before demos; use representative workflows and data; require security/legal/procurement review; test export and failure modes; calculate three-year TCO.</p>
+<h2 id="portfolio-lab">Portfolio lab</h2>
+<p>Use MuJoCo, MCAP, Foxglove free allowance, Prometheus/Grafana free or local, Jira/JSM free allowance, and GitHub. Simulate correlation from robot event to service case, engineering defect, release, work order and knowledge article. Never present a free/noncommercial tier as production approval.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

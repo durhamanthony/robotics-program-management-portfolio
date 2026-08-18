@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security and Remote Access — Robotics Support | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Assure / Validate</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/SECURITY_AND_REMOTE_ACCESS.md" download>Download MD</a></div>
+<article class="article"><h1 id="security-and-remote-access--robotics-support">Security and Remote Access — Robotics Support</h1>
+<h2 id="control-objectives">Control objectives</h2>
+<ul>
+<li>Unique device and named-user identity; no shared support accounts.</li>
+<li>Least privilege, MFA, just-in-time/approved elevation and rapid revocation.</li>
+<li>Segmented path through an approved broker/gateway; no direct public robot-control exposure.</li>
+<li>Encrypted transport, device trust and controlled certificate/key lifecycle.</li>
+<li>Command allowlist, safety interlocks and site confirmation for consequential actions.</li>
+<li>Complete session, command, configuration, file-transfer and approval audit.</li>
+<li>Signed updates, release rings, health checks, rollback and version inventory.</li>
+</ul>
+<h2 id="session-workflow">Session workflow</h2>
+<p>Linked case and business reason → verify entitlement/site/robot/safety state → customer/site approval when required → time-bounded access → record/session audit → approved diagnostics → no safety-control bypass → revoke/close → attach evidence and actions to case.</p>
+<h2 id="prohibited-practices">Prohibited practices</h2>
+<p>Personal remote-access accounts for production, reused credentials, unattended permanent elevation, copying sensitive logs to unapproved devices, unreviewed scripts/commands, modifying safety configuration through a support shortcut, or using a noncommercial/free license outside its terms.</p>
+<h2 id="review">Review</h2>
+<p>Security architecture and threat model before rollout; access review at least quarterly and after role/contract changes; alerting for anomalous sessions; incident exercise; supplier-access control; retention and customer data terms; tested break-glass and revocation.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

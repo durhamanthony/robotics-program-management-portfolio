@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotics Support Operating Model | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Govern / Reference</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/OPERATING_MODEL.md" download>Download MD</a></div>
+<article class="article"><h1 id="robotics-support-operating-model">Robotics Support Operating Model</h1>
+<h2 id="organization">Organization</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Mission</th>
+<th>Example roles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Level 1 (L1) customer support</td>
+<td>Intake, entitlement, safe initial response, communication, evidence</td>
+<td>Support agents/leads</td>
+</tr>
+<tr class="even">
+<td>Level 2 (L2) robotics support / remote operations</td>
+<td>Logs, replay, configuration, calibration guidance, controlled intervention</td>
+<td>Robotics support engineers</td>
+</tr>
+<tr class="odd">
+<td>Field service</td>
+<td>Onsite inspection, FRU replacement, calibration, validation</td>
+<td>Field technicians/engineers, dispatch</td>
+</tr>
+<tr class="even">
+<td>Level 3 (L3) engineering</td>
+<td>Product root cause and fix</td>
+<td>Hardware, firmware, software, Artificial Intelligence/perception, systems</td>
+</tr>
+<tr class="odd">
+<td>Service program/product operations</td>
+<td>Process, tools, readiness, Key Performance Indicators (KPIs), customer governance</td>
+<td>Service operations manager, program manager, analyst</td>
+</tr>
+<tr class="even">
+<td>Reliability/problem</td>
+<td>Trends, Root Cause Analysis (RCA), corrective/preventive action</td>
+<td>Reliability/problem engineers</td>
+</tr>
+<tr class="odd">
+<td>Parts/Return Material Authorization (RMA)/depot</td>
+<td>Availability, logistics, repair, disposition</td>
+<td>Supply/service logistics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-of-record-rules">System-of-record rules</h2>
+<ul>
+<li>Salesforce owns customer/account/site, installed product, contract, and entitlement.</li>
+<li>ServiceNow Customer Service Management/Field Service Management (CSM/FSM) or Zendesk owns customer case and communication. ServiceNow FSM or the selected field module owns work orders/dispatch/parts activity.</li>
+<li>Jira owns engineering defect/change/release work, not the customer conversation.</li>
+<li>The robot platform, Foxglove, and MCAP robotics log format own high-fidelity diagnostic evidence.</li>
+<li>Grafana owns service/infrastructure visualization and alert views; it does not replace case history.</li>
+<li>Every linked object carries the same correlation identifier and robot serial.</li>
+</ul>
+<h2 id="handoff-contract">Handoff contract</h2>
+<h3 id="level-1-to-level-2-requires">Level 1 to Level 2 requires</h3>
+<p>Robot/site/version, safety state, impact/severity, timestamps/time zone, mission, fault code, recent change, reproduction, logs/MCAP window, photos/video only if safe/approved, steps already tried, customer contact, and correlation ID.</p>
+<h3 id="level-2-to-field-requires">Level 2 to field requires</h3>
+<p>Remote diagnosis, suspected Field-Replaceable Unit (FRU), required skill/tool/part, access/site safety instructions, customer window, return-to-service test, and escalation contact.</p>
+<h3 id="level-2field-to-level-3-requires">Level 2/field to Level 3 requires</h3>
+<p>Minimal reproduction, affected versions/configurations, expected versus actual, evidence, frequency, impact, workaround, suspected subsystem, hardware-return availability, and linked case/work order/Return Material Authorization.</p>
+<h2 id="governance">Governance</h2>
+<p>Daily severity/launch review; weekly KPI and aging review; weekly case-defect-release review; monthly reliability/problem council; monthly workforce/parts forecast; customer Quarterly Business Review (QBR); release and deployment support-readiness gate.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotics Support Reference Architecture | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../styles.css"><script defer src="../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Plan / Design</span></div>
+<a class="button" href="../../downloads/source/tools/REFERENCE_ARCHITECTURE.md" download>Download MD</a></div>
+<article class="article"><h1 id="robotics-support-reference-architecture">Robotics Support Reference Architecture</h1>
+<h2 id="support-tiers">Support tiers</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>Owner</th>
+<th>Typical scope</th>
+<th>Exit condition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L0</td>
+<td>Customer self-service/automation</td>
+<td>Status, safe restart criteria, known issues, maintenance reminders</td>
+<td>Resolved or case created with evidence</td>
+</tr>
+<tr class="even">
+<td>L1</td>
+<td>Frontline support</td>
+<td>Entitlement, triage, common workflow, evidence collection, communication</td>
+<td>Resolved or reproducible escalation package</td>
+</tr>
+<tr class="odd">
+<td>L2</td>
+<td>Robotics support engineer / remote operations</td>
+<td>Logs, MCAP replay, configuration, calibration, network, controlled remote intervention</td>
+<td>Resolved, field work ordered, or L3 defect</td>
+</tr>
+<tr class="even">
+<td>Field</td>
+<td>Field service technician/engineer</td>
+<td>Inspection, replacement, calibration, validation, parts/RMA</td>
+<td>Robot passes return-to-service test</td>
+</tr>
+<tr class="odd">
+<td>L3</td>
+<td>Hardware/firmware/software engineering</td>
+<td>Reproducible product defect, root cause, code/design fix</td>
+<td>Fixed release/ECO and known-error update</td>
+</tr>
+</tbody>
+</table>
+<h2 id="case-to-resolution-workflow">Case-to-resolution workflow</h2>
+<ol type="1">
+<li>Detect customer report or telemetry alert.</li>
+<li>Confirm safety state; stop or isolate the robot when required.</li>
+<li>Validate account, installed asset, entitlement, site, robot ID, and current version.</li>
+<li>Collect the minimum evidence bundle: timestamps, MCAP/log window, photos/video if safe, fault codes, environment, recent changes, and reproduction steps.</li>
+<li>Classify severity and route to L1/L2/field/L3.</li>
+<li>Maintain a customer communication clock independent of engineering activity.</li>
+<li>Validate recovery against a return-to-service checklist.</li>
+<li>Link case, work order, RMA, problem, Jira defect, and release through one correlation ID.</li>
+<li>Publish or update knowledge and review recurring trends.</li>
+</ol>
+<h2 id="safety-boundary">Safety boundary</h2>
+<p>Support tooling is not the safety system. Remote commands must respect manufacturer controls, site safety procedures, authorization, and a positive confirmation that the work area is clear. E-stops, protective stops, energy isolation, and functional-safety controls must remain independent of dashboards and customer-service platforms.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

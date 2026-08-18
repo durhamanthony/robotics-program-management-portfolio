@@ -1,0 +1,394 @@
+[
+  {
+    "title": "Artifact Index \u2014 Humanoid Warehouse Deployment",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/BUDGET.html"
+  },
+  {
+    "title": "Business Case and TCO (Total Cost of Ownership) \u2014 Warehouse Truck Loading",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/BUSINESS_CASE_AND_TCO.html"
+  },
+  {
+    "title": "Case Study 1 \u2014 Five Humanoids for Pallet Building and Truck Loading",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.html"
+  },
+  {
+    "title": "Closeout and Benefits \u2014 Warehouse Truck-Loading Deployment",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/CLOSEOUT_AND_BENEFITS.html"
+  },
+  {
+    "title": "Deployment and Cutover Runbook",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/DEPLOYMENT_RUNBOOK.html"
+  },
+  {
+    "title": "Integration and Data Plan \u2014 Warehouse",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/INTEGRATION_AND_DATA_PLAN.html"
+  },
+  {
+    "title": "Operations Handoff",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/OPERATIONS_HANDOFF.html"
+  },
+  {
+    "title": "Project Charter \u2014 Humanoid Pallet-Building and Truck-Loading Deployment",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/PROJECT_CHARTER.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/RACI.html"
+  },
+  {
+    "title": "Raid",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/RAID.html"
+  },
+  {
+    "title": "Requirements Traceability",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/REQUIREMENTS_TRACEABILITY.html"
+  },
+  {
+    "title": "Research and Assumptions \u2014 Warehouse Truck Loading",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/RESEARCH_AND_ASSUMPTIONS.html"
+  },
+  {
+    "title": "Safety and Acceptance Plan",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.html"
+  },
+  {
+    "title": "Schedule",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/SCHEDULE.html"
+  },
+  {
+    "title": "Site Readiness Checklist \u2014 Warehouse",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/SITE_READINESS_CHECKLIST.html"
+  },
+  {
+    "title": "Statement of Work \u2014 Five-Humanoid Warehouse Deployment",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/STATEMENT_OF_WORK.html"
+  },
+  {
+    "title": "Training and Change Plan \u2014 Warehouse",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/TRAINING_AND_CHANGE_PLAN.html"
+  },
+  {
+    "title": "Weekly Status Report \u2014 Warehouse Deployment",
+    "path": "library/scenarios/01-humanoid-warehouse-deployment/WEEKLY_STATUS_REPORT.html"
+  },
+  {
+    "title": "Artifact Index \u2014 Quadruped Night-Security Deployment",
+    "path": "library/scenarios/02-quadruped-security-deployment/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/scenarios/02-quadruped-security-deployment/BUDGET.html"
+  },
+  {
+    "title": "Business Case and TCO (Total Cost of Ownership) \u2014 Quadruped Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.html"
+  },
+  {
+    "title": "Case Study 2 \u2014 Three Quadrupeds for Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/CASE_STUDY.html"
+  },
+  {
+    "title": "Closeout and Benefits \u2014 Quadruped Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/CLOSEOUT_AND_BENEFITS.html"
+  },
+  {
+    "title": "Incident and Escalation Plan \u2014 Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/INCIDENT_AND_ESCALATION_PLAN.html"
+  },
+  {
+    "title": "Integration and Data Plan \u2014 Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/INTEGRATION_AND_DATA_PLAN.html"
+  },
+  {
+    "title": "Security Robotics Operations Runbook",
+    "path": "library/scenarios/02-quadruped-security-deployment/OPERATIONS_RUNBOOK.html"
+  },
+  {
+    "title": "Privacy, Safety, and Acceptance",
+    "path": "library/scenarios/02-quadruped-security-deployment/PRIVACY_SAFETY_ACCEPTANCE.html"
+  },
+  {
+    "title": "Project and Deployment Plan",
+    "path": "library/scenarios/02-quadruped-security-deployment/PROJECT_AND_DEPLOYMENT_PLAN.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/scenarios/02-quadruped-security-deployment/RACI.html"
+  },
+  {
+    "title": "Raid",
+    "path": "library/scenarios/02-quadruped-security-deployment/RAID.html"
+  },
+  {
+    "title": "Requirements Traceability",
+    "path": "library/scenarios/02-quadruped-security-deployment/REQUIREMENTS_TRACEABILITY.html"
+  },
+  {
+    "title": "Research and Assumptions \u2014 Quadruped Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/RESEARCH_AND_ASSUMPTIONS.html"
+  },
+  {
+    "title": "Schedule",
+    "path": "library/scenarios/02-quadruped-security-deployment/SCHEDULE.html"
+  },
+  {
+    "title": "Site Readiness Checklist \u2014 Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/SITE_READINESS_CHECKLIST.html"
+  },
+  {
+    "title": "Statement of Work \u2014 Three-Quadruped Security Deployment",
+    "path": "library/scenarios/02-quadruped-security-deployment/STATEMENT_OF_WORK.html"
+  },
+  {
+    "title": "Training and Change Plan \u2014 Night Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/TRAINING_AND_CHANGE_PLAN.html"
+  },
+  {
+    "title": "Weekly Status Report \u2014 Quadruped Deployment",
+    "path": "library/scenarios/02-quadruped-security-deployment/WEEKLY_STATUS_REPORT.html"
+  },
+  {
+    "title": "Artifact Index \u2014 AD-01 New Robot Through First Sale",
+    "path": "library/scenarios/03-new-robot-first-sale/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Budget And Headcount",
+    "path": "library/scenarios/03-new-robot-first-sale/BUDGET_AND_HEADCOUNT.html"
+  },
+  {
+    "title": "Business Case \u2014 AD-01 Mobile Manipulator Through First Sale",
+    "path": "library/scenarios/03-new-robot-first-sale/BUSINESS_CASE.html"
+  },
+  {
+    "title": "Case Study 3 \u2014 Develop a New Robot Through First Sale",
+    "path": "library/scenarios/03-new-robot-first-sale/CASE_STUDY.html"
+  },
+  {
+    "title": "Closeout and Lessons \u2014 AD-01 First Sale",
+    "path": "library/scenarios/03-new-robot-first-sale/CLOSEOUT_AND_LESSONS.html"
+  },
+  {
+    "title": "Commercial Launch Plan \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/COMMERCIAL_LAUNCH_PLAN.html"
+  },
+  {
+    "title": "Customer Discovery Plan \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/CUSTOMER_DISCOVERY_PLAN.html"
+  },
+  {
+    "title": "First Customer Launch Plan",
+    "path": "library/scenarios/03-new-robot-first-sale/FIRST_CUSTOMER_LAUNCH.html"
+  },
+  {
+    "title": "New Product Introduction Stage-Gate Plan",
+    "path": "library/scenarios/03-new-robot-first-sale/NPI_STAGE_GATE_PLAN.html"
+  },
+  {
+    "title": "AD-01 Product Brief and Product Requirements Document",
+    "path": "library/scenarios/03-new-robot-first-sale/PRODUCT_BRIEF_AND_PRD.html"
+  },
+  {
+    "title": "Product Roadmap \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/PRODUCT_ROADMAP.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/scenarios/03-new-robot-first-sale/RACI.html"
+  },
+  {
+    "title": "Raid",
+    "path": "library/scenarios/03-new-robot-first-sale/RAID.html"
+  },
+  {
+    "title": "Reliability and Serviceability Plan \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/RELIABILITY_SERVICEABILITY_PLAN.html"
+  },
+  {
+    "title": "Research and Assumptions \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/RESEARCH_AND_ASSUMPTIONS.html"
+  },
+  {
+    "title": "Schedule",
+    "path": "library/scenarios/03-new-robot-first-sale/SCHEDULE.html"
+  },
+  {
+    "title": "Supplier and Manufacturing Readiness \u2014 AD-01",
+    "path": "library/scenarios/03-new-robot-first-sale/SUPPLIER_MANUFACTURING_READINESS.html"
+  },
+  {
+    "title": "System Requirements Traceability",
+    "path": "library/scenarios/03-new-robot-first-sale/SYSTEM_REQUIREMENTS_TRACEABILITY.html"
+  },
+  {
+    "title": "Verification and Validation Strategy",
+    "path": "library/scenarios/03-new-robot-first-sale/VERIFICATION_VALIDATION.html"
+  },
+  {
+    "title": "Weekly Status Report \u2014 AD-01 New Product Introduction",
+    "path": "library/scenarios/03-new-robot-first-sale/WEEKLY_STATUS_REPORT.html"
+  },
+  {
+    "title": "Artifact Index \u2014 Robotics Support Operations",
+    "path": "library/scenarios/04-robotics-support-operations/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/scenarios/04-robotics-support-operations/BUDGET.html"
+  },
+  {
+    "title": "Business Continuity \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/BUSINESS_CONTINUITY.html"
+  },
+  {
+    "title": "Case Study 4 \u2014 Build Robotics Support Operations",
+    "path": "library/scenarios/04-robotics-support-operations/CASE_STUDY.html"
+  },
+  {
+    "title": "Closeout and Maturity Roadmap \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/CLOSEOUT_AND_MATURITY_ROADMAP.html"
+  },
+  {
+    "title": "Customer Communications \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/CUSTOMER_COMMUNICATIONS.html"
+  },
+  {
+    "title": "Diagnostic and Troubleshooting Runbook",
+    "path": "library/scenarios/04-robotics-support-operations/DIAGNOSTIC_RUNBOOK.html"
+  },
+  {
+    "title": "Implementation Backlog",
+    "path": "library/scenarios/04-robotics-support-operations/IMPLEMENTATION_BACKLOG.html"
+  },
+  {
+    "title": "Incident, Problem, and Change Management",
+    "path": "library/scenarios/04-robotics-support-operations/INCIDENT_PROBLEM_CHANGE.html"
+  },
+  {
+    "title": "Knowledge Management \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/KNOWLEDGE_MANAGEMENT.html"
+  },
+  {
+    "title": "Robotics Service KPI Scorecard",
+    "path": "library/scenarios/04-robotics-support-operations/KPI_SCORECARD.html"
+  },
+  {
+    "title": "Observability and Data Plan \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/OBSERVABILITY_AND_DATA_PLAN.html"
+  },
+  {
+    "title": "Operating Baseline and Cost Assumptions \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.html"
+  },
+  {
+    "title": "Robotics Support Operating Model",
+    "path": "library/scenarios/04-robotics-support-operations/OPERATING_MODEL.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/scenarios/04-robotics-support-operations/RACI.html"
+  },
+  {
+    "title": "RMA, Parts, and Field Service Process",
+    "path": "library/scenarios/04-robotics-support-operations/RMA_AND_PARTS.html"
+  },
+  {
+    "title": "Security and Remote Access \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/SECURITY_AND_REMOTE_ACCESS.html"
+  },
+  {
+    "title": "Robotics Service Catalog",
+    "path": "library/scenarios/04-robotics-support-operations/SERVICE_CATALOG.html"
+  },
+  {
+    "title": "Severity and Service Targets",
+    "path": "library/scenarios/04-robotics-support-operations/SEVERITY_SLA.html"
+  },
+  {
+    "title": "Staffing and Capacity Plan \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/STAFFING_AND_CAPACITY_PLAN.html"
+  },
+  {
+    "title": "Support Readiness Gate",
+    "path": "library/scenarios/04-robotics-support-operations/SUPPORT_READINESS_CHECKLIST.html"
+  },
+  {
+    "title": "Tool Selection and Cost Model \u2014 Robotics Support",
+    "path": "library/scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.html"
+  },
+  {
+    "title": "Final Status Report \u2014 Support Operations Build",
+    "path": "library/scenarios/04-robotics-support-operations/WEEKLY_STATUS_REPORT.html"
+  },
+  {
+    "title": "Benefits Realization and Project Closeout",
+    "path": "library/governance/BENEFITS_AND_CLOSEOUT.html"
+  },
+  {
+    "title": "Change and Configuration Control",
+    "path": "library/governance/CHANGE_CONFIGURATION_CONTROL.html"
+  },
+  {
+    "title": "Communications and Meeting Plan",
+    "path": "library/governance/COMMUNICATIONS_AND_MEETING_PLAN.html"
+  },
+  {
+    "title": "Cybersecurity and Data Governance",
+    "path": "library/governance/CYBERSECURITY_DATA_GOVERNANCE.html"
+  },
+  {
+    "title": "Procurement and Vendor Management",
+    "path": "library/governance/PROCUREMENT_VENDOR_MANAGEMENT.html"
+  },
+  {
+    "title": "Robotics Program Management Plan",
+    "path": "library/governance/PROGRAM_MANAGEMENT_PLAN.html"
+  },
+  {
+    "title": "Quality Management Plan",
+    "path": "library/governance/QUALITY_MANAGEMENT_PLAN.html"
+  },
+  {
+    "title": "Robotics Program Governance Library",
+    "path": "library/governance/README.html"
+  },
+  {
+    "title": "Resource and Capacity Plan",
+    "path": "library/governance/RESOURCE_AND_CAPACITY_PLAN.html"
+  },
+  {
+    "title": "Training, Change, and Adoption Plan",
+    "path": "library/governance/TRAINING_CHANGE_ADOPTION.html"
+  },
+  {
+    "title": "Portfolio purpose",
+    "path": "library/portfolio/EXECUTIVE_PORTFOLIO.html"
+  },
+  {
+    "title": "Quadruped Night-Security Operations Demo",
+    "path": "library/simulations/quadruped_security/README.html"
+  },
+  {
+    "title": "MuJoCo Operations Demonstrations",
+    "path": "library/simulations/README.html"
+  },
+  {
+    "title": "Warehouse Palletizing and Truck-Loading Demo \u2014 Version 4",
+    "path": "library/simulations/warehouse_humanoids/README.html"
+  },
+  {
+    "title": "Robotics Support Reference Architecture",
+    "path": "library/tools/REFERENCE_ARCHITECTURE.html"
+  },
+  {
+    "title": "Research Sources",
+    "path": "library/tools/RESEARCH_SOURCES.html"
+  },
+  {
+    "title": "Robotics Support and Troubleshooting Tool Comparison",
+    "path": "library/tools/TOOL_COMPARISON.html"
+  }
+]

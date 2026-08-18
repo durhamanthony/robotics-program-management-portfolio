@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observability and Data Plan — Robotics Support | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Operate / Support</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/OBSERVABILITY_AND_DATA_PLAN.md" download>Download MD</a></div>
+<article class="article"><h1 id="observability-and-data-plan--robotics-support">Observability and Data Plan — Robotics Support</h1>
+<h2 id="evidence-layers">Evidence layers</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Examples</th>
+<th>Primary use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Robot/mission</td>
+<td>State, mission, localization, component health, battery, safety state</td>
+<td>Diagnose robot behavior and availability</td>
+</tr>
+<tr class="even">
+<td>High-fidelity event</td>
+<td>MCAP/log window, sensor/joint/event timeline</td>
+<td>Reproduce and correlate complex failures</td>
+</tr>
+<tr class="odd">
+<td>Edge/site</td>
+<td>Compute, storage, network, clock, certificates, services</td>
+<td>Separate robot vs infrastructure causes</td>
+</tr>
+<tr class="even">
+<td>Fleet/service</td>
+<td>Availability, mission success, version, alerts, interventions</td>
+<td>Operations and reliability trends</td>
+</tr>
+<tr class="odd">
+<td>Customer workflow</td>
+<td>Throughput, patrols, acceptance/business outcome</td>
+<td>Customer value and impact</td>
+</tr>
+</tbody>
+</table>
+<h2 id="minimum-event-contract">Minimum event contract</h2>
+<p><code>timestamp</code>, <code>robot_id</code>, <code>model</code>, <code>site_id</code>, <code>software_version</code>, <code>configuration_id</code>, <code>mission_id</code>, <code>operational_state</code>, <code>battery_pct</code>, <code>network</code>, <code>component</code>, <code>fault_code</code>, <code>severity</code>, <code>safety_state</code>, <code>location_or_zone</code>, <code>correlation_id</code>, and linked <code>support_case_id</code> when present.</p>
+<h2 id="alert-design">Alert design</h2>
+<p>Alert only when an actionable condition, owner and response exist. Define trigger, deduplication/suppression, severity, runbook, routing, maintenance mode, stale/no-data behavior, customer effect, and validation. Track precision, recall, alert-to-case conversion and repeated noise.</p>
+<h2 id="governance">Governance</h2>
+<p>Define ownership, purpose, minimization, consent/notice where applicable, retention, access, encryption, region, export, deletion, incident response and data quality. Use synthetic/redacted data in the public portfolio. Screenshots are supplementary; raw evidence and queries must be reproducible.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

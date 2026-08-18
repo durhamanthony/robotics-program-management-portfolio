@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warehouse Palletizing and Truck-Loading Demo — Version 4 | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div>
+<a class="button" href="../../../downloads/source/simulations/warehouse_humanoids/README.md" download>Download MD</a></div>
+<article class="article"><h1 id="warehouse-palletizing-and-truck-loading-demo--version-4">Warehouse Palletizing and Truck-Loading Demo — Version 4</h1>
+<h2 id="what-you-should-see">What you should see</h2>
+<p>The MuJoCo window title must say <code>warehouse_palletizing_forklift_v4</code>. The scene contains five separate blue worker lanes, five long black conveyor belts, five floor pallet stations, a yellow robot-operated forklift, and an open-back green truck with a differentiated cab, windows, wheels, lights, cargo interior, and loading ramp.</p>
+<p>The complete visual sequence runs for 72 seconds:</p>
+<ol type="1">
+<li>A carton advances along each worker's conveyor.</li>
+<li>Each robot walks only in its assigned lane and stops before the conveyor frame.</li>
+<li>The robot lifts the carton, turns without passing it through its body, and visibly carries it to the floor pallet.</li>
+<li>The robot places the carton on its pallet and returns for the next carton.</li>
+<li>The center pallet builds one carton at a time until the stack is seven cartons high.</li>
+<li>At seven cartons, all five workers stop under a global transfer-zone interlock.</li>
+<li>A robot-driven forklift enters the center aisle, raises its fork carriage with the entire pallet and seven-carton stack, turns toward the truck, climbs the ramp, and drives through the open rear.</li>
+<li>The loaded forklift disappears inside the truck while depositing the load, then emerges with empty forks and clears the aisle.</li>
+<li>Worker 05 retrieves a stored empty pallet, carries it through the protected cross aisle, and installs it at the empty center station.</li>
+</ol>
+<p>The lane status lights are green during palletizing, amber during the full-pallet interlock, and cyan while Worker 05 replenishes the pallet.</p>
+<h2 id="run-on-windows">Run on Windows</h2>
+<p>From Command Prompt in the repository root:</p>
+<pre class="text"><code>.venv\Scripts\python.exe simulations\warehouse_humanoids\run_demo.py --viewer --duration 72</code></pre>
+<p>The side panels are hidden when the viewer opens. The default portfolio camera changes at the worker interlock, truck-loading phase, and pallet-replenishment phase so each handoff can be seen clearly. Press <code>Tab</code> or <code>Shift+Tab</code> to reveal the panels.</p>
+<p>For one user-controlled camera with no automatic camera changes, add <code>--manual-camera</code>. Then use left-drag to orbit, right-drag to pan, and the mouse wheel to zoom.</p>
+<p>If the window title does not say <code>warehouse_palletizing_forklift_v4</code>, Windows is still running an older copy of the files.</p>
+<h2 id="generated-evidence">Generated evidence</h2>
+<p>The run writes CSV, JSONL, MCAP, and an acceptance-summary JSON file to <code>outputs/</code>. The summary checks the conveyor motion, stop clearance, visible carrying, seven-carton stack, global interlock, forklift load, truck entry, empty return, and replacement-pallet installation.</p>
+<h2 id="portfolio-boundary">Portfolio boundary</h2>
+<p>These simulations are fictitious generic scenarios for demonstration purposes only.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

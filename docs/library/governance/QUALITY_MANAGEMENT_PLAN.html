@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quality Management Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../styles.css"><script defer src="../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Assure / Validate</span></div>
+<a class="button" href="../../downloads/source/governance/QUALITY_MANAGEMENT_PLAN.md" download>Download MD</a></div>
+<article class="article"><h1 id="quality-management-plan">Quality Management Plan</h1>
+<h2 id="quality-objective">Quality objective</h2>
+<p>Deliver a robotics product or deployment that is traceable to approved requirements, safe within its intended operating envelope, repeatable in the target workflow, supportable after launch, and accepted with objective evidence.</p>
+<h2 id="quality-controls-by-phase">Quality controls by phase</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>Prevention</th>
+<th>Detection</th>
+<th>Required record</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Requirements</td>
+<td>Defined operating envelope and measurable acceptance</td>
+<td>Cross-functional review and ambiguity check</td>
+<td>Approved requirements baseline and RTM</td>
+</tr>
+<tr class="even">
+<td>Design</td>
+<td>Design standards, hazard controls, interface ownership</td>
+<td>Design/FMEA/security reviews</td>
+<td>Review minutes and action closure</td>
+</tr>
+<tr class="odd">
+<td>Build/configure</td>
+<td>Approved BOM/configuration and work instructions</td>
+<td>Incoming inspection, unit/integration test</td>
+<td>Build record and nonconformance log</td>
+</tr>
+<tr class="even">
+<td>FAT/verification</td>
+<td>Versioned procedures and calibrated equipment</td>
+<td>Witnessed pass/fail execution</td>
+<td>Test report, raw evidence, defects</td>
+</tr>
+<tr class="odd">
+<td>Site/SAT/UAT</td>
+<td>Site readiness and approved cutover</td>
+<td>Safety, functional, performance, recovery tests</td>
+<td>Signed SAT/UAT and exception list</td>
+</tr>
+<tr class="even">
+<td>Hypercare</td>
+<td>On-call, telemetry, known-error guidance</td>
+<td>KPI, incident, intervention and defect trends</td>
+<td>Daily report and handoff evidence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="defect-classes">Defect classes</h2>
+<ul>
+<li>Critical: unsafe condition, regulatory/security breach, or loss of required protective function; blocks use and release.</li>
+<li>High: prevents contracted workflow or recovery; blocks acceptance unless formally deferred with containment.</li>
+<li>Medium: degraded function with approved workaround; scheduled correction and tracked acceptance exception.</li>
+<li>Low: cosmetic or minor usability issue with no safety or contracted-performance effect.</li>
+</ul>
+<h2 id="entry-and-exit-rules">Entry and exit rules</h2>
+<ul>
+<li>A test phase begins only when its environment, configuration, data, staff, safety controls, and procedures are ready.</li>
+<li>Failed tests produce defect IDs; they are not silently rerun until passing.</li>
+<li>Retest evidence references the corrected configuration and original defect.</li>
+<li>Acceptance exceptions state owner, workaround, due date, warranty/support impact, and authorized approver.</li>
+</ul>
+<h2 id="portfolio-simulation-quality">Portfolio simulation quality</h2>
+<p>MuJoCo smoke tests verify model compilation. Scenario acceptance summaries verify scripted states and evidence generation. Windows recordings provide separate visual QA because a passing state-machine test does not prove that camera framing, payload contact, or object appearance is credible.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

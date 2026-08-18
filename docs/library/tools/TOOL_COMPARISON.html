@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotics Support and Troubleshooting Tool Comparison | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../styles.css"><script defer src="../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div>
+<a class="button" href="../../downloads/source/tools/TOOL_COMPARISON.md" download>Download MD</a></div>
+<article class="article"><h1 id="robotics-support-and-troubleshooting-tool-comparison">Robotics Support and Troubleshooting Tool Comparison</h1>
+<p>Pricing checked: August 16, 2026. Public prices change; verify with the vendor before procurement. “Custom” means the vendor does not publish a complete production price.</p>
+<p>Abbreviations used below are Return Material Authorization (RMA), Over-the-Air software delivery (OTA), Robot Operating System (ROS), Incident Response Management (IRM), Customer Service Management (CSM), Field Service Management (FSM), Customer Relationship Management (CRM), Continuous Integration (CI), Service-Level Objective (SLO), Configuration Management Database (CMDB), and Application Programming Interface (API). MCAP is the name of the robotics log-container format.</p>
+<h2 id="decision-principle">Decision principle</h2>
+<p>Do not force one product to serve four different jobs. A robotics support stack needs: customer case management, field work/parts/RMA, robot telemetry and replay, infrastructure monitoring, secure remote access/OTA, and engineering defect escalation.</p>
+<h2 id="shortlist">Shortlist</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Tool</th>
+<th>Primary use</th>
+<th>Free/portfolio option</th>
+<th>Public production price snapshot</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simulation</td>
+<td>MuJoCo</td>
+<td>Physics simulation and test scenarios</td>
+<td>Free/open source</td>
+<td>$0</td>
+<td>Portfolio standard</td>
+</tr>
+<tr class="even">
+<td>Robot data</td>
+<td>MCAP</td>
+<td>Multimodal robotics log container</td>
+<td>Free/open source</td>
+<td>$0</td>
+<td>Logging standard</td>
+</tr>
+<tr class="odd">
+<td>Robot visualization</td>
+<td>Foxglove</td>
+<td>ROS/MCAP visualization, replay, devices, data</td>
+<td>Free: 3 users, 5 devices, 10 GB storage</td>
+<td>Pro starts at $20/month with 1 TB storage and 3 developer seats; additional devices are $20/device/month and data is usage-priced</td>
+<td>Best portfolio visualization</td>
+</tr>
+<tr class="even">
+<td>Robot operations</td>
+<td>InOrbit</td>
+<td>Fleet observability, diagnostics, incident workflows, multi-vendor operations</td>
+<td>Free Edition</td>
+<td>Platform pricing custom; Premium Support advertised at $3,000/month with annual commitment</td>
+<td>Strong multi-vendor fleet option</td>
+</tr>
+<tr class="odd">
+<td>Robot operations</td>
+<td>Formant</td>
+<td>Fleet observability, teleoperation, data, workflows</td>
+<td>Demo/assessment; no durable public free production tier found</td>
+<td>Custom</td>
+<td>Enterprise comparison candidate</td>
+</tr>
+<tr class="even">
+<td>Time-series diagnostics</td>
+<td>PlotJuggler</td>
+<td>Live/offline time-series visualization, ROS</td>
+<td>Free/open source</td>
+<td>$0</td>
+<td>Local troubleshooting tool</td>
+</tr>
+<tr class="odd">
+<td>Metrics/logs</td>
+<td>Grafana Cloud</td>
+<td>Dashboards, logs, traces, alerts, IRM</td>
+<td>$0 tier: 50 GB logs/traces/profiles, 14-day retention, limited active users</td>
+<td>Pro: $19 platform fee plus usage; visualization and IRM seats separately priced</td>
+<td>Portfolio and production observability</td>
+</tr>
+<tr class="even">
+<td>Metrics</td>
+<td>Prometheus</td>
+<td>Metrics collection and alert inputs</td>
+<td>Free/open source</td>
+<td>$0 self-hosted</td>
+<td>Pair with Grafana</td>
+</tr>
+<tr class="odd">
+<td>OTA/device management</td>
+<td>Mender</td>
+<td>Secure OTA software updates and device inventory</td>
+<td>Open-source self-hosted; hosted enterprise trial excludes Service Provider features and Service-Level Agreement support</td>
+<td>Basic $34/month for up to 50 standard devices; Professional $291/month for up to 250; Enterprise custom</td>
+<td>Good OTA reference design</td>
+</tr>
+<tr class="even">
+<td>Edge fleet</td>
+<td>balena</td>
+<td>Container deployment and edge-device fleet management</td>
+<td>First 10 devices free</td>
+<td>Prototype $159/month/30 devices; Pilot $329/60; Production $1,439/110, plus overages</td>
+<td>Strong lab/prototype choice</td>
+</tr>
+<tr class="odd">
+<td>Secure access</td>
+<td>Tailscale</td>
+<td>Identity-based private network for remote diagnostics</td>
+<td>Personal $0, noncommercial limits</td>
+<td>Standard $8/user/month; Premium $18/user/month</td>
+<td>Lab access; enterprise review required</td>
+</tr>
+<tr class="even">
+<td>Customer/IT service</td>
+<td>Jira Service Management</td>
+<td>Requests, incidents, knowledge, on-call, developer escalation</td>
+<td>Free for 3 agents</td>
+<td>Standard $20/agent/month; Premium $51.42/agent/month</td>
+<td>Best free portfolio workflow</td>
+</tr>
+<tr class="odd">
+<td>Customer support</td>
+<td>Zendesk</td>
+<td>Omnichannel cases, knowledge, routing, analytics</td>
+<td>14-day trial</td>
+<td>Support Team $19; Suite Team $55; Suite Professional $115 per agent/month, annual billing</td>
+<td>Strong customer-support option</td>
+</tr>
+<tr class="even">
+<td>Enterprise service</td>
+<td>ServiceNow CSM/FSM</td>
+<td>Cases, playbooks, work orders, dispatch, parts, assets, contractors</td>
+<td>Developer learning instance may be available; production is not a free tier</td>
+<td>Custom quote</td>
+<td>Best when company already operates ServiceNow</td>
+</tr>
+<tr class="odd">
+<td>CRM/field service</td>
+<td>Salesforce Field Service</td>
+<td>CRM-connected work orders, dispatch, technician mobile, assets</td>
+<td>Service Cloud trial; no permanent production free tier</td>
+<td>Dispatcher/Technician $175/user/month; Contractor $55/user/month or $22/login; Field Service Plus $230/user/month, annual</td>
+<td>Best when Salesforce is system of customer record</td>
+</tr>
+<tr class="even">
+<td>Engineering work</td>
+<td>Jira</td>
+<td>Software/hardware backlog, defects, changes, releases</td>
+<td>Free for up to 10 users</td>
+<td>Standard $7.91/user/month; Premium $14.54/user/month</td>
+<td>Use for L3 engineering escalation</td>
+</tr>
+<tr class="odd">
+<td>Source/portfolio</td>
+<td>GitHub</td>
+<td>Code, issues, actions, evidence, Pages</td>
+<td>Free unlimited public/private repos; 2,000 Actions minutes/month for private use and free standard Actions for public repos</td>
+<td>Team $4/user/month</td>
+<td>Portfolio system of record</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-of-breed-enterprise-architecture">Best-of-breed enterprise architecture</h2>
+<p>Assumptions: Salesforce is the CRM; Jira is used for software development; the organization owns either ServiceNow or Zendesk.</p>
+<h3 id="recommended-system-of-record-split">Recommended system-of-record split</h3>
+<ul>
+<li><strong>Salesforce:</strong> accounts, installed products, contracts, entitlements, opportunities, customer/site master.</li>
+<li><strong>ServiceNow CSM + FSM</strong> <em>or</em> <strong>Zendesk + a field-service module:</strong> customer cases, service contracts, dispatch, work orders, parts/RMA, knowledge, technician activity.</li>
+<li><strong>Jira:</strong> reproducible L3 engineering defects, firmware/software changes, release linkage, known-error backlog.</li>
+<li><strong>Foxglove + MCAP:</strong> robot evidence package, timeline replay, sensor/joint/log correlation.</li>
+<li><strong>InOrbit or Formant:</strong> live fleet operations, robot health, mission status, remote interventions, multi-site/multi-vendor view.</li>
+<li><strong>Grafana/Prometheus/Loki:</strong> service and infrastructure SLOs, alerting, trends, capacity, executive dashboards.</li>
+<li><strong>Mender or balena:</strong> controlled OTA/device releases, rollout rings, rollback, configuration inventory.</li>
+<li><strong>Tailscale or enterprise zero-trust equivalent:</strong> authenticated support path; no direct internet exposure of robot control interfaces.</li>
+</ul>
+<h3 id="choice-between-servicenow-and-zendesk">Choice between ServiceNow and Zendesk</h3>
+<ul>
+<li>Choose <strong>ServiceNow CSM/FSM</strong> when field work, parts, contractors, asset history, CMDB, enterprise workflows, and scale dominate.</li>
+<li>Choose <strong>Zendesk</strong> when rapid customer-support setup, agent usability, omnichannel service, and knowledge are the priorities; add a robust field-service/asset/RMA capability.</li>
+<li>If Salesforce already has deep service adoption, assess <strong>Salesforce Field Service</strong> before buying a second field-dispatch platform. The CRM integration is valuable, but seat costs can grow quickly.</li>
+</ul>
+<h2 id="free-portfolio-stack">Free portfolio stack</h2>
+<ol type="1">
+<li>MuJoCo for simulated robots and operational events.</li>
+<li>MCAP plus Foxglove Free for replay/visualization.</li>
+<li>Grafana Cloud Free for KPI and incident dashboards.</li>
+<li>Jira + Jira Service Management Free for the project backlog, service portal, incidents, change, and knowledge.</li>
+<li>GitHub Free for source, documentation, issues, Actions, and recruiter-facing evidence.</li>
+<li>Tailscale Personal only for a private noncommercial lab; do not present it as a production-commercial license.</li>
+<li>Mender open source or the hosted limited trial for OTA workflow practice.</li>
+</ol>
+<h2 id="minimum-data-contract">Minimum data contract</h2>
+<p>Every robot event should carry: <code>timestamp</code>, <code>robot_id</code>, <code>model</code>, <code>site_id</code>, <code>software_version</code>, <code>mission_id</code>, <code>operational_state</code>, <code>battery_pct</code>, <code>network_rssi</code>, <code>joint_or_component</code>, <code>fault_code</code>, <code>severity</code>, <code>safety_state</code>, <code>location</code>, <code>correlation_id</code>, and <code>support_case_id</code> when escalated.</p>
+<h2 id="operational-integration-flow">Operational integration flow</h2>
+<pre class="text"><code>Robot/edge -&gt; MCAP + metrics/logs -&gt; Foxglove / fleet platform / Grafana
+                                    |             |
+                                    +--&gt; Service case/work order --&gt; field technician/RMA
+                                                   |
+                                                   +--&gt; Jira engineering defect --&gt; fixed release
+CRM installed product/entitlement -----------------+</code></pre>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

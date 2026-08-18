@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operating Baseline and Cost Assumptions — Robotics Support | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Govern / Reference</span></div>
+<a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md" download>Download MD</a></div>
+<article class="article"><h1 id="operating-baseline-and-cost-assumptions--robotics-support">Operating Baseline and Cost Assumptions — Robotics Support</h1>
+<h2 id="installed-base-and-workload">Installed base and workload</h2>
+<p>The planning baseline is 250 robots across 60 customer sites, with humanoid and quadruped products, business-hours customer intake, and 24-hour on-call coverage for safety and Severity-1 incidents.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Monthly demand input</th>
+<th style="text-align: right;">Calculation</th>
+<th style="text-align: right;">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Customer-created cases</td>
+<td style="text-align: right;">250 robots × 0.35 cases per robot</td>
+<td style="text-align: right;">88</td>
+</tr>
+<tr class="even">
+<td>Actionable telemetry incidents</td>
+<td style="text-align: right;">250 robots × 0.20 incidents per robot</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td>Planned maintenance visits</td>
+<td style="text-align: right;">Scenario input</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
+<td>Deployments, updates, and site changes</td>
+<td style="text-align: right;">Scenario input</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td><strong>Total planned work items</strong></td>
+<td style="text-align: right;">Rounded sum</td>
+<td style="text-align: right;"><strong>183/month</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The organization must replace these inputs with at least 90 days of actual cases, telemetry precision, maintenance plans, release schedules, travel time, case handling time, severity mix, and service contracts. Telemetry events that do not require human action are not counted as cases.</p>
+<h2 id="launch-staffing-and-loaded-annual-planning-cost">Launch staffing and loaded annual planning cost</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th style="text-align: right;">People</th>
+<th style="text-align: right;">Loaded annual cost per person</th>
+<th style="text-align: right;">Annual cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Service owner/program manager</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$180,000</td>
+<td style="text-align: right;">$180,000</td>
+</tr>
+<tr class="even">
+<td>Level 1 customer support</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$85,000</td>
+<td style="text-align: right;">$255,000</td>
+</tr>
+<tr class="odd">
+<td>Level 2 robotics support</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">$150,000</td>
+<td style="text-align: right;">$600,000</td>
+</tr>
+<tr class="even">
+<td>Field service</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">$130,000</td>
+<td style="text-align: right;">$520,000</td>
+</tr>
+<tr class="odd">
+<td>Reliability/problem engineer</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$155,000</td>
+<td style="text-align: right;">$155,000</td>
+</tr>
+<tr class="even">
+<td>Knowledge/tools/data analyst</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$125,000</td>
+<td style="text-align: right;">$125,000</td>
+</tr>
+<tr class="odd">
+<td>Parts/Return Material Authorization coordinator</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$100,000</td>
+<td style="text-align: right;">$100,000</td>
+</tr>
+<tr class="even">
+<td>On-call, overtime, and surge allowance</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">$15,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Initial staffing</strong></td>
+<td style="text-align: right;"><strong>15</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>$1,950,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Loaded cost means salary or contractor fee plus the scenario allowance for benefits, payroll burden, on-call, and management allocation. It is not a wage claim. Human Resources and Finance must replace it with named-role compensation and contractor quotes.</p>
+<h2 id="capacity-checks">Capacity checks</h2>
+<ul>
+<li>Three Level 1 agents provide about 300 net case-hours per month after meetings, training, and non-case work. At 30 minutes per intake/case-administration touch, that is roughly 600 touches per month, leaving room for updates and launch spikes.</li>
+<li>Four Level 2 engineers provide about 400 net diagnostic hours per month. At two hours per escalated case, they can cover roughly 200 escalations per month before field/project work; sustained utilization above 75% triggers hiring or scope review.</li>
+<li>Four field technicians can support approximately 32 two-day visits per month before travel constraints. A 13-week regional forecast and contractor coverage determine whether that is sufficient.</li>
+<li>Add coverage when the forecast exceeds 75% of usable capacity for six consecutive weeks, two people cannot cover a critical skill/on-call rotation, or contracted response is missed twice in a rolling month.</li>
+</ul>
+<h2 id="cost-result">Cost result</h2>
+<p>The first-year base program is $3.950 million plus $718,000 reserve, or $4.668 million authorized exposure. The steady-state year-two run rate is <span class="math inline">2.970<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>.<em>T</em><em>h</em><em>r</em><em>e</em><em>e</em> − <em>y</em><em>e</em><em>a</em><em>r</em><em>T</em><em>o</em><em>t</em><em>a</em><em>l</em><em>C</em><em>o</em><em>s</em><em>t</em><em>o</em><em>f</em><em>O</em><em>w</em><em>n</em><em>e</em><em>r</em><em>s</em><em>h</em><em>i</em><em>p</em>(<em>T</em><em>C</em><em>O</em>), <em>a</em><em>s</em><em>s</em><em>u</em><em>m</em><em>i</em><em>n</em><em>g</em><em>t</em><em>h</em><em>e</em><em>y</em><em>e</em><em>a</em><em>r</em> − <em>t</em><em>w</em><em>o</em><em>r</em><em>u</em><em>n</em><em>r</em><em>a</em><em>t</em><em>e</em><em>r</em><em>e</em><em>p</em><em>e</em><em>a</em><em>t</em><em>s</em><em>i</em><em>n</em><em>y</em><em>e</em><em>a</em><em>r</em><em>t</em><em>h</em><em>r</em><em>e</em><em>e</em><em>a</em><em>n</em><em>d</em><em>t</em><em>h</em><em>e</em><em>f</em><em>u</em><em>l</em><em>l</em><em>r</em><em>e</em><em>s</em><em>e</em><em>r</em><em>v</em><em>e</em><em>i</em><em>s</em><em>c</em><em>o</em><em>n</em><em>s</em><em>u</em><em>m</em><em>e</em><em>d</em>, <em>i</em><em>s</em> * *</span>10.608 million**.</p>
+<p>See <a href="BUDGET.html">BUDGET.csv</a> for line items and <a href="TOOL_SELECTION_AND_COST.html">Tool Selection and Cost Model</a> for the stack. Every platform amount remains quote-required and must account for robot count, users, sites, storage, data egress, integration, implementation, support, and contract term.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -1,0 +1,11 @@
+Deliverable,Sponsor,Program Manager,Security Ops,Robot Engineering,Privacy Legal,Safety EHS,IT Security,Field Support
+CONOPS and authority,A,R,R,C,C,C,C,I
+Route and site assessment,I,R,R,C,C,A,C,C
+Privacy impact and retention,I,C,C,I,A,I,C,I
+Mission geofence and alert design,I,A,R,R,C,C,C,I
+Network identity and remote access,I,C,C,C,C,C,A,I
+FAT and configuration release,I,A,C,R,C,C,C,C
+Commissioning and shadow patrol,I,A,R,R,C,C,C,R
+Acceptance and go-live,A,R,R,C,C,C,C,C
+Support handoff,A,R,R,C,I,C,C,R
+

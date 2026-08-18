@@ -1,0 +1,338 @@
+{
+  "portfolio_notice": "These simulations are fictitious generic scenarios for demonstration purposes only.",
+  "scenarios": [
+    {
+      "slug": "warehouse-humanoid-deployment",
+      "code": "CASE 01",
+      "title": "Five Humanoids — Warehouse Truck Loading",
+      "client": "Northstar Distribution Center",
+      "program_type": "Customer deployment",
+      "status": "Closed — accepted for controlled two-shift operation",
+      "health": "Green",
+      "role": "Deployment Program Manager",
+      "duration": "24 weeks",
+      "budget": "$1.346M installed",
+      "tco": "$2.226M five-year TCO",
+      "summary": "Deliver five humanoids from signed order through site acceptance, controlled pilot, truck-loading cutover, hypercare, and operations handoff. Each robot works in a separate lane, receives an approved carton at a conveyor, and places it on a floor pallet. A robot-operated forklift loads each completed seven-carton pallet into an outbound truck.",
+      "decision": "Northstar accepted the cell for controlled two-shift use after all mandatory safety tests passed and the 14-day hypercare window exceeded the contracted throughput, mission-success, intervention, damage, and availability thresholds. A second cell remains conditional on Finance validating at least $445,200 of annual gross capacity value using actual labor and volume data.",
+      "metrics": [
+        {"label": "Throughput", "value": "231 cartons/hour", "note": "Target: at least 225 for two consecutive hours", "state": "pass"},
+        {"label": "Mission success", "value": "98.6%", "note": "Target: at least 98%", "state": "pass"},
+        {"label": "Interventions", "value": "1.4 per 100", "note": "Limit: no more than 2 per 100", "state": "pass"},
+        {"label": "14-day availability", "value": "96.2%", "note": "Target: at least 95%", "state": "pass"},
+        {"label": "Damage / mis-sort", "value": "0.3%", "note": "Limit: no more than 0.5%", "state": "pass"},
+        {"label": "Budget variance", "value": "$0", "note": "$1.346M authorized and spent", "state": "pass"}
+      ],
+      "phases": [
+        {"name": "Contract and discovery", "start": 1, "end": 4, "status": "Complete"},
+        {"name": "Design and safety", "start": 4, "end": 10, "status": "Complete"},
+        {"name": "Build and Factory Acceptance Test", "start": 9, "end": 13, "status": "Complete"},
+        {"name": "Site readiness", "start": 8, "end": 15, "status": "Complete"},
+        {"name": "Install and commission", "start": 16, "end": 18, "status": "Complete"},
+        {"name": "Site/User Acceptance Testing", "start": 18, "end": 19, "status": "Complete"},
+        {"name": "Pilot and hypercare", "start": 20, "end": 23, "status": "Complete"},
+        {"name": "Handoff and closeout", "start": 24, "end": 24, "status": "Complete"}
+      ],
+      "timeline_unit": "Week",
+      "timeline_max": 24,
+      "financials": [
+        {"label": "Installed cost", "value": 1346000, "display": "$1,346,000"},
+        {"label": "Annual recurring cost", "value": 176000, "display": "$176,000"},
+        {"label": "Annual gross capacity value", "value": 544050, "display": "$544,050"},
+        {"label": "Annual net benefit", "value": 368050, "display": "$368,050"},
+        {"label": "Five-year net benefit", "value": 494250, "display": "$494,250"}
+      ],
+      "financial_note": "Base-case simple payback is 3.66 years and five-year Return on Investment (ROI) is 22.2%. If Finance can monetize only 60% of available labor capacity, payback becomes 8.95 years and expansion is not approved.",
+      "risks": [
+        {"id": "R-001", "risk": "Carton mix exceeds the validated 2–15 kilogram envelope", "score": 20, "status": "Transferred to operations", "response": "Reject workflow, daily mix report, and change-control trigger"},
+        {"id": "R-002", "risk": "Forklift or pedestrian enters the robot operating zone", "score": 15, "status": "Closed", "response": "Physical separation, access controls, and witnessed intrusion tests"},
+        {"id": "R-003", "risk": "Network coverage degrades inside trailer or dock", "score": 12, "status": "Closed", "response": "Radio-frequency survey, redundant coverage, and local safe-state test"},
+        {"id": "R-004", "risk": "Grasp failures reduce throughput", "score": 16, "status": "Closed", "response": "Representative carton tests, tuning, and exception routing"},
+        {"id": "R-005", "risk": "Critical spare lead time threatens restoration target", "score": 12, "status": "Transferred to service", "response": "Onsite minimum stock and replenishment trigger"}
+      ],
+      "team": [
+        {"role": "Executive sponsor", "accountability": "Funding, production authorization, and expansion decision"},
+        {"role": "Deployment Program Manager", "accountability": "Integrated plan, gates, risks, customer decisions, and acceptance"},
+        {"role": "Robot Engineering", "accountability": "Configuration, controls, integration, and technical evidence"},
+        {"role": "Safety / Environment, Health and Safety", "accountability": "Hazard controls, validation, and operating authorization"},
+        {"role": "Customer Operations", "accountability": "Process baseline, staffing, pilot execution, and benefits ownership"},
+        {"role": "Field Service and Support", "accountability": "Commissioning, spares, escalation, hypercare, and handoff"}
+      ],
+      "artifacts": [
+        {"label": "Case study", "path": "scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Project charter", "path": "scenarios/01-humanoid-warehouse-deployment/PROJECT_CHARTER.md", "category": "Initiate"},
+        {"label": "Statement of Work", "path": "scenarios/01-humanoid-warehouse-deployment/STATEMENT_OF_WORK.md", "category": "Initiate"},
+        {"label": "Business case and Total Cost of Ownership", "path": "scenarios/01-humanoid-warehouse-deployment/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
+        {"label": "Integrated schedule", "path": "scenarios/01-humanoid-warehouse-deployment/SCHEDULE.csv", "category": "Control"},
+        {"label": "Budget", "path": "scenarios/01-humanoid-warehouse-deployment/BUDGET.csv", "category": "Financial"},
+        {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/01-humanoid-warehouse-deployment/RAID.csv", "category": "Control"},
+        {"label": "Responsibility assignment matrix", "path": "scenarios/01-humanoid-warehouse-deployment/RACI.csv", "category": "Governance"},
+        {"label": "Requirements traceability", "path": "scenarios/01-humanoid-warehouse-deployment/REQUIREMENTS_TRACEABILITY.csv", "category": "Assurance"},
+        {"label": "Safety and acceptance plan", "path": "scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.md", "category": "Assurance"},
+        {"label": "Deployment runbook", "path": "scenarios/01-humanoid-warehouse-deployment/DEPLOYMENT_RUNBOOK.md", "category": "Execution"},
+        {"label": "Operations handoff", "path": "scenarios/01-humanoid-warehouse-deployment/OPERATIONS_HANDOFF.md", "category": "Close"},
+        {"label": "Closeout and benefits", "path": "scenarios/01-humanoid-warehouse-deployment/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
+      ],
+      "demo": {
+        "title": "Warehouse palletizing and truck-loading simulation",
+        "filename": "warehouse-humanoid-deployment.mp4",
+        "caption": "Five lane-separated humanoids pick cartons from conveyors, build a seven-carton pallet, pause for forklift loading into the truck, and resume after pallet replacement.",
+        "sequence": ["Stage in separate lanes", "Stop before conveyor", "Receive and carry carton", "Build seven-carton pallet", "Load outbound truck", "Replace pallet and restart"]
+      },
+      "closure": {
+        "schedule": "Completed in week 24",
+        "budget": "$1,346,000 spent against $1,346,000 authorization",
+        "acceptance": ["All mandatory safety tests passed with no open critical findings", "Thirty full material-flow cycles completed", "Two-hour throughput and quality test passed", "Operators and support staff completed role assessment", "Telemetry-to-case escalation and return-to-service drill passed"],
+        "lessons": ["Freeze the representative carton set before Factory Acceptance Testing", "Treat trailer wireless coverage as a site-readiness gate", "Put diagnostic evidence requirements into the released configuration", "Link expansion to finance-approved capacity value, not animation speed"]
+      }
+    },
+    {
+      "slug": "quadruped-security-deployment",
+      "code": "CASE 02",
+      "title": "Three Quadrupeds — Night Security",
+      "client": "Sentinel Ridge Industrial Campus",
+      "program_type": "Security operations deployment",
+      "status": "Closed — 30-night pilot accepted",
+      "health": "Green",
+      "role": "Security Robotics Program Manager",
+      "duration": "20 weeks plus 30-night pilot",
+      "budget": "$730K installed",
+      "tco": "$1.315M five-year TCO",
+      "summary": "Deploy three quadruped robots for human-supervised night patrol across stairs, curbs, gravel, and narrow walkways. Two robots run scheduled perimeter routes while the third rotates through charging and reserve coverage. Robots observe and report; authorized human security personnel retain all response decisions.",
+      "decision": "The pilot met all safety, privacy, patrol, alert, geofence, availability, and docking criteria. Sentinel Ridge authorized two recurring quadruped patrol posts and retained the existing fixed-post responder. Expansion beyond the approved routes requires a new route, privacy, network, and benefit review.",
+      "metrics": [
+        {"label": "Patrol completion", "value": "99.1%", "note": "Target: at least 98% over 30 nights", "state": "pass"},
+        {"label": "Fleet availability", "value": "96.4%", "note": "Target: at least 95%", "state": "pass"},
+        {"label": "Critical alert delivery", "value": "50 of 50", "note": "All received within 15 seconds", "state": "pass"},
+        {"label": "False alerts", "value": "4.2 per night", "note": "Limit: no more than 6", "state": "pass"},
+        {"label": "Geofence violations", "value": "0", "note": "Required: zero", "state": "pass"},
+        {"label": "Dock / safe-return tests", "value": "20 of 20", "note": "Required: 100%", "state": "pass"}
+      ],
+      "phases": [
+        {"name": "Concept of operations and policy", "start": 1, "end": 4, "status": "Complete"},
+        {"name": "Route, privacy, and site survey", "start": 2, "end": 5, "status": "Complete"},
+        {"name": "Mission, alert, and support design", "start": 5, "end": 9, "status": "Complete"},
+        {"name": "Configure and Factory Acceptance Test", "start": 8, "end": 11, "status": "Complete"},
+        {"name": "Site readiness", "start": 9, "end": 13, "status": "Complete"},
+        {"name": "Commission and shadow patrol", "start": 14, "end": 15, "status": "Complete"},
+        {"name": "Acceptance and 30-night pilot", "start": 16, "end": 19, "status": "Complete"},
+        {"name": "Handoff and closeout", "start": 20, "end": 20, "status": "Complete"}
+      ],
+      "timeline_unit": "Week",
+      "timeline_max": 20,
+      "financials": [
+        {"label": "Installed cost", "value": 730250, "display": "$730,250"},
+        {"label": "Annual recurring cost", "value": 117000, "display": "$117,000"},
+        {"label": "Annual gross benefit", "value": 343500, "display": "$343,500"},
+        {"label": "Annual net benefit", "value": 226500, "display": "$226,500"},
+        {"label": "Five-year net benefit", "value": 402250, "display": "$402,250"}
+      ],
+      "financial_note": "Base-case simple payback is 3.22 years when two contracted walking-rover posts are removed and one onsite responder remains. Removing only one post produces an 11.73-year payback, so that configuration does not pass the expansion screen.",
+      "risks": [
+        {"id": "R-001", "risk": "Wireless dead zone interrupts live supervision", "score": 20, "status": "Closed", "response": "Day/night survey, redundant path, and tested local safe state"},
+        {"id": "R-002", "risk": "Video records outside the approved purpose or area", "score": 15, "status": "Transferred to operations", "response": "Privacy masks, retention limits, access audit, and quarterly review"},
+        {"id": "R-003", "risk": "Weather or surface exceeds the operating envelope", "score": 16, "status": "Transferred to operations", "response": "Weather gate, route inspection, and recall rule"},
+        {"id": "R-004", "risk": "False alerts overload the security operator", "score": 12, "status": "Closed", "response": "Shadow mode and threshold tuning reduced workload to 4.2 per night"},
+        {"id": "R-005", "risk": "Dock failure removes reserve patrol coverage", "score": 12, "status": "Closed", "response": "Reserve robot, spare charger, and manual patrol fallback"}
+      ],
+      "team": [
+        {"role": "Security sponsor", "accountability": "Operating authority, policy, and benefit decision"},
+        {"role": "Program Manager", "accountability": "Integrated delivery, gates, risks, acceptance, and handoff"},
+        {"role": "Security Operations Center", "accountability": "Mission approval, alert verification, dispatch, and evidence handling"},
+        {"role": "Privacy and Legal", "accountability": "Purpose limits, notices, access, retention, and audit"},
+        {"role": "Safety and Robot Engineering", "accountability": "Route hazards, robot behavior, geofences, and fault validation"},
+        {"role": "Field Support", "accountability": "Docking, retrieval, spares, repair, and on-call coverage"}
+      ],
+      "artifacts": [
+        {"label": "Case study", "path": "scenarios/02-quadruped-security-deployment/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Project and deployment plan", "path": "scenarios/02-quadruped-security-deployment/PROJECT_AND_DEPLOYMENT_PLAN.md", "category": "Plan"},
+        {"label": "Statement of Work", "path": "scenarios/02-quadruped-security-deployment/STATEMENT_OF_WORK.md", "category": "Initiate"},
+        {"label": "Business case and Total Cost of Ownership", "path": "scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
+        {"label": "Integrated schedule", "path": "scenarios/02-quadruped-security-deployment/SCHEDULE.csv", "category": "Control"},
+        {"label": "Budget", "path": "scenarios/02-quadruped-security-deployment/BUDGET.csv", "category": "Financial"},
+        {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/02-quadruped-security-deployment/RAID.csv", "category": "Control"},
+        {"label": "Privacy, safety, and acceptance plan", "path": "scenarios/02-quadruped-security-deployment/PRIVACY_SAFETY_ACCEPTANCE.md", "category": "Assurance"},
+        {"label": "Incident and escalation plan", "path": "scenarios/02-quadruped-security-deployment/INCIDENT_AND_ESCALATION_PLAN.md", "category": "Operate"},
+        {"label": "Operations runbook", "path": "scenarios/02-quadruped-security-deployment/OPERATIONS_RUNBOOK.md", "category": "Operate"},
+        {"label": "Closeout and benefits", "path": "scenarios/02-quadruped-security-deployment/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
+      ],
+      "demo": {
+        "title": "Human-supervised quadruped night-patrol simulation",
+        "filename": "quadruped-night-security.mp4",
+        "caption": "Two quadrupeds patrol independent routes while a third remains available for charging rotation. The run demonstrates rough terrain, steps, anomaly escalation, human verification, network safe stop, sensor degradation, and low-battery docking.",
+        "sequence": ["Dispatch two routes", "Traverse uneven ground and steps", "Detect gate anomaly", "Send evidence to human", "Enter safe state on fault", "Return low-battery robot to dock"]
+      },
+      "closure": {
+        "schedule": "Completed in week 20 after a 30-night pilot",
+        "budget": "$730,250 spent against $730,250 authorization",
+        "acceptance": ["All scheduled patrol and availability thresholds passed", "Fifty witnessed critical alerts arrived within 15 seconds", "Privacy masking, access, retention, deletion, and audit tests passed", "Network-loss, sensor-degradation, low-battery, docking, and retrieval tests passed", "Human responders retained authority for every alert disposition"],
+        "lessons": ["Survey the route at the actual patrol hour and weather conditions", "Measure false-alert workload before unattended patrol", "Design evidence and support correlation together", "Return every route or sensor expansion to privacy, safety, network, and financial gates"]
+      }
+    },
+    {
+      "slug": "ad01-new-robot-first-sale",
+      "code": "CASE 03",
+      "title": "AD-01 — New Robot Through First Sale",
+      "client": "HarborPoint Fulfillment",
+      "program_type": "New Product Introduction",
+      "status": "Closed — limited availability approved",
+      "health": "Amber",
+      "role": "New Product Introduction Program Manager",
+      "duration": "18 months",
+      "budget": "$10.975M development program",
+      "tco": "$510K customer five-year TCO",
+      "summary": "Develop a compact mobile manipulator that moves one approved tote type weighing up to 15 kilograms along an 18-meter indoor route between two fixed stations. The program runs from observed customer workflows through Engineering Verification Test, Design Verification Test, Production Validation Test, first-customer deployment, 30-day acceptance, and a commercial release decision.",
+      "decision": "Leadership approved limited availability for the narrow two-station workflow. The first customer accepted the system, Cost of Goods Sold and pilot-build yield met the release gate, and the corrected design exceeded the mission target. General Availability remains gated by actuator second-source qualification and a qualified pipeline that can support the 82-unit development break-even screen.",
+      "metrics": [
+        {"label": "First-customer mission success", "value": "98.2%", "note": "Target: at least 98%", "state": "pass"},
+        {"label": "Transfer rate", "value": "41 per hour", "note": "Target: at least 40", "state": "pass"},
+        {"label": "Scheduled availability", "value": "95.8%", "note": "Target: at least 95%", "state": "pass"},
+        {"label": "Production first-pass yield", "value": "90%", "note": "9 of 10 units; target at least 90%", "state": "pass"},
+        {"label": "Released unit cost", "value": "$149,200", "note": "Limit: $150,000", "state": "pass"},
+        {"label": "Supplier exposure", "value": "1 open watch", "note": "Actuator second source due before General Availability", "state": "watch"}
+      ],
+      "phases": [
+        {"name": "Discovery", "start": 1, "end": 2, "status": "Complete"},
+        {"name": "Concept and architecture", "start": 2, "end": 4, "status": "Complete"},
+        {"name": "Requirements definition", "start": 4, "end": 6, "status": "Complete"},
+        {"name": "Engineering Verification Test", "start": 5, "end": 8, "status": "Complete"},
+        {"name": "Design Verification Test", "start": 8, "end": 12, "status": "Complete after correction"},
+        {"name": "Production Validation Test", "start": 13, "end": 15, "status": "Complete"},
+        {"name": "First-customer launch", "start": 16, "end": 16, "status": "Complete"},
+        {"name": "Acceptance and release decision", "start": 17, "end": 18, "status": "Complete"}
+      ],
+      "timeline_unit": "Month",
+      "timeline_max": 18,
+      "financials": [
+        {"label": "Development investment", "value": 10975000, "display": "$10,975,000"},
+        {"label": "Unit selling price", "value": 285000, "display": "$285,000"},
+        {"label": "Released unit cost", "value": 149200, "display": "$149,200"},
+        {"label": "Customer initial outlay", "value": 330000, "display": "$330,000"},
+        {"label": "Customer annual net benefit", "value": 168019, "display": "$168,019"}
+      ],
+      "financial_note": "Customer simple payback is 1.96 years. At the $285,000 unit price and $150,000 Cost of Goods Sold ceiling, contribution is $135,000 per unit and approximately 82 units are required to recover the $10.975M development investment before other corporate costs.",
+      "risks": [
+        {"id": "R-001", "risk": "Use-case expansion outruns requirements and safety evidence", "score": 20, "status": "Closed", "response": "Release 1 limited to one tote, two stations, flat floors, and supervised recovery"},
+        {"id": "R-002", "risk": "Critical actuator supplier threatens scale schedule", "score": 16, "status": "Open release condition", "response": "Buffer stock and second-source qualification before General Availability"},
+        {"id": "R-003", "risk": "Thermal derating prevents reliability target", "score": 20, "status": "Closed", "response": "Cooling and current-limit correction passed 2,000-cycle Design Verification Test"},
+        {"id": "R-004", "risk": "Field faults cannot be diagnosed remotely", "score": 15, "status": "Closed", "response": "Fault codes, telemetry bundle, replaceable-unit drill, and support gate"},
+        {"id": "R-005", "risk": "Unit cost exceeds the commercial model", "score": 16, "status": "Closed", "response": "Value engineering and supplier negotiation produced $149,200 released cost"}
+      ],
+      "team": [
+        {"role": "Executive sponsor", "accountability": "Funding tranches and release decision"},
+        {"role": "NPI Program Manager", "accountability": "Integrated gates, dependencies, risks, suppliers, and first-customer delivery"},
+        {"role": "Product and Systems", "accountability": "Customer problem, requirements, interfaces, and scope control"},
+        {"role": "Engineering and Safety", "accountability": "Design, verification, reliability, faults, and operating limits"},
+        {"role": "Manufacturing, Quality, and Supply Chain", "accountability": "Build process, yield, cost, suppliers, and release records"},
+        {"role": "Service, Sales, and Customer Success", "accountability": "Commercial terms, site readiness, support, acceptance, and adoption"}
+      ],
+      "artifacts": [
+        {"label": "Case study", "path": "scenarios/03-new-robot-first-sale/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Product brief and requirements document", "path": "scenarios/03-new-robot-first-sale/PRODUCT_BRIEF_AND_PRD.md", "category": "Product"},
+        {"label": "Business case", "path": "scenarios/03-new-robot-first-sale/BUSINESS_CASE.md", "category": "Financial"},
+        {"label": "New Product Introduction stage-gate plan", "path": "scenarios/03-new-robot-first-sale/NPI_STAGE_GATE_PLAN.md", "category": "Governance"},
+        {"label": "Integrated schedule", "path": "scenarios/03-new-robot-first-sale/SCHEDULE.csv", "category": "Control"},
+        {"label": "Budget and headcount", "path": "scenarios/03-new-robot-first-sale/BUDGET_AND_HEADCOUNT.csv", "category": "Financial"},
+        {"label": "System requirements traceability", "path": "scenarios/03-new-robot-first-sale/SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "category": "Assurance"},
+        {"label": "Verification and validation", "path": "scenarios/03-new-robot-first-sale/VERIFICATION_VALIDATION.md", "category": "Assurance"},
+        {"label": "Supplier and manufacturing readiness", "path": "scenarios/03-new-robot-first-sale/SUPPLIER_MANUFACTURING_READINESS.md", "category": "Execution"},
+        {"label": "First-customer launch", "path": "scenarios/03-new-robot-first-sale/FIRST_CUSTOMER_LAUNCH.md", "category": "Execution"},
+        {"label": "Closeout and lessons", "path": "scenarios/03-new-robot-first-sale/CLOSEOUT_AND_LESSONS.md", "category": "Close"}
+      ],
+      "demo": {
+        "title": "AD-01 tote-transfer product simulation",
+        "filename": "ad01-new-robot-npi.mp4",
+        "caption": "A narrow product demonstration of the AD-01 two-station tote-transfer workflow, including transfer, route travel, placement, and a controlled fault state.",
+        "sequence": ["Receive approved tote", "Verify payload", "Travel mapped route", "Place at second station", "Return for next mission", "Enter controlled state on fault"]
+      },
+      "closure": {
+        "schedule": "Completed at the month-18 release gate",
+        "budget": "$10,975,000 spent against $10,975,000 staged authorization",
+        "acceptance": ["Corrected design passed 2,000 representative Design Verification Test cycles at 98.4% mission success", "Production Validation Test achieved 9 of 10 first-pass units", "Released Cost of Goods Sold was $149,200 and assembly/test time was 39.4 hours", "First customer completed the 30-day acceptance window at 98.2% mission success and 95.8% availability", "Limited availability approved for the common two-station product baseline"],
+        "lessons": ["Narrow scope made safety and value claims testable", "Serviceability and telemetry must be product requirements", "A second source needs a dated gate, not a generic mitigation", "One accepted customer does not establish broad product-market fit"]
+      }
+    },
+    {
+      "slug": "robotics-support-operations",
+      "code": "CASE 04",
+      "title": "Robotics Support & Field Operations",
+      "client": "Orion Field Robotics",
+      "program_type": "Service operating model transformation",
+      "status": "Closed — service owner accepted operating model",
+      "health": "Green",
+      "role": "Service Operations Program Manager",
+      "duration": "180 days",
+      "budget": "$4.668M year-one authorization",
+      "tco": "$10.608M three-year TCO",
+      "summary": "Stand up one traceable support chain for 250 humanoid and quadruped robots across 60 sites. The operating model connects Salesforce customer cases, ServiceNow or Zendesk workflows, field work, Jira engineering defects, robot telemetry, parts, knowledge, release readiness, and customer communications.",
+      "decision": "The executive sponsor and service owner accepted the 180-day operating model. All 250 robots and 60 sites have owned installed-product records; severity, on-call, field, parts, remote-access, continuity, and product-readiness controls are live. High-confidence predictive case automation remains a phase-two improvement and is not required for closeout.",
+      "metrics": [
+        {"label": "Installed-base completeness", "value": "100%", "note": "250 robots at 60 sites have owner, version, entitlement, and location", "state": "pass"},
+        {"label": "Diagnostic evidence", "value": "96%", "note": "Target: at least 95% of escalations complete", "state": "pass"},
+        {"label": "Remote resolution", "value": "68%", "note": "Target: at least 65% for eligible cases", "state": "pass"},
+        {"label": "First-time field fix", "value": "87%", "note": "Target: at least 85%", "state": "pass"},
+        {"label": "Critical acknowledgement", "value": "12 min median", "note": "Target: within 15 minutes", "state": "pass"},
+        {"label": "Backlog completion", "value": "14 of 14", "note": "All foundation capabilities accepted", "state": "pass"}
+      ],
+      "phases": [
+        {"name": "Stabilize intake and escalation", "start": 1, "end": 30, "status": "Complete"},
+        {"name": "Standardize cases, work, evidence, and knowledge", "start": 31, "end": 60, "status": "Complete"},
+        {"name": "Instrument fleet telemetry and dashboards", "start": 61, "end": 90, "status": "Complete"},
+        {"name": "Scale field service, parts, and return-to-service", "start": 91, "end": 120, "status": "Complete"},
+        {"name": "Improve reliability and service economics", "start": 121, "end": 165, "status": "Complete"},
+        {"name": "Continuity test, handoff, and closeout", "start": 166, "end": 180, "status": "Complete"}
+      ],
+      "timeline_unit": "Day",
+      "timeline_max": 180,
+      "financials": [
+        {"label": "Year-one base", "value": 3950000, "display": "$3,950,000"},
+        {"label": "Management reserve", "value": 718000, "display": "$718,000"},
+        {"label": "Year-one authorization", "value": 4668000, "display": "$4,668,000"},
+        {"label": "Year-two run rate", "value": 2970000, "display": "$2,970,000"},
+        {"label": "Three-year TCO", "value": 10608000, "display": "$10,608,000"}
+      ],
+      "financial_note": "The year-one authorization includes the six-month implementation, initial 15-person operation, platform integration, telemetry, remote access, field tools, starter spares, enablement, contingency, and sponsor reserve. Vendor prices remain quote-required planning inputs.",
+      "risks": [
+        {"id": "R-001", "risk": "Unsafe remote action bypasses product controls", "score": 20, "status": "Closed", "response": "Role-based approval, audited sessions, command allow-list, and independent safety controls"},
+        {"id": "R-002", "risk": "Poor installed-product data causes wrong entitlement or dispatch", "score": 20, "status": "Closed", "response": "Named data owners and 100% serial-site-version-contract baseline"},
+        {"id": "R-003", "risk": "Telemetry noise creates unactionable support work", "score": 16, "status": "Transferred to service", "response": "Precision threshold, alert owner, and manual review before automation expansion"},
+        {"id": "R-004", "risk": "Critical parts are unavailable during a site outage", "score": 16, "status": "Closed", "response": "Failure forecast, depot minimums, serialized stock, and tested transfer workflow"},
+        {"id": "R-005", "risk": "Coverage demand exceeds the 15-person team", "score": 15, "status": "Transferred to service", "response": "Six-week utilization, response-miss, and skill-coverage staffing triggers"}
+      ],
+      "team": [
+        {"role": "Executive sponsor", "accountability": "Funding, priorities, policy exceptions, and operating-model acceptance"},
+        {"role": "Service Operations Program Manager", "accountability": "Roadmap, workstreams, dependencies, budget, risks, and handoff"},
+        {"role": "Frontline Support and Robotics Level 2", "accountability": "Intake, safe response, diagnosis, evidence, and remote restoration"},
+        {"role": "Field Service and Supply Chain", "accountability": "Dispatch, repair, parts, Return Material Authorization, and return-to-service"},
+        {"role": "Product and Engineering", "accountability": "Defects, known errors, releases, reliability, and serviceability"},
+        {"role": "Security, Data, and Enterprise Applications", "accountability": "Access controls, retention, integrations, and audit evidence"}
+      ],
+      "artifacts": [
+        {"label": "Case study", "path": "scenarios/04-robotics-support-operations/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Operating model", "path": "scenarios/04-robotics-support-operations/OPERATING_MODEL.md", "category": "Strategy"},
+        {"label": "Operating baseline and cost assumptions", "path": "scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "category": "Financial"},
+        {"label": "Service catalog", "path": "scenarios/04-robotics-support-operations/SERVICE_CATALOG.md", "category": "Operate"},
+        {"label": "Severity and Service-Level Agreement targets", "path": "scenarios/04-robotics-support-operations/SEVERITY_SLA.md", "category": "Operate"},
+        {"label": "Tool selection and cost", "path": "scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.md", "category": "Architecture"},
+        {"label": "Observability and data plan", "path": "scenarios/04-robotics-support-operations/OBSERVABILITY_AND_DATA_PLAN.md", "category": "Architecture"},
+        {"label": "Staffing and capacity plan", "path": "scenarios/04-robotics-support-operations/STAFFING_AND_CAPACITY_PLAN.md", "category": "Resource"},
+        {"label": "Implementation backlog", "path": "scenarios/04-robotics-support-operations/IMPLEMENTATION_BACKLOG.csv", "category": "Control"},
+        {"label": "Key Performance Indicator scorecard", "path": "scenarios/04-robotics-support-operations/KPI_SCORECARD.md", "category": "Control"},
+        {"label": "Business continuity plan", "path": "scenarios/04-robotics-support-operations/BUSINESS_CONTINUITY.md", "category": "Assurance"},
+        {"label": "Closeout and maturity roadmap", "path": "scenarios/04-robotics-support-operations/CLOSEOUT_AND_MATURITY_ROADMAP.md", "category": "Close"}
+      ],
+      "demo": {
+        "title": "Robotics support triage and evidence demonstration",
+        "filename": "robotics-support-triage.mp4",
+        "caption": "A support workflow demonstration showing a robot alert correlated to fleet telemetry, customer case, severity decision, diagnostic evidence, engineering escalation, field action, and controlled return to service.",
+        "sequence": ["Detect fleet alert", "Correlate robot and customer", "Assign severity", "Collect evidence", "Restore or dispatch", "Close with customer confirmation"]
+      },
+      "closure": {
+        "schedule": "Completed on day 180",
+        "budget": "$4,412,000 spent against $4,668,000 authorization; $256,000 reserve returned",
+        "acceptance": ["All 250 robot records linked to site, version, entitlement, and owner", "Severity 1 and Severity 2 on-call and customer-communication drills passed", "Case, work order, Jira defect, and telemetry correlation demonstrated end to end", "Field dispatch, critical spare, and return-to-service exercises passed", "Service owner accepted Key Performance Indicator dashboard, staffing triggers, continuity plan, and phase-two roadmap"],
+        "lessons": ["Installed-product data quality is a release dependency", "Customer communication and diagnosis need parallel owners", "Automate alerts only after precision and ownership are measured", "Support evidence must feed product reliability and serviceability decisions"]
+      }
+    }
+  ]
+}

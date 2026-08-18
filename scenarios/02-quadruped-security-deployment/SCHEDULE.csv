@@ -1,0 +1,14 @@
+ID,Phase,Task,Owner,Week Start,Week Finish,Predecessor,Exit Evidence
+1.1,Initiate,CONOPS authority and success criteria,Program Manager,1,3,,Approved CONOPS
+1.2,Discover,Privacy data and workforce review,Privacy Legal,1,4,,Approved impact review
+1.3,Discover,Day and night route site survey,Safety EHS,2,5,1.1,Hazard and coverage map
+2.1,Design,Mission geofence docking and alert design,Robot Engineering,5,8,1.2;1.3,Design baseline
+2.2,Design,Support field and retrieval design,Field Support,6,9,1.3,Service design package
+3.1,Build,Configure robots console telemetry and alerts,Robot Engineering,8,10,2.1,Release candidate
+3.2,Validate,FAT mission fault privacy and support tests,Program Manager,11,11,3.1;2.2,FAT report
+4.1,Ready,Site docks network signage and operator readiness,Security Ops,9,13,1.3,Readiness certificate
+5.1,Deploy,Commissioning and escorted shadow patrol,Program Manager,14,15,3.2;4.1,Shadow patrol evidence
+5.2,Validate,Concurrent patrol acceptance,Security Ops,16,17,5.1,Acceptance signoff
+6.1,Operate,Production hypercare,Field Support,17,19,5.2,KPI report
+6.2,Close,Handoff and lessons learned,Program Manager,20,20,6.1,Handoff signoff
+

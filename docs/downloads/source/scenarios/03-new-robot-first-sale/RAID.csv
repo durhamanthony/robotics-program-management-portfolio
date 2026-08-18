@@ -1,0 +1,9 @@
+ID,Type,Description,Probability,Impact,Owner,Response,Trigger,Status
+R-001,Risk,First use case expands faster than requirements and safety evidence,4,5,Product,Release 1 limited to one tote two stations flat floors and supervised recovery,New payload or environment requested,Closed
+R-002,Risk,Critical actuator supplier lead time threatens scale schedule,4,4,Supply Chain,Buffer stock and second-source qualification before General Availability,Lead time exceeds schedule float,Open release condition
+R-003,Risk,Thermal derating prevents Design Verification Test reliability target,4,5,Engineering,Cooling and current-limit correction passed 2000 representative cycles,Failure rate above growth curve,Closed
+R-004,Risk,Field faults cannot be diagnosed remotely,3,5,Service,Fault codes telemetry bundle replaceable-unit drill and support gate,Incomplete evidence bundle at Design Verification Test,Closed
+R-005,Risk,Unit cost exceeds business case,4,4,Finance,Value engineering and supplier negotiation produced 149200 dollar released cost,Forecast above target at concept or Design Verification Test,Closed
+A-001,Assumption,First customer provides representative site payload and operator time,3,4,Sales Customer,Contract obligations and readiness gate completed,Customer input late,Validated
+D-001,Dependency,Safety validation plan approved before Design Verification Test execution,3,5,Safety Security,Approval was a Design Verification Test entry criterion,Approval slips,Closed
+I-001,Issue,Product name and installed-base data model not finalized,5,2,Product,AD-01 identity and serialized product record approved before Engineering Verification Test exit,No decision by Engineering Verification Test exit,Closed

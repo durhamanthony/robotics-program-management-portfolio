@@ -1,0 +1,8 @@
+ID,Type,Description,Probability,Impact,Owner,Response,Trigger,Status
+R-001,Risk,Network dead zone causes loss of live supervision,4,5,IT Security,Day and night survey redundant path and tested local safe state,Signal or latency outside threshold,Closed
+R-002,Risk,Video captures outside approved purpose or area,3,5,Privacy Legal,Privacy masks retention limits access audit and quarterly review,Privacy control test failure,Transferred to operations
+R-003,Risk,Weather or surface exceeds operating envelope,4,4,Safety EHS,Weather gate route inspection and recall rule,Forecast or sensor threshold,Transferred to operations
+R-004,Risk,False alerts overwhelm security operator,4,3,Security Ops,Shadow mode and threshold tuning reduced workload to 4.2 per night,False-alert rate above target,Closed
+R-005,Risk,Dock failure leaves insufficient patrol coverage,3,4,Field Support,Reserve robot spare charger and manual patrol fallback,Charge not confirmed by cutoff,Closed
+A-001,Assumption,Security Operations Center staffed for full patrol window,3,5,Security Ops,Thirty-night roster confirmed before pilot,Open shift on roster,Validated
+D-001,Dependency,Privacy and workforce notice approved before recording,3,5,Privacy Legal,Approval treated as a go-live gate,Approval absent by week 12,Closed

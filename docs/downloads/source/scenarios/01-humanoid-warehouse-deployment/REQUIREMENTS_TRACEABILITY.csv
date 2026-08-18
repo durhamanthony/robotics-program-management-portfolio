@@ -1,0 +1,12 @@
+requirement_id,source,requirement,verification,acceptance_threshold,evidence_owner,planned_gate,status
+WH-SAFE-001,SOW,"Mandatory safety functions and safe states work in normal and fault conditions",Qualified test,"100% of mandatory tests pass; zero open critical safety findings",Safety Lead,"SAT (Site Acceptance Test)",Planned
+WH-PERF-001,Business case,"Sustain target throughput for the approved 2-15 kilogram carton mix",Two-hour operational test,">=225 cartons/hour for two consecutive hours",Operations Lead,"UAT (User Acceptance Testing)",Planned
+WH-PERF-002,Business case,"Complete pick carry and place without manual recovery",Witnessed operating test,">=98% success across at least 450 attempts",Operations Lead,"UAT (User Acceptance Testing)",Planned
+WH-QUAL-001,SOW,"Prevent damaged or wrong-placement cartons",Inspection/data review,"<=0.5% during the witnessed acceptance run",Quality Lead,"UAT (User Acceptance Testing)",Planned
+WH-REL-001,SOW,"Fleet remains available during hypercare",Telemetry report,">=95% across two shifts for 10 operating days excluding approved windows",Service Lead,Hypercare,Planned
+WH-OPS-001,SOW,"Limit human recovery demand",Operations report,"<=2 interventions per 100 cartons",Operations Lead,Hypercare,Planned
+WH-FLOW-001,Simulation,"Complete the seven-carton pallet truck-load and pallet-reset sequence",Witnessed cycle test,"30 consecutive cycles with robot pause forklift truck entry empty return pallet replacement and authorized restart",Operations Lead,"SAT (Site Acceptance Test)",Planned
+WH-INT-001,Design,"WMS and conveyor recover safely from failure",Fault injection,"10 of 10 approved normal and failure cases pass",Integration Lead,"SAT (Site Acceptance Test)",Planned
+WH-SEC-001,Security,"Unique identity least privilege and audited remote access",Inspection/test,"100% of 24 mandatory controls pass",Security Lead,Site Ready,Planned
+WH-TRN-001,Training,"Designated staff demonstrate role competence",Assessment,"100% of operators supervisors and support staff pass before access",Training Lead,Go-live,Planned
+WH-SUP-001,Support,"Case telemetry field and engineering chain is operational",Support drill,"Three injected incidents meet the 15-minute S1 acknowledgement target",Service Lead,Go-live,Planned

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study 1 — Five Humanoids for Pallet Building and Truck Loading | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 01 — Warehouse</span> <span class="tag muted-tag">Initiate / Discover</span></div>
+<a class="button" href="../../../downloads/source/scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.md" download>Download MD</a></div>
+<article class="article"><h1 id="case-study-1--five-humanoids-for-pallet-building-and-truck-loading">Case Study 1 — Five Humanoids for Pallet Building and Truck Loading</h1>
+<h2 id="scenario">Scenario</h2>
+<p>A robotics vendor has sold five humanoid robots to a distribution warehouse. Each robot works in a marked lane, stops before a powered conveyor, receives one approved carton, carries it to a floor pallet, and contributes to a seven-carton stack. A robot-operated forklift then moves the loaded pallet into the open back of an outbound truck. The robots pause while a replacement pallet is placed. The program manager owns delivery from signed order through customer acceptance and the end of hypercare.</p>
+<h2 id="outcome">Outcome</h2>
+<p>Deploy the five-robot cell for two shifts at one site. The controlled pilot must move at least 225 approved cartons per hour for two consecutive hours, complete at least 98 of every 100 pick-carry-place attempts without manual recovery, and require no more than two human interventions per 100 cartons. Expansion is not approved unless the financial model also shows a five-year simple payback using finance-approved labor-capacity value.</p>
+<h2 id="success-measures">Success measures</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th style="text-align: right;">Acceptance threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Safety validation</td>
+<td style="text-align: right;">100% mandatory tests passed; no open critical safety findings</td>
+</tr>
+<tr class="even">
+<td>Mission success</td>
+<td style="text-align: right;">&gt;= 98% during acceptance window within agreed carton envelope</td>
+</tr>
+<tr class="odd">
+<td>Throughput</td>
+<td style="text-align: right;">At least 225 cartons/hour for two consecutive hours using the acceptance carton mix</td>
+</tr>
+<tr class="even">
+<td>Damage/mis-sort</td>
+<td style="text-align: right;">No more than 0.5% damaged or misplaced cartons during the acceptance run</td>
+</tr>
+<tr class="odd">
+<td>Fleet availability</td>
+<td style="text-align: right;">&gt;= 95% during two-week hypercare, excluding approved windows</td>
+</tr>
+<tr class="even">
+<td>Human intervention</td>
+<td style="text-align: right;">No more than 2 interventions per 100 cartons</td>
+</tr>
+<tr class="odd">
+<td>Support readiness</td>
+<td style="text-align: right;">Portal, telemetry, severity routing, on-call, spares, and remote access tested</td>
+</tr>
+<tr class="even">
+<td>Training</td>
+<td style="text-align: right;">100% designated operators/support staff pass role assessment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="program-phases">Program phases</h2>
+<ol type="1">
+<li>Contract and SOW (Statement of Work) acceptance crosswalk.</li>
+<li>Use-case validation and carton/conveyor/pallet/truck-process data collection.</li>
+<li>Site survey, safety concept, material-flow and integration design.</li>
+<li>Configuration/build, integration, simulation, FAT (Factory Acceptance Test), and support preparation.</li>
+<li>Site readiness and pre-ship go/no-go.</li>
+<li>Delivery, installation, calibration, SAT (Site Acceptance Test), safety validation, and UAT (User Acceptance Testing).</li>
+<li>Controlled pilot by lane/shift, production cutover, and hypercare.</li>
+<li>Handoff, benefits review, and expansion decision.</li>
+</ol>
+<h2 id="workstreams">Workstreams</h2>
+<ul>
+<li>Program governance and customer management</li>
+<li>Robot hardware, end effector, firmware/software, and configuration</li>
+<li>Warehouse process, material flow, pallet/forklift/truck interface, and conveyor/WMS (Warehouse Management System) integration</li>
+<li>Safety/EHS (Environment, Health, and Safety) and human factors</li>
+<li>Site/facilities, power, charging, network, and physical controls</li>
+<li>Data, cybersecurity, privacy, telemetry, and dashboards</li>
+<li>Training, change management, labor/operational readiness</li>
+<li>Support, field service, spares, warranty, RMA (Return Material Authorization), and hypercare</li>
+</ul>
+<h2 id="critical-scenario-decisions">Critical scenario decisions</h2>
+<ul>
+<li>How are robot lanes separated from the conveyor, pallet exchange, forklift travel, and human recovery zones?</li>
+<li>What carton dimensions, weights, materials, damage states, and stack patterns are supported?</li>
+<li>How are unknown, damaged, leaking, unstable, or prohibited items rejected?</li>
+<li>What creates and ends a robot mission, and what happens when WMS/conveyor/network is unavailable?</li>
+<li>How are dropped cartons, unstable pallet stacks, forklift conflicts, truck availability, lighting, dust, and wet floors handled?</li>
+<li>What is the safe state after localization, perception, grasp, power, or communications failure?</li>
+<li>Which intervention requires a protective stop versus energy isolation and qualified service?</li>
+</ul>
+<h2 id="financial-decision-tied-to-the-scenario">Financial decision tied to the scenario</h2>
+<p>The baseline uses 18,750 annual manual handling hours and a public labor-cost benchmark of $36.27 per hour. Retaining one cell attendant per shift leaves 15,000 hours that could become capacity value. The full value is $544,050 per year, but it may be counted only when finance approves an overtime reduction, avoided temporary-labor expense, or documented redeployment plan. With a $1.346 million installed cost and $176,000 recurring annual cost, at least $445,200 in annual gross benefit is required for a five-year simple payback. The detailed calculation and conservative case are in <a href="BUSINESS_CASE_AND_TCO.html">Business Case and TCO</a>.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

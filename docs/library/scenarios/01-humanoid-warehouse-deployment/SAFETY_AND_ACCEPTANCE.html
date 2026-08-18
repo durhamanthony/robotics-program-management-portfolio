@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety and Acceptance Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 01 — Warehouse</span> <span class="tag muted-tag">Assure / Validate</span></div>
+<a class="button" href="../../../downloads/source/scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.md" download>Download MD</a></div>
+<article class="article"><h1 id="safety-and-acceptance-plan">Safety and Acceptance Plan</h1>
+<h2 id="safety-boundary">Safety boundary</h2>
+<p>The program manager coordinates evidence, owners, gates, and closure. Qualified robot-safety, EHS, engineering, and customer authorities determine applicable standards, perform/approve the risk assessment, validate safety functions, and accept residual risk.</p>
+<h2 id="hazard-themes">Hazard themes</h2>
+<p>Collision/crushing; unstable robot/fall; dropped or ejected cartons; sharp/leaking/hazardous contents; pinch points; trailer/dock gap and uneven surfaces; battery/electrical/thermal hazards; unexpected startup; manual recovery/lifting; forklift/pedestrian interaction; loss of perception/localization/network; unsafe remote command; cybersecurity compromise.</p>
+<h2 id="acceptance-suite">Acceptance suite</h2>
+<p>The table below is the Site Acceptance Test (SAT) baseline.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Test ID</th>
+<th>Requirement</th>
+<th>Method</th>
+<th>Threshold/evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SAT-001</td>
+<td>Identity/configuration</td>
+<td>Inspect/query</td>
+<td>Five serials and approved versions match register</td>
+</tr>
+<tr class="even">
+<td>SAT-010</td>
+<td>Emergency stop/protective response</td>
+<td>Qualified validation</td>
+<td>All mandatory functions pass; zero open critical safety findings</td>
+</tr>
+<tr class="odd">
+<td>SAT-020</td>
+<td>Nominal carton handling</td>
+<td>Test</td>
+<td>At least 225 cartons/hour for two consecutive hours at the approved 2-15 kilogram mix and at least 98% success</td>
+</tr>
+<tr class="even">
+<td>SAT-030</td>
+<td>Unsupported carton</td>
+<td>Test</td>
+<td>Safe reject/escalation; no uncontrolled attempt</td>
+</tr>
+<tr class="odd">
+<td>SAT-040</td>
+<td>Dropped carton</td>
+<td>Test</td>
+<td>Safe stop/recovery workflow and event evidence</td>
+</tr>
+<tr class="even">
+<td>SAT-050</td>
+<td>Network loss</td>
+<td>Test</td>
+<td>Enters defined safe state; local safety unaffected</td>
+</tr>
+<tr class="odd">
+<td>SAT-060</td>
+<td>Warehouse Management System/conveyor loss</td>
+<td>Test</td>
+<td>10 of 10 approved normal and failure cases enter the defined controlled pause and recovery path</td>
+</tr>
+<tr class="even">
+<td>SAT-070</td>
+<td>Low battery</td>
+<td>Test</td>
+<td>Mission completion/abort rule and safe dock behavior</td>
+</tr>
+<tr class="odd">
+<td>SAT-080</td>
+<td>Multi-robot concurrency</td>
+<td>Soak</td>
+<td>Zero lane/exclusion-zone violations and at least 225 cartons/hour for two hours</td>
+</tr>
+<tr class="even">
+<td>SAT-090</td>
+<td>Support path</td>
+<td>Drill</td>
+<td>Three injected alerts meet the 15-minute Severity-1 acknowledgement target with complete evidence</td>
+</tr>
+<tr class="odd">
+<td>SAT-100</td>
+<td>Return to service</td>
+<td>Drill</td>
+<td>Authorized checklist completed after simulated repair</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evidence-package">Evidence package</h2>
+<p>Signed test records, configuration/version export, photos/layout, training evidence, telemetry/MCAP links, defect disposition, risk register and residual-risk acceptance, cutover approval, support drill, and customer acceptance certificate.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

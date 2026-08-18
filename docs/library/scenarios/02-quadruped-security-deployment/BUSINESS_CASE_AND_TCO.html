@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-links"><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Case 02 — Security</span> <span class="tag muted-tag">Initiate / Discover</span></div>
+<a class="button" href="../../../downloads/source/scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.md" download>Download MD</a></div>
+<article class="article"><h1 id="business-case-and-tco-total-cost-of-ownership--quadruped-night-security">Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security</h1>
+<h2 id="decision">Decision</h2>
+<p>Deploy the three purchased quadrupeds through a 30-night controlled pilot. Approve the three-robot operating plan only if the customer can remove <strong>two contracted walking-rover posts per night while retaining an on-site human responder</strong>, and if the patrol, alert, privacy, safety, and support tests pass.</p>
+<p>The base case pays back in 3.22 years. If operations can remove only one rover post, payback increases to 11.7 years. That conservative result does not justify expansion.</p>
+<h2 id="why-a-legged-platform-can-reduce-site-alteration">Why a legged platform can reduce site alteration</h2>
+<p>The campus route includes code-compliant stairs, curbs, gravel, and uneven outdoor sections. Current manufacturer specifications provide useful feasibility anchors:</p>
+<ul>
+<li>Boston Dynamics lists Spot at a 30-degree maximum slope, 300 millimeter maximum step, IP54 ingress protection, and 90-minute average runtime.</li>
+<li>Unitree describes the industrial B2 as capable of sustained stair climbing, uneven/slippery terrain, 40-centimeter obstacles, and more than five hours of unloaded walking.</li>
+<li>Agility states that human-form robots are intended to work in existing human infrastructure without the costly retrofits often required by single-purpose automation.</li>
+</ul>
+<p>These statements support route screening, not final acceptance. Legged mobility can reduce continuous-path reconstruction compared with a wheeled robot and can avoid a fixed arm's engineered work cell, but the project still requires docks, power, wireless coverage, lighting review, signs, geofences, route repair, and a retrieval method.</p>
+<h2 id="cost-model">Cost model</h2>
+<p>The public Unitree B2-W listing of $100,000 is used only as a current industrial-quadruped price reference. It is not a vendor selection or a claim that the listed configuration is suitable for security. Sensor payloads, docks, software, integration, support, insurance, taxes, and compliance remain quote-required.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th style="text-align: right;">Calculation</th>
+<th style="text-align: right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Base one-time items</td>
+<td style="text-align: right;">Robots, payloads, docks, integration, site, controls, training, logistics</td>
+<td style="text-align: right;">$635,000</td>
+</tr>
+<tr class="even">
+<td>Contingency and management reserve</td>
+<td style="text-align: right;">Item contingency plus sponsor reserve</td>
+<td style="text-align: right;">$95,250</td>
+</tr>
+<tr class="odd">
+<td>Installed one-time cost</td>
+<td style="text-align: right;">$635,000 + $95,250</td>
+<td style="text-align: right;"><strong>$730,250</strong></td>
+</tr>
+<tr class="even">
+<td>Annual recurring cost</td>
+<td style="text-align: right;">Fleet software/support $75,000 + maintenance/spares $30,000 + evidence storage $12,000</td>
+<td style="text-align: right;"><strong>$117,000</strong></td>
+</tr>
+<tr class="odd">
+<td>Five-year TCO (Total Cost of Ownership)</td>
+<td style="text-align: right;">$730,250 + 5 × $117,000</td>
+<td style="text-align: right;"><strong>$1,315,250</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Line-item sources and replacement evidence are in <a href="BUDGET.html">BUDGET.csv</a>.</p>
+<h2 id="benefit-model">Benefit model</h2>
+<p>The customer scenario input is a $45/hour contracted rover invoice rate. It includes vendor wages, benefits, management, insurance, and margin; it is not represented as a BLS wage. The customer must replace it with actual invoices.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Benefit</th>
+<th style="text-align: right;">Calculation</th>
+<th style="text-align: right;">Annual value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Two walking-rover posts avoided</td>
+<td style="text-align: right;">2 rovers × 10 hours × 365 nights × $45/hour</td>
+<td style="text-align: right;">$328,500</td>
+</tr>
+<tr class="even">
+<td>One patrol vehicle avoided</td>
+<td style="text-align: right;">Customer fleet input</td>
+<td style="text-align: right;">$15,000</td>
+</tr>
+<tr class="odd">
+<td>Gross annual benefit</td>
+<td style="text-align: right;">$328,500 + $15,000</td>
+<td style="text-align: right;"><strong>$343,500</strong></td>
+</tr>
+<tr class="even">
+<td>Less recurring robot cost</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">($117,000)</td>
+</tr>
+<tr class="odd">
+<td>Net annual benefit</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>$226,500</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The existing fixed-post human responder remains. Robot alerts are verified by that authorized human; the model does not remove human incident authority. No theft prevention, liability avoidance, or incident avoidance is monetized.</p>
+<h2 id="base-and-conservative-results">Base and conservative results</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Result</th>
+<th style="text-align: right;">Base: two rover posts removed</th>
+<th style="text-align: right;">Conservative: one rover post removed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Annual gross benefit</td>
+<td style="text-align: right;">$343,500</td>
+<td style="text-align: right;">$179,250</td>
+</tr>
+<tr class="even">
+<td>Annual net benefit after recurring cost</td>
+<td style="text-align: right;">$226,500</td>
+<td style="text-align: right;">$62,250</td>
+</tr>
+<tr class="odd">
+<td>Simple payback</td>
+<td style="text-align: right;">3.22 years</td>
+<td style="text-align: right;">11.73 years</td>
+</tr>
+<tr class="even">
+<td>Five-year net benefit</td>
+<td style="text-align: right;">$402,250</td>
+<td style="text-align: right;">($419,000)</td>
+</tr>
+<tr class="odd">
+<td>Five-year ROI (Return on Investment)</td>
+<td style="text-align: right;">30.6%</td>
+<td style="text-align: right;">Negative</td>
+</tr>
+<tr class="even">
+<td>Five-year NPV (Net Present Value) at 8%</td>
+<td style="text-align: right;">$174,099</td>
+<td style="text-align: right;">Negative</td>
+</tr>
+</tbody>
+</table>
+<p>The minimum gross annual benefit for five-year simple payback is $263,050: $730,250 ÷ 5 + $117,000.</p>
+<h2 id="thirty-night-acceptance-tied-to-the-scenario">Thirty-night acceptance tied to the scenario</h2>
+<ol type="1">
+<li>Robots A and B complete eight combined scheduled patrol circuits per night; Robot C provides charging rotation and reserve coverage.</li>
+<li>At least 98% of scheduled patrol circuits complete over 30 nights.</li>
+<li>All 50 witnessed critical-alert tests reach the SOC (Security Operations Center) within 15 seconds and are linked to the correct robot, time, route, and evidence.</li>
+<li>After tuning, false alerts requiring operator review do not exceed six per 10-hour night.</li>
+<li>There are zero geofence violations and zero uncommanded entries into exclusion zones.</li>
+<li>Mandatory stair, curb, rough-terrain, low-light, network-loss, low-battery, docking, sensor-degradation, and retrieval tests pass.</li>
+<li>Privacy masks, authorized access, retention, deletion, and audit tests pass before unattended patrol.</li>
+<li>A human verifies every critical alert and owns dispatch, notification, and escalation decisions.</li>
+</ol>
+<h2 id="research-anchors">Research anchors</h2>
+<ul>
+<li><a href="https://shop.unitree.com/products/unitree-b2-w">Unitree B2-W product page and public price reference</a></li>
+<li><a href="https://bostondynamics.com/products/spot/">Boston Dynamics Spot specifications</a></li>
+<li><a href="https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work">Agility human-environment deployment rationale</a></li>
+<li><a href="https://www.bls.gov/oes/2023/may/oes339032.htm">BLS Security Guards, May 2023</a>, used only to test the reasonableness of a customer contract rate</li>
+<li><a href="https://www.nist.gov/privacy-framework">NIST Privacy Framework</a></li>
+<li><a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST Cybersecurity Framework 2.0</a></li>
+</ul>
+<p>Research checked August 16, 2026. See <a href="RESEARCH_AND_ASSUMPTIONS.html">Research and Assumptions</a> for limits and replacement rules.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

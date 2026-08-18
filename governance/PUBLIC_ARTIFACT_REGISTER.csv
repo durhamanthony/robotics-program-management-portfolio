@@ -1,0 +1,99 @@
+artifact_id,scenario,lifecycle,artifact,path,status,owner,public_safe
+PUB-001,Case 01 — Warehouse,Govern / Reference,Artifact Index — Humanoid Warehouse Deployment,scenarios/01-humanoid-warehouse-deployment/ARTIFACT_INDEX.md,Completed scenario evidence,Program Manager,Yes
+PUB-002,Case 01 — Warehouse,Plan / Control,Budget,scenarios/01-humanoid-warehouse-deployment/BUDGET.csv,Completed scenario evidence,Program Manager,Yes
+PUB-003,Case 01 — Warehouse,Initiate / Discover,Business Case and TCO (Total Cost of Ownership) — Warehouse Truck Loading,scenarios/01-humanoid-warehouse-deployment/BUSINESS_CASE_AND_TCO.md,Completed scenario evidence,Program Manager,Yes
+PUB-004,Case 01 — Warehouse,Initiate / Discover,Case Study 1 — Five Humanoids for Pallet Building and Truck Loading,scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.md,Completed scenario evidence,Program Manager,Yes
+PUB-005,Case 01 — Warehouse,Close / Learn,Closeout and Benefits — Warehouse Truck-Loading Deployment,scenarios/01-humanoid-warehouse-deployment/CLOSEOUT_AND_BENEFITS.md,Completed scenario evidence,Program Manager,Yes
+PUB-006,Case 01 — Warehouse,Execute / Deploy,Deployment and Cutover Runbook,scenarios/01-humanoid-warehouse-deployment/DEPLOYMENT_RUNBOOK.md,Completed scenario evidence,Program Manager,Yes
+PUB-007,Case 01 — Warehouse,Plan / Design,Integration and Data Plan — Warehouse,scenarios/01-humanoid-warehouse-deployment/INTEGRATION_AND_DATA_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-008,Case 01 — Warehouse,Close / Learn,Operations Handoff,scenarios/01-humanoid-warehouse-deployment/OPERATIONS_HANDOFF.md,Completed scenario evidence,Program Manager,Yes
+PUB-009,Case 01 — Warehouse,Initiate / Discover,Project Charter — Humanoid Pallet-Building and Truck-Loading Deployment,scenarios/01-humanoid-warehouse-deployment/PROJECT_CHARTER.md,Completed scenario evidence,Program Manager,Yes
+PUB-010,Case 01 — Warehouse,Plan / Control,Raci,scenarios/01-humanoid-warehouse-deployment/RACI.csv,Completed scenario evidence,Program Manager,Yes
+PUB-011,Case 01 — Warehouse,Plan / Control,Raid,scenarios/01-humanoid-warehouse-deployment/RAID.csv,Completed scenario evidence,Program Manager,Yes
+PUB-012,Case 01 — Warehouse,Plan / Design,Requirements Traceability,scenarios/01-humanoid-warehouse-deployment/REQUIREMENTS_TRACEABILITY.csv,Completed scenario evidence,Program Manager,Yes
+PUB-013,Case 01 — Warehouse,Govern / Reference,Research and Assumptions — Warehouse Truck Loading,scenarios/01-humanoid-warehouse-deployment/RESEARCH_AND_ASSUMPTIONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-014,Case 01 — Warehouse,Assure / Validate,Safety and Acceptance Plan,scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.md,Completed scenario evidence,Program Manager,Yes
+PUB-015,Case 01 — Warehouse,Plan / Control,Schedule,scenarios/01-humanoid-warehouse-deployment/SCHEDULE.csv,Completed scenario evidence,Program Manager,Yes
+PUB-016,Case 01 — Warehouse,Plan / Design,Site Readiness Checklist — Warehouse,scenarios/01-humanoid-warehouse-deployment/SITE_READINESS_CHECKLIST.md,Completed scenario evidence,Program Manager,Yes
+PUB-017,Case 01 — Warehouse,Initiate / Discover,Statement of Work — Five-Humanoid Warehouse Deployment,scenarios/01-humanoid-warehouse-deployment/STATEMENT_OF_WORK.md,Completed scenario evidence,Program Manager,Yes
+PUB-018,Case 01 — Warehouse,Execute / Deploy,Training and Change Plan — Warehouse,scenarios/01-humanoid-warehouse-deployment/TRAINING_AND_CHANGE_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-019,Case 01 — Warehouse,Execute / Deploy,Weekly Status Report — Warehouse Deployment,scenarios/01-humanoid-warehouse-deployment/WEEKLY_STATUS_REPORT.md,Completed scenario evidence,Program Manager,Yes
+PUB-020,Case 02 — Security,Govern / Reference,Artifact Index — Quadruped Night-Security Deployment,scenarios/02-quadruped-security-deployment/ARTIFACT_INDEX.md,Completed scenario evidence,Program Manager,Yes
+PUB-021,Case 02 — Security,Plan / Control,Budget,scenarios/02-quadruped-security-deployment/BUDGET.csv,Completed scenario evidence,Program Manager,Yes
+PUB-022,Case 02 — Security,Initiate / Discover,Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security,scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.md,Completed scenario evidence,Program Manager,Yes
+PUB-023,Case 02 — Security,Initiate / Discover,Case Study 2 — Three Quadrupeds for Night Security,scenarios/02-quadruped-security-deployment/CASE_STUDY.md,Completed scenario evidence,Program Manager,Yes
+PUB-024,Case 02 — Security,Close / Learn,Closeout and Benefits — Quadruped Night Security,scenarios/02-quadruped-security-deployment/CLOSEOUT_AND_BENEFITS.md,Completed scenario evidence,Program Manager,Yes
+PUB-025,Case 02 — Security,Operate / Support,Incident and Escalation Plan — Night Security,scenarios/02-quadruped-security-deployment/INCIDENT_AND_ESCALATION_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-026,Case 02 — Security,Plan / Design,Integration and Data Plan — Night Security,scenarios/02-quadruped-security-deployment/INTEGRATION_AND_DATA_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-027,Case 02 — Security,Execute / Deploy,Security Robotics Operations Runbook,scenarios/02-quadruped-security-deployment/OPERATIONS_RUNBOOK.md,Completed scenario evidence,Program Manager,Yes
+PUB-028,Case 02 — Security,Assure / Validate,"Privacy, Safety, and Acceptance",scenarios/02-quadruped-security-deployment/PRIVACY_SAFETY_ACCEPTANCE.md,Completed scenario evidence,Program Manager,Yes
+PUB-029,Case 02 — Security,Execute / Deploy,Project and Deployment Plan,scenarios/02-quadruped-security-deployment/PROJECT_AND_DEPLOYMENT_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-030,Case 02 — Security,Plan / Control,Raci,scenarios/02-quadruped-security-deployment/RACI.csv,Completed scenario evidence,Program Manager,Yes
+PUB-031,Case 02 — Security,Plan / Control,Raid,scenarios/02-quadruped-security-deployment/RAID.csv,Completed scenario evidence,Program Manager,Yes
+PUB-032,Case 02 — Security,Plan / Design,Requirements Traceability,scenarios/02-quadruped-security-deployment/REQUIREMENTS_TRACEABILITY.csv,Completed scenario evidence,Program Manager,Yes
+PUB-033,Case 02 — Security,Govern / Reference,Research and Assumptions — Quadruped Night Security,scenarios/02-quadruped-security-deployment/RESEARCH_AND_ASSUMPTIONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-034,Case 02 — Security,Plan / Control,Schedule,scenarios/02-quadruped-security-deployment/SCHEDULE.csv,Completed scenario evidence,Program Manager,Yes
+PUB-035,Case 02 — Security,Plan / Design,Site Readiness Checklist — Night Security,scenarios/02-quadruped-security-deployment/SITE_READINESS_CHECKLIST.md,Completed scenario evidence,Program Manager,Yes
+PUB-036,Case 02 — Security,Initiate / Discover,Statement of Work — Three-Quadruped Security Deployment,scenarios/02-quadruped-security-deployment/STATEMENT_OF_WORK.md,Completed scenario evidence,Program Manager,Yes
+PUB-037,Case 02 — Security,Execute / Deploy,Training and Change Plan — Night Security,scenarios/02-quadruped-security-deployment/TRAINING_AND_CHANGE_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-038,Case 02 — Security,Execute / Deploy,Weekly Status Report — Quadruped Deployment,scenarios/02-quadruped-security-deployment/WEEKLY_STATUS_REPORT.md,Completed scenario evidence,Program Manager,Yes
+PUB-039,Case 03 — New product,Govern / Reference,Artifact Index — AD-01 New Robot Through First Sale,scenarios/03-new-robot-first-sale/ARTIFACT_INDEX.md,Completed scenario evidence,Program Manager,Yes
+PUB-040,Case 03 — New product,Plan / Control,Budget And Headcount,scenarios/03-new-robot-first-sale/BUDGET_AND_HEADCOUNT.csv,Completed scenario evidence,Program Manager,Yes
+PUB-041,Case 03 — New product,Initiate / Discover,Business Case — AD-01 Mobile Manipulator Through First Sale,scenarios/03-new-robot-first-sale/BUSINESS_CASE.md,Completed scenario evidence,Program Manager,Yes
+PUB-042,Case 03 — New product,Initiate / Discover,Case Study 3 — Develop a New Robot Through First Sale,scenarios/03-new-robot-first-sale/CASE_STUDY.md,Completed scenario evidence,Program Manager,Yes
+PUB-043,Case 03 — New product,Close / Learn,Closeout and Lessons — AD-01 First Sale,scenarios/03-new-robot-first-sale/CLOSEOUT_AND_LESSONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-044,Case 03 — New product,Govern / Reference,Commercial Launch Plan — AD-01,scenarios/03-new-robot-first-sale/COMMERCIAL_LAUNCH_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-045,Case 03 — New product,Initiate / Discover,Customer Discovery Plan — AD-01,scenarios/03-new-robot-first-sale/CUSTOMER_DISCOVERY_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-046,Case 03 — New product,Govern / Reference,First Customer Launch Plan,scenarios/03-new-robot-first-sale/FIRST_CUSTOMER_LAUNCH.md,Completed scenario evidence,Program Manager,Yes
+PUB-047,Case 03 — New product,Govern / Reference,New Product Introduction Stage-Gate Plan,scenarios/03-new-robot-first-sale/NPI_STAGE_GATE_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-048,Case 03 — New product,Plan / Design,AD-01 Product Brief and Product Requirements Document,scenarios/03-new-robot-first-sale/PRODUCT_BRIEF_AND_PRD.md,Completed scenario evidence,Program Manager,Yes
+PUB-049,Case 03 — New product,Plan / Design,Product Roadmap — AD-01,scenarios/03-new-robot-first-sale/PRODUCT_ROADMAP.md,Completed scenario evidence,Program Manager,Yes
+PUB-050,Case 03 — New product,Plan / Control,Raci,scenarios/03-new-robot-first-sale/RACI.csv,Completed scenario evidence,Program Manager,Yes
+PUB-051,Case 03 — New product,Plan / Control,Raid,scenarios/03-new-robot-first-sale/RAID.csv,Completed scenario evidence,Program Manager,Yes
+PUB-052,Case 03 — New product,Operate / Support,Reliability and Serviceability Plan — AD-01,scenarios/03-new-robot-first-sale/RELIABILITY_SERVICEABILITY_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-053,Case 03 — New product,Govern / Reference,Research and Assumptions — AD-01,scenarios/03-new-robot-first-sale/RESEARCH_AND_ASSUMPTIONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-054,Case 03 — New product,Plan / Control,Schedule,scenarios/03-new-robot-first-sale/SCHEDULE.csv,Completed scenario evidence,Program Manager,Yes
+PUB-055,Case 03 — New product,Plan / Control,Supplier and Manufacturing Readiness — AD-01,scenarios/03-new-robot-first-sale/SUPPLIER_MANUFACTURING_READINESS.md,Completed scenario evidence,Program Manager,Yes
+PUB-056,Case 03 — New product,Plan / Design,System Requirements Traceability,scenarios/03-new-robot-first-sale/SYSTEM_REQUIREMENTS_TRACEABILITY.csv,Completed scenario evidence,Program Manager,Yes
+PUB-057,Case 03 — New product,Assure / Validate,Verification and Validation Strategy,scenarios/03-new-robot-first-sale/VERIFICATION_VALIDATION.md,Completed scenario evidence,Program Manager,Yes
+PUB-058,Case 03 — New product,Execute / Deploy,Weekly Status Report — AD-01 New Product Introduction,scenarios/03-new-robot-first-sale/WEEKLY_STATUS_REPORT.md,Completed scenario evidence,Program Manager,Yes
+PUB-059,Case 04 — Support,Govern / Reference,Artifact Index — Robotics Support Operations,scenarios/04-robotics-support-operations/ARTIFACT_INDEX.md,Completed scenario evidence,Program Manager,Yes
+PUB-060,Case 04 — Support,Plan / Control,Budget,scenarios/04-robotics-support-operations/BUDGET.csv,Completed scenario evidence,Program Manager,Yes
+PUB-061,Case 04 — Support,Operate / Support,Business Continuity — Robotics Support,scenarios/04-robotics-support-operations/BUSINESS_CONTINUITY.md,Completed scenario evidence,Program Manager,Yes
+PUB-062,Case 04 — Support,Initiate / Discover,Case Study 4 — Build Robotics Support Operations,scenarios/04-robotics-support-operations/CASE_STUDY.md,Completed scenario evidence,Program Manager,Yes
+PUB-063,Case 04 — Support,Plan / Design,Closeout and Maturity Roadmap — Robotics Support,scenarios/04-robotics-support-operations/CLOSEOUT_AND_MATURITY_ROADMAP.md,Completed scenario evidence,Program Manager,Yes
+PUB-064,Case 04 — Support,Execute / Deploy,Customer Communications — Robotics Support,scenarios/04-robotics-support-operations/CUSTOMER_COMMUNICATIONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-065,Case 04 — Support,Execute / Deploy,Diagnostic and Troubleshooting Runbook,scenarios/04-robotics-support-operations/DIAGNOSTIC_RUNBOOK.md,Completed scenario evidence,Program Manager,Yes
+PUB-066,Case 04 — Support,Govern / Reference,Implementation Backlog,scenarios/04-robotics-support-operations/IMPLEMENTATION_BACKLOG.csv,Completed scenario evidence,Program Manager,Yes
+PUB-067,Case 04 — Support,Operate / Support,"Incident, Problem, and Change Management",scenarios/04-robotics-support-operations/INCIDENT_PROBLEM_CHANGE.md,Completed scenario evidence,Program Manager,Yes
+PUB-068,Case 04 — Support,Operate / Support,Knowledge Management — Robotics Support,scenarios/04-robotics-support-operations/KNOWLEDGE_MANAGEMENT.md,Completed scenario evidence,Program Manager,Yes
+PUB-069,Case 04 — Support,Govern / Reference,Robotics Service KPI Scorecard,scenarios/04-robotics-support-operations/KPI_SCORECARD.md,Completed scenario evidence,Program Manager,Yes
+PUB-070,Case 04 — Support,Operate / Support,Observability and Data Plan — Robotics Support,scenarios/04-robotics-support-operations/OBSERVABILITY_AND_DATA_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-071,Case 04 — Support,Govern / Reference,Operating Baseline and Cost Assumptions — Robotics Support,scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md,Completed scenario evidence,Program Manager,Yes
+PUB-072,Case 04 — Support,Govern / Reference,Robotics Support Operating Model,scenarios/04-robotics-support-operations/OPERATING_MODEL.md,Completed scenario evidence,Program Manager,Yes
+PUB-073,Case 04 — Support,Plan / Control,Raci,scenarios/04-robotics-support-operations/RACI.csv,Completed scenario evidence,Program Manager,Yes
+PUB-074,Case 04 — Support,Operate / Support,"RMA, Parts, and Field Service Process",scenarios/04-robotics-support-operations/RMA_AND_PARTS.md,Completed scenario evidence,Program Manager,Yes
+PUB-075,Case 04 — Support,Assure / Validate,Security and Remote Access — Robotics Support,scenarios/04-robotics-support-operations/SECURITY_AND_REMOTE_ACCESS.md,Completed scenario evidence,Program Manager,Yes
+PUB-076,Case 04 — Support,Operate / Support,Robotics Service Catalog,scenarios/04-robotics-support-operations/SERVICE_CATALOG.md,Completed scenario evidence,Program Manager,Yes
+PUB-077,Case 04 — Support,Govern / Reference,Severity and Service Targets,scenarios/04-robotics-support-operations/SEVERITY_SLA.md,Completed scenario evidence,Program Manager,Yes
+PUB-078,Case 04 — Support,Govern / Reference,Staffing and Capacity Plan — Robotics Support,scenarios/04-robotics-support-operations/STAFFING_AND_CAPACITY_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-079,Case 04 — Support,Operate / Support,Support Readiness Gate,scenarios/04-robotics-support-operations/SUPPORT_READINESS_CHECKLIST.md,Completed scenario evidence,Program Manager,Yes
+PUB-080,Case 04 — Support,Govern / Reference,Tool Selection and Cost Model — Robotics Support,scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.md,Completed scenario evidence,Program Manager,Yes
+PUB-081,Case 04 — Support,Execute / Deploy,Final Status Report — Support Operations Build,scenarios/04-robotics-support-operations/WEEKLY_STATUS_REPORT.md,Completed scenario evidence,Program Manager,Yes
+PUB-082,Portfolio controls,Close / Learn,Benefits Realization and Project Closeout,governance/BENEFITS_AND_CLOSEOUT.md,Completed scenario evidence,Program Manager,Yes
+PUB-083,Portfolio controls,Govern / Reference,Change and Configuration Control,governance/CHANGE_CONFIGURATION_CONTROL.md,Completed scenario evidence,Program Manager,Yes
+PUB-084,Portfolio controls,Execute / Deploy,Communications and Meeting Plan,governance/COMMUNICATIONS_AND_MEETING_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-085,Portfolio controls,Assure / Validate,Cybersecurity and Data Governance,governance/CYBERSECURITY_DATA_GOVERNANCE.md,Completed scenario evidence,Program Manager,Yes
+PUB-086,Portfolio controls,Plan / Control,Procurement and Vendor Management,governance/PROCUREMENT_VENDOR_MANAGEMENT.md,Completed scenario evidence,Program Manager,Yes
+PUB-087,Portfolio controls,Govern / Reference,Robotics Program Management Plan,governance/PROGRAM_MANAGEMENT_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-088,Portfolio controls,Assure / Validate,Quality Management Plan,governance/QUALITY_MANAGEMENT_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-089,Portfolio controls,Govern / Reference,Robotics Program Governance Library,governance/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-090,Portfolio controls,Plan / Control,Resource and Capacity Plan,governance/RESOURCE_AND_CAPACITY_PLAN.md,Completed scenario evidence,Program Manager,Yes
+PUB-091,Portfolio controls,Execute / Deploy,"Training, Change, and Adoption Plan",governance/TRAINING_CHANGE_ADOPTION.md,Completed scenario evidence,Program Manager,Yes
+PUB-092,Portfolio controls,Govern / Reference,Portfolio purpose,portfolio/EXECUTIVE_PORTFOLIO.md,Completed scenario evidence,Program Manager,Yes
+PUB-093,Portfolio controls,Govern / Reference,Quadruped Night-Security Operations Demo,simulations/quadruped_security/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-094,Portfolio controls,Govern / Reference,MuJoCo Operations Demonstrations,simulations/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-095,Portfolio controls,Govern / Reference,Warehouse Palletizing and Truck-Loading Demo — Version 4,simulations/warehouse_humanoids/README.md,Completed scenario evidence,Program Manager,Yes
+PUB-096,Portfolio controls,Plan / Design,Robotics Support Reference Architecture,tools/REFERENCE_ARCHITECTURE.md,Completed scenario evidence,Program Manager,Yes
+PUB-097,Portfolio controls,Govern / Reference,Research Sources,tools/RESEARCH_SOURCES.md,Completed scenario evidence,Program Manager,Yes
+PUB-098,Portfolio controls,Govern / Reference,Robotics Support and Troubleshooting Tool Comparison,tools/TOOL_COMPARISON.md,Completed scenario evidence,Program Manager,Yes

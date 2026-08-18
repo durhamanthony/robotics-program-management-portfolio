@@ -1,0 +1,12 @@
+Capability,Executive Sponsor,Service Ops,Customer Support,Robotics L2,Field Service,Engineering,Product,IT Security,Supply Chain
+Service strategy and funding,A,R,C,C,C,C,C,C,C
+Case intake and communication,I,A,R,C,I,I,I,I,I
+Remote diagnostics and recovery,I,C,C,A,C,C,I,C,I
+Field dispatch and repair,I,C,I,C,A,C,I,C,C
+Engineering defect and release,I,C,I,C,C,A,C,C,I
+Problem and reliability management,I,A,C,R,R,R,C,C,C
+Knowledge and training,I,A,R,R,R,C,C,C,I
+Remote access and security incident,I,C,I,C,C,C,I,A,I
+Parts depot and RMA,I,C,I,C,R,C,I,I,A
+Release and deployment support readiness,A,R,C,C,C,C,R,C,C
+
