@@ -4,7 +4,7 @@ This package assumes Salesforce Customer Relationship Management, Jira engineeri
 
 | Capability | Artifact | Decision or evidence supported |
 |---|---|---|
-| Strategy | [Case study](CASE_STUDY.md), [operating baseline and cost assumptions](OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md), [operating model](OPERATING_MODEL.md), [service catalog](SERVICE_CATALOG.md), [maturity roadmap](CLOSEOUT_AND_MATURITY_ROADMAP.md) | Installed-base demand, target organization, cost and rollout |
+| Strategy | [Case study](CASE_STUDY.md), [operating baseline and cost assumptions](OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md), [basis of estimate and sensitivity](BASIS_OF_ESTIMATE_AND_SENSITIVITY.md), [operating model](OPERATING_MODEL.md), [service catalog](SERVICE_CATALOG.md), [maturity roadmap](CLOSEOUT_AND_MATURITY_ROADMAP.md) | Installed-base demand, target organization, cost and rollout |
 | Tools/data | [Tool selection/cost](TOOL_SELECTION_AND_COST.md), [observability/data](OBSERVABILITY_AND_DATA_PLAN.md), [security/remote access](SECURITY_AND_REMOTE_ACCESS.md) | System of record, evidence and access |
 | Operations | [Severity/SLA](SEVERITY_SLA.md), [incident/problem/change](INCIDENT_PROBLEM_CHANGE.md), [diagnostic runbook](DIAGNOSTIC_RUNBOOK.md), [customer communications](CUSTOMER_COMMUNICATIONS.md) | Safe restoration and accountability |
 | Field/parts | [Return Material Authorization and parts](RMA_AND_PARTS.md), [staffing/capacity](STAFFING_AND_CAPACITY_PLAN.md), [continuity](BUSINESS_CONTINUITY.md) | Field response and resilience |

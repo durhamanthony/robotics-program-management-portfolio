@@ -92,7 +92,7 @@ def check_public_boundaries(errors: list[str]) -> None:
 
 def check_dashboards(errors: list[str]) -> None:
     pages = (
-        "warehouse-humanoid-deployment.html",
+        "retail-humanoid-backroom.html",
         "quadruped-security-deployment.html",
         "ad01-new-robot-first-sale.html",
         "robotics-support-operations.html",
@@ -109,10 +109,10 @@ def check_dashboards(errors: list[str]) -> None:
 
 def check_scenarios(errors: list[str]) -> None:
     required = {
-        "01-humanoid-warehouse-deployment": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "CLOSEOUT_AND_BENEFITS.md"),
-        "02-quadruped-security-deployment": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "INCIDENT_AND_ESCALATION_PLAN.md"),
-        "03-new-robot-first-sale": ("ARTIFACT_INDEX.md", "BUSINESS_CASE.md", "RESEARCH_AND_ASSUMPTIONS.md", "PRODUCT_ROADMAP.md", "SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "COMMERCIAL_LAUNCH_PLAN.md"),
-        "04-robotics-support-operations": ("ARTIFACT_INDEX.md", "OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "SERVICE_CATALOG.md", "TOOL_SELECTION_AND_COST.md", "OBSERVABILITY_AND_DATA_PLAN.md", "BUSINESS_CONTINUITY.md"),
+        "01-humanoid-retail-backroom": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "CLOSEOUT_AND_BENEFITS.md"),
+        "02-quadruped-security-deployment": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "INCIDENT_AND_ESCALATION_PLAN.md"),
+        "03-new-robot-first-sale": ("ARTIFACT_INDEX.md", "BUSINESS_CASE.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "PRODUCT_ROADMAP.md", "SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "COMMERCIAL_LAUNCH_PLAN.md"),
+        "04-robotics-support-operations": ("ARTIFACT_INDEX.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "SERVICE_CATALOG.md", "TOOL_SELECTION_AND_COST.md", "OBSERVABILITY_AND_DATA_PLAN.md", "BUSINESS_CONTINUITY.md"),
     }
     for scenario, files in required.items():
         for name in files:
@@ -181,6 +181,15 @@ def check_media(errors: list[str], warnings: list[str]) -> None:
             errors.append(f"File exceeds 50 MB public-portfolio guardrail: {path.relative_to(ROOT)}")
 
 
+def check_navigation(errors: list[str]) -> None:
+    for path in DOCS.rglob("*.html"):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if "⌂ Home" not in text:
+            errors.append(f"Generated page lacks explicit Home control: {path.relative_to(ROOT)}")
+        if "← Back" not in text:
+            errors.append(f"Generated page lacks explicit Back control: {path.relative_to(ROOT)}")
+
+
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -195,6 +204,7 @@ def main() -> int:
     check_recruiter_corrections(errors)
     check_csv(errors)
     check_media(errors, warnings)
+    check_navigation(errors)
     print(f"Validation summary: {len(errors)} error(s), {len(warnings)} warning(s)")
     for warning in warnings:
         print(f"WARNING: {warning}")

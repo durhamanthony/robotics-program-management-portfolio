@@ -1,83 +1,91 @@
 [
   {
-    "title": "Artifact Index \u2014 Humanoid Warehouse Deployment",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/ARTIFACT_INDEX.html"
+    "title": "Artifact Index \u2014 Retail Backroom Humanoid Deployment",
+    "path": "library/scenarios/01-humanoid-retail-backroom/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Basis of Estimate and Sensitivity \u2014 Retail Backroom Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
     "title": "Budget",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/BUDGET.html"
+    "path": "library/scenarios/01-humanoid-retail-backroom/BUDGET.html"
   },
   {
-    "title": "Business Case and TCO (Total Cost of Ownership) \u2014 Warehouse Truck Loading",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/BUSINESS_CASE_AND_TCO.html"
+    "title": "Business Case and Total Cost of Ownership \u2014 Retail Backroom Humanoids",
+    "path": "library/scenarios/01-humanoid-retail-backroom/BUSINESS_CASE_AND_TCO.html"
   },
   {
-    "title": "Case Study 1 \u2014 Five Humanoids for Pallet Building and Truck Loading",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.html"
+    "title": "Case Study 1 \u2014 Retail Backroom Humanoid Fulfillment",
+    "path": "library/scenarios/01-humanoid-retail-backroom/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Benefits \u2014 Warehouse Truck-Loading Deployment",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/CLOSEOUT_AND_BENEFITS.html"
+    "title": "Closeout and Benefits Report \u2014 Retail Backroom Humanoid Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/CLOSEOUT_AND_BENEFITS.html"
   },
   {
-    "title": "Deployment and Cutover Runbook",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/DEPLOYMENT_RUNBOOK.html"
+    "title": "Deployment Runbook \u2014 Retail Backroom Humanoid Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/DEPLOYMENT_RUNBOOK.html"
   },
   {
-    "title": "Integration and Data Plan \u2014 Warehouse",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/INTEGRATION_AND_DATA_PLAN.html"
+    "title": "Integration and Data Plan \u2014 Retail Backroom Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/INTEGRATION_AND_DATA_PLAN.html"
   },
   {
-    "title": "Operations Handoff",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/OPERATIONS_HANDOFF.html"
+    "title": "Operations Handoff \u2014 Retail Backroom Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/OPERATIONS_HANDOFF.html"
   },
   {
-    "title": "Project Charter \u2014 Humanoid Pallet-Building and Truck-Loading Deployment",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/PROJECT_CHARTER.html"
+    "title": "Project Charter \u2014 Two Humanoids for Retail Backroom Fulfillment",
+    "path": "library/scenarios/01-humanoid-retail-backroom/PROJECT_CHARTER.html"
   },
   {
     "title": "Raci",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/RACI.html"
+    "path": "library/scenarios/01-humanoid-retail-backroom/RACI.html"
   },
   {
     "title": "Raid",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/RAID.html"
+    "path": "library/scenarios/01-humanoid-retail-backroom/RAID.html"
   },
   {
     "title": "Requirements Traceability",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/REQUIREMENTS_TRACEABILITY.html"
+    "path": "library/scenarios/01-humanoid-retail-backroom/REQUIREMENTS_TRACEABILITY.html"
   },
   {
-    "title": "Research and Assumptions \u2014 Warehouse Truck Loading",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/RESEARCH_AND_ASSUMPTIONS.html"
+    "title": "Research and Assumptions \u2014 Retail Backroom Humanoid Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/RESEARCH_AND_ASSUMPTIONS.html"
   },
   {
-    "title": "Safety and Acceptance Plan",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.html"
+    "title": "Safety and Acceptance Plan \u2014 Retail Backroom Humanoids",
+    "path": "library/scenarios/01-humanoid-retail-backroom/SAFETY_AND_ACCEPTANCE.html"
   },
   {
     "title": "Schedule",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/SCHEDULE.html"
+    "path": "library/scenarios/01-humanoid-retail-backroom/SCHEDULE.html"
   },
   {
-    "title": "Site Readiness Checklist \u2014 Warehouse",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/SITE_READINESS_CHECKLIST.html"
+    "title": "Site Readiness Checklist \u2014 Meridian Store 214",
+    "path": "library/scenarios/01-humanoid-retail-backroom/SITE_READINESS_CHECKLIST.html"
   },
   {
-    "title": "Statement of Work \u2014 Five-Humanoid Warehouse Deployment",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/STATEMENT_OF_WORK.html"
+    "title": "Statement of Work \u2014 Retail Backroom Humanoid Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/STATEMENT_OF_WORK.html"
   },
   {
-    "title": "Training and Change Plan \u2014 Warehouse",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/TRAINING_AND_CHANGE_PLAN.html"
+    "title": "Training and Change Plan \u2014 Retail Backroom Pilot",
+    "path": "library/scenarios/01-humanoid-retail-backroom/TRAINING_AND_CHANGE_PLAN.html"
   },
   {
-    "title": "Weekly Status Report \u2014 Warehouse Deployment",
-    "path": "library/scenarios/01-humanoid-warehouse-deployment/WEEKLY_STATUS_REPORT.html"
+    "title": "Weekly Status Report \u2014 Week 20 Closeout",
+    "path": "library/scenarios/01-humanoid-retail-backroom/WEEKLY_STATUS_REPORT.html"
   },
   {
     "title": "Artifact Index \u2014 Quadruped Night-Security Deployment",
     "path": "library/scenarios/02-quadruped-security-deployment/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Basis of Estimate and Sensitivity \u2014 Quadruped Security",
+    "path": "library/scenarios/02-quadruped-security-deployment/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
     "title": "Budget",
@@ -154,6 +162,10 @@
   {
     "title": "Artifact Index \u2014 AD-01 New Robot Through First Sale",
     "path": "library/scenarios/03-new-robot-first-sale/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Basis of Estimate and Sensitivity \u2014 AD-01 New Product Introduction",
+    "path": "library/scenarios/03-new-robot-first-sale/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
     "title": "Budget And Headcount",
@@ -234,6 +246,10 @@
   {
     "title": "Artifact Index \u2014 Robotics Support Operations",
     "path": "library/scenarios/04-robotics-support-operations/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Basis of Estimate and Sensitivity \u2014 Robotics Support Operations",
+    "path": "library/scenarios/04-robotics-support-operations/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
     "title": "Budget",
@@ -340,6 +356,10 @@
     "path": "library/governance/CYBERSECURITY_DATA_GOVERNANCE.html"
   },
   {
+    "title": "Number Assurance and Evidence Rules",
+    "path": "library/governance/NUMBER_ASSURANCE_AND_EVIDENCE_RULES.html"
+  },
+  {
     "title": "Procurement and Vendor Management",
     "path": "library/governance/PROCUREMENT_VENDOR_MANAGEMENT.html"
   },
@@ -368,6 +388,10 @@
     "path": "library/portfolio/EXECUTIVE_PORTFOLIO.html"
   },
   {
+    "title": "MuJoCo Demo \u2014 AD-01 New Product Introduction",
+    "path": "library/simulations/new_robot_npi/README.html"
+  },
+  {
     "title": "Quadruped Night-Security Operations Demo",
     "path": "library/simulations/quadruped_security/README.html"
   },
@@ -376,8 +400,12 @@
     "path": "library/simulations/README.html"
   },
   {
-    "title": "Warehouse Palletizing and Truck-Loading Demo \u2014 Version 4",
-    "path": "library/simulations/warehouse_humanoids/README.html"
+    "title": "MuJoCo Demo \u2014 Retail Backroom Humanoid Fulfillment",
+    "path": "library/simulations/retail_humanoids/README.html"
+  },
+  {
+    "title": "Support Lab \u2014 Robotics Incident Triage",
+    "path": "library/simulations/support_lab/README.html"
   },
   {
     "title": "Robotics Support Reference Architecture",

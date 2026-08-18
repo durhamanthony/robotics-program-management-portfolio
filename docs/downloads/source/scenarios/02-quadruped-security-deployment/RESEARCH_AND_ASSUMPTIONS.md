@@ -4,8 +4,8 @@
 
 | Topic | Source | Portfolio use | Limitation |
 |---|---|---|---|
-| Industrial quadruped price | [Unitree B2-W](https://shop.unitree.com/products/unitree-b2-w) | $100,000 public configuration reference | The listing also says to contact sales; no security payload, dock, support, tax, customs, integration, or suitability is assumed |
-| Industrial quadruped terrain | [Unitree B2](https://www.unitree.com/b2) | Category feasibility screening for stairs and uneven terrain | Manufacturer claim; customer route testing remains mandatory |
+| Industrial quadruped price | [Unitree B2](https://shop.unitree.com/zh-ca/products/unitree-b2) | $100,000 public base-platform reference | The listing also says to contact sales; no security payload, dock, support, tax, customs, integration, or suitability is assumed |
+| Industrial quadruped terrain | [Unitree B2](https://www.unitree.com/mobile/b2/) | Category feasibility screening for stairs and uneven terrain | Manufacturer claim; customer route testing remains mandatory |
 | Quadruped operating envelope | [Boston Dynamics Spot](https://bostondynamics.com/products/spot/) | Independent category reference for slope, step, ingress protection, runtime, payload, and sensing | Not a quote and not the selected product |
 | Existing human infrastructure | [Agility logistics product description](https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work) | Supports the limited claim that legged/human-form robots may reduce retrofit needs | Does not mean zero site modification |
 | Guard wage reasonableness | [BLS Security Guards, May 2023](https://www.bls.gov/oes/2023/may/oes339032.htm) | Tests whether the fictional $45/hour contractor invoice is directionally plausible after burden, overhead, insurance, and margin | Customer invoice remains required |

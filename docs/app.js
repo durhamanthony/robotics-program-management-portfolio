@@ -1,4 +1,15 @@
 (function () {
+  document.querySelectorAll("[data-go-back]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const fallback = button.dataset.fallback || "index.html";
+      if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = fallback;
+      }
+    });
+  });
+
   const search = document.getElementById("artifact-search");
   if (search) {
     const items = [...document.querySelectorAll(".artifact-item")];

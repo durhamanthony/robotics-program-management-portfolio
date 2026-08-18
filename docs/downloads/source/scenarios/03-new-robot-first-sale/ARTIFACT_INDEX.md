@@ -4,7 +4,7 @@ This package links the customer, product, engineering, manufacturing, service, c
 
 | Lifecycle | Artifact | Decision or evidence supported |
 |---|---|---|
-| Discover | [Case study](CASE_STUDY.md), [business case](BUSINESS_CASE.md), [research/assumptions](RESEARCH_AND_ASSUMPTIONS.md), [customer discovery](CUSTOMER_DISCOVERY_PLAN.md) | Problem, users, customer value, investment and source limits |
+| Discover | [Case study](CASE_STUDY.md), [business case](BUSINESS_CASE.md), [basis of estimate and sensitivity](BASIS_OF_ESTIMATE_AND_SENSITIVITY.md), [research/assumptions](RESEARCH_AND_ASSUMPTIONS.md), [customer discovery](CUSTOMER_DISCOVERY_PLAN.md) | Problem, users, customer value, investment and source limits |
 | Define | [Product brief/Product Requirements Document](PRODUCT_BRIEF_AND_PRD.md), [roadmap](PRODUCT_ROADMAP.md), [requirements traceability](SYSTEM_REQUIREMENTS_TRACEABILITY.csv) | Product boundary, sequencing, testable baseline |
 | Develop | [Stage-gate plan](NPI_STAGE_GATE_PLAN.md), [schedule](SCHEDULE.csv), [RACI](RACI.csv), [RAID](RAID.csv), [budget/headcount](BUDGET_AND_HEADCOUNT.csv) | Integrated delivery control |
 | Validate | [Verification and Validation](VERIFICATION_VALIDATION.md), [supplier/manufacturing](SUPPLIER_MANUFACTURING_READINESS.md), [reliability/serviceability](RELIABILITY_SERVICEABILITY_PLAN.md) | Evidence for Engineering Verification Test, Design Verification Test, Production Validation Test, and support |

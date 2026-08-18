@@ -8,12 +8,12 @@ Public website: `https://durhamanthony.github.io/robotics-program-management-por
 
 The GitHub Pages website opens with four complete operating scenarios:
 
-1. Five humanoids deployed for warehouse palletizing and outbound truck loading.
+1. Two humanoids piloted for employee-facing retail-backroom fulfillment in an unchanged legacy store.
 2. Three quadrupeds deployed for human-supervised night security.
 3. The AD-01 mobile manipulator developed through its first customer sale.
 4. A robotics support and field-operations model for 250 robots at 60 sites.
 
-Each scenario has an executive dashboard with scope, acceptance results, schedule, budget and Total Cost of Ownership (TCO), top risks, team accountability, browser-based simulation evidence, completed project artifacts, and formal closeout.
+Each scenario has an executive dashboard with scope, acceptance results, schedule, budget and Total Cost of Ownership (TCO), top risks, team accountability, browser-playable workflow evidence, completed project artifacts, and formal closeout.
 
 ## Repository map
 
@@ -21,7 +21,7 @@ Each scenario has an executive dashboard with scope, acceptance results, schedul
 - `scenarios/` — completed scenario documents and data.
 - `portfolio/scenario_dashboard_data.json` — dashboard source data.
 - `media/videos/` — browser-playable MP4 demonstrations.
-- `simulations/` — MuJoCo source used to create demonstration evidence.
+- `simulations/` — MuJoCo source for the retail and security cases, plus documented evidence plans for the product and support workflows.
 - `tools/` — robotics support tool research and reference architecture.
 - `governance/` — selected cross-program controls and the generated public artifact register.
 - `scripts/` — repeatable site builder and privacy/link validator.

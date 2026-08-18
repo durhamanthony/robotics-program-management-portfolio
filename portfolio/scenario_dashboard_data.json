@@ -2,88 +2,90 @@
   "portfolio_notice": "These simulations are fictitious generic scenarios for demonstration purposes only.",
   "scenarios": [
     {
-      "slug": "warehouse-humanoid-deployment",
+      "slug": "retail-humanoid-backroom",
       "code": "CASE 01",
-      "title": "Five Humanoids — Warehouse Truck Loading",
-      "client": "Northstar Distribution Center",
-      "program_type": "Customer deployment",
-      "status": "Closed — accepted for controlled two-shift operation",
-      "health": "Green",
+      "title": "Two Humanoids — Retail Backroom Fulfillment",
+      "client": "Meridian Department Store",
+      "program_type": "Legacy-site retail deployment",
+      "status": "Closed — operations accepted; chain rollout held at financial gate",
+      "health": "Amber",
       "role": "Deployment Program Manager",
-      "duration": "24 weeks",
-      "budget": "$1.346M installed",
-      "tco": "$2.226M five-year TCO",
-      "summary": "Deliver five humanoids from signed order through site acceptance, controlled pilot, truck-loading cutover, hypercare, and operations handoff. Each robot works in a separate lane, receives an approved carton at a conveyor, and places it on a floor pallet. A robot-operated forklift loads each completed seven-carton pallet into an outbound truck.",
-      "decision": "Northstar accepted the cell for controlled two-shift use after all mandatory safety tests passed and the 14-day hypercare window exceeded the contracted throughput, mission-success, intervention, damage, and availability thresholds. A second cell remains conditional on Finance validating at least $445,200 of annual gross capacity value using actual labor and volume data.",
+      "duration": "20 weeks including 30-day pilot",
+      "budget": "$640K pilot installed",
+      "tco": "$1.730M five-year TCO",
+      "summary": "Deploy two humanoid robots in an unchanged, employee-only department-store backroom. A sales associate submits a stock-keeping unit, size, and color request from a tablet. A robot walks through existing human aisles and doors, uses the short stair route where required, retrieves a shoe box or already-hung garment, and delivers it to an employee handoff point. The same fleet performs put-away and cycle-count work between requests. Tangled hangers, ladders, electrical work, and customer-floor operation remain human tasks.",
+      "decision": "The 30-day pilot passed the safety, retrieval, wait-time, inventory-accuracy, damage, and intervention gates, so Meridian accepted the operating procedure and support handoff. Finance did not authorize chain rollout: measured annual gross value was $184,468 versus the $346,000 annual value required for five-year payback at the current planning cost. A second-site decision requires a binding vendor quote and either lower recurring cost or independently measured value at or above $346,000 per year.",
       "metrics": [
-        {"label": "Throughput", "value": "231 cartons/hour", "note": "Target: at least 225 for two consecutive hours", "state": "pass"},
-        {"label": "Mission success", "value": "98.6%", "note": "Target: at least 98%", "state": "pass"},
-        {"label": "Interventions", "value": "1.4 per 100", "note": "Limit: no more than 2 per 100", "state": "pass"},
-        {"label": "14-day availability", "value": "96.2%", "note": "Target: at least 95%", "state": "pass"},
-        {"label": "Damage / mis-sort", "value": "0.3%", "note": "Limit: no more than 0.5%", "state": "pass"},
-        {"label": "Budget variance", "value": "$0", "note": "$1.346M authorized and spent", "state": "pass"}
+        {"label": "Retrieval mission success", "value": "98.1%", "note": "Fictional pilot result; target: at least 97%", "state": "pass"},
+        {"label": "Median associate wait", "value": "3.4 minutes", "note": "Fictional baseline: 7.1 minutes; target: no more than 4", "state": "pass"},
+        {"label": "Inventory location accuracy", "value": "98.7%", "note": "Fictional baseline: 94.2%; target: at least 98%", "state": "pass"},
+        {"label": "Interventions", "value": "2.2 per 100", "note": "Fictional pilot result; limit: no more than 3", "state": "pass"},
+        {"label": "Damage or wrong item", "value": "0.2%", "note": "Fictional pilot result; limit: no more than 0.5%", "state": "pass"},
+        {"label": "Five-year value gap", "value": "$807,662", "note": "Calculated shortfall at current planning inputs", "state": "watch"}
       ],
       "phases": [
-        {"name": "Contract and discovery", "start": 1, "end": 4, "status": "Complete"},
-        {"name": "Design and safety", "start": 4, "end": 10, "status": "Complete"},
-        {"name": "Build and Factory Acceptance Test", "start": 9, "end": 13, "status": "Complete"},
-        {"name": "Site readiness", "start": 8, "end": 15, "status": "Complete"},
-        {"name": "Install and commission", "start": 16, "end": 18, "status": "Complete"},
-        {"name": "Site/User Acceptance Testing", "start": 18, "end": 19, "status": "Complete"},
-        {"name": "Pilot and hypercare", "start": 20, "end": 23, "status": "Complete"},
-        {"name": "Handoff and closeout", "start": 24, "end": 24, "status": "Complete"}
+        {"name": "Workflow observation and baseline", "start": 1, "end": 3, "status": "Complete"},
+        {"name": "Use-case, safety, and privacy design", "start": 2, "end": 6, "status": "Complete"},
+        {"name": "Integration and Factory Acceptance Test", "start": 5, "end": 9, "status": "Complete"},
+        {"name": "Site readiness and employee change plan", "start": 6, "end": 10, "status": "Complete"},
+        {"name": "Install, map, and commission", "start": 11, "end": 12, "status": "Complete"},
+        {"name": "Site Acceptance Test and shadow mode", "start": 13, "end": 14, "status": "Complete"},
+        {"name": "Thirty-day controlled pilot", "start": 15, "end": 19, "status": "Complete"},
+        {"name": "Handoff, financial gate, and closeout", "start": 20, "end": 20, "status": "Complete"}
       ],
       "timeline_unit": "Week",
-      "timeline_max": 24,
+      "timeline_max": 20,
       "financials": [
-        {"label": "Installed cost", "value": 1346000, "display": "$1,346,000"},
-        {"label": "Annual recurring cost", "value": 176000, "display": "$176,000"},
-        {"label": "Annual gross capacity value", "value": 544050, "display": "$544,050"},
-        {"label": "Annual net benefit", "value": 368050, "display": "$368,050"},
-        {"label": "Five-year net benefit", "value": 494250, "display": "$494,250"}
+        {"label": "Installed pilot planning cost", "value": 640000, "display": "$640,000"},
+        {"label": "Annual recurring planning cost", "value": 218000, "display": "$218,000"},
+        {"label": "Annual labor-capacity value", "value": 132268, "display": "$132,268"},
+        {"label": "Annual measured margin recovery", "value": 52200, "display": "$52,200"},
+        {"label": "Five-year Total Cost of Ownership", "value": 1730000, "display": "$1,730,000"},
+        {"label": "Five-year value shortfall", "value": 807662, "display": "$807,662 shortfall"}
       ],
-      "financial_note": "Base-case simple payback is 3.66 years and five-year Return on Investment (ROI) is 22.2%. If Finance can monetize only 60% of available labor capacity, payback becomes 8.95 years and expansion is not approved.",
+      "financial_note": "There is no positive payback at the pilot inputs. The labor component is 4,965 hours × $26.64 per hour = $132,268, using the U.S. Bureau of Labor Statistics March 2026 retail-trade total-compensation benchmark. Adding $52,200 of fictional measured margin recovery produces $184,468 annual gross value, below the $218,000 recurring cost. Five-year payback requires $346,000 annual gross value: $218,000 recurring cost plus $128,000 annual recovery of the $640,000 installation. Robot, integration, license, and support prices are planning allowances pending binding quotes.",
       "risks": [
-        {"id": "R-001", "risk": "Carton mix exceeds the validated 2–15 kilogram envelope", "score": 20, "status": "Transferred to operations", "response": "Reject workflow, daily mix report, and change-control trigger"},
-        {"id": "R-002", "risk": "Forklift or pedestrian enters the robot operating zone", "score": 15, "status": "Closed", "response": "Physical separation, access controls, and witnessed intrusion tests"},
-        {"id": "R-003", "risk": "Network coverage degrades inside trailer or dock", "score": 12, "status": "Closed", "response": "Radio-frequency survey, redundant coverage, and local safe-state test"},
-        {"id": "R-004", "risk": "Grasp failures reduce throughput", "score": 16, "status": "Closed", "response": "Representative carton tests, tuning, and exception routing"},
-        {"id": "R-005", "risk": "Critical spare lead time threatens restoration target", "score": 12, "status": "Transferred to service", "response": "Onsite minimum stock and replenishment trigger"}
+        {"id": "R-001", "risk": "Mixed stock, damaged cartons, or tangled hangers exceed the approved grasp set", "score": 20, "status": "Transferred to operations", "response": "Reject to labeled exception zone; humans handle tangled hangers and damaged packaging"},
+        {"id": "R-002", "risk": "Employees or stock carts enter a narrow shared aisle", "score": 20, "status": "Closed", "response": "Low-speed shared-space mode, stop-distance tests, right-of-way rule, and staffed shadow period"},
+        {"id": "R-003", "risk": "Tablet or inventory interface sends the wrong stock location", "score": 16, "status": "Closed", "response": "Stock-keeping-unit confirmation, location confidence gate, scan at pick and handoff"},
+        {"id": "R-004", "risk": "Short stair or fire-door route is unavailable", "score": 15, "status": "Transferred to operations", "response": "Route-health check, alternate employee handoff, and safe return"},
+        {"id": "R-005", "risk": "Operational success is mistaken for a scalable business case", "score": 20, "status": "Closed at financial gate", "response": "No chain rollout without binding quotes and measured annual gross value of at least $346,000"}
       ],
       "team": [
-        {"role": "Executive sponsor", "accountability": "Funding, production authorization, and expansion decision"},
-        {"role": "Deployment Program Manager", "accountability": "Integrated plan, gates, risks, customer decisions, and acceptance"},
-        {"role": "Robot Engineering", "accountability": "Configuration, controls, integration, and technical evidence"},
-        {"role": "Safety / Environment, Health and Safety", "accountability": "Hazard controls, validation, and operating authorization"},
-        {"role": "Customer Operations", "accountability": "Process baseline, staffing, pilot execution, and benefits ownership"},
-        {"role": "Field Service and Support", "accountability": "Commissioning, spares, escalation, hypercare, and handoff"}
+        {"role": "Retail operations sponsor", "accountability": "Pilot authority, employee experience, and chain-rollout decision"},
+        {"role": "Deployment Program Manager", "accountability": "Integrated plan, gates, risks, vendor decisions, acceptance, and closeout"},
+        {"role": "Store and inventory operations", "accountability": "Baseline, stock locations, tablet workflow, exception ownership, and benefit measurement"},
+        {"role": "Robot, integration, and safety engineering", "accountability": "Mobility, manipulation, interfaces, hazards, and technical evidence"},
+        {"role": "Information security and privacy", "accountability": "Identity, least privilege, camera purpose, retention, and access review"},
+        {"role": "Field service and change lead", "accountability": "Commissioning, spares, support drills, training, adoption, and handoff"}
       ],
       "artifacts": [
-        {"label": "Case study", "path": "scenarios/01-humanoid-warehouse-deployment/CASE_STUDY.md", "category": "Executive"},
-        {"label": "Project charter", "path": "scenarios/01-humanoid-warehouse-deployment/PROJECT_CHARTER.md", "category": "Initiate"},
-        {"label": "Statement of Work", "path": "scenarios/01-humanoid-warehouse-deployment/STATEMENT_OF_WORK.md", "category": "Initiate"},
-        {"label": "Business case and Total Cost of Ownership", "path": "scenarios/01-humanoid-warehouse-deployment/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
-        {"label": "Integrated schedule", "path": "scenarios/01-humanoid-warehouse-deployment/SCHEDULE.csv", "category": "Control"},
-        {"label": "Budget", "path": "scenarios/01-humanoid-warehouse-deployment/BUDGET.csv", "category": "Financial"},
-        {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/01-humanoid-warehouse-deployment/RAID.csv", "category": "Control"},
-        {"label": "Responsibility assignment matrix", "path": "scenarios/01-humanoid-warehouse-deployment/RACI.csv", "category": "Governance"},
-        {"label": "Requirements traceability", "path": "scenarios/01-humanoid-warehouse-deployment/REQUIREMENTS_TRACEABILITY.csv", "category": "Assurance"},
-        {"label": "Safety and acceptance plan", "path": "scenarios/01-humanoid-warehouse-deployment/SAFETY_AND_ACCEPTANCE.md", "category": "Assurance"},
-        {"label": "Deployment runbook", "path": "scenarios/01-humanoid-warehouse-deployment/DEPLOYMENT_RUNBOOK.md", "category": "Execution"},
-        {"label": "Operations handoff", "path": "scenarios/01-humanoid-warehouse-deployment/OPERATIONS_HANDOFF.md", "category": "Close"},
-        {"label": "Closeout and benefits", "path": "scenarios/01-humanoid-warehouse-deployment/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
+        {"label": "Case study", "path": "scenarios/01-humanoid-retail-backroom/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Project charter", "path": "scenarios/01-humanoid-retail-backroom/PROJECT_CHARTER.md", "category": "Initiate"},
+        {"label": "Statement of Work", "path": "scenarios/01-humanoid-retail-backroom/STATEMENT_OF_WORK.md", "category": "Initiate"},
+        {"label": "Business case and Total Cost of Ownership", "path": "scenarios/01-humanoid-retail-backroom/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
+        {"label": "Basis of estimate and sensitivity", "path": "scenarios/01-humanoid-retail-backroom/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "category": "Financial"},
+        {"label": "Integrated schedule", "path": "scenarios/01-humanoid-retail-backroom/SCHEDULE.csv", "category": "Control"},
+        {"label": "Budget", "path": "scenarios/01-humanoid-retail-backroom/BUDGET.csv", "category": "Financial"},
+        {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/01-humanoid-retail-backroom/RAID.csv", "category": "Control"},
+        {"label": "Responsibility assignment matrix", "path": "scenarios/01-humanoid-retail-backroom/RACI.csv", "category": "Governance"},
+        {"label": "Requirements traceability", "path": "scenarios/01-humanoid-retail-backroom/REQUIREMENTS_TRACEABILITY.csv", "category": "Assurance"},
+        {"label": "Safety and acceptance plan", "path": "scenarios/01-humanoid-retail-backroom/SAFETY_AND_ACCEPTANCE.md", "category": "Assurance"},
+        {"label": "Deployment runbook", "path": "scenarios/01-humanoid-retail-backroom/DEPLOYMENT_RUNBOOK.md", "category": "Execution"},
+        {"label": "Operations handoff", "path": "scenarios/01-humanoid-retail-backroom/OPERATIONS_HANDOFF.md", "category": "Close"},
+        {"label": "Closeout and benefits", "path": "scenarios/01-humanoid-retail-backroom/CLOSEOUT_AND_BENEFITS.md", "category": "Close"}
       ],
       "demo": {
-        "title": "Warehouse palletizing and truck-loading simulation",
-        "filename": "warehouse-humanoid-deployment.mp4",
-        "caption": "Five lane-separated humanoids pick cartons from conveyors, build a seven-carton pallet, pause for forklift loading into the truck, and resume after pallet replacement.",
-        "sequence": ["Stage in separate lanes", "Stop before conveyor", "Receive and carry carton", "Build seven-carton pallet", "Load outbound truck", "Replace pallet and restart"]
+        "title": "Retail backroom fulfillment workflow animation",
+        "filename": "retail-humanoid-fulfillment.mp4",
+        "caption": "A browser-playable operational animation shows a tablet request, walking through an unchanged stockroom, stair traversal, shoe-box retrieval, employee handoff, and inventory confirmation. It demonstrates the program workflow; it is not a robot-performance test.",
+        "sequence": ["Receive tablet request", "Confirm item and location", "Walk existing aisle and stair route", "Retrieve approved item", "Deliver to employee handoff", "Update inventory and accept next mission"]
       },
       "closure": {
-        "schedule": "Completed in week 24",
-        "budget": "$1,346,000 spent against $1,346,000 authorization",
-        "acceptance": ["All mandatory safety tests passed with no open critical findings", "Thirty full material-flow cycles completed", "Two-hour throughput and quality test passed", "Operators and support staff completed role assessment", "Telemetry-to-case escalation and return-to-service drill passed"],
-        "lessons": ["Freeze the representative carton set before Factory Acceptance Testing", "Treat trailer wireless coverage as a site-readiness gate", "Put diagnostic evidence requirements into the released configuration", "Link expansion to finance-approved capacity value, not animation speed"]
+        "schedule": "Completed in week 20 after the 30-day pilot",
+        "budget": "$640,000 spent against the fictional pilot authorization",
+        "acceptance": ["Zero recordable safety events and all stop, route-block, network-loss, and human-yield tests passed", "Retrieval mission success reached 98.1% against the 97% gate", "Median associate wait fell from a fictional 7.1-minute baseline to 3.4 minutes", "Inventory location accuracy reached 98.7% and damage or wrong-item rate was 0.2%", "Employees passed tablet, exception, emergency-stop, recovery, and escalation assessments"],
+        "lessons": ["The human-form-factor rationale must be tied to actual doors, aisles, stairs, shelves, and handoff points", "Tangled hangers and damaged packaging require an explicit human exception path", "Operational acceptance and financial approval are separate decisions", "Do not scale until vendor quotes and measured store value close the $161,532 annual value gap"]
       }
     },
     {
@@ -127,7 +129,7 @@
         {"label": "Annual net benefit", "value": 226500, "display": "$226,500"},
         {"label": "Five-year net benefit", "value": 402250, "display": "$402,250"}
       ],
-      "financial_note": "Base-case simple payback is 3.22 years when two contracted walking-rover posts are removed and one onsite responder remains. Removing only one post produces an 11.73-year payback, so that configuration does not pass the expansion screen.",
+      "financial_note": "The arithmetic is reproducible, but this remains a planning model. The $100,000-per-robot public price anchor excludes the configured security system; all payload, dock, integration, support, customs, and site costs require quotes. With fictional customer inputs of two 10-hour contracted rover posts at $45 per hour plus $15,000 vehicle cost, simple payback is 3.22 years. Removing only one post produces an 11.73-year payback and fails the five-year screen.",
       "risks": [
         {"id": "R-001", "risk": "Wireless dead zone interrupts live supervision", "score": 20, "status": "Closed", "response": "Day/night survey, redundant path, and tested local safe state"},
         {"id": "R-002", "risk": "Video records outside the approved purpose or area", "score": 15, "status": "Transferred to operations", "response": "Privacy masks, retention limits, access audit, and quarterly review"},
@@ -148,6 +150,7 @@
         {"label": "Project and deployment plan", "path": "scenarios/02-quadruped-security-deployment/PROJECT_AND_DEPLOYMENT_PLAN.md", "category": "Plan"},
         {"label": "Statement of Work", "path": "scenarios/02-quadruped-security-deployment/STATEMENT_OF_WORK.md", "category": "Initiate"},
         {"label": "Business case and Total Cost of Ownership", "path": "scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
+        {"label": "Basis of estimate and sensitivity", "path": "scenarios/02-quadruped-security-deployment/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "category": "Financial"},
         {"label": "Integrated schedule", "path": "scenarios/02-quadruped-security-deployment/SCHEDULE.csv", "category": "Control"},
         {"label": "Budget", "path": "scenarios/02-quadruped-security-deployment/BUDGET.csv", "category": "Financial"},
         {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/02-quadruped-security-deployment/RAID.csv", "category": "Control"},
@@ -210,7 +213,7 @@
         {"label": "Customer initial outlay", "value": 330000, "display": "$330,000"},
         {"label": "Customer annual net benefit", "value": 168019, "display": "$168,019"}
       ],
-      "financial_note": "Customer simple payback is 1.96 years. At the $285,000 unit price and $150,000 Cost of Goods Sold ceiling, contribution is $135,000 per unit and approximately 82 units are required to recover the $10.975M development investment before other corporate costs.",
+      "financial_note": "These are fictional concept-stage inputs, not quoted economics. Customer simple payback is 1.96 years at the documented workload and public labor benchmark. At the $285,000 unit price and $150,000 Cost of Goods Sold ceiling, contribution is $135,000 per unit and 82 units are required to recover the $10.975M development authorization before sales, warranty, support, overhead, working capital, tax, and financing.",
       "risks": [
         {"id": "R-001", "risk": "Use-case expansion outruns requirements and safety evidence", "score": 20, "status": "Closed", "response": "Release 1 limited to one tote, two stations, flat floors, and supervised recovery"},
         {"id": "R-002", "risk": "Critical actuator supplier threatens scale schedule", "score": 16, "status": "Open release condition", "response": "Buffer stock and second-source qualification before General Availability"},
@@ -230,6 +233,7 @@
         {"label": "Case study", "path": "scenarios/03-new-robot-first-sale/CASE_STUDY.md", "category": "Executive"},
         {"label": "Product brief and requirements document", "path": "scenarios/03-new-robot-first-sale/PRODUCT_BRIEF_AND_PRD.md", "category": "Product"},
         {"label": "Business case", "path": "scenarios/03-new-robot-first-sale/BUSINESS_CASE.md", "category": "Financial"},
+        {"label": "Basis of estimate and sensitivity", "path": "scenarios/03-new-robot-first-sale/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "category": "Financial"},
         {"label": "New Product Introduction stage-gate plan", "path": "scenarios/03-new-robot-first-sale/NPI_STAGE_GATE_PLAN.md", "category": "Governance"},
         {"label": "Integrated schedule", "path": "scenarios/03-new-robot-first-sale/SCHEDULE.csv", "category": "Control"},
         {"label": "Budget and headcount", "path": "scenarios/03-new-robot-first-sale/BUDGET_AND_HEADCOUNT.csv", "category": "Financial"},
@@ -291,7 +295,7 @@
         {"label": "Year-two run rate", "value": 2970000, "display": "$2,970,000"},
         {"label": "Three-year TCO", "value": 10608000, "display": "$10,608,000"}
       ],
-      "financial_note": "The year-one authorization includes the six-month implementation, initial 15-person operation, platform integration, telemetry, remote access, field tools, starter spares, enablement, contingency, and sponsor reserve. Vendor prices remain quote-required planning inputs.",
+      "financial_note": "The arithmetic is reconciled, but the 250-robot installed base, demand rates, staffing costs, and platform amounts are fictional planning inputs. The year-one authorization includes the six-month implementation, initial 15-person operation, platform integration, telemetry, remote access, field tools, starter spares, enablement, contingency, and sponsor reserve. Vendor prices and actual workload remain quote- and evidence-required.",
       "risks": [
         {"id": "R-001", "risk": "Unsafe remote action bypasses product controls", "score": 20, "status": "Closed", "response": "Role-based approval, audited sessions, command allow-list, and independent safety controls"},
         {"id": "R-002", "risk": "Poor installed-product data causes wrong entitlement or dispatch", "score": 20, "status": "Closed", "response": "Named data owners and 100% serial-site-version-contract baseline"},
@@ -311,6 +315,7 @@
         {"label": "Case study", "path": "scenarios/04-robotics-support-operations/CASE_STUDY.md", "category": "Executive"},
         {"label": "Operating model", "path": "scenarios/04-robotics-support-operations/OPERATING_MODEL.md", "category": "Strategy"},
         {"label": "Operating baseline and cost assumptions", "path": "scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "category": "Financial"},
+        {"label": "Basis of estimate and sensitivity", "path": "scenarios/04-robotics-support-operations/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "category": "Financial"},
         {"label": "Service catalog", "path": "scenarios/04-robotics-support-operations/SERVICE_CATALOG.md", "category": "Operate"},
         {"label": "Severity and Service-Level Agreement targets", "path": "scenarios/04-robotics-support-operations/SEVERITY_SLA.md", "category": "Operate"},
         {"label": "Tool selection and cost", "path": "scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.md", "category": "Architecture"},

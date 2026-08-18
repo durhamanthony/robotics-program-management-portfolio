@@ -1,0 +1,15 @@
+id,work_package,start_week,end_week,owner,predecessor,exit_evidence,status
+1.0,Workflow observation and baseline,1,3,Program Manager,None,"Signed task map; request-time sample; item-class envelope",Complete
+1.1,Employee and inventory data baseline,1,3,Store Operations,None,"Baseline wait 7.1 minutes; location accuracy 94.2 percent; data dictionary",Complete
+2.0,Use-case requirements and change control,2,5,Product Lead,1.0,Signed requirements and exclusions,Complete
+2.1,Route safety privacy and cybersecurity design,3,6,Safety Lead,1.0,"Hazard log; route map; camera purpose; access model",Complete
+3.0,Tablet inventory and identity integration,5,8,Integration Lead,2.0,20 normal and failure interface cases pass,Complete
+3.1,Factory Acceptance Test (FAT),8,9,Engineering Lead,3.0,Witnessed FAT report and open-defect disposition,Complete
+4.0,Site readiness and employee change plan,6,10,Store Operations,2.1,Signed readiness checklist and training roster,Complete
+5.0,Install map and commission,11,12,Field Service,"3.1;4.0",Configuration record and commissioning checklist,Complete
+5.1,Site Acceptance Test (SAT),13,13,Safety Lead,5.0,All mandatory safety and route cases pass,Complete
+5.2,User Acceptance Testing (UAT) and shadow mode,14,14,Store Sponsor,5.1,100 witnessed requests and trained-user signoff,Complete
+6.0,Thirty-day controlled pilot,15,19,Store Operations,5.2,Daily logs and accepted KPI report,Complete
+6.1,Hypercare and support drills,15,19,Service Owner,5.2,Severity-1 drill and return-to-service evidence,Complete
+7.0,Operational acceptance and handoff,20,20,Store Sponsor,"6.0;6.1",Signed handoff and residual-risk acceptance,Complete
+7.1,Financial scale gate and closeout,20,20,Finance,6.0,"No-rollout decision; benefit ledger; closeout report",Complete

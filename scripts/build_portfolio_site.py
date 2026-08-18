@@ -21,8 +21,10 @@ SOURCE_DIRS = ("scenarios", "tools")
 SOURCE_FILES = (
     "portfolio/EXECUTIVE_PORTFOLIO.md",
     "simulations/README.md",
-    "simulations/warehouse_humanoids/README.md",
+    "simulations/retail_humanoids/README.md",
     "simulations/quadruped_security/README.md",
+    "simulations/new_robot_npi/README.md",
+    "simulations/support_lab/README.md",
 )
 GOVERNANCE_FILES = (
     "governance/README.md",
@@ -35,6 +37,7 @@ GOVERNANCE_FILES = (
     "governance/CYBERSECURITY_DATA_GOVERNANCE.md",
     "governance/TRAINING_CHANGE_ADOPTION.md",
     "governance/BENEFITS_AND_CLOSEOUT.md",
+    "governance/NUMBER_ASSURANCE_AND_EVIDENCE_RULES.md",
 )
 
 
@@ -77,7 +80,7 @@ def scenario_name(path: Path) -> str:
     if rel.parts[0] != "scenarios":
         return "Portfolio controls"
     return {
-        "01-humanoid-warehouse-deployment": "Case 01 — Warehouse",
+        "01-humanoid-retail-backroom": "Case 01 — Retail backroom",
         "02-quadruped-security-deployment": "Case 02 — Security",
         "03-new-robot-first-sale": "Case 03 — New product",
         "04-robotics-support-operations": "Case 04 — Support",
@@ -157,7 +160,8 @@ def shell(title: str, body: str, depth: int = 0, description: str = "") -> str:
 <link rel="stylesheet" href="{prefix}styles.css"><script defer src="{prefix}app.js"></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="{prefix}index.html">Anthony Durham</a>
-<div class="nav-links"><a href="{prefix}index.html#cases">Scenarios</a><a href="{prefix}artifacts.html">Artifacts</a><a href="{prefix}videos.html">Demos</a><a href="{prefix}about.html">About</a></div></nav></header>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="{prefix}index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="{prefix}index.html">⌂ Home</a><a href="{prefix}index.html#cases">Scenarios</a><a href="{prefix}artifacts.html">Artifacts</a><a href="{prefix}videos.html">Demos</a><a href="{prefix}about.html">About</a></div></div></nav></header>
 {body}
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
@@ -172,9 +176,21 @@ def page_for_source(path: Path) -> tuple[Path, str]:
     raw.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(path, raw)
     raw_link = Path(*([".."] * depth), "downloads", "source", *rel.parts).as_posix()
+    scenario_returns = {
+        "01-humanoid-retail-backroom": "retail-humanoid-backroom",
+        "02-quadruped-security-deployment": "quadruped-security-deployment",
+        "03-new-robot-first-sale": "ad01-new-robot-first-sale",
+        "04-robotics-support-operations": "robotics-support-operations",
+    }
+    if rel.parts[0] == "scenarios" and len(rel.parts) > 1 and rel.parts[1] in scenario_returns:
+        return_link = Path(*([".."] * depth), "scenarios", f"{scenario_returns[rel.parts[1]]}.html").as_posix() + "#artifacts"
+        return_label = "← Back to scenario artifacts"
+    else:
+        return_link = Path(*([".."] * depth), "artifacts.html").as_posix()
+        return_label = "← Back to artifact library"
     fragment = markdown_fragment(path) if path.suffix.lower() == ".md" else csv_fragment(path)
-    body = f"""<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">{esc(scenario_name(path))}</span> <span class="tag muted-tag">{esc(lifecycle_for(path.name))}</span></div>
-<a class="button" href="{raw_link}" download>Download {esc(path.suffix.upper()[1:])}</a></div>
+    body = f"""<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="{return_link}">{return_label}</a><div><span class="tag">{esc(scenario_name(path))}</span> <span class="tag muted-tag">{esc(lifecycle_for(path.name))}</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="{Path(*([".."] * depth), "index.html").as_posix()}">⌂ Home</a><a class="button" href="{raw_link}" download>Download {esc(path.suffix.upper()[1:])}</a></div></div>
 <article class="article">{fragment}</article></main>"""
     return out, shell(title_for(path), body, depth=depth)
 
@@ -246,7 +262,7 @@ def build_dashboard(scenario: dict) -> None:
     accept = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["acceptance"])
     lessons = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["lessons"])
     body = f"""<main id="main">
-<section class="scenario-hero"><div class="container"><a class="back-link" href="../index.html#cases">← All scenarios</a><div class="scenario-eyebrow">{esc(scenario['code'])} · {esc(scenario['program_type'])}</div>
+<section class="scenario-hero"><div class="container"><div class="scenario-links"><a class="back-link" href="../index.html#cases">← All scenarios</a><a class="back-link" href="../index.html">⌂ Home</a></div><div class="scenario-eyebrow">{esc(scenario['code'])} · {esc(scenario['program_type'])}</div>
 <h1>{esc(scenario['title'])}</h1><p class="lead">{esc(scenario['client'])} · {esc(scenario['role'])}</p>
 <div class="status-row"><span class="status status-{esc(scenario['health'].lower())}">{esc(scenario['status'])}</span><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(scenario['tco'])}</span></div></div></section>
 <div class="dashboard-nav-wrap"><nav class="dashboard-nav container" aria-label="Scenario sections">
@@ -261,7 +277,7 @@ def build_dashboard(scenario: dict) -> None:
 <section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 <section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
-<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Simulation demonstration</h2></div></div>{demo_markup(scenario)}</section>
+<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable workflow demonstration</h2></div></div>{demo_markup(scenario)}</section>
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
 </div></main>"""
     write(DOCS / "scenarios" / f"{scenario['slug']}.html", shell(scenario["title"], body, depth=1, description=scenario["summary"]))
@@ -277,7 +293,7 @@ def build_index(data: dict, count: int) -> None:
 <div class="button-row"><a class="button" href="#cases">Explore four scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
 <main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>Four complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, simulation evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>Four complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable workflow evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
 <section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch the workflow</strong><p>Play browser-based simulation clips—no terminal commands or software installation.</p></article></div></section></main>"""
     write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
 
@@ -321,7 +337,7 @@ def build_videos(data: dict) -> None:
             media = '<div class="video-placeholder compact"><span>Recording in production</span><strong>Browser playback will appear here.</strong></div>'
             label = "Open dashboard and sequence"
         cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(scenario["code"])}</span><h2>{esc(scenario["demo"]["title"])}</h2><p>{esc(scenario["demo"]["caption"])}</p><a href="scenarios/{esc(scenario["slug"])}.html#demo">{label} →</a></div></article>')
-    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>Simulation demonstrations</h1><p class="section-intro">Recruiters and hiring managers can play completed clips directly in the browser. No command line, Python installation, or MuJoCo setup is required.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
+    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>Workflow demonstrations</h1><p class="section-intro">Recruiters and hiring managers can play completed operational animations directly in the browser. No command line, Python installation, or MuJoCo setup is required.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
     write(DOCS / "videos.html", shell("Simulation Demonstrations", body))
 
 

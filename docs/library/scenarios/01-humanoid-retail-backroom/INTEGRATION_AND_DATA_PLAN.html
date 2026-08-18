@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integration and Data Plan — Retail Backroom Pilot | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/retail-humanoid-backroom.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 01 — Retail backroom</span> <span class="tag muted-tag">Plan / Design</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/01-humanoid-retail-backroom/INTEGRATION_AND_DATA_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="integration-and-data-plan--retail-backroom-pilot">Integration and Data Plan — Retail Backroom Pilot</h1>
+<h2 id="transaction-flow">Transaction flow</h2>
+<p>Associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → employee handoff scan → inventory/event update → telemetry and support case when required.</p>
+<h2 id="interface-controls">Interface controls</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Interface</th>
+<th>Request/response</th>
+<th>Timeout/retry</th>
+<th>Failure behavior</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tablet/identity</td>
+<td>user, store, role, item, handoff</td>
+<td>5 seconds; one retry</td>
+<td>no anonymous mission; show explicit error</td>
+<td>authentication and revocation tests</td>
+</tr>
+<tr class="even">
+<td>Inventory service</td>
+<td>SKU, size, color → bin/rail location</td>
+<td>3 seconds; two retries</td>
+<td>no movement without valid location; human search queue</td>
+<td>20 normal/error cases</td>
+</tr>
+<tr class="odd">
+<td>Mission service</td>
+<td>validated request → route/item mission</td>
+<td>idempotency key; no duplicate mission</td>
+<td>safe hold and operator alert</td>
+<td>duplicate/replay test</td>
+</tr>
+<tr class="even">
+<td>Pick/handoff scan</td>
+<td>item and employee handoff confirmation</td>
+<td>scan at pick and delivery</td>
+<td>reject mismatch; return to exception point</td>
+<td>transaction reconciliation</td>
+</tr>
+<tr class="odd">
+<td>Telemetry/support</td>
+<td>robot, mission, event, fault, configuration</td>
+<td>buffer during outage; ordered resend</td>
+<td>local safe state; correlated case</td>
+<td>network-loss and case drill</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-ownership-and-retention">Data ownership and retention</h2>
+<p>Meridian owns requests, inventory, employee identity, and business measures. The vendor owns robot diagnostic data subject to contract. Video is limited to navigation/manipulation evidence in employee-only zones; no facial recognition. Operational clips retain 7 days unless attached to an incident; incident evidence retains 90 days or the legal schedule. Access is role-based, logged, reviewed monthly, and revoked at role termination.</p>
+<h2 id="data-quality-rules">Data-quality rules</h2>
+<ul>
+<li>SKU, size, color, location, request, mission, and handoff identifiers must reconcile one-to-one.</li>
+<li>Times use synchronized Universal Time Coordinated (UTC) plus displayed local time.</li>
+<li>Missing or low-confidence location data blocks autonomous retrieval.</li>
+<li>Dashboard measures are produced from versioned queries; the animation never supplies KPI data.</li>
+<li>Pilot raw data, calculation workbook, and approved result snapshot are retained with closeout evidence.</li>
+</ul>
+<h2 id="cutover-and-rollback">Cutover and rollback</h2>
+<p>Run interfaces in shadow mode for 100 requests. If wrong-item rate exceeds 0.5%, duplicate missions occur, security logs fail, or safe-state evidence is missing, disable robot mission creation, retain the tablet as a human pick queue, reconcile open transactions, and restore only after change approval and regression testing.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

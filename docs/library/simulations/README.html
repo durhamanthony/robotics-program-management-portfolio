@@ -4,30 +4,28 @@
 <link rel="stylesheet" href="../../styles.css"><script defer src="../../app.js"></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html">Anthony Durham</a>
-<div class="nav-links"><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></nav></header>
-<main id="main" class="container"><div class="artifact-tools"><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div>
-<a class="button" href="../../downloads/source/simulations/README.md" download>Download MD</a></div>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../index.html">⌂ Home</a><a href="../../index.html#cases">Scenarios</a><a href="../../artifacts.html">Artifacts</a><a href="../../videos.html">Demos</a><a href="../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../index.html">⌂ Home</a><a class="button" href="../../downloads/source/simulations/README.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="mujoco-operations-demonstrations">MuJoCo Operations Demonstrations</h1>
-<p>These demos are intentionally small and explainable. They support program-management and service-operations conversations by creating robot state, faults, telemetry, acceptance evidence, and incident workflows.</p>
-<p>They are <strong>not</strong> production controllers, safety systems, learned locomotion policies, or vendor-accurate digital twins.</p>
-<h2 id="demos">Demos</h2>
+<p>These small, explainable simulations support project/program discussions by exposing operating states, faults, telemetry, acceptance evidence, and service handoffs. They are not production controllers, certified safety systems, learned locomotion policies, or vendor-accurate digital twins.</p>
+<h2 id="demonstrations">Demonstrations</h2>
 <ul>
-<li><code>warehouse_humanoids</code> — five articulated humanoid visual agents work in separate conveyor-fed lanes, carry cartons to floor pallets, and stop when the center stack reaches seven. A robot-operated forklift transfers the loaded pallet into an open-back green truck and returns empty before a worker installs a replacement pallet. See the <a href="warehouse_humanoids/README.html">warehouse demo guide</a>.</li>
-<li><code>quadruped_security</code> — three simplified quadruped visual agents patrol a campus route; network, sensor, and battery events test human-supervised escalation.</li>
-<li><code>new_robot_npi</code> — an actuated mobile-manipulator concept executes a repeatable validation sequence and an injected controlled stop.</li>
-<li><code>support_lab</code> — converts fault telemetry into a deduplicated service-ticket register and scorecard.</li>
+<li><code>retail_humanoids</code> — two humanoid visual agents follow tablet-driven retail backroom retrieval routes through existing human-scale aisles, a door, and a short split-level area.</li>
+<li><code>quadruped_security</code> — three quadruped visual agents patrol a campus route while network, sensor, battery, and human-supervision events are exercised.</li>
+<li><code>new_robot_npi</code> — an actuated mobile-manipulator concept runs a repeatable two-station verification sequence and injected controlled stop.</li>
+<li><code>support_lab</code> — converts robot fault telemetry into deduplicated service cases and a support scorecard.</li>
 </ul>
-<p>The warehouse and security models use MuJoCo mocap bodies as an operations visualization. The new-robot model uses physical joints and position actuators. This distinction is documented so viewers do not mistake motion scripting for advanced control engineering.</p>
-<h2 id="outputs">Outputs</h2>
-<p>Each demo produces CSV, JSONL, MCAP, and JSON summary files in <code>outputs/</code>. Open the MCAP files with Foxglove; use CSV/JSONL in analytics or the support lab.</p>
-<h2 id="run">Run</h2>
+<p>The retail and security models use MuJoCo mocap bodies for operations visualization. The new-product model uses physical joints and position actuators. Browser videos are operational animations built for recruiters; they are not labeled as MuJoCo renders.</p>
+<h2 id="run-locally">Run locally</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> simulations/requirements.txt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/warehouse_humanoids/run_demo.py <span class="at">--duration</span> 72</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/quadruped_security/run_demo.py <span class="at">--duration</span> 45</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/new_robot_npi/run_demo.py</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/retail_humanoids/run_demo.py <span class="at">--viewer</span> <span class="at">--duration</span> 36</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/quadruped_security/run_demo.py <span class="at">--viewer</span> <span class="at">--duration</span> 45</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/new_robot_npi/run_demo.py <span class="at">--viewer</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/support_lab/triage.py</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> simulations/test_models.py</span></code></pre></div>
-<p>Use <code>--viewer</code> only on a machine with a graphical desktop.</p>
+<p>Use <code>--viewer</code> only on a graphical desktop. Website visitors need no terminal, Python, or MuJoCo.</p>
 </article></main>
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>

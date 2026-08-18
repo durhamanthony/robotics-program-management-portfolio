@@ -1,0 +1,13 @@
+cost_id,cost_element,basis,evidence_class,quantity,unit_cost,authorized_amount,actual_or_forecast,variance,owner,procurement_status
+C-001,Humanoid systems and manipulation package,Fictional planning allowance pending configuration quote,Quote required,2,180000,360000,360000,0,Procurement,Binding quote required
+C-002,Tablet inventory and identity integration,Fictional fixed planning allowance,Quote required,1,105000,105000,105000,0,Integration Lead,Statement of Work required
+C-003,Site safety privacy and commissioning,Fictional planning allowance,Quote required,1,55000,55000,55000,0,Safety Lead,Vendor/site quote required
+C-004,Training and 30-day hypercare,Fictional planning allowance,Quote required,1,35000,35000,35000,0,Change Lead,Support quote required
+C-005,Contingency,Known risk allowance,Planning allowance,1,45000,45000,45000,0,Program Manager,Released against approved risks
+C-006,Management reserve,Unknown-unknown allowance,Planning allowance,1,40000,40000,40000,0,Sponsor,Sponsor controlled
+C-007,Installed pilot total,Sum C-001 through C-006,Calculated,1,640000,640000,640000,0,Finance,Scenario authorization
+C-008,Software and remote operations annual,Fictional annual allowance,Quote required,1,96000,96000,96000,0,Service Owner,Annual quote required
+C-009,Field support annual,Fictional annual allowance,Quote required,1,72000,72000,72000,0,Service Owner,Annual quote required
+C-010,Connectivity and site services annual,Fictional annual allowance,Quote required,1,20000,20000,20000,0,IT Lead,Carrier/site quote required
+C-011,Spares and battery reserve annual,Fictional annual allowance,Quote required,1,30000,30000,30000,0,Field Service,Failure-rate evidence required
+C-012,Annual recurring total,Sum C-008 through C-011,Calculated,1,218000,218000,218000,0,Finance,Scenario planning total

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deployment Runbook — Retail Backroom Humanoid Pilot | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/retail-humanoid-backroom.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 01 — Retail backroom</span> <span class="tag muted-tag">Execute / Deploy</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/01-humanoid-retail-backroom/DEPLOYMENT_RUNBOOK.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="deployment-runbook--retail-backroom-humanoid-pilot">Deployment Runbook — Retail Backroom Humanoid Pilot</h1>
+<h2 id="preconditions">Preconditions</h2>
+<p>Approved configuration and route; signed readiness checklist; change freeze; trained onsite authority; rollback owner; inventory test tenant; segmented network; chargers; emergency equipment; representative item/exception set; Factory Acceptance Test (FAT) exit; defect list with no open critical item.</p>
+<h2 id="installation-and-commissioning">Installation and commissioning</h2>
+<ol type="1">
+<li>Confirm serial numbers, software, checksums, certificates, warranties, spares, and shipping condition.</li>
+<li>Verify route, stair, doors, fire egress, handoff, charger, exception zone, and stock-cart parking against the signed drawing.</li>
+<li>Connect each robot with least-privilege identity; validate access logging and revocation.</li>
+<li>Load the approved map, speed, stop, item, reach, charging, retention, and safe-state configuration.</li>
+<li>Test tablet, inventory lookup, mission creation, pick scan, handoff scan, event, and case correlation.</li>
+<li>Run empty routes, approved items, human/cart intrusions, blocked route, wrong location, network loss, low battery, sensor fault, and emergency stop.</li>
+<li>Execute Site Acceptance Test (SAT); record witness, configuration, timestamp, result, and defect for each case.</li>
+<li>Complete 100-request User Acceptance Testing (UAT) in shadow mode before pilot authorization.</li>
+</ol>
+<h2 id="cutover-checklist">Cutover checklist</h2>
+<ul>
+<li>Store Sponsor and Safety Lead sign go/no-go.</li>
+<li>Human fallback is staffed and tablet can route requests to people.</li>
+<li>All shifts know pause, emergency stop, exception, and escalation procedures.</li>
+<li>Monitoring, service desk, Level 2 (L2), field on-call, and spare kits are live.</li>
+<li>Baseline queries and daily KPI report are frozen and versioned.</li>
+</ul>
+<h2 id="stop-and-rollback-triggers">Stop and rollback triggers</h2>
+<p>Any contact/injury; safety-control bypass; robot outside route; fire-egress interference; repeated uncontrolled drop; security compromise; wrong-item rate above 0.5%; mission success below 97% for two days; or unavailable human fallback. Stop missions, establish safe state, notify authority, preserve evidence, reconcile transactions, and route all requests to human picking. Restore only after root-cause, approved change, regression test, and signed restart.</p>
+<h2 id="hypercare">Hypercare</h2>
+<p>Thirty days: onsite opening/closing owner, daily issue/KPI huddle, weekly sponsor/Finance review, and 24/7 Severity-1 remote coverage. Exit requires five consecutive days above operational thresholds, trained ownership, tested support, accepted known errors, reconciled benefit data, and recorded financial decision.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

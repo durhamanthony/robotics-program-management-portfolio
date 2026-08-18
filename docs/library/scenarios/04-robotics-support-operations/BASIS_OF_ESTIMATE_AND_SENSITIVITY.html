@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basis of Estimate and Sensitivity — Robotics Support Operations | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/robotics-support-operations.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 04 — Support</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/04-robotics-support-operations/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="basis-of-estimate-and-sensitivity--robotics-support-operations">Basis of Estimate and Sensitivity — Robotics Support Operations</h1>
+<h2 id="planning-basis">Planning basis</h2>
+<p>This model sizes a support organization for a fictional installed base of 250 robots across 60 customer sites. It is an operating-model estimate, not a vendor quotation or claim about an existing fleet.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th style="text-align: right;">Base value</th>
+<th>Evidence class</th>
+<th>Required replacement evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Installed base</td>
+<td style="text-align: right;">250 robots / 60 sites</td>
+<td>Fictional portfolio baseline</td>
+<td>Installed-product register and signed deployment forecast</td>
+</tr>
+<tr class="even">
+<td>Customer-created cases</td>
+<td style="text-align: right;">0.35 per robot per month</td>
+<td>Fictional demand rate</td>
+<td>At least 90 days of normalized case history</td>
+</tr>
+<tr class="odd">
+<td>Actionable telemetry incidents</td>
+<td style="text-align: right;">0.20 per robot per month</td>
+<td>Fictional demand rate</td>
+<td>Alert precision, suppression, and human-action data</td>
+</tr>
+<tr class="even">
+<td>Planned maintenance visits</td>
+<td style="text-align: right;">25 per month</td>
+<td>Fictional operating input</td>
+<td>Maintenance plan and regional route forecast</td>
+</tr>
+<tr class="odd">
+<td>Changes and deployments</td>
+<td style="text-align: right;">20 per month</td>
+<td>Fictional operating input</td>
+<td>Release and deployment calendar</td>
+</tr>
+<tr class="even">
+<td>Fifteen-person team</td>
+<td style="text-align: right;">$1,950,000 loaded annual cost</td>
+<td>Fictional role-based allowance</td>
+<td>Human Resources rates, contractor bids, geographic mix, and on-call terms</td>
+</tr>
+<tr class="odd">
+<td>Platforms, telemetry, remote access, and storage</td>
+<td style="text-align: right;">Scenario allowances</td>
+<td>Quote required</td>
+<td>Named editions, users, assets, retention, data volume, egress, implementation, and support terms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workload-and-capacity-math">Workload and capacity math</h2>
+<ul>
+<li>Customer cases = 250 × 0.35 = <strong>87.5</strong>, rounded to 88 per month.</li>
+<li>Actionable telemetry incidents = 250 × 0.20 = <strong>50 per month</strong>.</li>
+<li>Planned work = 88 cases + 50 telemetry incidents + 25 maintenance visits + 20 changes/deployments = <strong>183 work items per month</strong>.</li>
+<li>Three Level 1 agents provide about <strong>300 net case-hours per month</strong> in the model.</li>
+<li>Four Level 2 engineers provide about <strong>400 net diagnostic hours per month</strong>.</li>
+<li>Four field technicians provide a planning capacity of <strong>32 two-day visits per month</strong> before regional travel constraints.</li>
+</ul>
+<p>The staffing plan triggers review when usable capacity exceeds 75% for six consecutive weeks, response targets are missed twice in a rolling month, or a critical skill/on-call rotation cannot be covered by two people.</p>
+<h2 id="cost-reconciliation">Cost reconciliation</h2>
+<ul>
+<li>Year-one base = <strong>$3,950,000</strong>.</li>
+<li>Management reserve = <strong>$718,000</strong>.</li>
+<li>Year-one authorized exposure = $3,950,000 + <span class="math inline">718, 000 =  * *</span>4,668,000**.</li>
+<li>Year-two steady-state run rate = <strong>$2,970,000</strong>.</li>
+<li>Three-year Total Cost of Ownership (TCO), assuming the year-two run rate repeats in year three and the full reserve is consumed, = $4,668,000 + 2 × <span class="math inline">2, 970, 000 =  * *</span>10,608,000**.</li>
+</ul>
+<h2 id="sensitivity">Sensitivity</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Operating effect</th>
+<th>Financial treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Case and actionable-alert rates are 25% higher</td>
+<td>About 218 monthly work items before planned-project changes</td>
+<td>Recalculate touch time and Level 1/Level 2 capacity before hiring</td>
+</tr>
+<tr class="even">
+<td>Field demand rises from 25 to 35 two-day visits per month</td>
+<td>Exceeds the four-technician planning capacity</td>
+<td>Add regional contractor or headcount after travel analysis</td>
+</tr>
+<tr class="odd">
+<td>Vendor platform quotes are 20% higher than allowances</td>
+<td>Increase affected tooling lines, implementation, reserve, and recurring run rate</td>
+<td>Sponsor reauthorization required</td>
+</tr>
+<tr class="even">
+<td>Telemetry precision reduces actionable alerts by 40%</td>
+<td>About 30 rather than 50 telemetry incidents per month</td>
+<td>Reallocate engineering time; do not book savings until sustained for 90 days</td>
+</tr>
+</tbody>
+</table>
+<h2 id="decision-rule">Decision rule</h2>
+<p>The operating model can close only when the installed-product baseline, intake and severity process, safe remote-access controls, on-call model, field coverage, parts/Return Material Authorization (RMA), continuity test, service dashboards, and product escalation path are accepted. Budget approval remains conditional on vendor quotes and a 90-day workload calibration.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

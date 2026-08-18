@@ -1,0 +1,10 @@
+id,type,statement,probability_1_5,impact_1_5,score,owner,response,trigger,closeout_status
+R-001,Risk,Mixed stock damaged cartons or tangled hangers exceed approved grasp set,4,5,20,Inventory Lead,Reject to labeled human exception zone,Unsupported-item rate above 2 percent,Transferred to operations
+R-002,Risk,Employee or stock cart enters narrow shared aisle,4,5,20,Safety Lead,Low-speed mode stop-distance tests and right-of-way rule,Any contact or control bypass,Closed with controls
+R-003,Risk,Inventory interface sends wrong location or variant,4,4,16,Integration Lead,Confirm SKU size color and scan at pick and handoff,Wrong-item rate above 0.5 percent,Closed with controls
+R-004,Risk,Stair or fire-door route is blocked or outside envelope,3,5,15,Store Operations,Route-health check alternate handoff and safe return,Route unavailable for more than 10 minutes,Transferred to operations
+R-005,Risk,Operational acceptance is mistaken for a scalable business case,4,5,20,Finance,Separate G5 operational and G6 financial gates,Gross annual value below 346000 dollars,Closed at financial gate
+A-001,Assumption,Approved shoe boxes weigh 0.3 to 8 kilograms,3,4,12,Inventory Lead,Representative sample and scale log before FAT,Any sample outside envelope,Validated for pilot set
+A-002,Assumption,Returned associate time can be used for customer-facing work,4,4,16,Store Sponsor,Observe schedules and floor coverage; do not book cash savings automatically,No documented staffing or customer impact,Unvalidated for cash savings
+I-001,Issue,Annual gross value is below annual recurring cost,5,5,25,Finance,Hold chain rollout and seek quote-backed cost down or additional measured value,184468 dollars below 218000 dollars,Open commercial issue
+D-001,Dependency,Test inventory tenant identity and tablet are available by week 5,3,4,12,IT Lead,Weekly dependency review and test harness fallback,Access not ready by week 4,Closed

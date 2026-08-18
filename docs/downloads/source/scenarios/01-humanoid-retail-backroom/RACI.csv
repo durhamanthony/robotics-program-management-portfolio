@@ -1,0 +1,15 @@
+deliverable_or_decision,Store Sponsor,Program Manager,Store Operations,Engineering,Safety,IT and Security,Field Service,Finance
+Charter and pilot authorization,A,R,C,C,C,C,I,C
+Workflow baseline,A,R,R,C,C,C,I,C
+Requirements and exclusions,A,R,C,R,C,C,I,I
+Route and safety design,A,C,C,R,R,C,C,I
+Tablet inventory and identity integration,I,A,C,R,C,R,C,I
+Factory Acceptance Test (FAT),I,A,C,R,C,C,R,I
+Site Acceptance Test (SAT),A,R,C,R,R,C,R,I
+User Acceptance Testing (UAT),A,R,R,C,C,C,C,I
+Thirty-day pilot,A,R,R,C,C,C,R,C
+Incident and emergency authority,A,C,R,C,R,C,R,I
+Operational acceptance,A,R,R,C,C,C,C,I
+Financial chain-rollout gate,C,R,C,I,I,I,I,A
+Operations handoff,A,R,R,C,C,C,R,I
+Legend,"R=Responsible; A=Accountable; C=Consulted; I=Informed",,,,,,,

@@ -1,9 +1,0 @@
-ID,Type,Description,Probability,Impact,Owner,Response,Trigger,Status
-R-001,Risk,Actual carton mix exceeds validated operating envelope,4,5,Customer Ops,Reject workflow daily mix report and change-control trigger,More than 2 percent unsupported cartons,Transferred to operations
-R-002,Risk,Forklift or pedestrian enters robot operating zone,3,5,Safety EHS,Physical separation access controls and witnessed intrusion tests,Zone intrusion or bypass,Closed
-R-003,Risk,Network coverage fails inside trailer or dock,3,4,IT Security,Radio-frequency survey redundant coverage and local safe-state test,Packet loss above threshold,Closed
-R-004,Risk,Grasp failures reduce throughput,4,4,Robot Engineering,Representative carton testing tuning and exception routing,Mission success below target,Closed
-R-005,Risk,Spare actuator or end-effector lead time exceeds Service-Level Agreement,3,4,Field Service,Onsite minimum stock and replenishment trigger,Stock below minimum,Transferred to service
-A-001,Assumption,Customer provides representative trailers and cartons for Factory and Site Acceptance Testing,3,4,Customer Ops,Dated sample obligation completed before test,Sample set late or incomplete,Validated
-D-001,Dependency,Warehouse Management System and conveyor test endpoint available before integration test,3,4,IT Security,Weekly dependency review and simulator fallback,Test date slips five days,Closed
-I-001,Issue,Final production shift coverage not approved,5,3,Sponsor,Two-shift labor plan approved before site gate,Not approved by week 12,Closed

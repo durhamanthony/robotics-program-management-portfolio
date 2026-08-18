@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety and Acceptance Plan — Retail Backroom Humanoids | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/retail-humanoid-backroom.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 01 — Retail backroom</span> <span class="tag muted-tag">Assure / Validate</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/01-humanoid-retail-backroom/SAFETY_AND_ACCEPTANCE.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="safety-and-acceptance-plan--retail-backroom-humanoids">Safety and Acceptance Plan — Retail Backroom Humanoids</h1>
+<h2 id="operating-limits">Operating limits</h2>
+<p>Employee-only backroom; approved mapped route; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited.</p>
+<h2 id="principal-hazards-and-controls">Principal hazards and controls</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Hazard</th>
+<th>Preventive control</th>
+<th>Detection/protective control</th>
+<th>Recovery</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>person/cart in aisle</td>
+<td>right-of-way, low speed, marked parking</td>
+<td>perception, protective stop, emergency stop</td>
+<td>supervisor clears/restarts by checklist</td>
+</tr>
+<tr class="even">
+<td>fall on stair/threshold</td>
+<td>mapped route, surface/edge inspection</td>
+<td>posture/fault monitor and exclusion distance</td>
+<td>isolate area; field retrieval plan</td>
+</tr>
+<tr class="odd">
+<td>dropped/wrong item</td>
+<td>approved grasp set; scan before pick</td>
+<td>grip/load monitoring; pick/handoff scan</td>
+<td>safe stop; human exception</td>
+</tr>
+<tr class="even">
+<td>blocked fire door/egress</td>
+<td>route excludes staging in egress</td>
+<td>opening inspection and route-health check</td>
+<td>recall robot; use human workflow</td>
+</tr>
+<tr class="odd">
+<td>network/integration loss</td>
+<td>local safe behavior; idempotent interface</td>
+<td>heartbeat, timeout, transaction reconciliation</td>
+<td>pause missions; tablet becomes human queue</td>
+</tr>
+<tr class="even">
+<td>battery/electrical/thermal</td>
+<td>approved charger, inspection, clearances</td>
+<td>temperature/fault monitoring</td>
+<td>isolate power; emergency response</td>
+</tr>
+<tr class="odd">
+<td>privacy/security misuse</td>
+<td>employee-only purpose, least privilege</td>
+<td>access logs, masks, retention/deletion checks</td>
+<td>revoke access; incident process</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mandatory-acceptance-tests">Mandatory acceptance tests</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Witnessed criterion</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FAT-010 approved-item handling</td>
+<td>100 varied picks with at least 97% success and no uncontrolled drop</td>
+<td>pass</td>
+</tr>
+<tr class="even">
+<td>FAT-020 exception handling</td>
+<td>10/10 tangled/damaged/unsupported cases reject without grasp</td>
+<td>pass</td>
+</tr>
+<tr class="odd">
+<td>SAT-010 route/stair/door</td>
+<td>20/20 cycles remain in route and complete safe stops</td>
+<td>pass</td>
+</tr>
+<tr class="even">
+<td>SAT-020 human/cart intrusion</td>
+<td>30/30 approaches stop before protective boundary</td>
+<td>pass</td>
+</tr>
+<tr class="odd">
+<td>SAT-030 network/interface loss</td>
+<td>10/10 faults enter defined safe hold; no duplicate transaction</td>
+<td>pass</td>
+</tr>
+<tr class="even">
+<td>SAT-040 emergency stop/restart</td>
+<td>each device stops motion; only authorized checklist restart</td>
+<td>pass</td>
+</tr>
+<tr class="odd">
+<td>UAT-010 retrieval</td>
+<td>at least 97% mission success</td>
+<td>98.1%</td>
+</tr>
+<tr class="even">
+<td>UAT-020 wait</td>
+<td>median no more than 4.0 minutes</td>
+<td>3.4 minutes</td>
+</tr>
+<tr class="odd">
+<td>UAT-030 quality/intervention</td>
+<td>wrong/damage at most 0.5%; interventions at most 3/100</td>
+<td>0.2%; 2.2/100</td>
+</tr>
+</tbody>
+</table>
+<p>FAT means Factory Acceptance Test, SAT means Site Acceptance Test, and UAT means User Acceptance Testing.</p>
+<h2 id="authority">Authority</h2>
+<p>Safety Lead approves mandatory safety evidence; Store Sponsor accepts operations; Finance separately decides scale. A failed mandatory safety test is no-go regardless of schedule or financial value.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

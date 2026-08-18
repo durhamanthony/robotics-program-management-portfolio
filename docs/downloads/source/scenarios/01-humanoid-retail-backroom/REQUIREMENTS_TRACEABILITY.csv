@@ -1,0 +1,14 @@
+requirement_id,source,requirement,verification_method,acceptance_criterion,owner,gate,result
+RET-FUNC-001,Charter,"Receive tablet request with Stock-Keeping Unit size and color",Interface test,20 of 20 normal and error cases produce correct mission or explicit rejection,Integration Lead,FAT,Pass
+RET-FUNC-002,Statement of Work,Retrieve approved shoe box or already-hung garment,Witnessed test,At least 97 of 100 approved missions complete without manual recovery,Store Operations,UAT,98.1 percent
+RET-ROUTE-001,Site design,Use approved existing aisles doors and short stair route,Witnessed route test,20 of 20 route cycles complete with no boundary violation,Safety Lead,SAT,Pass
+RET-HUM-001,Safety plan,Yield to employees and carts in shared aisle,Intrusion and stop test,Stop before protective boundary in 30 of 30 approaches,Safety Lead,SAT,Pass
+RET-PERF-001,Business case,Reduce request-to-handoff time,Thirty-day log,Median no more than 4.0 minutes,Store Sponsor,UAT,3.4 minutes
+RET-DATA-001,Business case,Improve inventory location accuracy,Cycle-count comparison,At least 98 percent,Inventory Lead,UAT,98.7 percent
+RET-QUAL-001,Statement of Work,Limit damaged or wrong-item handoffs,Inspection and transaction log,No more than 0.5 percent,Quality Lead,UAT,0.2 percent
+RET-OPS-001,Charter,Limit human recovery demand,Intervention log,No more than 3 interventions per 100 missions,Store Operations,UAT,2.2 per 100
+RET-EXC-001,Scope,Tangled hangers damaged packaging and unsupported items go to humans,Fault-injection test,10 of 10 cases reject to exception queue without grasp attempt,Safety Lead,FAT,Pass
+RET-SEC-001,Security design,Use least-privilege service identity and audited operator access,Security test,No critical finding; access and revocation tests pass,Security Lead,SAT,Pass
+RET-PRIV-001,Privacy design,Operate employee-only with camera purpose and retention limits,Review and deletion test,Approved notice; masked zones; deletion and access-log checks pass,Privacy Lead,SAT,Pass
+RET-SUP-001,Operations handoff,Create correlated alert case and restore service,Support drill,Severity-1 acknowledgement within 15 minutes and service restored within 4 hours,Service Owner,UAT,Pass
+RET-FIN-001,Business case,Meet five-year scale threshold,Finance review,Annual gross value at least 346000 dollars with binding quotes,Finance,G6,Fail at 184468 dollars
