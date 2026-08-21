@@ -3,15 +3,6 @@
   "capability_demos": [
     {
       "code": "CAPABILITY LAB 01",
-      "title": "MuJoCo Restroom Cleaning Humanoid",
-      "filename": "restroom-cleaning-humanoid.mp4",
-      "caption": "A scripted MuJoCo operations visualization of a humanoid moving through a public restroom to service toilets, sinks, mirrors, floors, paper supplies, and trash. Electrical work and light-bulb replacement remain outside the robot task scope.",
-      "href": "library/simulations/restroom_cleaning/README.html",
-      "label": "Open capability notes",
-      "model_source": "simulations/restroom_cleaning/README.md"
-    },
-    {
-      "code": "CAPABILITY LAB 02",
       "title": "MuJoCo Warehouse Palletizing and Truck Loading",
       "filename": "warehouse-palletizing-truck-loading.mp4",
       "caption": "A scripted MuJoCo operations visualization of humanoids moving cartons from conveyors to a seven-carton pallet stack, followed by robot-operated forklift transfer into a green delivery truck and empty-pallet reset.",
@@ -361,6 +352,107 @@
         "budget": "$4,412,000 spent against $4,668,000 authorization; $256,000 reserve returned",
         "acceptance": ["All 250 robot records linked to site, version, entitlement, and owner", "Severity 1 and Severity 2 on-call and customer-communication drills passed", "Case, work order, Jira defect, and telemetry correlation demonstrated end to end", "Field dispatch, critical spare, and return-to-service exercises passed", "Service owner accepted Key Performance Indicator dashboard, staffing triggers, continuity plan, and phase-two roadmap"],
         "lessons": ["Installed-product data quality is a release dependency", "Customer communication and diagnosis need parallel owners", "Automate alerts only after precision and ownership are measured", "Support evidence must feed product reliability and serviceability decisions"]
+      }
+    },
+    {
+      "slug": "airport-restroom-humanoid-deployment",
+      "code": "CASE 05",
+      "title": "Two Humanoids — Airport Restroom Cleaning Pilot",
+      "client": "Pacific Gateway International Airport",
+      "program_type": "Airport facilities deployment",
+      "status": "Closed — pilot accepted; expansion held at economics gate",
+      "health": "Amber",
+      "role": "Integrated Robotics Program Manager",
+      "duration": "28 weeks including 90-day pilot",
+      "budget": "$1.645M actual / $1.875M authorized",
+      "tco": "$3.135M five-year TCO",
+      "summary": "Deploy two humanoid robots into four unchanged Terminal 4 public restrooms for controlled routine cleaning and replenishment. The rooms remain closed and verified empty during robot work. Airport custodians retain inspection, prohibited-contamination response, corrective cleaning, supply custody, and reopening authority. The program is managed through three coordinated viewpoints: seller/integrator, humanoid manufacturer, and airport buyer/operator.",
+      "decision": "The airport accepted the seller's pilot deliverables, the manufacturer froze a four-room pilot product baseline, and airport operations accepted the controlled runbook. Expansion was not authorized. The pilot passed safety, mission, quality, supply, support, and cost gates, but $68,985 of annualized routine-task capacity does not support the $3.1345 million five-year planning Total Cost of Ownership. A scale decision requires binding quotes and measured non-labor service value.",
+      "metrics": [
+        {"label": "Scheduled mission completion", "value": "1,048 / 1,080", "note": "97.04%; target at least 97%", "state": "pass"},
+        {"label": "First-pass quality", "value": "248 / 270", "note": "91.85%; target at least 90%", "state": "pass"},
+        {"label": "Safety / recovery tests", "value": "60 / 60", "note": "All witnessed tests passed", "state": "pass"},
+        {"label": "Exception drills", "value": "24 / 24", "note": "Safe stop and human escalation required", "state": "pass"},
+        {"label": "Supply accuracy", "value": "327 / 332", "note": "98.49%; target at least 98%", "state": "pass"},
+        {"label": "Five-year value gap", "value": "$2.790M", "note": "Routine capacity value only; no savings booked", "state": "watch"}
+      ],
+      "phases": [
+        {"name": "Charter, baseline, and procurement", "start": 1, "end": 4, "status": "Complete"},
+        {"name": "Product baseline and integrated design", "start": 3, "end": 8, "status": "Complete"},
+        {"name": "Airport site, safety, privacy, and network", "start": 5, "end": 14, "status": "Complete"},
+        {"name": "Manufacturer verification", "start": 7, "end": 12, "status": "Complete"},
+        {"name": "Factory Acceptance Test", "start": 11, "end": 12, "status": "Complete"},
+        {"name": "Install and Site Acceptance Test", "start": 13, "end": 16, "status": "Complete"},
+        {"name": "Training and shadow mode", "start": 16, "end": 20, "status": "Complete"},
+        {"name": "Controlled 90-day pilot", "start": 21, "end": 26, "status": "Complete"},
+        {"name": "Acceptance, handoff, and closeout", "start": 27, "end": 28, "status": "Complete"}
+      ],
+      "timeline_unit": "Week",
+      "timeline_max": 28,
+      "financials": [
+        {"label": "Direct-cost base", "value": 1630000, "display": "$1,630,000"},
+        {"label": "Pilot authorization", "value": 1874500, "display": "$1,874,500"},
+        {"label": "Pilot actual", "value": 1645000, "display": "$1,645,000"},
+        {"label": "Annual run rate", "value": 315000, "display": "$315,000"},
+        {"label": "Five-year TCO", "value": 3134500, "display": "$3,134,500"},
+        {"label": "Annual capacity value", "value": 68985, "display": "$68,985"}
+      ],
+      "financial_note": "The equipment and service amounts are quote-required planning allowances, not vendor prices. Four rooms × three missions per day × 0.50 observed labor-hour × 365 days creates 2,190 annual task-hours. At the fictional airport loaded rate of $31.50 per hour, annual capacity value is $68,985. Capacity is not cash savings, no job is eliminated, and even the low-cost/high-value sensitivity fails five-year cost recovery.",
+      "risks": [
+        {"id": "R-001", "risk": "Passenger enters during robot operation", "score": 10, "status": "Closed", "response": "Physical closure, occupancy check, entry control, audible notice, and immediate stop"},
+        {"id": "R-002", "risk": "Sharps, blood, vomit, or unknown material encountered", "score": 20, "status": "Transferred to airport procedure", "response": "Stop without contact, isolate, and dispatch trained human specialist"},
+        {"id": "R-003", "risk": "Wrong chemical or wet contact time", "score": 15, "status": "Transferred to quality audit", "response": "Approved cartridge, label, Safety Data Sheet, locked recipe, and timed dwell"},
+        {"id": "R-004", "risk": "Wet floor creates slip hazard", "score": 12, "status": "Closed", "response": "Moisture check, warning sign, inspection, and human reopening authority"},
+        {"id": "R-005", "risk": "Pilot data used beyond approved purpose", "score": 8, "status": "Closed; recurring review", "response": "Closed-room operation, minimization, least privilege, short retention, and audit"},
+        {"id": "R-006", "risk": "Pilot result generalized beyond approved rooms", "score": 12, "status": "Open control", "response": "Four-room baseline, change control, and separate expansion gate"}
+      ],
+      "team": [
+        {"role": "Airport Executive Sponsor", "accountability": "Funding, airport authority, pilot acceptance, and expansion decision"},
+        {"role": "Integrated Robotics Program Manager", "accountability": "Master plan, cross-party dependencies, decisions, cost, risk, evidence, and closeout"},
+        {"role": "Seller / Integrator Project Manager", "accountability": "Contract, site integration, commissioning, training, acceptance delivery, and support handoff"},
+        {"role": "Manufacturer Project Manager", "accountability": "Pilot product baseline, verification, release, reliability, spares, and defect correction"},
+        {"role": "Airport Owner / Operator Project Manager", "accountability": "Procurement, facilities, workforce, safety, operations, benefits, acceptance, and handoff"},
+        {"role": "Custodial, Safety, Cybersecurity, and Facilities Leads", "accountability": "Daily authority, inspection, exceptions, chemicals, privacy, access, infrastructure, and fallback"}
+      ],
+      "perspectives": [
+        {"name": "Seller / Integrator PM", "decision": "Did we deliver the contracted, integrated, supportable pilot and acceptance evidence?", "outcome": "All eight deliverables accepted; $304,200 actual against $310,000 work package; warranty handoff started.", "artifact": "scenarios/05-airport-restroom-humanoid-deployment/SELLER_INTEGRATOR_PROJECT_PLAN.md"},
+        {"name": "Manufacturer PM", "decision": "Is the exact pilot configuration verified and releasable for this operating envelope?", "outcome": "v4.4 pilot baseline accepted for four mapped rooms; General Availability remains gated.", "artifact": "scenarios/05-airport-restroom-humanoid-deployment/MANUFACTURER_PROJECT_PLAN.md"},
+        {"name": "Airport Buyer / Operator PM", "decision": "Can the airport operate, inspect, support, and economically justify the system?", "outcome": "Controlled operation accepted; no workforce reduction and no airport-wide rollout authorized.", "artifact": "scenarios/05-airport-restroom-humanoid-deployment/AIRPORT_OWNER_IMPLEMENTATION_PLAN.md"}
+      ],
+      "artifacts": [
+        {"label": "Case study", "path": "scenarios/05-airport-restroom-humanoid-deployment/CASE_STUDY.md", "category": "Executive"},
+        {"label": "Research and assumptions", "path": "scenarios/05-airport-restroom-humanoid-deployment/RESEARCH_AND_ASSUMPTIONS.md", "category": "Evidence"},
+        {"label": "Integrated program charter", "path": "scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_PROGRAM_CHARTER.md", "category": "Initiate"},
+        {"label": "Seller Statement of Work", "path": "scenarios/05-airport-restroom-humanoid-deployment/STATEMENT_OF_WORK.md", "category": "Commercial"},
+        {"label": "Business case and Total Cost of Ownership", "path": "scenarios/05-airport-restroom-humanoid-deployment/BUSINESS_CASE_AND_TCO.md", "category": "Financial"},
+        {"label": "Basis of estimate and sensitivity", "path": "scenarios/05-airport-restroom-humanoid-deployment/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "category": "Financial"},
+        {"label": "Integrated master schedule", "path": "scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_MASTER_SCHEDULE.csv", "category": "Control"},
+        {"label": "Budget and variance", "path": "scenarios/05-airport-restroom-humanoid-deployment/BUDGET.csv", "category": "Financial"},
+        {"label": "Risk, assumption, issue, and dependency register", "path": "scenarios/05-airport-restroom-humanoid-deployment/RAID.csv", "category": "Control"},
+        {"label": "Requirements traceability", "path": "scenarios/05-airport-restroom-humanoid-deployment/REQUIREMENTS_TRACEABILITY.csv", "category": "Assurance"},
+        {"label": "Safety, quality, and acceptance", "path": "scenarios/05-airport-restroom-humanoid-deployment/SAFETY_QUALITY_AND_ACCEPTANCE_PLAN.md", "category": "Assurance"},
+        {"label": "Seller / integrator Project Manager plan", "path": "scenarios/05-airport-restroom-humanoid-deployment/SELLER_INTEGRATOR_PROJECT_PLAN.md", "category": "Perspective"},
+        {"label": "Manufacturer Project Manager plan", "path": "scenarios/05-airport-restroom-humanoid-deployment/MANUFACTURER_PROJECT_PLAN.md", "category": "Perspective"},
+        {"label": "Airport owner / operator implementation", "path": "scenarios/05-airport-restroom-humanoid-deployment/AIRPORT_OWNER_IMPLEMENTATION_PLAN.md", "category": "Perspective"},
+        {"label": "Daily operations and exception runbook", "path": "scenarios/05-airport-restroom-humanoid-deployment/DAILY_OPERATIONS_AND_EXCEPTION_RUNBOOK.md", "category": "Operate"},
+        {"label": "Cybersecurity, privacy, and data", "path": "scenarios/05-airport-restroom-humanoid-deployment/CYBERSECURITY_PRIVACY_AND_DATA_PLAN.md", "category": "Assurance"},
+        {"label": "Training, change, and workforce", "path": "scenarios/05-airport-restroom-humanoid-deployment/TRAINING_CHANGE_AND_WORKFORCE_PLAN.md", "category": "Change"},
+        {"label": "Benefits realization", "path": "scenarios/05-airport-restroom-humanoid-deployment/BENEFITS_REALIZATION_PLAN.md", "category": "Benefits"},
+        {"label": "Final weekly status report", "path": "scenarios/05-airport-restroom-humanoid-deployment/WEEKLY_STATUS_REPORT.md", "category": "Control"},
+        {"label": "Closeout and handoff", "path": "scenarios/05-airport-restroom-humanoid-deployment/CLOSEOUT_AND_HANDOFF.md", "category": "Close"}
+      ],
+      "demo": {
+        "title": "MuJoCo v4.4 Airport Restroom Humanoid Cleaning",
+        "filename": "restroom-cleaning-humanoid.mp4",
+        "caption": "Accelerated browser clip rendered from the audit-approved MuJoCo v4.4 public-restroom model. A scripted humanoid services two toilets, one urinal, the open floor, two sinks, and two mirrors, then returns to the labeled charging station. The live source sequence runs two 58-second cleaning loops separated by a 30-second charging wait. This is an operations visualization, not cleaning-efficacy or autonomous-performance validation.",
+        "model_source": "simulations/restroom_cleaning/README.md",
+        "sequence": ["Verify closed empty room", "Service two toilet bays", "Service the urinal", "Swiffer the open floor", "Wipe sinks and mirrors", "Return to charge and repeat the controlled loop"]
+      },
+      "closure": {
+        "schedule": "Completed in week 28 after the 90-day pilot",
+        "budget": "$1,645,000 actual against $1,874,500 authorization; $229,500 returned",
+        "acceptance": ["1,048 of 1,080 scheduled routine missions completed", "248 of 270 sampled missions passed the twelve-point inspection on first review", "All 60 witnessed safety/recovery tests and 24 prohibited-exception drills passed", "Seller deliverables, manufacturer pilot baseline, airport runbook, training, spares, support, and data handoff accepted", "No labor savings booked and no airport-wide expansion authorized"],
+        "lessons": ["Human-form-factor rationale must connect to existing doors, partitions, fixtures, tools, and human-height work", "Seller delivery, manufacturer release, and buyer operational acceptance are separate decisions", "A safe exception path is part of the product and operating design", "A technically successful pilot can still fail the scale-economics gate", "Percentages need denominators, and planning prices need quotations before procurement"]
       }
     }
   ]

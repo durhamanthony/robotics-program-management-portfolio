@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import math
 import subprocess
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -17,6 +18,10 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 VIDEO_DIR = ROOT / "media" / "videos"
+RESTROOM_SIM_DIR = ROOT / "simulations" / "restroom_cleaning"
+sys.path.insert(0, str(RESTROOM_SIM_DIR))
+
+from restroom_sequence import SEQUENCE_END_SECONDS, update as restroom_sequence_update
 
 
 def smooth(value: float) -> float:
@@ -147,27 +152,8 @@ def ad01_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
 
 
 def restroom_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    stops = [(-6.0, -2.0, 0.0), (1.2, -2.9, 0.0), (3.4, 1.25, 0.0), (3.5, 3.15, 0.0), (0.2, -1.2, 0.0), (-1.55, -3.5, 0.0), (-2.5, -3.4, 0.0), (5.0, -0.6, 0.0)]
-    pose = path_pose(t, stops)
-    set_mocap(model, data, "cleaning_humanoid", pose)
-    x_pos, y_pos, z_pos, yaw = pose
-    if 0.08 < t < 0.70:
-        set_mocap(model, data, "cleaning_tool", (x_pos + 0.35, y_pos, z_pos + 0.72, yaw))
-    else:
-        set_mocap(model, data, "cleaning_tool", (-5.7, 3.6, 0.72, 0.0))
-    if 0.68 < t < 0.84:
-        set_mocap(model, data, "paper_refill", (x_pos + 0.38, y_pos, 1.05, yaw))
-    elif t >= 0.84:
-        set_mocap(model, data, "paper_refill", (-1.55, -4.0, 1.42, math.pi / 2))
-    else:
-        set_mocap(model, data, "paper_refill", (-5.6, 3.3, 0.75, 0.0))
-    if 0.80 < t < 0.94:
-        set_mocap(model, data, "trash_bag", (x_pos + 0.38, y_pos, 0.85, yaw))
-    elif t >= 0.94:
-        set_mocap(model, data, "trash_bag", (-6.4, -2.4, 0.4, 0.0))
-    else:
-        set_mocap(model, data, "trash_bag", (-2.5, -3.65, 0.95, 0.0))
-    return "overview"
+    camera, _, _ = restroom_sequence_update(model, data, t * SEQUENCE_END_SECONDS)
+    return camera
 
 
 def warehouse_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
@@ -232,7 +218,7 @@ SCENES = {
         Scene("security", ROOT / "simulations/quadruped_security/security.xml", "quadruped-night-security.mp4", 14.0, security_update),
         Scene("ad01", ROOT / "simulations/new_robot_npi/ad01.xml", "ad01-new-robot-npi.mp4", 14.0, ad01_update),
         Scene("support", ROOT / "simulations/support_lab/service_bay.xml", "robotics-support-triage.mp4", 12.0, support_update),
-        Scene("restroom", ROOT / "simulations/restroom_cleaning/restroom.xml", "restroom-cleaning-humanoid.mp4", 14.0, restroom_update),
+        Scene("restroom", ROOT / "simulations/restroom_cleaning/restroom.xml", "restroom-cleaning-humanoid.mp4", SEQUENCE_END_SECONDS, restroom_update),
         Scene("warehouse", ROOT / "simulations/warehouse_capability/warehouse.xml", "warehouse-palletizing-truck-loading.mp4", 16.0, warehouse_update),
     )
 }

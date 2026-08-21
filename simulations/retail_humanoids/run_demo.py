@@ -70,8 +70,8 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
 
     viewer = None
     if viewer_enabled:
-        import mujoco.viewer
-        viewer = mujoco.viewer.launch_passive(model, data, show_left_ui=False, show_right_ui=False)
+        from mujoco import viewer as mujoco_viewer
+        viewer = mujoco_viewer.launch_passive(model, data, show_left_ui=False, show_right_ui=False)
         camera_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_CAMERA, "portfolio")
         viewer.cam.type = mujoco.mjtCamera.mjCAMERA_FIXED
         viewer.cam.fixedcamid = camera_id

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manufacturer Project Manager Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/MANUFACTURER_PROJECT_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="manufacturer-project-manager-plan">Manufacturer Project Manager Plan</h1>
+<h2 id="accountable-outcome">Accountable outcome</h2>
+<p>Release and support a traceable pilot configuration that can execute the four-room routine scope, produce verification evidence, and fail safely. The release is limited to the pilot; it is not General Availability.</p>
+<h2 id="product-baseline">Product baseline</h2>
+<ul>
+<li>Two serialized humanoid robots and two chargers.</li>
+<li>Approved cleaning-tool and supply interfaces.</li>
+<li>Locked chemical/material compatibility list.</li>
+<li>Restroom mapping and fixture approach parameters.</li>
+<li>Local safe-state behavior for network, occupancy, energy, thermal, leak, and contact faults.</li>
+<li>Telemetry bundle for mission, configuration, fault, intervention, and inspection correlation.</li>
+</ul>
+<h2 id="verification-plan">Verification plan</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Evidence</th>
+<th style="text-align: right;">Release threshold</th>
+<th style="text-align: right;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeated task sequence</td>
+<td>500 laboratory cycles</td>
+<td style="text-align: right;">At least 97% completion</td>
+<td style="text-align: right;">491 of 500 or 98.2%</td>
+</tr>
+<tr>
+<td>Tool retention</td>
+<td>200 attach/use/release cycles</td>
+<td style="text-align: right;">Zero uncontrolled releases</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Fixture contact</td>
+<td>Force-limited approach tests</td>
+<td style="text-align: right;">All within approved envelope</td>
+<td style="text-align: right;">120 of 120</td>
+</tr>
+<tr>
+<td>Chemical compatibility</td>
+<td>Coupons and 30-day exposure</td>
+<td style="text-align: right;">No unsafe degradation</td>
+<td style="text-align: right;">Pass with approved products only</td>
+</tr>
+<tr>
+<td>Safe state</td>
+<td>40 injected faults</td>
+<td style="text-align: right;">40 of 40 stop/recover as specified</td>
+<td style="text-align: right;">40 of 40</td>
+</tr>
+<tr>
+<td>Serviceability</td>
+<td>Replaceable-unit drill</td>
+<td style="text-align: right;">Median repair within 45 minutes</td>
+<td style="text-align: right;">38 minutes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="defect-and-release-control">Defect and release control</h2>
+<p>Every defect links to configuration, evidence, severity, workaround, correction, regression result, and release decision. A mirror-wiping path defect found in pilot week 22 was corrected in the pilot branch, regression-tested for 50 cycles, approved by change control, and released to both serialized robots in week 23.</p>
+<h2 id="closeout">Closeout</h2>
+<p>The manufacturer accepted the v4.4 pilot baseline for the four mapped rooms. General Availability remained blocked by broader chemical compatibility, additional fixture families, long-duration reliability, production cost, and second-source evidence.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -8,7 +8,7 @@ date: "August 2026"
 
 I build the operating system around complex technology: the plan, people, readiness gates, telemetry, support model, vendor controls, and customer handoff that turn a technical product into a reliable service.
 
-This portfolio applies enterprise-scale program and service-operations leadership to four fictional robotics scenarios. It demonstrates judgment, completed artifacts, governance, browser-playable MuJoCo-rendered evidence, and the source models used to produce each clip.
+This portfolio applies enterprise-scale program and service-operations leadership to five fictional robotics scenarios. It demonstrates judgment, completed artifacts, governance, browser-playable MuJoCo-rendered evidence, and the source models used to produce each clip.
 
 # Professional foundation
 

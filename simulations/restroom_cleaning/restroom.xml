@@ -1,70 +1,151 @@
-<mujoco model="public_restroom_humanoid_cleaning_v1">
+<mujoco model="public_restroom_humanoid_cleaning_v4_4">
   <compiler angle="degree"/>
   <option timestep="0.01" gravity="0 0 -9.81"/>
-  <statistic center="0 0 1.1" extent="9"/>
-  <visual><global offwidth="960" offheight="540"/><headlight ambient="0.45 0.45 0.45" diffuse="0.88 0.88 0.88"/></visual>
-  <default><geom contype="0" conaffinity="0"/></default>
+  <statistic center="0 0 1.0" extent="8.4"/>
+  <visual>
+    <global offwidth="960" offheight="540" azimuth="140" elevation="-58"/>
+    <headlight ambient="0.30 0.30 0.30" diffuse="0.28 0.28 0.28" specular="0.03 0.03 0.03"/>
+  </visual>
+  <default>
+    <geom contype="1" conaffinity="1" friction="0.9 0.02 0.002"/>
+  </default>
+
   <asset>
-    <texture name="tile" type="2d" builtin="checker" rgb1="0.67 0.70 0.72" rgb2="0.82 0.84 0.85" width="256" height="256"/>
-    <material name="floor" texture="tile" texrepeat="12 8" reflectance="0.15"/>
-    <material name="wall" rgba="0.88 0.91 0.92 1"/>
+    <texture name="tile" type="2d" builtin="checker" rgb1="0.28 0.32 0.35" rgb2="0.66 0.69 0.71" width="256" height="256"/>
+    <texture name="cleaning_label" type="2d" file="assets/cleaning_supplies.png"/>
+    <texture name="charging_label" type="2d" file="assets/charging_station.png"/>
+    <texture name="garbage_label" type="2d" file="assets/garbage.png"/>
+    <texture name="paper_label" type="2d" file="assets/paper_towels.png"/>
+    <material name="floor" texture="tile" texrepeat="12 8" reflectance="0" specular="0" shininess="0"/>
+    <material name="wall" rgba="0.90 0.92 0.93 1"/>
     <material name="partition" rgba="0.38 0.43 0.47 1"/>
-    <material name="ceramic" rgba="0.93 0.95 0.96 1" specular="0.55" shininess="0.55"/>
+    <material name="ceramic" rgba="0.96 0.97 0.98 1" specular="0.55" shininess="0.55"/>
+    <material name="seat" rgba="0.83 0.86 0.88 1" specular="0.25"/>
+    <material name="water" rgba="0.27 0.62 0.78 1" reflectance="0.18"/>
     <material name="steel" rgba="0.65 0.70 0.73 1" specular="0.70" shininess="0.70"/>
-    <material name="mirror" rgba="0.25 0.55 0.64 0.70" reflectance="0.45"/>
+    <material name="mirror" rgba="0.25 0.55 0.64 0.72" reflectance="0.45"/>
     <material name="robot" rgba="0.04 0.42 0.82 1"/>
     <material name="accent" rgba="0.02 0.72 0.60 1"/>
     <material name="hazard" rgba="0.95 0.20 0.05 1" emission="0.12"/>
+    <material name="cleaning_sign" texture="cleaning_label" texuniform="false" specular="0"/>
+    <material name="charging_sign" texture="charging_label" texuniform="false" specular="0"/>
+    <material name="garbage_sign" texture="garbage_label" texuniform="false" specular="0"/>
+    <material name="paper_sign" texture="paper_label" texuniform="false" specular="0"/>
   </asset>
+
   <worldbody>
-    <light pos="-2 -2 7" dir="0.15 0.1 -1" diffuse="0.92 0.92 0.92"/>
-    <geom type="plane" size="8 5 0.1" material="floor" contype="1" conaffinity="1"/>
-    <camera name="overview" pos="-10 -10 7" xyaxes="0.72 -0.69 0 0.40 0.42 0.81"/>
-    <camera name="fixtures" pos="4 -9 4.2" xyaxes="0.90 0.44 0 -0.19 0.39 0.90"/>
-    <camera name="supplies" pos="-8 4 4" xyaxes="-0.42 -0.91 0 0.39 -0.18 0.90"/>
+    <light pos="-2 -2 7" dir="0.15 0.1 -1" diffuse="0.30 0.30 0.30" specular="0.03 0.03 0.03"/>
+    <light pos="5 3 6" dir="-0.2 -0.1 -1" diffuse="0.16 0.16 0.16" specular="0.02 0.02 0.02"/>
+    <geom name="restroom_floor" type="plane" size="7.2 4.8 0.1" material="floor"/>
 
-    <!-- Existing public restroom shell with an open entry and serviceable fixtures. -->
-    <geom type="box" pos="0 4.8 1.5" size="7.2 0.10 1.5" material="wall"/>
-    <geom type="box" pos="7.2 0 1.5" size="0.10 4.8 1.5" material="wall"/>
-    <geom type="box" pos="-7.2 2.9 1.5" size="0.10 1.9 1.5" material="wall"/>
-    <geom type="box" pos="-7.2 -3.5 1.5" size="0.10 1.3 1.5" material="wall"/>
+    <!-- Fixed cameras reproduce the four audit angles identified in the review. -->
+    <!-- Wide cameras are far enough back to keep the complete room visible in
+         MuJoCo's narrow center viewport when both side-control panels are open. -->
+    <camera name="top_overview" pos="-18 -18 22.5" fovy="54" xyaxes="0.707107 -0.707107 0 0.468293 0.468293 0.749269"/>
+    <!-- Higher and farther elevated diagonal view for toilet and urinal work.
+         It keeps the robot, both toilet bays, the urinal, and more of the room
+         visible in MuJoCo's narrow center viewport. -->
+    <camera name="fixture_cleaning" pos="-18 -18 22.5" fovy="54" xyaxes="0.707107 -0.707107 0 0.468293 0.468293 0.749269"/>
+    <camera name="toilet_cleaning" pos="-18 -18 18" fovy="58" xyaxes="0.707107 -0.707107 0 0.397457 0.397457 0.827077"/>
+    <camera name="floor_cleaning" pos="-18 -18 18" fovy="58" xyaxes="0.707107 -0.707107 0 0.397457 0.397457 0.827077"/>
+    <!-- This camera is behind and above the robot while it faces the sinks.
+         The robot, both arms, sink counter, and mirrors remain in front of it. -->
+    <camera name="sink_cleaning" pos="1.2 3.5 7.5" fovy="55" xyaxes="-1 0 0 0 -0.674269 0.738485"/>
 
-    <!-- Two stalls and toilets. -->
-    <geom type="box" pos="4.8 2.2 1.15" size="0.06 2.2 1.15" material="partition"/>
-    <geom type="box" pos="2.4 4.0 1.15" size="2.4 0.06 1.15" material="partition"/>
-    <geom type="box" pos="4.8 -1.0 1.15" size="0.06 1.0 1.15" material="partition"/>
-    <geom type="box" pos="2.4 0.0 1.15" size="2.4 0.06 1.15" material="partition"/>
-    <geom type="box" pos="3.6 3.3 0.42" size="0.36 0.50 0.22" material="ceramic"/>
-    <geom type="cylinder" pos="3.6 3.3 0.66" size="0.34 0.16" material="ceramic"/>
-    <geom type="box" pos="3.6 1.25 0.42" size="0.36 0.50 0.22" material="ceramic"/>
-    <geom type="cylinder" pos="3.6 1.25 0.66" size="0.34 0.16" material="ceramic"/>
+    <!-- Building shell. The entry wall is intentionally low so the whole room stays visible. -->
+    <geom name="back_building_wall" type="box" pos="0 4.8 1.5" size="7.2 0.10 1.5" material="wall"/>
+    <geom name="right_building_wall" type="box" pos="7.2 0 1.5" size="0.10 4.8 1.5" material="wall"/>
+    <!-- Original doorway orientation, with both wall sections lowered for the audit view. -->
+    <geom name="low_door_wall_upper" type="box" pos="-7.2 2.9 0.42" size="0.10 1.9 0.42" material="wall"/>
+    <geom name="low_door_wall_lower" type="box" pos="-7.2 -3.5 0.42" size="0.10 1.3 0.42" material="wall"/>
+    <geom name="mirror_backing_wall" type="box" pos="0.6 -4.34 1.5" size="3.0 0.10 1.5" material="wall"/>
 
-    <!-- Sink bank, mirrors, dispensers and waste. -->
-    <geom type="box" pos="1.2 -3.7 0.84" size="2.0 0.52 0.12" material="ceramic"/>
-    <geom type="cylinder" pos="0.25 -3.68 0.99" size="0.38 0.08" material="steel"/>
-    <geom type="cylinder" pos="2.15 -3.68 0.99" size="0.38 0.08" material="steel"/>
-    <geom type="box" pos="0.25 -4.22 1.75" size="0.72 0.035 0.62" material="mirror"/>
-    <geom type="box" pos="2.15 -4.22 1.75" size="0.72 0.035 0.62" material="mirror"/>
-    <geom name="paper_towel_dispenser" type="box" pos="-1.55 -4.18 1.45" size="0.34 0.14 0.46" material="partition"/>
-    <geom name="trash_bin" type="cylinder" pos="-2.5 -3.65 0.44" size="0.38 0.44" rgba="0.12 0.15 0.17 1"/>
-    <geom name="supply_cabinet" type="box" pos="-5.6 3.8 1.0" size="0.62 0.48 1.0" material="partition"/>
-    <geom name="dock" type="box" pos="-5.6 2.55 0.12" size="0.62 0.48 0.12" material="accent"/>
-    <geom name="hazard_marker" type="cylinder" pos="5.65 -0.6 0.08" size="0.14 0.08" material="hazard"/>
+    <!-- Open-front toilet and urinal bays. The two blue-marked door panels are removed. -->
+    <geom name="moved_outer_privacy_wall" type="box" pos="-6.72 3.12 1.15" size="0.07 1.65 1.15" material="partition"/>
+    <geom name="toilet_divider_wall" type="box" pos="-4.00 3.12 1.15" size="0.07 1.65 1.15" material="partition"/>
+    <geom name="toilet_urinal_divider" type="box" pos="-1.30 3.12 1.15" size="0.07 1.65 1.15" material="partition"/>
+
+    <body name="toilet_1" pos="-5.35 4.05 0">
+      <geom name="toilet_1_pedestal" type="ellipsoid" pos="0 0.02 0.31" size="0.29 0.37 0.31" material="ceramic"/>
+      <geom name="toilet_1_bowl" type="ellipsoid" pos="0 -0.20 0.57" size="0.43 0.58 0.23" material="ceramic"/>
+      <geom name="toilet_1_seat" type="ellipsoid" pos="0 -0.22 0.72" size="0.38 0.50 0.055" material="seat"/>
+      <geom name="toilet_1_water" type="ellipsoid" pos="0 -0.25 0.755" size="0.25 0.34 0.018" material="water" contype="0" conaffinity="0"/>
+      <geom name="toilet_1_tank" type="box" pos="0 0.37 0.90" size="0.40 0.18 0.43" material="ceramic"/>
+      <geom name="toilet_1_lid" type="box" pos="0 0.37 1.35" size="0.43 0.20 0.035" material="ceramic"/>
+      <geom name="toilet_1_flush" type="sphere" pos="0.29 0.16 1.02" size="0.045" material="steel"/>
+    </body>
+
+    <body name="toilet_2" pos="-2.65 4.05 0">
+      <geom name="toilet_2_pedestal" type="ellipsoid" pos="0 0.02 0.31" size="0.29 0.37 0.31" material="ceramic"/>
+      <geom name="toilet_2_bowl" type="ellipsoid" pos="0 -0.20 0.57" size="0.43 0.58 0.23" material="ceramic"/>
+      <geom name="toilet_2_seat" type="ellipsoid" pos="0 -0.22 0.72" size="0.38 0.50 0.055" material="seat"/>
+      <geom name="toilet_2_water" type="ellipsoid" pos="0 -0.25 0.755" size="0.25 0.34 0.018" material="water" contype="0" conaffinity="0"/>
+      <geom name="toilet_2_tank" type="box" pos="0 0.37 0.90" size="0.40 0.18 0.43" material="ceramic"/>
+      <geom name="toilet_2_lid" type="box" pos="0 0.37 1.35" size="0.43 0.20 0.035" material="ceramic"/>
+      <geom name="toilet_2_flush" type="sphere" pos="0.29 0.16 1.02" size="0.045" material="steel"/>
+    </body>
+
+    <!-- The toilets and urinal are moved together toward the brown-marked back zone. -->
+    <body name="urinal" pos="0.00 4.52 0">
+      <geom name="urinal_back" type="box" pos="0 0 0.96" size="0.34 0.10 0.48" material="ceramic"/>
+      <geom name="urinal_bowl" type="ellipsoid" pos="0 -0.22 0.73" size="0.36 0.29 0.34" material="ceramic"/>
+      <geom name="urinal_water" type="ellipsoid" pos="0 -0.40 0.72" size="0.22 0.10 0.12" material="water" contype="0" conaffinity="0"/>
+      <geom name="urinal_flush_pipe" type="cylinder" pos="0 -0.06 1.52" size="0.035 0.25" material="steel"/>
+      <geom name="urinal_flush_valve" type="sphere" pos="0 -0.06 1.27" size="0.075" material="steel"/>
+    </body>
+
+    <!-- Two sinks, faucets, mirrors, and the solid wall behind the mirrors. -->
+    <geom name="sink_counter" type="box" pos="1.20 -3.70 0.84" size="2.00 0.52 0.12" material="ceramic"/>
+    <geom name="sink_cabinet" type="box" pos="1.20 -4.05 0.42" size="1.90 0.14 0.42" material="partition"/>
+    <geom name="sink_1" type="ellipsoid" pos="0.25 -3.68 0.98" size="0.43 0.32 0.08" material="steel"/>
+    <geom name="sink_2" type="ellipsoid" pos="2.15 -3.68 0.98" size="0.43 0.32 0.08" material="steel"/>
+    <geom name="faucet_1_post" type="cylinder" pos="0.25 -4.00 1.18" size="0.035 0.18" material="steel"/>
+    <geom name="faucet_1_spout" type="capsule" fromto="0.25 -4.00 1.34 0.25 -3.70 1.34" size="0.035" material="steel"/>
+    <geom name="faucet_2_post" type="cylinder" pos="2.15 -4.00 1.18" size="0.035 0.18" material="steel"/>
+    <geom name="faucet_2_spout" type="capsule" fromto="2.15 -4.00 1.34 2.15 -3.70 1.34" size="0.035" material="steel"/>
+    <geom name="mirror_1" type="box" pos="0.25 -4.22 1.85" size="0.72 0.025 0.62" material="mirror" contype="0" conaffinity="0"/>
+    <geom name="mirror_2" type="box" pos="2.15 -4.22 1.85" size="0.72 0.025 0.62" material="mirror" contype="0" conaffinity="0"/>
+
+    <!-- Clearly labeled waste and paper-towel fixtures. -->
+    <geom name="trash_bin" type="cylinder" pos="-2.50 -3.65 0.44" size="0.40 0.44" rgba="0.10 0.12 0.14 1"/>
+    <geom name="garbage_label" type="box" pos="-2.50 -4.64 1.08" size="0.62 0.025 0.16" material="garbage_sign" contype="0" conaffinity="0"/>
+    <geom name="paper_towel_dispenser" type="box" pos="-1.55 -4.55 1.45" size="0.34 0.15 0.46" material="partition"/>
+    <geom name="paper_towel_label" type="box" pos="-1.55 -4.64 2.22" size="0.86 0.025 0.18" material="paper_sign" contype="0" conaffinity="0"/>
+
+    <!-- Cabinet and charging station moved to the green-marked right wall. -->
+    <geom name="supply_cabinet" type="box" pos="6.60 1.05 1.00" size="0.48 0.62 1.00" material="partition"/>
+    <geom name="supply_handle" type="capsule" fromto="6.10 0.82 0.85 6.10 0.82 1.15" size="0.025" material="steel" contype="0" conaffinity="0"/>
+    <geom name="cleaning_supplies_label" type="box" pos="6.095 1.05 1.48" size="0.025 0.58 0.18" material="cleaning_sign" contype="0" conaffinity="0"/>
+    <geom name="dock" type="box" pos="6.60 -0.70 0.16" size="0.48 0.62 0.16" material="accent"/>
+    <geom name="charging_station_label" type="box" pos="6.095 -0.70 0.62" size="0.025 0.58 0.18" material="charging_sign" contype="0" conaffinity="0"/>
+
+    <geom name="hazard_marker" type="cylinder" pos="3.0 -1.0 0.08" size="0.14 0.08" material="hazard"/>
 
     <body name="cleaning_humanoid" mocap="true" pos="-6.0 -2.0 0">
       <geom type="box" pos="0 0 1.20" size="0.25 0.19 0.36" material="robot"/>
       <geom type="sphere" pos="0 0 1.78" size="0.18" material="ceramic"/>
       <geom type="box" pos="0.16 0 1.79" size="0.07 0.12 0.05" rgba="0.03 0.12 0.16 1"/>
-      <geom type="capsule" fromto="0 -0.27 1.46 0 -0.48 0.92" size="0.075" material="ceramic"/>
-      <geom type="capsule" fromto="0 0.27 1.46 0 0.48 0.92" size="0.075" material="ceramic"/>
       <geom type="capsule" fromto="0 -0.12 0.91 0 -0.16 0.10" size="0.085" material="ceramic"/>
       <geom type="capsule" fromto="0 0.12 0.91 0 0.16 0.10" size="0.085" material="ceramic"/>
     </body>
-    <body name="cleaning_tool" mocap="true" pos="-5.8 -1.5 0.72">
-      <geom type="cylinder" size="0.035 0.65" material="steel"/>
-      <geom type="box" pos="0 0 -0.68" size="0.30 0.10 0.035" material="accent"/>
+
+    <!-- Independently animated arms reach toward the sink and mirrors. -->
+    <body name="left_arm" mocap="true" pos="-5.90 -2.22 1.48">
+      <geom type="capsule" fromto="0 0 0 0.78 0 -0.14" size="0.075" material="ceramic" contype="0" conaffinity="0"/>
     </body>
-    <body name="paper_refill" mocap="true" pos="-5.6 3.3 0.75"><geom type="cylinder" size="0.20 0.16" euler="90 0 0" material="ceramic"/></body>
-    <body name="trash_bag" mocap="true" pos="-2.5 -3.65 0.95"><geom type="sphere" size="0.25" rgba="0.05 0.06 0.07 1"/></body>
+    <body name="right_arm" mocap="true" pos="-5.90 -1.78 1.48">
+      <geom type="capsule" fromto="0 0 0 0.78 0 -0.14" size="0.075" material="ceramic" contype="0" conaffinity="0"/>
+    </body>
+
+    <body name="cleaning_tool" mocap="true" pos="-5.8 -1.5 0.72">
+      <geom type="cylinder" size="0.035 0.65" material="steel" contype="0" conaffinity="0"/>
+      <geom type="box" pos="0 0 -0.68" size="0.30 0.10 0.035" material="accent" contype="0" conaffinity="0"/>
+    </body>
+    <body name="paper_refill" mocap="true" pos="5.75 1.05 0.75">
+      <geom type="cylinder" size="0.20 0.16" euler="90 0 0" material="ceramic"/>
+    </body>
+    <body name="trash_bag" mocap="true" pos="-2.50 -3.65 0.95">
+      <geom type="sphere" size="0.25" rgba="0.05 0.06 0.07 1"/>
+    </body>
   </worldbody>
 </mujoco>

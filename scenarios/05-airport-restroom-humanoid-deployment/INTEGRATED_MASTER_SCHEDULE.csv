@@ -1,0 +1,15 @@
+ID,Workstream,Milestone_or_activity,Start_week,End_week,Exit_evidence,Owner,Status
+1,Integrated,Charter funding and governance,1,2,Signed charter and decision rights,Integrated Program Manager,Complete
+2,Airport,Workflow time study and room survey,1,4,Approved baseline and four-room survey,Airport Project Manager,Complete
+3,Manufacturer,Pilot product baseline and tool interfaces,2,7,Released configuration and interface record,Manufacturer Project Manager,Complete
+4,Seller,Integrated design and hazard review,4,8,Design review action closure,Seller Project Manager,Complete
+5,Airport,Network identity privacy and entry controls,5,10,Security and operations approvals,Airport Project Manager,Complete
+6,Manufacturer,Verification and reliability test,7,12,Verification report and defect disposition,Manufacturer Project Manager,Complete
+7,Seller,Factory Acceptance Test,11,12,Signed Factory Acceptance Test report,Seller Project Manager,Complete
+8,Airport,Site preparation and custodial procedures,9,14,Site-readiness certificate,Airport Project Manager,Complete
+9,Seller,Installation and Site Acceptance Test,13,16,Signed Site Acceptance Test and punch list,Seller Project Manager,Complete
+10,Integrated,Training and 30-day shadow mode,16,20,Assessments and shadow-mode exit approval,Integrated Program Manager,Complete
+11,Integrated,Controlled 90-day pilot,21,26,1080-mission dataset and weekly reviews,Integrated Program Manager,Complete
+12,Integrated,Acceptance economics and handoff,27,27,Acceptance certificate and reconciled costs,Airport Project Manager,Complete
+13,Integrated,Closeout and expansion decision,28,28,Closeout report and no-scale decision,Executive Steering Committee,Complete
+

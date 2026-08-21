@@ -1,0 +1,14 @@
+Deliverable_or_decision,Airport_Sponsor,Integrated_Program_Manager,Airport_Project_Manager,Seller_Project_Manager,Manufacturer_Project_Manager,Airport_Safety,Custodial_Operations,Cybersecurity_Procurement
+Charter and funding,A,R,C,C,C,C,C,C
+Workflow and benefits baseline,I,A,R,C,C,C,R,C
+Integrated design,I,A,C,R,R,C,C,C
+Pilot product release,I,C,C,C,A,R,C,I
+Factory Acceptance Test,I,A,C,R,R,C,C,I
+Site Acceptance Test,I,A,R,R,C,R,C,C
+Room closure and daily operating authority,I,C,A,C,I,C,R,I
+Chemical and Safety Data Sheet control,I,C,A,C,C,R,R,I
+Pilot acceptance,A,R,R,C,C,R,R,C
+Commercial expansion decision,A,R,R,C,C,C,C,R
+Manufacturer General Availability decision,I,I,I,C,A,C,C,I
+Closeout and handoff,A,R,R,R,R,C,R,C
+

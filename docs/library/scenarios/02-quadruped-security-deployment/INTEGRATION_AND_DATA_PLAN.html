@@ -14,34 +14,34 @@
 <h2 id="interface-controls">Interface controls</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Interface</th>
 <th>Required data</th>
 <th>Failure response</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Mission/fleet</td>
 <td>Robot, route, geofence version, schedule, battery, mission state</td>
 <td>Do not start or execute approved safe-return/hold behavior</td>
 </tr>
-<tr class="even">
+<tr>
 <td>SOC/alert</td>
 <td>Alert type, confidence/context, robot/location, time, media reference</td>
 <td>Retry/alternate channel; create visible delivery failure</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Evidence system</td>
 <td>Case/correlation ID, immutable timestamp, approved media/log excerpt, access audit</td>
 <td>Preserve local buffer; prohibit untracked copies</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Identity/remote access</td>
 <td>Named user/device, least privilege, MFA, approval, session log</td>
 <td>Deny by default and escalate</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Service tooling</td>
 <td>Serial/version/health, fault, mission and MCAP/log window</td>
 <td>Create linked case; redact according to policy</td>

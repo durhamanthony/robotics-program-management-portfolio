@@ -1,0 +1,13 @@
+RESTROOM MUJOCO V4 UPDATE
+
+1. Close MuJoCo and GitHub Desktop.
+2. Copy every item from this update into the root of your existing
+   robotics-program-management-portfolio folder.
+3. Choose Replace the files in the destination when Windows asks.
+4. Double-click RUN_RESTROOM_DEMO_WINDOWS.bat.
+
+The live audit starts with the elevated top camera, runs one 58-second cleaning
+loop, waits at the charger for 30 seconds, repeats the loop, and stops at the
+charger after 146 seconds. The final scene stays open until you close MuJoCo.
+
+Do not commit or push until you visually approve the room and motion.

@@ -1,0 +1,42 @@
+# Basis of Estimate and Sensitivity
+
+## Estimate classification
+
+This is a concept-stage planning estimate. It is suitable for a controlled pilot funding envelope, not for supplier award or airport-wide appropriation. Every robot, integration, support, and infrastructure amount requires a quotation.
+
+## Arithmetic controls
+
+- Direct-cost base: $1,630,000.
+- Fifteen-percent uncertainty allowance: $244,500.
+- Pilot authorization: $1,874,500.
+- Post-pilot annual run rate: $315,000.
+- Five-year Total Cost of Ownership: $3,134,500.
+- Annual routine capacity: 2,190 labor-hours.
+- Annualized capacity value at $31.50 per hour: $68,985.
+
+## Sensitivity
+
+| Case | Initial program | Annual run rate | Five-year Total Cost of Ownership | Annual task-capacity value | Five-year value before discounting | Gap |
+|---|---:|---:|---:|---:|---:|---:|
+| Low cost / high value | $1,350,000 | $240,000 | $2,310,000 | $147,825 | $739,125 | $(1,570,875) |
+| Base | $1,874,500 | $315,000 | $3,134,500 | $68,985 | $344,925 | $(2,789,575) |
+| High cost / low value | $2,600,000 | $460,000 | $4,440,000 | $38,325 | $191,625 | $(4,248,375) |
+
+The low-cost/high-value case assumes 3,285 annual hours at $45 per hour. It still does not recover cost. Financial justification therefore cannot rest on routine labor capacity alone.
+
+## Quote and measurement register
+
+| Item | Required evidence | Due | Owner |
+|---|---|---|---|
+| Robot and charger price | Binding quote, warranty, useful life, replacement terms | Before expansion gate | Procurement |
+| Integration | Fixed deliverables, labor rates, travel, exclusions, acceptance | Before supplier award | Seller Project Manager |
+| Support | Coverage, response targets, parts, software, annual escalation | Before pilot start | Service Owner |
+| Airport infrastructure | Approved design and quantity takeoff | Design gate | Airport Engineering |
+| Custodial workload | Four-week time study by service type | Week 4 | Benefits Owner |
+| Quality | Twelve-point audit baseline and pilot sample | Weekly | Custodial Quality |
+| Service value | Closure minutes, response, complaints, availability | Pilot close | Airport Operations |
+
+## Management reserve rule
+
+The uncertainty allowance is controlled by the Executive Steering Committee. It cannot hide scope growth. A draw requires an identified risk, estimate-to-complete, schedule impact, owner, and approval. Unused funds return at closeout.
+

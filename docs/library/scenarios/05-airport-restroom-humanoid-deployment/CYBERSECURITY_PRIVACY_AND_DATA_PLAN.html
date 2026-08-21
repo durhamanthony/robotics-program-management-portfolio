@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybersecurity, Privacy, and Data Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Assure / Validate</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/CYBERSECURITY_PRIVACY_AND_DATA_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="cybersecurity-privacy-and-data-plan">Cybersecurity, Privacy, and Data Plan</h1>
+<h2 id="purpose-limitation">Purpose limitation</h2>
+<p>Sensors support navigation, safety, fixture service, exception detection, and evidence inside a closed restroom. The pilot prohibits facial recognition, identity inference, passenger analytics, marketing, law-enforcement use, and operation while the room is occupied.</p>
+<h2 id="control-design">Control design</h2>
+<table>
+<thead>
+<tr>
+<th>Control area</th>
+<th>Required control</th>
+<th>Acceptance evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identity</td>
+<td>Unique robot, service, operator, and support identities; multi-factor authentication for people</td>
+<td>Account and authentication test</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Segmented robot network, only approved destinations and ports</td>
+<td>Architecture and rule review</td>
+</tr>
+<tr>
+<td>Privilege</td>
+<td>Operator, support, administrator, auditor, and airport roles separated</td>
+<td>Role test and access review</td>
+</tr>
+<tr>
+<td>Remote support</td>
+<td>Airport-approved window, ticket, named person, recorded commands, session timeout</td>
+<td>Witnessed support drill</td>
+</tr>
+<tr>
+<td>Data minimization</td>
+<td>Event metadata by default; image capture only for defined fault evidence</td>
+<td>Data-flow review</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td>Closed-room operation, occupancy inhibit, privacy masking, no audio unless separately approved</td>
+<td>Eighteen privacy and deletion tests</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>Routine telemetry 90 days; fault evidence 30 days unless attached to an active investigation; access logs one year</td>
+<td>Automated deletion and legal-hold tests</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Signed release, configuration inventory, rollback, vulnerability intake</td>
+<td>Release and rollback drill</td>
+</tr>
+<tr>
+<td>Incident response</td>
+<td>Robot safe state, credential revocation, evidence preservation, airport cyber escalation</td>
+<td>Tabletop and technical exercise</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-ownership">Data ownership</h2>
+<p>The airport owns operational and inspection records. Manufacturer access is limited to approved diagnostic data for a ticket or reliability review. The seller cannot reuse airport data to train a model or build a commercial dataset without a separate written agreement.</p>
+<h2 id="exit">Exit</h2>
+<p>At pilot termination, the seller returns airport data, provides the retained-data inventory, deletes unneeded copies, removes credentials, and certifies remote-access closure. The airport preserves only records required by policy, contract, incident, or legal hold.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

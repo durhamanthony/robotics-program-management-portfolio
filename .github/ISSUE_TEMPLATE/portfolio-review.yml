@@ -1,0 +1,52 @@
+name: Portfolio review
+description: Give structured feedback on a scenario, artifact, dashboard, or demonstration
+title: "Review: "
+labels: [review]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area reviewed
+      options:
+        - Home page
+        - Airport restroom humanoid scenario
+        - Retail backroom humanoid scenario
+        - Quadruped security scenario
+        - New robot product introduction scenario
+        - Robotics support operations scenario
+        - Completed artifact
+        - MuJoCo demonstration
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Page or file link
+      placeholder: https://...
+  - type: textarea
+    id: works
+    attributes:
+      label: What is clear and credible?
+    validations:
+      required: true
+  - type: textarea
+    id: improve
+    attributes:
+      label: What should change?
+      description: Identify the specific sentence, number, visual, workflow, or artifact.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or example
+      description: Add a source, calculation, screenshot, or concrete rewrite when possible.
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Public-content check
+      options:
+        - label: This feedback does not include confidential or private information.
+          required: true
+

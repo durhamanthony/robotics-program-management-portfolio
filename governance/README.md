@@ -1,6 +1,6 @@
 # Robotics Program Governance Library
 
-This folder contains the cross-program controls used by all four portfolio scenarios. The scenario folders contain the project-specific evidence; this folder defines how a robotics project or program manager governs the work.
+This folder contains the cross-program controls used by all five portfolio scenarios. The scenario folders contain the project-specific evidence; this folder defines how a robotics project or program manager governs the work.
 
 ## Control set
 

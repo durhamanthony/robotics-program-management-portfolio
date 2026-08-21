@@ -1,0 +1,12 @@
+Cost_ID,Perspective,Cost_group,Base_USD,Committed_USD,Actual_USD,Variance_USD,Evidence,Status
+C01,Manufacturer,Two humanoid robots and chargers,500000,482000,482000,18000,Serialized equipment acceptance,Complete
+C02,Manufacturer,Application engineering,220000,216000,211500,8500,Approved time and deliverables,Complete
+C03,Seller,Configuration integration and commissioning,310000,310000,304200,5800,Milestone acceptance,Complete
+C04,Airport,Site network cybersecurity and entry controls,145000,142500,139800,5200,Airport work orders,Complete
+C05,Integrated,Independent safety and acceptance,120000,118000,116400,3600,Test reports,Complete
+C06,Airport,Training and operational change,70000,68000,66100,3900,Training completion,Complete
+C07,Seller,Pilot support spares and consumables,110000,103000,99800,10200,Parts and support records,Complete
+C08,Integrated,Integrated program management,155000,155000,151700,3300,Approved resource actuals,Complete
+C09,Integrated,Uncertainty allowance,244500,85000,73500,171000,Approved risk draws,Closed
+TOTAL,Integrated,Pilot authorization,1874500,1679500,1645000,229500,Finance reconciliation,Complete
+

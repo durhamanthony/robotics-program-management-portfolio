@@ -101,6 +101,7 @@ def check_dashboards(errors: list[str]) -> None:
         "quadruped-security-deployment.html",
         "ad01-new-robot-first-sale.html",
         "robotics-support-operations.html",
+        "airport-restroom-humanoid-deployment.html",
     )
     for name in pages:
         path = DOCS / "scenarios" / name
@@ -108,7 +109,8 @@ def check_dashboards(errors: list[str]) -> None:
             errors.append(f"Missing scenario dashboard: {path.relative_to(ROOT)}")
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
-        if text.count("data-tab-target=") != 8 or text.count('class="dashboard-panel') != 8:
+        expected = 9 if name == "airport-restroom-humanoid-deployment.html" else 8
+        if text.count("data-tab-target=") != expected or text.count('class="dashboard-panel') != expected:
             errors.append(f"Dashboard is missing one or more required sections: {path.relative_to(ROOT)}")
 
 
@@ -118,6 +120,7 @@ def check_scenarios(errors: list[str]) -> None:
         "02-quadruped-security-deployment": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "INCIDENT_AND_ESCALATION_PLAN.md"),
         "03-new-robot-first-sale": ("ARTIFACT_INDEX.md", "BUSINESS_CASE.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "PRODUCT_ROADMAP.md", "SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "COMMERCIAL_LAUNCH_PLAN.md"),
         "04-robotics-support-operations": ("ARTIFACT_INDEX.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "SERVICE_CATALOG.md", "TOOL_SELECTION_AND_COST.md", "OBSERVABILITY_AND_DATA_PLAN.md", "BUSINESS_CONTINUITY.md"),
+        "05-airport-restroom-humanoid-deployment": ("ARTIFACT_INDEX.md", "CASE_STUDY.md", "INTEGRATED_PROGRAM_CHARTER.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "SELLER_INTEGRATOR_PROJECT_PLAN.md", "MANUFACTURER_PROJECT_PLAN.md", "AIRPORT_OWNER_IMPLEMENTATION_PLAN.md", "SAFETY_QUALITY_AND_ACCEPTANCE_PLAN.md", "CLOSEOUT_AND_HANDOFF.md"),
     }
     for scenario, files in required.items():
         for name in files:

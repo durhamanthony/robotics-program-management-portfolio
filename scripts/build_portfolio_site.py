@@ -86,6 +86,7 @@ def scenario_name(path: Path) -> str:
         "02-quadruped-security-deployment": "Case 02 — Security",
         "03-new-robot-first-sale": "Case 03 — New product",
         "04-robotics-support-operations": "Case 04 — Support",
+        "05-airport-restroom-humanoid-deployment": "Case 05 — Airport restroom",
     }.get(rel.parts[1], rel.parts[1])
 
 
@@ -131,6 +132,7 @@ def markdown_fragment(path: Path) -> str:
         check=True,
         capture_output=True,
         text=True,
+        encoding='utf-8',
     )
     return re.sub(
         r'href="([^"?#]+)\.(?:md|csv)([?#][^"]*)?"',
@@ -183,6 +185,7 @@ def page_for_source(path: Path) -> tuple[Path, str]:
         "02-quadruped-security-deployment": "quadruped-security-deployment",
         "03-new-robot-first-sale": "ad01-new-robot-first-sale",
         "04-robotics-support-operations": "robotics-support-operations",
+        "05-airport-restroom-humanoid-deployment": "airport-restroom-humanoid-deployment",
     }
     if rel.parts[0] == "scenarios" and len(rel.parts) > 1 and rel.parts[1] in scenario_returns:
         return_link = Path(*([".."] * depth), "scenarios", f"{scenario_returns[rel.parts[1]]}.html").as_posix() + "#artifacts"
@@ -262,6 +265,16 @@ def demo_markup(scenario: dict) -> str:
 
 def build_dashboard(scenario: dict) -> None:
     team = "".join(f'<article><strong>{esc(item["role"])}</strong><p>{esc(item["accountability"])}</p></article>' for item in scenario["team"])
+    perspectives = scenario.get("perspectives", [])
+    perspective_tab = '<button data-tab-target="perspectives">Three PM Views</button>' if perspectives else ""
+    perspective_cards = "".join(
+        f'<article><span class="panel-kicker">Accountable decision</span><h3>{esc(item["name"])}</h3><p><strong>{esc(item["decision"])}</strong></p><p>{esc(item["outcome"])}</p><p><a href="{artifact_url(item["artifact"])}">Open completed Project Manager plan →</a></p></article>'
+        for item in perspectives
+    )
+    perspective_panel = (
+        f'<section id="perspectives" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Three accountable delivery viewpoints</span><h2>Seller, manufacturer, and airport Project Manager decisions</h2></div></div><p class="section-intro">One integrated program, with separate contractual, product-release, and owner-operator accountabilities. Each card links to a completed plan with its own budget, schedule, risks, acceptance evidence, and handoff.</p><div class="team-grid">{perspective_cards}</div></section>'
+        if perspectives else ""
+    )
     accept = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["acceptance"])
     lessons = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["lessons"])
     body = f"""<main id="main">
@@ -269,7 +282,7 @@ def build_dashboard(scenario: dict) -> None:
 <h1>{esc(scenario['title'])}</h1><p class="lead">{esc(scenario['client'])} · {esc(scenario['role'])}</p>
 <div class="status-row"><span class="status status-{esc(scenario['health'].lower())}">{esc(scenario['status'])}</span><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(scenario['tco'])}</span></div></div></section>
 <div class="dashboard-nav-wrap"><nav class="dashboard-nav container" aria-label="Scenario sections">
-<button class="active" data-tab-target="overview">Overview</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button><button data-tab-target="artifacts">Artifacts</button><button data-tab-target="demo">Demo</button><button data-tab-target="closeout">Closeout</button>
+<button class="active" data-tab-target="overview">Overview</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button>{perspective_tab}<button data-tab-target="artifacts">Artifacts</button><button data-tab-target="demo">Demo</button><button data-tab-target="closeout">Closeout</button>
 </nav></div>
 <div class="container dashboard-shell">
 <section id="overview" class="dashboard-panel active"><div class="panel-heading"><div><span class="panel-kicker">Executive view</span><h2>Program outcome and acceptance</h2></div><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div>
@@ -279,6 +292,7 @@ def build_dashboard(scenario: dict) -> None:
 <section id="financials" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Decision economics</span><h2>Budget and Total Cost of Ownership</h2></div></div><div class="finance-chart">{financial_chart(scenario)}</div><div class="callout"><strong>Decision rule</strong><p>{esc(scenario['financial_note'])}</p></div></section>
 <section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
+{perspective_panel}
 <section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
 <section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable MuJoCo simulation</h2></div></div>{demo_markup(scenario)}</section>
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
@@ -287,16 +301,17 @@ def build_dashboard(scenario: dict) -> None:
 
 
 def build_index(data: dict, count: int) -> None:
+    scenario_count = len(data["scenarios"])
     cards = []
     for scenario in data["scenarios"]:
         metric = scenario["metrics"][0]
         cards.append(f"""<article class="case-card"><div class="case-top"><span>{esc(scenario['code'])}</span><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div><h3>{esc(scenario['title'])}</h3><p>{esc(scenario['summary'])}</p><div class="case-facts"><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(metric['label'])}: {esc(metric['value'])}</span></div><a class="card-link" href="scenarios/{esc(scenario['slug'])}.html">Open program dashboard →</a></article>""")
     body = f"""<section class="hero"><div class="hero-grid"><div><div class="eyebrow">Robotics deployment · product introduction · service operations</div>
 <h1>Turning complex robotics into reliable operations.</h1><p class="lead">A project and program management portfolio showing how Anthony Durham turns a robotics concept or customer order into a governed, measurable operating outcome.</p>
-<div class="button-row"><a class="button" href="#cases">Explore four scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
+<div class="button-row"><a class="button" href="#cases">Explore {scenario_count} scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
 <main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>Four complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
 <section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch MuJoCo</strong><p>Play browser-based MuJoCo-rendered clips—no terminal commands or software installation.</p></article></div></section></main>"""
     write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
 
@@ -316,10 +331,10 @@ def build_artifact_page(paths: list[Path]) -> None:
     write(DOCS / "artifacts.html", shell("Completed Artifact Library", body))
 
 
-def build_about() -> None:
-    body = """<main id="main" class="container"><article class="article about-article"><div class="eyebrow dark">About Anthony Durham</div><h1>Program leadership at the boundary of technology and operations</h1>
+def build_about(scenario_count: int) -> None:
+    body = f"""<main id="main" class="container"><article class="article about-article"><div class="eyebrow dark">About Anthony Durham</div><h1>Program leadership at the boundary of technology and operations</h1>
 <p>Anthony led a 45-person, five-team Walmart technology portfolio spanning engineering, Level 2 support, remote-support tools, telemetry, and call-center technology. He managed a $14 million portfolio, delivered $2 million in annual savings, scaled a platform from approximately 1,000 to 37,000 endpoints, and supported telemetry strategy across 300,000 Windows devices.</p>
-<p>He is applying that experience to robotics deployment and service operations through hands-on robotics training, advanced online coursework, Project Management Professional exam preparation, and the four operating scenarios in this portfolio.</p>
+<p>He is applying that experience to robotics deployment and service operations through hands-on robotics training, advanced online coursework, Project Management Professional exam preparation, and the {scenario_count} operating scenarios in this portfolio.</p>
 <h2>Robotics and project-management development</h2><ul><li>CSTU and Robofix five-day hands-on robotics bootcamp — completed August 2026.</li><li>Mangates Learn Robotics one-day hands-on training — completed July 30, 2026; eight professional development units.</li><li>AI Robotics Edu Advanced Robotics Training with Ray Tang, PhD — ten-week online program in progress.</li><li>Project Management Academy Project Management Professional exam-preparation course — completed; exam preparation in progress.</li></ul>
 <h2>Recent AI project work</h2><p>Mercor — AI Data Annotation Contributor / IT Management Subject Matter Expert, December 2025–January 2026. Assigned contributor applying IT-management expertise to confidential evaluation scenarios and image-labeling work.</p>
 <p><a class="button" href="https://www.linkedin.com/in/anthonydurham">View LinkedIn profile</a></p></article></main>"""
@@ -354,7 +369,7 @@ def build_videos(data: dict) -> None:
         if entry["href"] != model_url:
             links += f' · <a href="{esc(model_url)}">MuJoCo model notes →</a>'
         cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(entry["code"])}</span><h2>{esc(entry["title"])}</h2><p>{esc(entry["caption"])}</p><p>{links}</p></div></article>')
-    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>MuJoCo Simulation Gallery</h1><p class="section-intro">All six clips on this page are rendered from MuJoCo models in this repository. The motions are scripted operational visualizations—not learned locomotion, grasp-performance validation, certified controls, or vendor digital twins. Recruiters and hiring managers can play them directly in the browser without Python, a terminal, or MuJoCo.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
+    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>MuJoCo Simulation Gallery</h1><p class="section-intro">All {len(entries)} clips on this page are rendered from MuJoCo models in this repository. The motions are scripted operational visualizations—not learned locomotion, grasp-performance validation, certified controls, or vendor digital twins. Recruiters and hiring managers can play them directly in the browser without Python, a terminal, or MuJoCo.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
     write(DOCS / "videos.html", shell("MuJoCo Simulation Gallery", body))
 
 
@@ -382,11 +397,11 @@ def main() -> None:
     for scenario in data["scenarios"]:
         build_dashboard(scenario)
     build_artifact_page(paths)
-    build_about()
+    build_about(len(data["scenarios"]))
     build_videos(data)
     search = [{"title": title_for(p), "path": (Path("library") / p.relative_to(ROOT).with_suffix(".html")).as_posix()} for p in paths]
     write(DOCS / "search-index.json", json.dumps(search, indent=2))
-    print(f"Built public GitHub Pages site: 4 dashboards, {len(paths)} artifacts")
+    print(f"Built public GitHub Pages site: {len(data['scenarios'])} dashboards, {len(paths)} artifacts")
 
 
 if __name__ == "__main__":

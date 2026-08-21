@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Operations and Exception Runbook | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Execute / Deploy</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/DAILY_OPERATIONS_AND_EXCEPTION_RUNBOOK.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="daily-operations-and-exception-runbook">Daily Operations and Exception Runbook</h1>
+<h2 id="start-of-shift-release">Start-of-shift release</h2>
+<ol type="1">
+<li>Airport custodian checks room assignment, public-service window, warning signs, barrier, occupancy status, and manual fallback.</li>
+<li>Operator verifies robot serial, approved configuration, battery, tool, chemical identity, supply levels, telemetry, charger, and support contact.</li>
+<li>Custodian inspects for sharps, visible blood, vomit, unknown chemical, standing water, smoke, obstruction, damage, or occupied stall. Any prohibited condition blocks dispatch.</li>
+<li>Airport Duty Manager authorizes the service window; the room is closed and verified empty.</li>
+<li>Operator dispatches one room mission. Parallel operation requires separate closure and supervision capacity.</li>
+</ol>
+<h2 id="routine-mission">Routine mission</h2>
+<ul>
+<li>Establish the top overview and verify the mapped room.</li>
+<li>Service toilet 1, toilet 2, and urinal with the approved tool sequence.</li>
+<li>Clean the open floor using the approved path.</li>
+<li>Wipe sinks and mirrors with the approved surface process.</li>
+<li>Service the entry route, supplies, and waste within the approved scope.</li>
+<li>Return to charge and create a mission record.</li>
+<li>Custodian performs the twelve-point inspection and either reopens or assigns corrective work.</li>
+</ul>
+<h2 id="stop-conditions">Stop conditions</h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Robot action</th>
+<th>Human action</th>
+<th>Reopen authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Person enters or occupancy uncertain</td>
+<td>Protective stop</td>
+<td>Clear room and investigate entry control</td>
+<td>Airport Duty Manager</td>
+</tr>
+<tr>
+<td>Sharps, blood, vomit, or prohibited contamination</td>
+<td>Stop without contact and flag location</td>
+<td>Trained specialist follows airport exposure-control procedure</td>
+<td>Custodial Supervisor</td>
+</tr>
+<tr>
+<td>Chemical mismatch or leak</td>
+<td>Stop, isolate dispenser, retain record</td>
+<td>Follow Safety Data Sheet and airport spill procedure</td>
+<td>Airport Safety</td>
+</tr>
+<tr>
+<td>Standing water or plumbing fault</td>
+<td>Stop outside affected zone</td>
+<td>Isolate fixture and dispatch Facilities</td>
+<td>Facilities Supervisor</td>
+</tr>
+<tr>
+<td>Network loss</td>
+<td>Local safe state</td>
+<td>Restore network or manually recover</td>
+<td>Seller Support plus Airport Cybersecurity</td>
+</tr>
+<tr>
+<td>Collision/contact or damaged fixture</td>
+<td>Emergency stop</td>
+<td>Protect area, inspect person/robot/fixture, open incident</td>
+<td>Airport Safety</td>
+</tr>
+<tr>
+<td>Low energy or thermal limit</td>
+<td>Return to dock or safe stop</td>
+<td>Inspect telemetry and recover per manufacturer procedure</td>
+<td>Robot Operator</td>
+</tr>
+<tr>
+<td>Inspection failure</td>
+<td>Remain closed</td>
+<td>Corrective human cleaning and defect classification</td>
+<td>Custodian</td>
+</tr>
+</tbody>
+</table>
+<h2 id="severity-and-communication">Severity and communication</h2>
+<ul>
+<li>Severity 1: injury, uncontrolled entry, chemical release, collision, privacy event, or both robots unavailable. Notify Airport Duty Manager and Safety immediately; seller acknowledgement target 15 minutes.</li>
+<li>Severity 2: one robot unavailable, repeated quality failure, charger failure, or room blocked. Notify custodial supervisor and seller; acknowledgement target 30 minutes.</li>
+<li>Severity 3: non-blocking defect or documentation issue. Record before shift end; review in daily triage.</li>
+</ul>
+<h2 id="end-of-shift">End-of-shift</h2>
+<p>Reconcile scheduled versus completed missions, inspections, exceptions, supplies, chemical use, battery, faults, interventions, public complaints, support cases, and room downtime. The Airport Project Manager reviews daily during commissioning and weekly during steady pilot operation.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

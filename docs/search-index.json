@@ -340,6 +340,94 @@
     "path": "library/scenarios/04-robotics-support-operations/WEEKLY_STATUS_REPORT.html"
   },
   {
+    "title": "Airport Owner / Operator Implementation Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/AIRPORT_OWNER_IMPLEMENTATION_PLAN.html"
+  },
+  {
+    "title": "Artifact Index \u2014 Airport Restroom Humanoid Pilot",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Basis of Estimate and Sensitivity",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
+  },
+  {
+    "title": "Benefits Realization Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/BENEFITS_REALIZATION_PLAN.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/BUDGET.html"
+  },
+  {
+    "title": "Business Case and Total Cost of Ownership",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/BUSINESS_CASE_AND_TCO.html"
+  },
+  {
+    "title": "Case 05 \u2014 Airport Restroom Humanoid Cleaning Pilot",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/CASE_STUDY.html"
+  },
+  {
+    "title": "Closeout and Handoff \u2014 Airport Restroom Humanoid Pilot",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/CLOSEOUT_AND_HANDOFF.html"
+  },
+  {
+    "title": "Cybersecurity, Privacy, and Data Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/CYBERSECURITY_PRIVACY_AND_DATA_PLAN.html"
+  },
+  {
+    "title": "Daily Operations and Exception Runbook",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/DAILY_OPERATIONS_AND_EXCEPTION_RUNBOOK.html"
+  },
+  {
+    "title": "Integrated Master Schedule",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_MASTER_SCHEDULE.html"
+  },
+  {
+    "title": "Integrated Program Charter \u2014 Airport Restroom Humanoid Pilot",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_PROGRAM_CHARTER.html"
+  },
+  {
+    "title": "Manufacturer Project Manager Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/MANUFACTURER_PROJECT_PLAN.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/RACI.html"
+  },
+  {
+    "title": "Raid",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/RAID.html"
+  },
+  {
+    "title": "Requirements Traceability",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/REQUIREMENTS_TRACEABILITY.html"
+  },
+  {
+    "title": "Research and Assumptions \u2014 Airport Restroom Humanoid Pilot",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/RESEARCH_AND_ASSUMPTIONS.html"
+  },
+  {
+    "title": "Safety, Quality, and Acceptance Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/SAFETY_QUALITY_AND_ACCEPTANCE_PLAN.html"
+  },
+  {
+    "title": "Seller / Integrator Project Manager Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/SELLER_INTEGRATOR_PROJECT_PLAN.html"
+  },
+  {
+    "title": "Statement of Work \u2014 Seller and System Integrator",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/STATEMENT_OF_WORK.html"
+  },
+  {
+    "title": "Training, Change, and Workforce Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/TRAINING_CHANGE_AND_WORKFORCE_PLAN.html"
+  },
+  {
+    "title": "Weekly Status Report \u2014 Week 28 / Final",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/WEEKLY_STATUS_REPORT.html"
+  },
+  {
     "title": "Benefits Realization and Project Closeout",
     "path": "library/governance/BENEFITS_AND_CLOSEOUT.html"
   },
@@ -400,7 +488,7 @@
     "path": "library/simulations/README.html"
   },
   {
-    "title": "Public Restroom Humanoid Cleaning \u2014 MuJoCo Capability Demo",
+    "title": "Public Restroom Humanoid Cleaning \u2014 MuJoCo Capability Demo v4.4",
     "path": "library/simulations/restroom_cleaning/README.html"
   },
   {
