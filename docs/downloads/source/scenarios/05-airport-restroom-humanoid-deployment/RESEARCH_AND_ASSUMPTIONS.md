@@ -14,6 +14,14 @@ Public sources define safety and cleaning constraints. All airport names, volume
 | Occupational Safety and Health Administration, *Hazard Communication*, 29 Code of Federal Regulations 1910.1200, https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.1200 | Labels, Safety Data Sheets, chemical information, and training | Chemical custody, storage, robot refill procedure, responder training |
 | Occupational Safety and Health Administration, *Bloodborne Pathogens — Overview*, https://www.osha.gov/bloodborne-pathogens/ | Employers determine exposure and use an exposure-control plan where occupational exposure exists | Sharps and visible-blood safe stop, site exposure determination, trained human response |
 | United States Bureau of Labor Statistics, *Janitors and Building Cleaners*, May 2024 wage data, https://www.bls.gov/ooh/building-and-grounds-cleaning/janitors-and-building-cleaners.htm | National median wage was $17.27 per hour; work commonly includes variable shifts | External reasonableness check only; not used as a local airport quotation |
+| Metropolitan Washington Airports Authority, *Custodial Services at Ronald Reagan Washington National Airport*, solicitation 1-19-C001, https://www.mwaa.com/business/1-19-c001-custodial-services-national-airport | Public airport custodial scope runs 24 hours per day, 365 days per year and includes restrooms across approximately 1.5 million square feet; listed annual estimate was $10–11 million | Supports continuous-airport demand, not Pacific Gateway volumes or pricing |
+| TRAX Analytics, *Syracuse Hancock International Airport*, https://traxinsights.com/syracuse-hancock-international-airport/ | Vendor case reports 20 restroom locations, approximately 10 minutes per restroom, and demand-based cleaning | Reasonableness check for short-visit duration; vendor-reported case, not independent benchmark |
+| Agility Robotics, *GXO Signs Industry-First Multi-Year Agreement with Agility Robotics*, June 27, 2024, https://www.agilityrobotics.com/content/gxo-signs-industry-first-multi-year-agreement-with-agility-robotics | Commercial Robotics-as-a-Service deployment for tote movement in a live warehouse | Supports commercial model and dense logistics-workflow plausibility only |
+| Figure, *Production at BMW*, November 2025, https://www.figure.ai/news/production-at-bmw | Vendor reports 10-hour shifts, more than 90,000 parts, 1,250 runtime hours, and contribution to more than 30,000 vehicles | Supports high-utilization manufacturing opportunity ranking; vendor-reported evidence |
+| Figure, *F.03 at BMW*, https://www.figure.ai/news/f-03-at-bmw | Describes sequencing, carts, component handling, and existing production workflows | Supports human-infrastructure fit; not an airport-cost source |
+| Agility Robotics, *Commercial Agreement with Toyota Motor Manufacturing Canada*, 2026, https://www.agilityrobotics.com/content/agility-robotics-announces-commercial-agreement-with-toyota-motor-manufacturing-canada | Commercial manufacturing deployment announcement | Supports opportunity ranking only |
+| Agility Robotics, *Mercado Libre and Agility Robotics Announce Commercial Agreement*, https://www.agilityrobotics.com/content/mercado-libre-and-agility-robotics-announce-commercial-agreement | Vendor reports more than 100,000 totes moved using existing aisles and workflows | Supports existing-infrastructure rationale; vendor-reported evidence |
+| Figure, *Agreement with Catalyst Brands*, https://www.figure.ai/news/figure-signs-agreement-with-catalyst-brands | Retail distribution commercial agreement | Supports retail opportunity ranking only |
 
 ## Fictional airport baseline
 
@@ -30,6 +38,22 @@ Public sources define safety and cleaning constraints. All airport names, volume
 | Annualized capacity value | 2,190 × $31.50 = $68,985 | Derived, not cash savings | Finance |
 
 The Bureau of Labor Statistics wage is a national wage benchmark, not a loaded airport cost. The scenario's $31.50 rate includes fictional benefits, shift premiums, and contractor overhead and must be replaced with the airport's actual payroll or contract data.
+
+## Phase 2 fictional planning inputs
+
+| Input | Value | Validation required |
+|---|---:|---|
+| Rooms served | 12 | Approved expansion map |
+| Short visits | 8 per room per day at 10 minutes | Four-week time study and passenger-demand data |
+| Deep cleans | 2 per room per day at 30 minutes | Custodial work sampling |
+| Productive fleet time | 28 hours per day | Dispatch simulation and proof period |
+| Robots | 2 | Capacity, charging, maintenance, and resilience model |
+| RaaS base price | $6,000 per robot per month | Binding competitive quotation |
+| Initial integration | $150,000 | Fixed-price Statement of Work |
+| Retained human support | $80,000 per year | Airport staffing and contract plan |
+| Loaded task rate | $31.50 per hour | Airport Finance validation |
+
+Robotics-as-a-Service (RaaS) converts ownership into a subscription but does not eliminate integration, retained human work, or commercial risk. The rate ceiling is a customer affordability boundary; a provider must separately approve its cost floor.
 
 ## Cost assumptions requiring quotation
 
@@ -53,4 +77,3 @@ The direct-cost base is $1,630,000. A fifteen-percent uncertainty allowance of $
 - “Capacity released” is time available for other assigned work. It is not headcount reduction or cash savings.
 - A passed pilot is not a scale approval, product certification, infection-control guarantee, or safety certification.
 - Expansion requires actual quotations, site measurements, employee consultation, airport authority approval, and an updated hazard analysis.
-

@@ -14,54 +14,54 @@
 <h2 id="control-design">Control design</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Control area</th>
 <th>Required control</th>
 <th>Acceptance evidence</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Identity</td>
 <td>Unique robot, service, operator, and support identities; multi-factor authentication for people</td>
 <td>Account and authentication test</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Network</td>
 <td>Segmented robot network, only approved destinations and ports</td>
 <td>Architecture and rule review</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Privilege</td>
 <td>Operator, support, administrator, auditor, and airport roles separated</td>
 <td>Role test and access review</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Remote support</td>
 <td>Airport-approved window, ticket, named person, recorded commands, session timeout</td>
 <td>Witnessed support drill</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Data minimization</td>
 <td>Event metadata by default; image capture only for defined fault evidence</td>
 <td>Data-flow review</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Privacy</td>
 <td>Closed-room operation, occupancy inhibit, privacy masking, no audio unless separately approved</td>
 <td>Eighteen privacy and deletion tests</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Retention</td>
 <td>Routine telemetry 90 days; fault evidence 30 days unless attached to an active investigation; access logs one year</td>
 <td>Automated deletion and legal-hold tests</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Software</td>
 <td>Signed release, configuration inventory, rollback, vulnerability intake</td>
 <td>Release and rollback drill</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Incident response</td>
 <td>Robot safe state, credential revocation, evidence preservation, airport cyber escalation</td>
 <td>Tabletop and technical exercise</td>

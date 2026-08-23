@@ -14,7 +14,7 @@
 <h2 id="principal-hazards-and-controls">Principal hazards and controls</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Hazard</th>
 <th>Preventive control</th>
 <th>Detection/protective control</th>
@@ -22,43 +22,43 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>person/cart in aisle</td>
 <td>right-of-way, low speed, marked parking</td>
 <td>perception, protective stop, emergency stop</td>
 <td>supervisor clears/restarts by checklist</td>
 </tr>
-<tr>
+<tr class="even">
 <td>fall on stair/threshold</td>
 <td>mapped route, surface/edge inspection</td>
 <td>posture/fault monitor and exclusion distance</td>
 <td>isolate area; field retrieval plan</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>dropped/wrong item</td>
 <td>approved grasp set; scan before pick</td>
 <td>grip/load monitoring; pick/handoff scan</td>
 <td>safe stop; human exception</td>
 </tr>
-<tr>
+<tr class="even">
 <td>blocked fire door/egress</td>
 <td>route excludes staging in egress</td>
 <td>opening inspection and route-health check</td>
 <td>recall robot; use human workflow</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>network/integration loss</td>
 <td>local safe behavior; idempotent interface</td>
 <td>heartbeat, timeout, transaction reconciliation</td>
 <td>pause missions; tablet becomes human queue</td>
 </tr>
-<tr>
+<tr class="even">
 <td>battery/electrical/thermal</td>
 <td>approved charger, inspection, clearances</td>
 <td>temperature/fault monitoring</td>
 <td>isolate power; emergency response</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>privacy/security misuse</td>
 <td>employee-only purpose, least privilege</td>
 <td>access logs, masks, retention/deletion checks</td>
@@ -69,54 +69,54 @@
 <h2 id="mandatory-acceptance-tests">Mandatory acceptance tests</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Test</th>
 <th>Witnessed criterion</th>
 <th>Result</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>FAT-010 approved-item handling</td>
 <td>100 varied picks with at least 97% success and no uncontrolled drop</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="even">
 <td>FAT-020 exception handling</td>
 <td>10/10 tangled/damaged/unsupported cases reject without grasp</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>SAT-010 route/stair/door</td>
 <td>20/20 cycles remain in route and complete safe stops</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="even">
 <td>SAT-020 human/cart intrusion</td>
 <td>30/30 approaches stop before protective boundary</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>SAT-030 network/interface loss</td>
 <td>10/10 faults enter defined safe hold; no duplicate transaction</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="even">
 <td>SAT-040 emergency stop/restart</td>
 <td>each device stops motion; only authorized checklist restart</td>
 <td>pass</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>UAT-010 retrieval</td>
 <td>at least 97% mission success</td>
 <td>98.1%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>UAT-020 wait</td>
 <td>median no more than 4.0 minutes</td>
 <td>3.4 minutes</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>UAT-030 quality/intervention</td>
 <td>wrong/damage at most 0.5%; interventions at most 3/100</td>
 <td>0.2%; 2.2/100</td>

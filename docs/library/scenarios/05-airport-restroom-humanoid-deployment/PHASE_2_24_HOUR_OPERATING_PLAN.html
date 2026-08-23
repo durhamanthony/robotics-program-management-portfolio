@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 2 24-Hour Operating Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/PHASE_2_24_HOUR_OPERATING_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="phase-2-24-hour-operating-plan">Phase 2 24-Hour Operating Plan</h1>
+<h2 id="service-objective">Service objective</h2>
+<p>Provide scheduled restroom service across a continuously operating terminal without claiming that either robot works continuously. Two robots are staggered so charging, maintenance, and exception recovery do not remove all fleet capacity at once.</p>
+<h2 id="daily-demand-model">Daily demand model</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Service class</th>
+<th style="text-align: right;">Rooms</th>
+<th style="text-align: right;">Frequency</th>
+<th style="text-align: right;">Standard time</th>
+<th style="text-align: right;">Daily hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Short service visit</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8 per room</td>
+<td style="text-align: right;">10 minutes</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td>Deep clean</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2 per room</td>
+<td style="text-align: right;">30 minutes</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td><strong>Total productive fleet time</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>28</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Short visits cover approved fixture touch-up, dispensers, visible litter, waste-bin status, and inspection evidence. Deep cleans cover the full approved fixture and floor sequence. Prohibited contamination always transfers to trained human responders.</p>
+<h2 id="staggered-coverage">Staggered coverage</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Window</th>
+<th>Robot A</th>
+<th>Robot B</th>
+<th>Operations control</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00:00–06:00</td>
+<td>Deep cleans and low-demand rooms</td>
+<td>Charge, maintenance, then short visits</td>
+<td>Duty supervisor releases rooms</td>
+</tr>
+<tr class="even">
+<td>06:00–12:00</td>
+<td>Short visits and replenishment</td>
+<td>Short visits, charge as scheduled</td>
+<td>Passenger peaks drive closure timing</td>
+</tr>
+<tr class="odd">
+<td>12:00–18:00</td>
+<td>Charge, inspection support, then short visits</td>
+<td>Short visits and approved deep cleans</td>
+<td>Dispatch adjusts to flight bank</td>
+</tr>
+<tr class="even">
+<td>18:00–24:00</td>
+<td>Short visits and deep cleans</td>
+<td>Charge, maintenance, then service</td>
+<td>Overnight reset and evidence review</td>
+</tr>
+</tbody>
+</table>
+<p>The table is an operating pattern, not a minute-by-minute dispatch plan. The fleet scheduler must preserve 28 productive hours while respecting charger state, room availability, travel, preventive maintenance, and safe-stop recovery.</p>
+<h2 id="human-authority-retained">Human authority retained</h2>
+<ul>
+<li>Verify the room is closed and empty before release.</li>
+<li>Select and control chemicals and Safety Data Sheets.</li>
+<li>Respond to sharps, blood, vomit, unknown substances, smoke, standing water, or aggressive behavior.</li>
+<li>Inspect work, order corrective cleaning, and reopen the room.</li>
+<li>Refill locked consumables and approve recipe or route changes.</li>
+<li>Take over when remote recovery fails or a robot blocks an egress path.</li>
+</ul>
+<h2 id="performance-dashboard">Performance dashboard</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th style="text-align: right;">Conditional threshold</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Productive fleet utilization</td>
+<td style="text-align: right;">At least 28 hours/day</td>
+<td>Dispatch and mission logs</td>
+</tr>
+<tr class="even">
+<td>Scheduled availability</td>
+<td style="text-align: right;">At least 85%</td>
+<td>Robot-ready hours ÷ scheduled hours</td>
+</tr>
+<tr class="odd">
+<td>Mission completion</td>
+<td style="text-align: right;">At least 95%</td>
+<td>Completed ÷ released missions</td>
+</tr>
+<tr class="even">
+<td>First-pass inspection</td>
+<td style="text-align: right;">At least 90%</td>
+<td>Custodial checklist sample</td>
+</tr>
+<tr class="odd">
+<td>Supply accuracy</td>
+<td style="text-align: right;">At least 98%</td>
+<td>Requested versus delivered quantity</td>
+</tr>
+<tr class="even">
+<td>Uncontrolled public entry</td>
+<td style="text-align: right;">0</td>
+<td>Entry-control and incident record</td>
+</tr>
+<tr class="odd">
+<td>Prohibited-condition contact</td>
+<td style="text-align: right;">0</td>
+<td>Exception and safe-stop record</td>
+</tr>
+</tbody>
+</table>
+<h2 id="approved-adjacency-backlog">Approved adjacency backlog</h2>
+<p>Restroom cleaning remains the anchor workload. If the 12-room schedule has unused capacity, the change-control board may test supply-cart loading and delivery, paper and soap replenishment, waste movement, spill-response support, facilities inspection, lost-item transfer, overnight concession supply movement, and nontechnical condition reporting. Each task requires its own route, payload, safety, privacy, acceptance, and economic review.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -9,6 +9,10 @@ These are completed fictional scenario documents, not empty templates.
 | INTEGRATED_PROGRAM_CHARTER.md | Authority, objectives, gates, exclusions | Complete |
 | STATEMENT_OF_WORK.md | Seller/integrator contract deliverables | Complete |
 | BUSINESS_CASE_AND_TCO.md | Pilot and expansion decisions | Complete |
+| PHASE_2_RAAS_EXPANSION_BUSINESS_CASE.md | Scaled customer economics and decision gates | Complete |
+| PHASE_2_24_HOUR_OPERATING_PLAN.md | Staggered continuous-terminal service model | Complete |
+| RAAS_PRICING_AND_UNIT_ECONOMICS.md | Customer ceiling and provider sustainability screen | Complete |
+| 24_HOUR_HUMANOID_OPPORTUNITY_ROADMAP.md | Ranked adjacent 24-hour workflows | Complete |
 | BASIS_OF_ESTIMATE_AND_SENSITIVITY.md | Arithmetic, uncertainty, quote requirements | Complete |
 | INTEGRATED_MASTER_SCHEDULE.csv | Cross-party plan and gates | Complete |
 | BUDGET.csv | Authorization, commitment, actual, variance | Complete |
@@ -25,4 +29,3 @@ These are completed fictional scenario documents, not empty templates.
 | BENEFITS_REALIZATION_PLAN.md | Benefits ownership and anti-double-counting rules | Complete |
 | WEEKLY_STATUS_REPORT.md | Final integrated status | Complete |
 | CLOSEOUT_AND_HANDOFF.md | Final acceptance, handoff, cost, lessons | Complete |
-

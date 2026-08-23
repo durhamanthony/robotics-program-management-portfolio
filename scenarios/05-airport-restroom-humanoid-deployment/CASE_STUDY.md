@@ -39,6 +39,12 @@ The two robots completed 1,048 of 1,080 scheduled routine missions. A stratified
 
 The pilot was accepted as a controlled operational learning result. Expansion was not authorized. The five-year planning Total Cost of Ownership was $3,134,500, while the measured routine-task capacity released by this four-restroom pilot annualized to only $68,985 at the airport's fictional loaded labor rate. The airport required binding quotes, a revised multi-restroom operating design, and measured non-labor service value before any scale decision.
 
+## Phase 2 recommendation developed after closeout
+
+The program team preserved the pilot result and designed a different scale case rather than changing historical numbers. The proposed Phase 2 covers 12 restrooms with two robots under Robotics-as-a-Service (RaaS). Eight 10-minute short visits and two 30-minute deep cleans per room per day create 28 productive fleet-hours per day. The robots are staggered; neither is described as operating continuously.
+
+At a planning subscription of USD 6,000 per robot per month, the five-year Total Cost of Ownership is USD 1,270,000 versus USD 1,609,650 of task-capacity value. Planning net benefit is USD 339,650, Return on Investment (ROI) is 26.7%, and simple payback on initial integration is approximately 18 months. Phase 2 is Conditional Green only if a time study validates the workload and the final subscription remains at or below USD 6,595 per robot per month.
+
 ## Project closeout decision
 
 1. Accept the seller's contracted pilot deliverables and close implementation punch-list items.
@@ -46,4 +52,3 @@ The pilot was accepted as a controlled operational learning result. Expansion wa
 3. Transfer the four-restroom operating runbook, exception process, inspection records, spare kit, and support contacts to airport operations.
 4. Continue no more than 60 days under existing controls for data collection; do not add restrooms, shifts, chemicals, or tasks without change review.
 5. Reopen the investment decision only when vendor quotations and an observed airport workload model demonstrate a defensible service or financial benefit.
-

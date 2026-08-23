@@ -26,11 +26,11 @@ These are two separate decisions. Pilot acceptance is based on delivered scope a
 
 The authorization includes equipment, deployment, and the initial pilot-support period. The steady-state planning run rate after pilot is $315,000 per year: $120,000 support/software, $60,000 maintenance/spares, $25,000 incremental consumables, $90,000 airport oversight/quality, and $20,000 network/data.
 
-Five-year Total Cost of Ownership = $1,874,500 + (4 × $315,000) = **$3,134,500**.
+Five-year Total Cost of Ownership = USD 1,874,500 + (4 × USD 315,000) = **USD 3,134,500**.
 
 ## Benefit model
 
-The pilot baseline contains 4 restrooms × 3 routine missions per day × 0.50 observed labor-hour per mission × 365 days = 2,190 annual labor-hours. At the fictional airport's $31.50 loaded rate, that is **$68,985 of annual task capacity**.
+The pilot baseline contains 4 restrooms × 3 routine missions per day × 0.50 observed labor-hour per mission × 365 days = 2,190 annual labor-hours. At the fictional airport's USD 31.50 loaded rate, that is **USD 68,985 of annual task capacity**.
 
 This is not booked savings. Custodians remain responsible for inspection, exception response, corrective cleaning, supplies, and reopening. No position is eliminated in this scenario.
 
@@ -41,6 +41,14 @@ This is not booked savings. Custodians remain responsible for inspection, except
 - Airport-wide rollout: do not authorize.
 - Reason: the pilot established technical and operating evidence, but $68,985 annualized capacity value does not support a $3,134,500 five-year Total Cost of Ownership.
 
+## Separate Phase 2 recommendation
+
+Do not scale the pilot's capital-purchase design. Evaluate a separate 12-restroom Robotics-as-a-Service (RaaS) operating model documented in `PHASE_2_RAAS_EXPANSION_BUSINESS_CASE.md`.
+
+That design schedules 28 productive fleet-hours per day across two robots. At the same USD 31.50 loaded task rate, it creates USD 321,930 of annual capacity value. With a USD 6,000 per-robot monthly subscription, USD 150,000 of integration, and USD 80,000 per year of retained human support, five-year Total Cost of Ownership is USD 1,270,000. The resulting planning net benefit is USD 339,650 and Return on Investment (ROI) is 26.7%.
+
+The Phase 2 result is **Conditional Green**, not authorized work. It depends on verified utilization, binding quotations, and a subscription no higher than USD 6,595 per robot per month to preserve a 20% five-year customer ROI.
+
 ## Conditions to reopen expansion
 
 1. Binding equipment, integration, support, and infrastructure quotations.
@@ -49,4 +57,3 @@ This is not booked savings. Custodians remain responsible for inspection, except
 4. A fleet and staffing model that preserves specialist response and human inspection.
 5. Sensitivity that remains acceptable under lower utilization, higher support cost, and replacement-part delay.
 6. Airport, workforce, safety, cybersecurity, privacy, finance, and procurement approval.
-

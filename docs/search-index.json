@@ -340,6 +340,10 @@
     "path": "library/scenarios/04-robotics-support-operations/WEEKLY_STATUS_REPORT.html"
   },
   {
+    "title": "24-Hour Humanoid Opportunity Roadmap",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/24_HOUR_HUMANOID_OPPORTUNITY_ROADMAP.html"
+  },
+  {
     "title": "Airport Owner / Operator Implementation Plan",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/AIRPORT_OWNER_IMPLEMENTATION_PLAN.html"
   },
@@ -390,6 +394,18 @@
   {
     "title": "Manufacturer Project Manager Plan",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/MANUFACTURER_PROJECT_PLAN.html"
+  },
+  {
+    "title": "Phase 2 24-Hour Operating Plan",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/PHASE_2_24_HOUR_OPERATING_PLAN.html"
+  },
+  {
+    "title": "Phase 2 Robotics-as-a-Service Expansion Business Case",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/PHASE_2_RAAS_EXPANSION_BUSINESS_CASE.html"
+  },
+  {
+    "title": "Robotics-as-a-Service Pricing and Unit Economics",
+    "path": "library/scenarios/05-airport-restroom-humanoid-deployment/RAAS_PRICING_AND_UNIT_ECONOMICS.html"
   },
   {
     "title": "Raci",

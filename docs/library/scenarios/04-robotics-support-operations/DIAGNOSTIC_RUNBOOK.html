@@ -20,7 +20,7 @@
 <h2 id="diagnostic-branches">Diagnostic branches</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Symptom</th>
 <th>Check</th>
 <th>Tool/evidence</th>
@@ -28,43 +28,43 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Robot offline</td>
 <td>Power, network, device identity, last heartbeat, site outage</td>
 <td>Fleet platform, Grafana, edge mgmt, network logs</td>
 <td>Field if power/hardware; IT if network; L3 if reproducible software</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Mission failure</td>
 <td>State transitions, localization, perception, planner, payload/environment</td>
 <td>MCAP/Foxglove, event log, mission record</td>
 <td>L3 with reproduction; ops if envelope violation</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Joint/actuator fault</td>
 <td>Fault code, temperature/current, calibration, load, recent maintenance</td>
 <td>Time-series plots, manufacturer diagnostics</td>
 <td>Safe stop; qualified field service; RMA/engineering</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Sensor degradation</td>
 <td>Health, obstruction/contamination, timestamps, calibration, environment</td>
 <td>Foxglove, images, diagnostics</td>
 <td>Suspend dependent mission; field clean/calibrate/replace</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Battery/charging</td>
 <td>State of charge/health, temperature, dock contact, charger/power</td>
 <td>Fleet dashboard, charger logs, inspection</td>
 <td>Recall/isolate per procedure; field/battery safety owner</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Software/update issue</td>
 <td>Version, rollout ring, signature, config, rollback status</td>
 <td>Mender/balena, release record, logs</td>
 <td>Freeze rollout, rollback under change authority, L3 defect</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Repeated alert</td>
 <td>Correlation, threshold, version/site concentration</td>
 <td>Grafana/fleet analytics, problem record</td>

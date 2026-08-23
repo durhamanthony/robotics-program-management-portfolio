@@ -24,6 +24,19 @@ This is a concept-stage planning estimate. It is suitable for a controlled pilot
 
 The low-cost/high-value case assumes 3,285 annual hours at $45 per hour. It still does not recover cost. Financial justification therefore cannot rest on routine labor capacity alone.
 
+## Phase 2 RaaS sensitivity
+
+This is a separate 12-room Robotics-as-a-Service (RaaS) scale case, not a revision of the four-room pilot actuals.
+
+| Monthly rate per robot | Five-year subscription | Five-year Total Cost of Ownership | Net benefit | Return on Investment |
+|---:|---:|---:|---:|---:|
+| $5,750 | $690,000 | $1,240,000 | $369,650 | 29.8% |
+| $6,000 | $720,000 | $1,270,000 | $339,650 | 26.7% |
+| $6,595 | $791,400 | $1,341,400 | $268,250 | 20.0% |
+| $7,000 | $840,000 | $1,390,000 | $219,650 | 15.8% |
+
+All rows use $150,000 initial integration, $400,000 five-year retained support, and $1,609,650 five-year task-capacity value. The economics fail if productive utilization falls materially below 28 fleet-hours per day or if the negotiated subscription exceeds the approved threshold.
+
 ## Quote and measurement register
 
 | Item | Required evidence | Due | Owner |
@@ -39,4 +52,3 @@ The low-cost/high-value case assumes 3,285 annual hours at $45 per hour. It stil
 ## Management reserve rule
 
 The uncertainty allowance is controlled by the Executive Steering Committee. It cannot hide scope growth. A draw requires an identified risk, estimate-to-complete, schedule impact, owner, and approval. Unused funds return at closeout.
-
