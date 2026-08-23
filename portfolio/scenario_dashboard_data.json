@@ -403,7 +403,7 @@
         {"label": "Phase 2 five-year TCO", "value": 1270000, "display": "$1,270,000"},
         {"label": "Phase 2 net benefit", "value": 339650, "display": "$339,650"}
       ],
-      "financial_note": "Phase 1 preserves its actual result: four rooms created $68,985 of annual task capacity and did not justify the $3.1345 million five-year capital path. Phase 2 is a different 12-room RaaS design: 28 productive fleet-hours per day creates $321,930 annual capacity value. At $6,000 per robot per month, $150,000 integration, and $80,000 annual retained support, five-year TCO is $1.270 million versus $1.60965 million value. Capacity is not booked cash savings; all prices require quotation.",
+      "financial_note": "Evidence classification: the 12-room workload, 28 productive fleet-hours per day, $31.50 loaded rate, $6,000 monthly RaaS price, $150,000 integration, and $80,000 annual support are scenario assumptions. The $321,930 annual capacity value, $1.270 million five-year TCO, $339,650 net benefit, and 26.7% ROI are derived calculations. Capacity is not booked cash savings. Actual workload, prices, service scope, performance, and realized savings are unknown pending a time study, binding quotations, contract terms, and Finance validation.",
       "risks": [
         {"id": "R-001", "risk": "Passenger enters during robot operation", "score": 10, "status": "Closed", "response": "Physical closure, occupancy check, entry control, audible notice, and immediate stop"},
         {"id": "R-002", "risk": "Sharps, blood, vomit, or unknown material encountered", "score": 20, "status": "Transferred to airport procedure", "response": "Stop without contact, isolate, and dispatch trained human specialist"},

@@ -6,6 +6,21 @@ Should Pacific Gateway International Airport contract for two humanoid robots un
 
 **Recommendation: conditional approval.** Proceed to competitive quotation and contract negotiation only if the final design covers at least 12 restrooms, schedules at least 28 productive fleet-hours per day, and holds the base subscription at or below **USD 6,595 per robot per month**. This is a planning threshold, not a vendor quote.
 
+## Number confidence at a glance
+
+| Input or result | Value | Evidence class | What remains unknown |
+|---|---:|---|---|
+| Public airport operating pattern | 24 hours/day, 365 days/year | Public benchmark | Actual room demand and closure windows at the fictional airport |
+| Short-visit duration | 10 minutes | Research-based estimate informed by a vendor airport case | Independent time study for this room design and task list |
+| Rooms and visit frequency | 12 rooms; 8 short visits and 2 deep cleans daily | Scenario assumption | Actual passenger-driven frequency by room and hour |
+| Deep-clean duration | 30 minutes | Scenario assumption | Measured robot and retained-human time |
+| Loaded task rate | USD 31.50/hour | Scenario assumption | Airport payroll or custodial-contract loaded rate |
+| RaaS subscription | USD 6,000/robot/month | Scenario assumption | Binding competitive quotation and included services |
+| Integration | USD 150,000 | Scenario assumption | Fixed-price Statement of Work |
+| Retained support | USD 80,000/year | Scenario assumption | Approved operating and staffing plan |
+| Annual capacity value | USD 321,930 | Derived calculation | Whether released capacity becomes an avoided expense or other measurable value |
+| Five-year TCO, net benefit, and ROI | USD 1.270M; USD 339,650; 26.7% | Derived calculations | Final terms, inflation, discount rate, taxes, insurance, and realized utilization |
+
 Phase 1 remains an Amber result: the four-room pilot was technically accepted but did not pass its economic gate. Phase 2 is a different operating design and must not be presented as an achieved deployment.
 
 ## Scaled operating design

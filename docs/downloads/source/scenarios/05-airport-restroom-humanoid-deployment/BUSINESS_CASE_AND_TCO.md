@@ -6,6 +6,10 @@ Should the airport accept the two-robot, four-restroom pilot, and should it auth
 
 These are two separate decisions. Pilot acceptance is based on delivered scope and evidence. Expansion requires a defensible operating and financial case.
 
+## Evidence status
+
+Airport operating patterns, labor references, and cited safety or cleaning guidance are **public benchmarks**. Task timing informed by published material is a **research-based estimate**. Equipment, integration, support, oversight, workload, and fictional pilot-result inputs are **scenario assumptions**. Total Cost of Ownership, capacity value, and economic gaps are **derived calculations**. Actual restroom demand, task time, customer labor cost, vendor pricing, service terms, performance, and conversion of released capacity into avoided expense are **unknown / pending validation**.
+
 ## Pilot authorization
 
 | Cost group | Planning amount |

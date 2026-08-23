@@ -6,6 +6,10 @@ Deploy the three purchased quadrupeds through a 30-night controlled pilot. Appro
 
 The base case pays back in 3.22 years. If operations can remove only one rover post, payback increases to 11.7 years. That conservative result does not justify expansion.
 
+## Evidence status
+
+Published mobility specifications and the $100,000 base-unit reference are **public benchmarks**. Route suitability is a **research-based estimate**. Payload, integration, support, labor-post, vehicle, and operating-cost inputs are **scenario assumptions**. Total Cost of Ownership, payback, and sensitivity results are **derived calculations**. Configured system price, actual route performance, staffing changes, insurance, service terms, and realized savings are **unknown / pending validation**.
+
 ## Why a legged platform can reduce site alteration
 
 The campus route includes code-compliant stairs, curbs, gravel, and uneven outdoor sections. Current manufacturer specifications provide useful feasibility anchors:

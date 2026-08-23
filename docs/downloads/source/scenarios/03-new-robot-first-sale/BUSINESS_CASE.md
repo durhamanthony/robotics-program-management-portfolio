@@ -6,6 +6,10 @@ Fund an 18-month, **$10.975 million** New Product Introduction (NPI) program in 
 
 Do not authorize the first-customer shipment until the product demonstrates at least 40 completed transfers per hour, 98% mission success, no more than three human interventions per 100 missions, at least 95% scheduled availability, safe behavior under mandatory faults, production first-pass yield of at least 90%, and Cost of Goods Sold (COGS) at or below $150,000.
 
+## Evidence status
+
+The labor-cost anchor is a **public benchmark**. The defined tote-transfer workflow is a **research-based estimate** of a plausible customer problem. Development cost, unit price, Cost of Goods Sold, staffing, workload, service fee, and performance results are **scenario assumptions**. Payback, Net Present Value, contribution, and 82-unit recovery threshold are **derived calculations**. Actual engineering effort, demand, selling price, supplier cost, warranty, financing, and customer utilization are **unknown / pending validation**.
+
 ## First-customer workflow and value
 
 The customer operates two material-handler positions per shift, two shifts per day, 7.5 productive hours per shift, 250 days per year. AD-01 does not remove human exception ownership; the model retains the equivalent of 0.5 handler per shift for replenishment, recovery, and adjacent work.

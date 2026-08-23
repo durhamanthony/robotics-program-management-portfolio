@@ -460,6 +460,10 @@
     "path": "library/governance/CYBERSECURITY_DATA_GOVERNANCE.html"
   },
   {
+    "title": "Financial Evidence Classification and Number Confidence",
+    "path": "library/governance/FINANCIAL_EVIDENCE_CLASSIFICATION.html"
+  },
+  {
     "title": "Number Assurance and Evidence Rules",
     "path": "library/governance/NUMBER_ASSURANCE_AND_EVIDENCE_RULES.html"
   },

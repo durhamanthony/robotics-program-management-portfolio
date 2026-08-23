@@ -40,7 +40,20 @@ GOVERNANCE_FILES = (
     "governance/TRAINING_CHANGE_ADOPTION.md",
     "governance/BENEFITS_AND_CLOSEOUT.md",
     "governance/NUMBER_ASSURANCE_AND_EVIDENCE_RULES.md",
+    "governance/FINANCIAL_EVIDENCE_CLASSIFICATION.md",
 )
+
+
+def evidence_legend() -> str:
+    return """<div class="evidence-box" role="note" aria-label="How to interpret portfolio numbers">
+<div><strong>How to read these numbers</strong><p>Financial figures are planning-grade unless explicitly identified as an actual result or binding quotation.</p></div>
+<div class="evidence-grid">
+<span class="evidence-item evidence-public"><b>Public benchmark</b> Published external reference used only as a reasonableness check.</span>
+<span class="evidence-item evidence-estimate"><b>Research-based estimate</b> Best estimate informed by published evidence, but not customer- or vendor-confirmed.</span>
+<span class="evidence-item evidence-assumption"><b>Scenario assumption</b> Fictional input selected to make the demonstration model complete.</span>
+<span class="evidence-item evidence-derived"><b>Derived calculation</b> Reproducible arithmetic calculated from identified inputs.</span>
+<span class="evidence-item evidence-unknown"><b>Unknown / pending validation</b> Requires a time study, customer data, competitive quote, or contract.</span>
+</div></div>"""
 
 
 def write(path: Path, text: str) -> None:
@@ -288,7 +301,7 @@ def build_dashboard(scenario: dict) -> None:
 <div class="overview-grid"><article class="summary-card"><h3>Scope</h3><p>{esc(scenario['summary'])}</p></article><article class="decision-card"><h3>Closeout decision</h3><p>{esc(scenario['decision'])}</p></article></div>
 <div class="kpi-grid">{metric_cards(scenario)}</div></section>
 <section id="schedule" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Integrated plan</span><h2>Schedule and stage gates</h2></div><span class="tag">{esc(scenario['duration'])}</span></div>{gantt(scenario)}</section>
-<section id="financials" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Decision economics</span><h2>Budget and Total Cost of Ownership</h2></div></div><div class="finance-chart">{financial_chart(scenario)}</div><div class="callout"><strong>Decision rule</strong><p>{esc(scenario['financial_note'])}</p></div></section>
+<section id="financials" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Decision economics</span><h2>Budget and Total Cost of Ownership</h2></div></div>{evidence_legend()}<div class="finance-chart">{financial_chart(scenario)}</div><div class="callout"><strong>Decision rule and confidence limits</strong><p>{esc(scenario['financial_note'])}</p></div></section>
 <section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 {perspective_panel}
@@ -310,7 +323,7 @@ def build_index(data: dict, count: int) -> None:
 <div class="button-row"><a class="button" href="#cases">Explore {scenario_count} scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
 <main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div><p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div>{evidence_legend()}<p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
 <section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch MuJoCo</strong><p>Play browser-based MuJoCo-rendered clips—no terminal commands or software installation.</p></article></div></section></main>"""
     write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
 

@@ -4,6 +4,10 @@
 
 Fund one controlled store pilot to test operational feasibility in an unchanged human workspace. Do not approve chain rollout until binding vendor quotations replace planning allowances and measured annual gross value reaches at least $346,000.
 
+## Evidence status
+
+The labor rate is a **public benchmark**. The workflow relevance is a **research-based estimate**. Robot, integration, license, support, workload, and margin-recovery inputs are **scenario assumptions**. Totals, gaps, and thresholds are **derived calculations**. Actual store workload, vendor pricing, gross-margin recovery, service levels, and realized savings are **unknown / pending validation**.
+
 ## Why a humanoid is being tested
 
 The fictional store has standard doors, narrow aisles, mixed shelf heights, garment rails, a short stair route, hand-carried merchandise, and employee handoff points. These are human interfaces. Sanctuary AI reported a retail pilot covering front- and back-of-store activities; Agility Robotics states that its humanoid is designed for spaces and infrastructure built for people. That is evidence that the category is relevant, not evidence that this scenario's robot will meet its targets.

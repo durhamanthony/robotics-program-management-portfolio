@@ -76,6 +76,16 @@ section { margin: 52px 0; }
 .section-intro { color: var(--muted); max-width: 830px; }
 .section-heading, .panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .truth-banner { background: var(--soft-amber); border-left: 5px solid #dfa61e; border-radius: 8px; padding: 15px 18px; margin: 18px 0; }
+.evidence-box { border: 1px solid #cbd6da; border-left: 5px solid #54717b; background: #f7fafb; border-radius: 8px; padding: 16px 18px; margin: 18px 0 26px; }
+.evidence-box p { margin: 4px 0 12px; color: #536171; }
+.evidence-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 8px; }
+.evidence-item { display: block; border-radius: 6px; padding: 9px 10px; font-size: .78rem; line-height: 1.35; }
+.evidence-item b { display: block; margin-bottom: 2px; }
+.evidence-public { background: #e8f2fb; border-left: 4px solid #3979a8; }
+.evidence-estimate { background: #eaf5ef; border-left: 4px solid #3d8764; }
+.evidence-assumption { background: #fff5d9; border-left: 4px solid #d19a18; }
+.evidence-derived { background: #efeafd; border-left: 4px solid #7357aa; }
+.evidence-unknown { background: #f8e9e9; border-left: 4px solid #a84c4c; }
 .tag { display: inline-block; color: #0a6555; background: var(--soft-green); border-radius: 999px; padding: 5px 10px; font-size: .76rem; font-weight: 800; white-space: nowrap; }
 .muted-tag { color: #536171; background: #eef2f4; margin-left: 6px; }
 .health { display: inline-flex; align-items: center; border-radius: 999px; padding: 4px 10px; font-weight: 850; font-size: .76rem; }
