@@ -25,7 +25,7 @@ const COLORS = {
   green: "#E6F4EA",
   border: "#CBD5E1",
 };
-const evidenceKey = "Evidence-confidence key: PB-H = public benchmark/high; RBE-M = range estimate/medium; SA-L = scenario assumption/low; DC-L = derived calculation/low; UPV = unverified production value.";
+const evidenceKey = "Evidence-confidence key: PB-H = public benchmark/high; PB-M = public benchmark/medium; RBE-M = research-based estimate/medium; SA-L = scenario assumption/low; DC-L = derived calculation/low; UPV = unverified production value.";
 
 function colName(n) {
   let s = "";
@@ -157,7 +157,7 @@ populateTableSheet(portfolio, {
   rows: [
     ["CASE-01", "Retail backroom humanoid pilot", "Deployment", 672000, -221990, "Pilot accepted; scale held", "Complete", "SA-L/DC-L", "Low", "Case 01 business case and signed-pilot placeholders"],
     ["CASE-02", "Quadruped night security", "Deployment", 527000, 174099, "Break-even labor rate $33.98/hour", "Complete", "PB-H/SA-L/DC-L", "Low", "BLS wage benchmark plus disclosed assumptions"],
-    ["CASE-03", "Open-source quadruped RaaS", "Productization", 2400000, 412800, "41 robots recover productization authorization", "Conditional", "SA-L/DC-L", "Low", "Case 03 unit economics and open-source gates"],
+    ["CASE-03", "Open-source quadruped RaaS", "Productization", 2397234, 26670, "48 robots recover modeled productization authorization", "Conditional", "PB-H/PB-M/SA-L/DC-L", "Low", "Glassdoor, BLS, Unitree, and disclosed assumptions"],
     ["CASE-04", "Robotics support operations", "Service", 678000, 255600, "250 robots / 60 sites service baseline", "Complete", "SA-L/DC-L", "Low", "Synthetic data workflow and operating model"],
     ["CASE-05", "Airport restroom humanoid pilot", "Deployment", 515000, 241006, "22.1 productive fleet hours/day", "Conditional", "PB-H/SA-L/DC-L", "Low", "BLS wage benchmark plus disclosed assumptions"],
   ], tableName: "PortfolioTable", widths: [12, 30, 18, 18, 22, 34, 16, 20, 14, 42], numberFormats: { "D5:E9": "$#,##0;[Red]-$#,##0" }, validations: [{ range: "G5:G100", values: ["Planned", "Conditional", "Complete", "Hold"] }], conditional: [{ range: "G5:G100", text: "Hold", fill: COLORS.red, color: "#9B1C1C" }, { range: "G5:G100", text: "Complete", fill: COLORS.green, color: COLORS.teal }]

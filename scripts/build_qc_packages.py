@@ -26,6 +26,8 @@ SOURCE_FILES = (
     "media/videos/video_manifest.csv",
     "scripts/validate_portfolio.py",
     "scripts/build_portfolio_site.py",
+    "scripts/build_pm_spreadsheet.mjs",
+    "scripts/build_case03_financial_model.mjs",
     "scripts/render_mujoco_videos.py",
     "scripts/apply_approved_rebuild.py",
     "scripts/apply_evidence_and_table_titles.py",

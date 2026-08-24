@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DELIVERABLES = ROOT / "deliverables"
 MANIFEST = ROOT / "WINDOWS_SYNC_MANIFEST.csv"
-OUTPUT = DELIVERABLES / "robotics-program-management-portfolio-windows-sync-2026-08-23.zip"
+OUTPUT = DELIVERABLES / "robotics-program-management-portfolio-windows-sync-2026-08-24.zip"
 TOP = "robotics-program-management-portfolio-main"
 EXCLUDED_PARTS = {".git", ".venv", ".render-venv", "__pycache__", "qa", "deliverables"}
 EXCLUDED_SUFFIXES = {".pyc", ".inspect.ndjson"}

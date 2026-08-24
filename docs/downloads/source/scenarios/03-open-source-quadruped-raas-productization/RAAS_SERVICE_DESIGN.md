@@ -1,6 +1,6 @@
 # RaaS Service Design - OpenQuad Managed Lab
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Service boundary
 
@@ -8,7 +8,7 @@ The provider owns the serialized base unit, supported release, remote diagnosis,
 
 ## Service levels
 
-**Table 1. Planning service levels - Evidence: scenario assumptions [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Planning service levels - Evidence: scenario assumptions [SA-L]; Confidence: low**
 
 | Service | Target | Measurement | Exclusion |
 |---|---|---|---|

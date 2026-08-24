@@ -10,7 +10,7 @@
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/03-open-source-quadruped-raas-productization/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="basis-of-estimate-and-sensitivity---openquad-raas">Basis of Estimate and Sensitivity - OpenQuad RaaS</h1>
 <blockquote>
-<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
 </blockquote>
 <h2 id="material-inputs">Material inputs</h2>
 <p class="table-title"><strong>Table 1. Decision inputs and replacement evidence - Evidence and confidence shown per row</strong></p><table>
@@ -30,136 +30,167 @@
 <td>Release-specific legal review and retained notices</td>
 </tr>
 <tr class="even">
+<td>Glassdoor U.S. Robotics Software Engineer</td>
+<td style="text-align: right;">$154,709/year or $74/hour; May 2026</td>
+<td>[PB-M]</td>
+<td>Customer payroll/contract ledger and Finance approval</td>
+</tr>
+<tr class="odd">
+<td>BLS private-industry compensation split</td>
+<td style="text-align: right;">Wages 69.9%; benefits 30.1%; March 2026</td>
+<td>[PB-H]</td>
+<td>Company-specific benefit and payroll burden</td>
+</tr>
+<tr class="even">
+<td>Loaded planning labor cost</td>
+<td style="text-align: right;">$154,709 / 69.9% = $221,329 per FTE-year</td>
+<td>[DC-M]</td>
+<td>Approved employer labor model</td>
+</tr>
+<tr class="odd">
 <td>Productization program</td>
-<td style="text-align: right;">$2,400,000</td>
-<td>[SA-L]</td>
+<td style="text-align: right;">$2,397,234 rounded</td>
+<td>[DC-L] from 7.0 FTE-years and [SA-L] allowances</td>
 <td>Approved resource-loaded estimate and actuals</td>
+</tr>
+<tr class="even">
+<td>Unitree Go2 EDU list price comparator</td>
+<td style="text-align: right;">$15,900</td>
+<td>[PB-M]</td>
+<td>Product-specific binding BOM and supplier quote</td>
 </tr>
 <tr class="odd">
 <td>Build/calibration/delivery</td>
-<td style="text-align: right;">$28,000 per robot</td>
-<td>[SA-L]</td>
+<td style="text-align: right;">$24,000 per robot</td>
+<td>[DC-L]</td>
 <td>Supplier quotes, routings, yield, freight, tax, and warranty reserve</td>
 </tr>
 <tr class="even">
-<td>Direct service/cloud reserve</td>
-<td style="text-align: right;">$7,200 per robot-year</td>
-<td>[SA-L]</td>
+<td>Direct 36-month service/cloud reserve</td>
+<td style="text-align: right;">$12,672 per robot</td>
+<td>[DC-L]</td>
 <td>Observed cases, cloud bills, spares consumption, and repair history</td>
 </tr>
 <tr class="odd">
-<td>Subscription</td>
-<td style="text-align: right;">$2,950 per robot-month</td>
-<td>[SA-L]</td>
+<td>Subscription decision price</td>
+<td style="text-align: right;">$2,400 per robot-month</td>
+<td>[DC-L] from 48-unit recovery target</td>
 <td>Executed order and collection terms</td>
 </tr>
 <tr class="even">
 <td>Customer capacity</td>
-<td style="text-align: right;">1,200 hours per site-year</td>
+<td style="text-align: right;">1,000 hours per site-year</td>
 <td>[SA-L]</td>
 <td>Time study and approved work-redesign plan</td>
 </tr>
 <tr class="odd">
-<td>Loaded capacity value</td>
-<td style="text-align: right;">$78 per hour</td>
-<td>[SA-L]</td>
+<td>Customer capacity value</td>
+<td style="text-align: right;">$74 per hour</td>
+<td>[PB-M] Glassdoor salary rate, not loaded cost</td>
 <td>Customer payroll/contract ledger and Finance approval</td>
 </tr>
 </tbody>
 </table>
 <h2 id="provider-sensitivity">Provider sensitivity</h2>
-<p class="table-title"><strong>Table 2. Provider 36-month sensitivity - Evidence: [DC-L] derived from [SA-L] inputs; Confidence: see evidence key and row/source notes</strong></p><table>
+<p class="table-title"><strong>Table 2. Provider 36-month sensitivity - Evidence: [DC-L] derived from mixed inputs; Confidence: low overall</strong></p><table>
 <thead>
 <tr class="header">
 <th>Case</th>
 <th style="text-align: right;">Monthly price</th>
 <th style="text-align: right;">Direct 3-year cost</th>
 <th style="text-align: right;">Contribution including allocated onboarding</th>
-<th style="text-align: right;">Units to recover $2.4M</th>
+<th style="text-align: right;">Units to recover $2.397M</th>
 <th>Decision</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Base</td>
-<td style="text-align: right;">$2,950</td>
-<td style="text-align: right;">$49,600</td>
-<td style="text-align: right;">$58,600</td>
-<td style="text-align: right;">41</td>
-<td>Conditional pass</td>
+<td style="text-align: right;">$2,400</td>
+<td style="text-align: right;">$36,672</td>
+<td style="text-align: right;">$50,498</td>
+<td style="text-align: right;">48</td>
+<td>Conditional pass; $26,670 cohort buffer</td>
 </tr>
 <tr class="even">
 <td>Price -10%</td>
-<td style="text-align: right;">$2,655</td>
-<td style="text-align: right;">$49,600</td>
-<td style="text-align: right;">$47,980</td>
-<td style="text-align: right;">51</td>
+<td style="text-align: right;">$2,160</td>
+<td style="text-align: right;">$36,672</td>
+<td style="text-align: right;">$41,858</td>
+<td style="text-align: right;">58</td>
 <td>Fails 48-unit cohort</td>
 </tr>
 <tr class="odd">
 <td>Service cost +50%</td>
-<td style="text-align: right;">$2,950</td>
-<td style="text-align: right;">$60,400</td>
-<td style="text-align: right;">$47,800</td>
-<td style="text-align: right;">51</td>
+<td style="text-align: right;">$2,400</td>
+<td style="text-align: right;">$43,008</td>
+<td style="text-align: right;">$44,162</td>
+<td style="text-align: right;">55</td>
 <td>Fails 48-unit cohort</td>
 </tr>
 <tr class="even">
 <td>Build cost +25%</td>
-<td style="text-align: right;">$2,950</td>
-<td style="text-align: right;">$56,600</td>
-<td style="text-align: right;">$51,600</td>
-<td style="text-align: right;">47</td>
-<td>Narrow pass before omitted costs</td>
+<td style="text-align: right;">$2,400</td>
+<td style="text-align: right;">$42,672</td>
+<td style="text-align: right;">$44,498</td>
+<td style="text-align: right;">54</td>
+<td>Fails 48-unit cohort</td>
 </tr>
 <tr class="odd">
 <td>Price -10% and service +50%</td>
-<td style="text-align: right;">$2,655</td>
-<td style="text-align: right;">$60,400</td>
-<td style="text-align: right;">$37,180</td>
-<td style="text-align: right;">65</td>
+<td style="text-align: right;">$2,160</td>
+<td style="text-align: right;">$43,008</td>
+<td style="text-align: right;">$35,522</td>
+<td style="text-align: right;">68</td>
 <td>Stop / redesign</td>
 </tr>
 </tbody>
 </table>
 <h2 id="customer-sensitivity">Customer sensitivity</h2>
-<p class="table-title"><strong>Table 3. Customer two-robot value sensitivity - Evidence: [DC-L] derived from [SA-L] inputs; Confidence: see evidence key and row/source notes</strong></p><table>
+<p class="table-title"><strong>Table 3. Customer two-robot value sensitivity - Evidence: [DC-L] from [PB-M]/[SA-L] inputs; Confidence: low overall</strong></p><table>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Released hours per year</th>
-<th style="text-align: right;">Loaded value/hour</th>
+<th style="text-align: right;">Salary value/hour</th>
 <th style="text-align: right;">Three-year gross capacity value</th>
-<th style="text-align: right;">Net value vs. $236,400 TCO</th>
+<th style="text-align: right;">Net value vs. $184,800 TCO</th>
 <th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1,200</td>
-<td style="text-align: right;">$78</td>
-<td style="text-align: right;">$280,800</td>
-<td style="text-align: right;">$44,400</td>
-<td>18.8% ROI</td>
+<td style="text-align: right;">$74</td>
+<td style="text-align: right;">$266,400</td>
+<td style="text-align: right;">$81,600</td>
+<td>44.2% ROI</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">1,000</td>
-<td style="text-align: right;">$78</td>
-<td style="text-align: right;">$234,000</td>
-<td style="text-align: right;">($2,400)</td>
-<td>Fails</td>
+<td style="text-align: right;">$74</td>
+<td style="text-align: right;">$222,000</td>
+<td style="text-align: right;">$37,200</td>
+<td>20.1% ROI; passes 15% gate</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">900</td>
-<td style="text-align: right;">$78</td>
-<td style="text-align: right;">$210,600</td>
-<td style="text-align: right;">($25,800)</td>
-<td>Fails</td>
+<td style="text-align: right;">$74</td>
+<td style="text-align: right;">$199,800</td>
+<td style="text-align: right;">$15,000</td>
+<td>8.1% ROI; below gate</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">$74</td>
+<td style="text-align: right;">$177,600</td>
+<td style="text-align: right;">($7,200)</td>
+<td>Fails</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,000</td>
 <td style="text-align: right;">$60</td>
-<td style="text-align: right;">$216,000</td>
-<td style="text-align: right;">($20,400)</td>
+<td style="text-align: right;">$180,000</td>
+<td style="text-align: right;">($4,800)</td>
 <td>Fails</td>
 </tr>
 </tbody>

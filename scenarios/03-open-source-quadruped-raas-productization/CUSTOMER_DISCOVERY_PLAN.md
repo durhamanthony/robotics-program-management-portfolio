@@ -1,6 +1,6 @@
 # Customer Discovery Plan - Managed Research Quadrupeds
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Discovery objective
 
@@ -8,7 +8,7 @@ Determine whether customers value reproducibility and support enough to choose a
 
 ## Interview and evidence plan
 
-**Table 1. Discovery questions and decision evidence - Evidence: scenario plan [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Discovery questions and decision evidence - Evidence: scenario plan [SA-L]; Confidence: low**
 
 | Hypothesis | Question / observation | Evidence required | Decision |
 |---|---|---|---|

@@ -1,6 +1,6 @@
 # OpenQuad Managed Lab Product Brief and Product Requirements Document
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Product promise
 
@@ -8,7 +8,7 @@ Provide a reproducible two-robot research-lab capability with predictable monthl
 
 ## Users and jobs
 
-**Table 1. Users and jobs to be done - Evidence: scenario discovery synthesis [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Users and jobs to be done - Evidence: scenario discovery synthesis [SA-L]; Confidence: low**
 
 | User | Job | Product response |
 |---|---|---|

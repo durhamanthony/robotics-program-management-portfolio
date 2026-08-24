@@ -1,10 +1,11 @@
 table_title,cost_category,amount_usd,primary_capacity,evidence_class,confidence,source_or_validation
-Case 03 productization budget,Product systems and open-source compliance,220000,"Product, systems, legal",Scenario assumption,Low,Approved resource-loaded estimate and actuals
-Case 03 productization budget,Hardware design reliability and safety,420000,"Hardware, safety, reliability",Scenario assumption,Low,Staffing plan and supplier quotes
-Case 03 productization budget,Software platform and DevSecOps,520000,"Embedded, platform, security",Scenario assumption,Low,"Backlog, labor rates, cloud quote"
-Case 03 productization budget,Manufacturing engineering and fixtures,350000,"ME, quality, test",Scenario assumption,Low,"Routing, fixture quote, yield plan"
-Case 03 productization budget,Fleet service and customer operations,250000,"Service, support, customer success",Scenario assumption,Low,Service demand and staffing model
-Case 03 productization budget,Twelve pilot units,336000,"$28,000 x 12",Derived calculation,Low,"Binding BOM, labor, freight, yield"
-Case 03 productization budget,Independent testing legal insurance,120000,External services,Scenario assumption,Low,Binding proposals
-Case 03 productization budget,Program and commercial launch,100000,"Program, sales enablement",Scenario assumption,Low,Resource-loaded plan
-Case 03 productization budget,Management reserve,84000,Sponsor-controlled,Derived calculation,Low,Risk-priced estimate
+Case 03 productization budget,Program product systems compliance labor,331993.56,"1.5 FTE-years x $221,329 loaded planning cost",Derived calculation,Low,Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption
+Case 03 productization budget,Hardware reliability and safety labor,331993.56,"1.5 FTE-years x $221,329 loaded planning cost",Derived calculation,Low,Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption
+Case 03 productization budget,Software security and release labor,442658.08,"2.0 FTE-years x $221,329 loaded planning cost",Derived calculation,Low,Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption
+Case 03 productization budget,Manufacturing and quality labor,221329.04,"1.0 FTE-year x $221,329 loaded planning cost",Derived calculation,Low,Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption
+Case 03 productization budget,Service and customer operations labor,221329.05,"1.0 FTE-year x $221,329 loaded planning cost",Derived calculation,Low,Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption
+Case 03 productization budget,Twelve pilot units,288000,"$24,000 modeled direct cost x 12",Derived calculation,Low,Unitree comparator plus assumed labor and unit allowance; replace with binding BOM
+Case 03 productization budget,Fixtures and laboratory equipment,120000,Scenario allowance,Scenario assumption,Low,Binding equipment and fixture quotes
+Case 03 productization budget,External safety legal and insurance,150000,Scenario allowance,Scenario assumption,Low,Binding proposals and insurance terms
+Case 03 productization budget,Cloud data and pilot operations,72000,Scenario allowance,Scenario assumption,Low,Cloud bills and operating plan
+Case 03 productization budget,Management reserve,217930.33,"10% of $2,179,303.29 subtotal",Derived calculation,Low,Risk-priced estimate and sponsor approval

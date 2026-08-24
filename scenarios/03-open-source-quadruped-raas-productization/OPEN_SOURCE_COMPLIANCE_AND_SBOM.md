@@ -1,6 +1,6 @@
 # Open-Source Compliance and SBOM Plan
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Control objective
 
@@ -8,7 +8,7 @@ Ship a reproducible commercial service while preserving every applicable copyrig
 
 ## Release controls
 
-**Table 1. Open-source release controls - Evidence: control design [SA-L], source statements [PB-H]; Confidence: see evidence key and row/source notes**
+**Table 1. Open-source release controls - Evidence: control design [SA-L], source statements [PB-H]; Confidence: low/high by row**
 
 | Control | Owner | Gate evidence |
 |---|---|---|

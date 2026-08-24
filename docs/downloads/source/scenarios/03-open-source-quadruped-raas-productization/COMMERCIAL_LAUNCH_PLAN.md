@@ -1,12 +1,12 @@
 # Commercial Launch Plan - OpenQuad RaaS
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Offer
 
 The limited-availability offer is a two-robot, 36-month supervised-lab subscription with onboarding, supported release images, SBOM/license packet, remote diagnosis, standard maintenance, advance-replacement eligibility, and quarterly service review.
 
-**Table 1. Launch evidence and claims controls - Evidence: scenario plan [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Launch evidence and claims controls - Evidence: scenario plan [SA-L]; Confidence: low**
 
 | Workstream | Deliverable | Claim boundary |
 |---|---|---|

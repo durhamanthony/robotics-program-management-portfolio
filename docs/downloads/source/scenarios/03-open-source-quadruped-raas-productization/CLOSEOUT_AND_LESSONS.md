@@ -1,6 +1,6 @@
 # Closeout and Lessons - OpenQuad RaaS Productization
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Closeout decision
 
@@ -8,7 +8,7 @@ Limited availability is approved for the supervised indoor laboratory envelope. 
 
 ## Accepted evidence
 
-**Table 1. Closeout evidence - Evidence: fictional scenario results [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Closeout evidence - Evidence: fictional scenario results [SA-L]; Confidence: low**
 
 | Area | Evidence | Status |
 |---|---|---|
