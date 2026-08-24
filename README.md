@@ -22,7 +22,7 @@ Each scenario has an executive dashboard with scope, acceptance results, schedul
 - `scenarios/` — completed scenario documents and data.
 - `portfolio/scenario_dashboard_data.json` — dashboard source data.
 - `media/videos/` — four MuJoCo operations demonstrations plus productization and support workflow animations.
-- `simulations/` — MuJoCo source for four case-study demonstrations plus the warehouse capability scene.
+- `simulations/` — MuJoCo source for the four simulator-backed case studies, including the two-scene retail inbound-to-fulfillment story.
 - `tools/` — robotics support data lab, tool research, and reference architecture.
 - `pm-operating-system/` — reusable Word, Excel, CSV, and AI-assisted program-management tools.
 - `quality-control/` — independent Claude and Grok review packages with manifests and response schemas.

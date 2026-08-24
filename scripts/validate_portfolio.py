@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import importlib.util
 import json
 import re
 import sys
@@ -194,6 +195,47 @@ def check_media(errors: list[str], warnings: list[str]) -> None:
             errors.append(f"File exceeds 50 MB public-portfolio guardrail: {path.relative_to(ROOT)}")
 
 
+def load_module(path: Path, name: str):
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Could not load validation module: {path.relative_to(ROOT)}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def check_retail_story(errors: list[str]) -> None:
+    inbound = load_module(ROOT / "simulations" / "retail_inbound" / "retail_inbound_sequence.py", "retail_inbound_validation")
+    orders = load_module(ROOT / "simulations" / "retail_humanoids" / "retail_sequence.py", "retail_order_validation")
+    inbound_report = inbound.route_validation_report()
+    order_report = orders.route_clearance_report()
+    for key, value in inbound_report.items():
+        if isinstance(value, bool) and not value:
+            errors.append(f"Retail inbound validation failed: {key}")
+    for key, value in order_report.items():
+        if isinstance(value, bool) and not value:
+            errors.append(f"Retail order-picking validation failed: {key}")
+
+    data = json.loads((ROOT / "portfolio" / "scenario_dashboard_data.json").read_text(encoding="utf-8"))
+    if data.get("capability_demos"):
+        errors.append("Standalone capability card remains after retail-story consolidation")
+    retail_demo = data["scenarios"][0]["demo"]
+    required_copy = ("Unload truck", "raised racks", "courtesy drop-off table")
+    searchable = f"{retail_demo.get('caption', '')} {' '.join(retail_demo.get('sequence', []))}".lower()
+    for phrase in required_copy:
+        if phrase.lower() not in searchable:
+            errors.append(f"Retail dashboard is missing required workflow copy: {phrase}")
+
+    with (ROOT / "media" / "videos" / "video_manifest.csv").open(newline="", encoding="utf-8-sig") as handle:
+        rows = list(csv.DictReader(handle))
+    retail_rows = [row for row in rows if row.get("video_id") == "retail"]
+    if len(retail_rows) != 1 or retail_rows[0].get("duration_target_seconds") != "40":
+        errors.append("Retail video manifest must contain one 40-second composed story")
+    if any(row.get("video_id") == "warehouse" for row in rows):
+        errors.append("Standalone loading capability remains in the video manifest")
+
+
 def check_navigation(errors: list[str]) -> None:
     for path in DOCS.rglob("*.html"):
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -217,7 +259,9 @@ def check_rebuild_acceptance(errors: list[str]) -> None:
         ROOT / "scenarios" / "03-new-robot-first-sale",
         ROOT / "simulations" / "new_robot_npi",
         ROOT / "simulations" / "support_lab",
+        ROOT / "simulations" / "warehouse_capability",
         ROOT / "media" / "videos" / "ad01-new-robot-npi.mp4",
+        ROOT / "media" / "videos" / "warehouse-palletizing-truck-loading.mp4",
     ):
         if obsolete.exists():
             errors.append(f"Retired path remains: {obsolete.relative_to(ROOT)}")
@@ -314,6 +358,7 @@ def main() -> int:
     check_recruiter_corrections(errors)
     check_csv(errors)
     check_media(errors, warnings)
+    check_retail_story(errors)
     check_navigation(errors)
     check_rebuild_acceptance(errors)
     check_table_titles_and_evidence(errors)

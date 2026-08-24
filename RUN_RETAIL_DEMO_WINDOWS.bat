@@ -10,16 +10,16 @@ if not exist ".venv\Scripts\python.exe" (
 ".venv\Scripts\python.exe" -m pip install -r simulations\requirements.txt
 if errorlevel 1 goto :error
 
-echo Running the fast retail workflow and evidence check...
+echo Running the inbound-to-fulfillment retail workflow and evidence checks...
 ".venv\Scripts\python.exe" simulations\retail_humanoids\run_demo.py --duration 36 --output-dir outputs
 if errorlevel 1 goto :error
 
-echo Opening the retail MuJoCo viewer with the corrected overview camera and stair heights...
+echo Opening the order-picking MuJoCo viewer. The browser video adds the truck-unload and stocking model before this scene...
 ".venv\Scripts\python.exe" simulations\retail_humanoids\run_demo.py --viewer --duration 36 --output-dir outputs
 if errorlevel 1 goto :error
 
 echo.
-echo Retail workflow completed. Evidence is in the outputs folder.
+echo Retail inbound, stair, order-pick, and courtesy-drop-off checks completed. Evidence is in the outputs folder.
 pause
 exit /b 0
 

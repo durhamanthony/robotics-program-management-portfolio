@@ -10,11 +10,11 @@ Approved configuration and route; signed readiness checklist; change freeze; tra
 ## Installation and commissioning
 
 1. Confirm serial numbers, software, checksums, certificates, warranties, spares, and shipping condition.
-2. Verify route, stair, doors, fire egress, handoff, charger, exception zone, and stock-cart parking against the signed drawing.
+2. Verify truck position, ramp/threshold, pallet staging, forklift park, zone interlock, route, four-step stair, doors, fire egress, courtesy drop-off table, charger, exception zone, and stock-cart parking against the signed drawing.
 3. Connect each robot with least-privilege identity; validate access logging and revocation.
 4. Load the approved map, speed, stop, item, reach, charging, retention, and safe-state configuration.
-5. Test tablet, inventory lookup, mission creation, pick scan, handoff scan, event, and case correlation.
-6. Run empty routes, approved items, human/cart intrusions, blocked route, wrong location, network loss, low battery, sensor fault, and emergency stop.
+5. Test receiving schedule, pallet identification, forklift mission, pallet-stable state, parked/zone-clear signal, stocking scan, tablet, inventory lookup, pick, courtesy drop-off, event, and case correlation.
+6. Run full-pallet unload and clear-zone cycles, lower/raised stocking, empty routes, approved items, human/cart intrusions, blocked route, wrong location, network loss, low battery, sensor fault, and emergency stop.
 7. Execute Site Acceptance Test (SAT); record witness, configuration, timestamp, result, and defect for each case.
 8. Complete 100-request User Acceptance Testing (UAT) in shadow mode before pilot authorization.
 
@@ -28,7 +28,7 @@ Approved configuration and route; signed readiness checklist; change freeze; tra
 
 ## Stop and rollback triggers
 
-Any contact/injury; safety-control bypass; robot outside route; fire-egress interference; repeated uncontrolled drop; security compromise; wrong-item rate above 0.5%; mission success below 97% for two days; or unavailable human fallback. Stop missions, establish safe state, notify authority, preserve evidence, reconcile transactions, and route all requests to human picking. Restore only after root-cause, approved change, regression test, and signed restart.
+Any contact/injury; forklift/humanoid overlap; unstable pallet; safety-control bypass; robot outside route; fire-egress interference; repeated uncontrolled drop; security compromise; wrong-item rate above 0.5%; mission success below 97% for two days; or unavailable human fallback. Stop missions, establish safe state, notify authority, preserve evidence, reconcile transactions, and route receiving/picking to the human fallback. Restore only after root-cause, approved change, regression test, and signed restart.
 
 ## Hypercare
 

@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Configure and deploy two vendor-supplied humanoid robots at fictional Meridian Store 214 for an employee-only backroom workflow. A sales associate submits an item request from a tablet; the robot verifies the request, walks an approved existing route, retrieves a shoe box or already-hung garment, delivers it to an employee handoff point, and records the transaction. Between requests, robots perform approved put-away and cycle-count missions.
+Configure and deploy two vendor-supplied humanoid robots plus a robot-operated forklift interface at fictional Meridian Store 214 for an employee-only backroom workflow. At inbound receipt, the forklift removes a full pallet from the truck and clears the receiving zone; humanoids then transfer approved cartons to lower and raised storage racks. For fulfillment, a sales associate submits an item request from a tablet; the robot verifies the request, walks an approved route, retrieves a shoe box or already-hung garment, places it on the courtesy drop-off table, and records the transaction. Between requests, robots perform approved return put-away and cycle-count missions. [SA-L]
 
 ## Deliverables and acceptance evidence
 
@@ -14,6 +14,7 @@ Configure and deploy two vendor-supplied humanoid robots at fictional Meridian S
 | Deliverable | Vendor/Program team | Meridian | Acceptance evidence |
 |---|---|---|---|
 | Validated workflow | observe, document, bound use cases | provide staff, volume, item classes | signed task/envelope map |
+| Inbound receiving cell | configure truck-to-receiving forklift path, pallet state, work-zone interlock, and carton-release logic | provide dock window, traffic rules, pallet standard, and witnesses | 20 witnessed unload/clear/release cycles without overlap |
 | Route and safety design | map aisles, doors, stair, stops, faults | approve access and emergency rules | hazard log and design review |
 | Tablet/inventory integration | configure identity, request, scan, event, retry | provide test tenant and data | 20 normal/fault interface tests pass |
 | Configured fleet | robot, charger, end effector, telemetry | provide power, network, staging | Factory Acceptance Test (FAT) report |
@@ -23,7 +24,7 @@ Configure and deploy two vendor-supplied humanoid robots at fictional Meridian S
 
 ## Boundaries
 
-Only approved shoe boxes from 0.3 to 8 kilograms and already-hung garments within the validated reach envelope are handled. Tangled hangers, torn cartons, loose clothing, heavy or hazardous items, customer-floor work, ladders, and electrical work route to a human exception queue.
+Only standard, stable full pallets at the approved truck interface; approved shoe boxes from 0.3 to 8 kilograms; and already-hung garments within the validated reach envelope are handled. Mixed forklift/humanoid traffic, unstable pallets, damaged cartons, tangled hangers, loose clothing, heavy or hazardous items, customer-floor work, ladders, and electrical work route to a human exception queue.
 
 ## Commercial assumptions
 

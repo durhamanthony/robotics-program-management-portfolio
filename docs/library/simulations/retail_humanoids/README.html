@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MuJoCo Demo — Retail Backroom Humanoid Fulfillment | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<title>MuJoCo Demo — Retail Backroom Inbound and Fulfillment | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
 <link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
@@ -8,16 +8,16 @@
 <div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/simulations/retail_humanoids/README.md" download>Download MD</a></div></div>
-<article class="article"><h1 id="mujoco-demo--retail-backroom-humanoid-fulfillment">MuJoCo Demo — Retail Backroom Humanoid Fulfillment</h1>
+<article class="article"><h1 id="mujoco-demo--retail-backroom-inbound-and-fulfillment">MuJoCo Demo — Retail Backroom Inbound and Fulfillment</h1>
 <blockquote>
 <p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
 </blockquote>
-<p>This MuJoCo operations visualization mirrors Case 01. It uses a coherent department-store backroom: a ground-floor receiving table, tablet station, human-scale aisles, garment rack, a guarded four-step stock platform, upper shoe shelving, a put-away cart, and an employee handoff point. The blue humanoid retrieves a shoe carton from the raised shelf and carries it to the employee handoff. The green humanoid picks a carton from receiving, visibly carries it through the open aisle below the table, and places it on the put-away cart.</p>
-<p>The model demonstrates route ownership, two distinct item movements, handoff/put-away states, and deterministic route-clearance checks. It does not claim a commercial humanoid can autonomously perform the task, and it is not a dynamics, grasp, collision-avoidance, stair-safety, or certified-control validation.</p>
+<p>This MuJoCo operations visualization mirrors the expanded Case 01 flow in one 40-second clip. The first model, documented in <a href="../retail_inbound/README.html"><code>../retail_inbound/README.md</code></a>, begins with a full pallet inside a delivery truck. A robot-operated forklift backs the pallet into receiving and clears the work zone. Two humanoids then stock ground and raised racks; the upper-route robot carries its carton up four visible, yellow-edged steps. The clip then cuts to this order-fulfillment model, where two robots pull requested cartons from different stock levels and place them on the courtesy drop-off table for a sales associate.</p>
+<p>The models demonstrate state ownership, forklift-to-humanoid work-zone separation, distinct item movements, stair-linked height changes, order-picking, courtesy drop-off states, and deterministic route checks. On-video stage labels make the sequence explicit. They do not claim that a commercial robot can autonomously perform these tasks, and they are not dynamics, grasp, collision-avoidance, forklift-control, stair-safety, or certified-control validation. [DC-L]</p>
 <h2 id="windows-run">Windows run</h2>
 <p>From the repository folder:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\python.exe simulations\retail_humanoids\run_demo.py -<span class="at">-viewer</span> -<span class="at">-duration</span> 36</span></code></pre></div>
-<p>The browser-playable portfolio video is rendered from <code>retail.xml</code>. Motion is scripted for program-workflow communication and is not locomotion, grasp, or safety-performance validation.</p>
+<p>The browser-playable portfolio video is composed from <code>../retail_inbound/retail_inbound.xml</code> and <code>retail.xml</code>. Motion is scripted for program-workflow communication and is not locomotion, grasp, forklift-control, or safety-performance validation.</p>
 </article></main>
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>

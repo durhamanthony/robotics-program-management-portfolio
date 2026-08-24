@@ -11,7 +11,7 @@
 |---|---|---|
 | [Sanctuary AI retail deployment](https://sanctuary.ai/news/sanctuary-ai-deploys-first-humanoid-general-purpose-robot-commercially/) | category relevance: 110 correctly completed retail tasks during a one-week Mark's pilot, including front/back store picking, packing, cleaning, tagging, labeling, and folding | Meridian autonomy, speed, reliability, safety, price, staffing, or payback |
 | [Agility Robotics human-centric design](https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work) | rationale for testing a human form factor in existing human spaces and infrastructure | this scenario's dexterity, stair performance, item handling, or cost |
-| [U.S. Bureau of Labor Statistics March 2026 retail compensation](https://www.bls.gov/charts/employer-costs-for-employee-compensation/costs-by-industry.htm) | $20.41 wages + $6.23 benefits = $26.64/hour retail-trade benchmark | Meridian payroll, scheduling, vacancy, overtime, or realizable cash savings |
+| [Glassdoor U.S. Retail Sales Associate salary, June 2026](https://www.glassdoor.com/Salaries/retail-sales-associate-salary-SRCH_IN1_KO0%2C22.htm) | $40,242/year average, equivalent to $19.35/hour at 2,080 paid hours; 94,388 anonymously submitted salaries [RBE-M] | Meridian payroll, benefits, location, scheduling, vacancy, overtime, or realizable cash savings |
 
 ## Fictional scenario inputs
 
@@ -28,7 +28,8 @@ Robot purchase/lease; manipulation package; software; remote operations; invento
 | ID | Assumption | Owner | Validation | If false |
 |---|---|---|---|---|
 | A-01 | approved shoe boxes weigh 0.3–8 kg | Inventory lead | representative sample and scale log before FAT | reduce item classes/change scope |
-| A-02 | short stair and doors meet vendor envelope | Safety lead | measured route and witnessed SAT | use alternate handoff/no-go |
+| A-02 | short stair and doors meet vendor envelope | Safety lead | measured route and witnessed SAT | use alternate courtesy drop-off/no-go |
+| A-06 | existing robot-operated forklift can exchange mission and zone-clear states | Safety lead | interface test and 20 witnessed unload cycles | keep inbound receipt human-operated/no-go |
 | A-03 | inventory locations are available by application interface | IT lead | test tenant and 20 interface cases | manual scan workflow/replan |
 | A-04 | associates can use returned time for customer service | Store sponsor | staffing and floor-observation study | do not count labor value |
 | A-05 | no customer-floor operation is needed | Store sponsor | approved operating procedure | new privacy/safety/change gate |

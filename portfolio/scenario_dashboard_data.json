@@ -1,16 +1,6 @@
 {
   "portfolio_notice": "These simulations are fictitious generic scenarios for demonstration purposes only.",
-  "capability_demos": [
-    {
-      "code": "CAPABILITY LAB 01",
-      "title": "MuJoCo Warehouse Palletizing and Truck Loading",
-      "filename": "warehouse-palletizing-truck-loading.mp4",
-      "caption": "A scripted MuJoCo operations visualization of humanoids moving cartons from conveyors to a seven-carton pallet stack, followed by robot-operated forklift transfer into a green delivery truck and empty-pallet reset.",
-      "href": "library/simulations/warehouse_capability/README.html",
-      "label": "Open capability notes",
-      "model_source": "simulations/warehouse_capability/README.md"
-    }
-  ],
+  "capability_demos": [],
   "scenarios": [
     {
       "slug": "retail-humanoid-backroom",
@@ -24,8 +14,8 @@
       "duration": "20 weeks including 30-day pilot",
       "budget": "$640K pilot installed",
       "tco": "$1.730M five-year TCO",
-      "summary": "Deploy two humanoid robots in an unchanged, employee-only department-store backroom. A sales associate submits a stock-keeping unit, size, and color request from a tablet. A robot walks through existing human aisles and doors, uses the short stair route where required, retrieves a shoe box or already-hung garment, and delivers it to an employee handoff point. The same fleet performs put-away and cycle-count work between requests. Tangled hangers, ladders, electrical work, and customer-floor operation remain human tasks.",
-      "decision": "The 30-day pilot passed the safety, retrieval, wait-time, inventory-accuracy, damage, and intervention gates, so Meridian accepted the operating procedure and support handoff. Finance did not authorize chain rollout: measured annual gross value was $184,468 versus the $346,000 annual value required for five-year payback at the current planning cost. A second-site decision requires a binding vendor quote and either lower recurring cost or independently measured value at or above $346,000 per year.",
+      "summary": "Deploy two humanoid robots across the employee-only retail backroom flow. During inbound receiving, a robot-operated forklift removes a full pallet from the delivery truck and clears the work zone; humanoids then carry cartons to lower and raised storage racks, using the visible stair route where required. During fulfillment, a sales associate submits a stock-keeping unit, size, and color request from a tablet; robots pull the requested merchandise and place it on the courtesy drop-off table. Tangled hangers, damaged packaging, ladders, electrical work, and customer-floor operation remain human tasks.",
+      "decision": "The 30-day pilot passed the safety, retrieval, wait-time, inventory-accuracy, damage, intervention, and inbound zone-handoff gates, so Meridian accepted the operating procedure and support handoff. Finance did not authorize chain rollout: modeled annual gross value was $148,258 versus the $346,000 annual value required for five-year payback at the current planning cost. A second-site decision requires a binding vendor quote and either lower recurring cost or independently measured value at or above $346,000 per year.",
       "metrics": [
         {
           "label": "Retrieval mission success",
@@ -69,7 +59,7 @@
         },
         {
           "label": "Five-year value gap",
-          "value": "$807,662",
+          "value": "$988,708",
           "note": "Calculated shortfall at current planning inputs",
           "state": "watch",
           "evidence_class": "Scenario assumption",
@@ -145,8 +135,8 @@
         },
         {
           "label": "Annual labor-capacity value",
-          "value": 132268,
-          "display": "$132,268",
+          "value": 96058,
+          "display": "$96,058",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
@@ -166,13 +156,13 @@
         },
         {
           "label": "Five-year value shortfall",
-          "value": 807662,
-          "display": "$807,662 shortfall",
+          "value": 988708,
+          "display": "$988,708 shortfall",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         }
       ],
-      "financial_note": "There is no positive payback at the pilot inputs. The labor component is 4,965 hours \u00d7 $26.64 per hour = $132,268, using the U.S. Bureau of Labor Statistics March 2026 retail-trade total-compensation benchmark. Adding $52,200 of fictional measured margin recovery produces $184,468 annual gross value, below the $218,000 recurring cost. Five-year payback requires $346,000 annual gross value: $218,000 recurring cost plus $128,000 annual recovery of the $640,000 installation. Robot, integration, license, and support prices are planning allowances pending binding quotes.",
+      "financial_note": "There is no positive payback at the pilot inputs. Glassdoor's June 2026 U.S. Retail Sales Associate average salary is $40,242/year, or a $19.35/hour planning equivalent using 2,080 paid hours [RBE-M]. The labor component is 4,965 hours \u00d7 $19.3471 = $96,058. Adding $52,200 of fictional measured margin recovery produces $148,258 annual gross value, below the $218,000 recurring cost. Five-year payback requires $346,000 annual gross value: $218,000 recurring cost plus $128,000 annual recovery of the $640,000 installation. The Glassdoor benchmark is crowd-sourced and excludes Meridian benefits, location, and payroll; robot, integration, license, and support prices remain planning allowances pending binding quotes.",
       "risks": [
         {
           "id": "R-001",
@@ -193,14 +183,14 @@
           "risk": "Tablet or inventory interface sends the wrong stock location",
           "score": 16,
           "status": "Closed",
-          "response": "Stock-keeping-unit confirmation, location confidence gate, scan at pick and handoff"
+          "response": "Stock-keeping-unit confirmation, location confidence gate, scan at pick and courtesy drop-off"
         },
         {
           "id": "R-004",
           "risk": "Short stair or fire-door route is unavailable",
           "score": 15,
           "status": "Transferred to operations",
-          "response": "Route-health check, alternate employee handoff, and safe return"
+          "response": "Route-health check, alternate courtesy drop-off, and safe return"
         },
         {
           "id": "R-005",
@@ -208,6 +198,13 @@
           "score": 20,
           "status": "Closed at financial gate",
           "response": "No chain rollout without binding quotes and measured annual gross value of at least $346,000"
+        },
+        {
+          "id": "R-006",
+          "risk": "Forklift unloading and humanoid stocking overlap in the receiving zone",
+          "score": 20,
+          "status": "Closed with control",
+          "response": "Time-separate the tasks; interlock the receiving zone; release humanoid missions only after the forklift parks and the pallet is verified stable"
         }
       ],
       "team": [
@@ -221,7 +218,7 @@
         },
         {
           "role": "Store and inventory operations",
-          "accountability": "Baseline, stock locations, tablet workflow, exception ownership, and benefit measurement"
+          "accountability": "Dock schedule, pallet receipt, stock locations, tablet workflow, exception ownership, and benefit measurement"
         },
         {
           "role": "Robot, integration, and safety engineering",
@@ -311,14 +308,15 @@
       "demo": {
         "title": "MuJoCo Retail Backroom Humanoid Simulation",
         "filename": "retail-humanoid-fulfillment.mp4",
-        "caption": "Rendered from a MuJoCo backroom model with human-scale aisles, a receiving area, garment rack, four-step stock platform, shoe shelving, tablet station, and employee handoff. The blue robot retrieves and hands off a shoe carton. The green robot picks up a receiving carton, visibly carries it through a clear aisle, and places it on the put-away cart. Scripted motion is not locomotion, grasp, collision-avoidance, or safety-performance validation.",
+        "caption": "A 40-second, seven-stage MuJoCo retail-backroom story. A robot-operated forklift backs a full pallet out of the delivery truck and parks it in receiving. After the forklift clears the zone, two humanoids carry cartons to lower and raised storage racks; the upper-route robot visibly climbs each of four physical treads. The scene then cuts to order fulfillment: both robots pull requested merchandise and place it on the courtesy drop-off table for a sales associate. On-video stage labels make the workflow explicit. Scripted motion is not locomotion, grasp, forklift-control, collision-avoidance, or safety-performance validation. [DC-L; Low confidence]",
         "model_source": "simulations/retail_humanoids/README.md",
         "sequence": [
-          "Receive tablet request",
-          "Confirm item and location",
-          "Walk existing aisle and stair route",
-          "Retrieve approved item",
-          "Deliver to employee handoff",
+          "Unload truck: robot-operated forklift removes full pallet",
+          "Clear receiving zone and verify stable pallet",
+          "Stock lower and raised racks; use visible stairs where required",
+          "Receive tablet order and confirm item location",
+          "Pull requested merchandise from both stock levels",
+          "Place merchandise on courtesy drop-off table",
           "Update inventory and accept next mission"
         ],
         "type": "MuJoCo operations visualization"
@@ -334,10 +332,11 @@
           "Employees passed tablet, exception, emergency-stop, recovery, and escalation assessments"
         ],
         "lessons": [
-          "The human-form-factor rationale must be tied to actual doors, aisles, stairs, shelves, and handoff points",
+          "The human-form-factor rationale must be tied to actual doors, aisles, stairs, shelves, receiving zones, and courtesy drop-off points",
+          "Forklift unloading and humanoid stocking require a hard operating-state handoff rather than simultaneous mixed traffic",
           "Tangled hangers and damaged packaging require an explicit human exception path",
           "Operational acceptance and financial approval are separate decisions",
-          "Do not scale until vendor quotes and measured store value close the $161,532 annual value gap"
+          "Do not scale until vendor quotes and measured store value close the $197,742 annual value gap"
         ]
       }
     },

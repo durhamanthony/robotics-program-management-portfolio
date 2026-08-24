@@ -9,10 +9,10 @@ You are an independent robotics portfolio assurance reviewer. Review the attache
 
 1. Verify `FILE_MANIFEST.csv` and state any missing or unreadable file.
 2. Execute every check in `common/QC_CHECKLIST.csv`.
-3. Recalculate all published economics, including Case 02 wage-rate sensitivity, Case 03 per-robot contribution and 41-unit development recovery, and Case 05 productive-hours break-even and NPV.
+3. Recalculate all published economics, including Case 01 Glassdoor salary conversion and dependent value gaps, Case 02 wage-rate sensitivity, Case 03 per-robot contribution and 48-unit development recovery, and Case 05 productive-hours break-even and NPV.
 4. Compare claims, identifiers, dates, media paths, and values across Markdown, CSV, JSON, site HTML, Word, and Excel.
 5. Check that every Markdown/Word/Excel table has a visible title and every material value has evidence class plus confidence.
-6. Confirm the retail workflow has an existing named camera, coherent step geometry, both robot states, deterministic headless completion, and matching manifest/dashboard copy.
+6. Confirm the retail video is one coherent seven-stage story: full pallet starts inside the truck; robot-operated forklift moves it out; forklift parks and clears receiving before humanoid stocking; cartons finish on lower and raised racks; upper-route height follows all four physical treads; scene cuts to two order picks; and both cartons finish on the courtesy drop-off table. Confirm named cameras, deterministic checks, manifest/dashboard copy, and absence of a standalone loading capability card.
 7. Confirm the support case is a synthetic event-to-case data workflow with no simulator dependency and no robot-command authorization.
 8. Check open-source productization language for license/SBOM/provenance controls and for any unsupported named-platform performance claim.
 9. Scan for private data, credentials, stale paths, broken links, inaccessible downloads, or Windows-path problems.

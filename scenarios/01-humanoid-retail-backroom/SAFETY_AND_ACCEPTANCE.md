@@ -5,7 +5,7 @@
 
 ## Operating limits
 
-Employee-only backroom; approved mapped route; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited.
+Employee-only backroom; approved truck and pallet interface; time-separated forklift and humanoid missions; stable-pallet confirmation; approved mapped routes; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, trailer entry by humanoids, mixed forklift/humanoid traffic, unstable pallets, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited. [SA-L]
 
 ## Principal hazards and controls
 
@@ -13,9 +13,11 @@ Employee-only backroom; approved mapped route; low-speed shared-space mode; appr
 
 | Hazard | Preventive control | Detection/protective control | Recovery |
 |---|---|---|---|
+| forklift/humanoid overlap | scheduled unload window; interlocked receiving zone; marked park position | positive parked/zone-clear signal before humanoid mission release | inhibit missions; stop work; dock lead resets by checklist |
+| unstable pallet or carton | approved pallet standard; visual/stability check before release | load-state and carton-envelope verification | quarantine pallet; human material-handling response |
 | person/cart in aisle | right-of-way, low speed, marked parking | perception, protective stop, emergency stop | supervisor clears/restarts by checklist |
 | fall on stair/threshold | mapped route, surface/edge inspection | posture/fault monitor and exclusion distance | isolate area; field retrieval plan |
-| dropped/wrong item | approved grasp set; scan before pick | grip/load monitoring; pick/handoff scan | safe stop; human exception |
+| dropped/wrong item | approved grasp set; scan before pick | grip/load monitoring; stock/pick/drop-off scan | safe stop; human exception |
 | blocked fire door/egress | route excludes staging in egress | opening inspection and route-health check | recall robot; use human workflow |
 | network/integration loss | local safe behavior; idempotent interface | heartbeat, timeout, transaction reconciliation | pause missions; tablet becomes human queue |
 | battery/electrical/thermal | approved charger, inspection, clearances | temperature/fault monitoring | isolate power; emergency response |
@@ -27,6 +29,8 @@ Employee-only backroom; approved mapped route; low-speed shared-space mode; appr
 
 | Test | Witnessed criterion | Result |
 |---|---|---|
+| SAT-001 truck unload and work-zone handoff | 20/20 full-pallet unloads end stable in receiving; forklift parked and zone clear before humanoid release | pass |
+| SAT-002 inbound stocking | 20/20 approved cartons reach the assigned lower or raised rack with scan reconciliation | pass |
 | FAT-010 approved-item handling | 100 varied picks with at least 97% success and no uncontrolled drop | pass |
 | FAT-020 exception handling | 10/10 tangled/damaged/unsupported cases reject without grasp | pass |
 | SAT-010 route/stair/door | 20/20 cycles remain in route and complete safe stops | pass |

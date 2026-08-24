@@ -34,49 +34,55 @@
 <td>pass</td>
 </tr>
 <tr class="even">
-<td>Median request-to-handoff</td>
+<td>Median request-to-drop-off</td>
 <td style="text-align: right;">no more than 4.0 minutes</td>
 <td style="text-align: right;">3.4 minutes</td>
 <td>pass</td>
 </tr>
 <tr class="odd">
+<td>Forklift unload/clear/stock release</td>
+<td style="text-align: right;">20/20 cycles without overlap</td>
+<td style="text-align: right;">20/20</td>
+<td>pass</td>
+</tr>
+<tr class="even">
 <td>Inventory location accuracy</td>
 <td style="text-align: right;">at least 98%</td>
 <td style="text-align: right;">98.7%</td>
 <td>pass</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Interventions</td>
 <td style="text-align: right;">no more than 3/100</td>
 <td style="text-align: right;">2.2/100</td>
 <td>pass</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Damage/wrong item</td>
 <td style="text-align: right;">no more than 0.5%</td>
 <td style="text-align: right;">0.2%</td>
 <td>pass</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Recordable safety events</td>
 <td style="text-align: right;">zero</td>
 <td style="text-align: right;">zero</td>
 <td>pass</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Annual gross value</td>
 <td style="text-align: right;">at least $346,000</td>
-<td style="text-align: right;">$184,468</td>
+<td style="text-align: right;">$148,258</td>
 <td>fail</td>
 </tr>
 </tbody>
 </table>
 <h2 id="financial-reconciliation">Financial reconciliation</h2>
-<p>Installed pilot spending was $640,000 in the fictional budget. Annual recurring planning cost is $218,000. Annualized value is $132,268 from 4,965 returned hours at the U.S. Bureau of Labor Statistics $26.64 retail-trade compensation benchmark plus $52,200 fictional measured margin recovery. Gross value is $33,532 below recurring cost and $161,532 below the five-year annual threshold. Five-year shortfall is $807,662.</p>
+<p>Installed pilot spending was $640,000 in the fictional budget. Annual recurring planning cost is $218,000. Annualized value is $96,058 from 4,965 returned hours at the Glassdoor June 2026 U.S. Retail Sales Associate average salary of <span class="math inline">40, 242/<em>y</em><em>e</em><em>a</em><em>r</em>(</span>19.35/hour planning equivalent) plus $52,200 fictional measured margin recovery. Gross value is $69,742 below recurring cost and $197,742 below the five-year annual threshold. Five-year shortfall is $988,708. The Glassdoor value is a crowd-sourced research benchmark [RBE-M], not Meridian payroll or total compensation.</p>
 <p>Finance therefore recorded <strong>no chain rollout</strong>. No savings were booked from returned time because actual payroll, overtime, vacancies, schedules, and customer transaction effects were not supplied.</p>
 <h2 id="handoff-and-closure-evidence">Handoff and closure evidence</h2>
 <ul>
-<li>configuration, route, item envelope, test records, defect list, support cases, KPI query, and pilot dataset archived;</li>
+<li>configuration, truck/pallet interface, work-zone interlock, route, item envelope, test records, defect list, support cases, KPI query, and pilot dataset archived;</li>
 <li>training, support severity, field recovery, security access, privacy deletion, and rollback drills accepted;</li>
 <li>unsupported-item, blocked-route, and financial risks assigned to named operational owners;</li>
 <li>contracts, invoices, warranties, assets, licenses, and decommissioning obligations identified; and</li>
@@ -84,7 +90,8 @@
 </ul>
 <h2 id="lessons">Lessons</h2>
 <ol type="1">
-<li>A humanoid justification must identify the human infrastructure actually used: doors, stairs, aisles, shelves, garment rails, and handoff points.</li>
+<li>A humanoid justification must identify the human infrastructure actually used: receiving zones, doors, stairs, aisles, shelves, garment rails, and courtesy drop-off points.</li>
+<li>Forklift unloading and humanoid stocking require a positive, auditable zone-clear handoff rather than simultaneous mixed traffic.</li>
 <li>Tangled hangers and damaged packaging belong in a defined exception workflow until tested evidence says otherwise.</li>
 <li>Operational success is not a return-on-investment result.</li>
 <li>Planning allowances must not be displayed as market prices.</li>

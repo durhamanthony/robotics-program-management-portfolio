@@ -25,7 +25,7 @@ The portfolio uses complete fictional scenarios to demonstrate decision-making. 
 
 | Scenario | Reconciled calculation | Decision meaning |
 |---|---|---|
-| Retail backroom | Five-year Total Cost of Ownership (TCO) = $640,000 + 5 × $218,000 = $1,730,000; annual gross value = $132,268 + $52,200 = $184,468; five-year value shortfall = $807,662 | Operational pilot accepted; financial scale gate closed |
+| Retail backroom | Five-year Total Cost of Ownership (TCO) = $640,000 + 5 × $218,000 = $1,730,000; Glassdoor salary-equivalent labor capacity = $96,058; annual gross value = $96,058 + $52,200 = $148,258; five-year value shortfall = $988,708 | Operational pilot accepted; financial scale gate closed |
 | Quadruped security | Five-year TCO = $730,250 + 5 × $117,000 = $1,315,250; annual net value = $343,500 − $117,000 = $226,500; payback = 3.22 years | Base case passes only when two contracted rover posts are removed and one responder remains |
 | Open quadruped RaaS | Contract revenue = $2,400 × 36 = $86,400 per robot; direct 36-month cost = $24,000 + $12,672 = $36,672; contribution = $86,400 − $36,672 + $770 allocated onboarding contribution = $50,498; development recovery = ceiling($2,397,233.62 ÷ $50,498) = 48 robots | Glassdoor, BLS, and Unitree are dated benchmarks; staffing, allowances, demand, utilization, and service-loss data remain low-confidence validation gates |
 | Support operations | Year-one authorization = $3,950,000 + $718,000 = $4,668,000; three-year TCO = $4,668,000 + 2 × $2,970,000 = $10,608,000 | Operating model accepted; vendor prices and workload calibration remain open inputs |

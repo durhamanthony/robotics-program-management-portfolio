@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Backroom Inbound Receiving — MuJoCo Story Segment | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/simulations/retail_inbound/README.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="retail-backroom-inbound-receiving--mujoco-story-segment">Retail Backroom Inbound Receiving — MuJoCo Story Segment</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
+</blockquote>
+<p>This model is the inbound half of the Case 01 retail operations story. A full pallet begins inside an open-backed delivery truck. A robot-operated forklift backs down the ramp, places the pallet in the receiving zone, and clears the humanoid work area. One humanoid carries a carton to a ground-level rack. A second humanoid carries a carton up four visible, yellow-edged steps and places it on the raised storage rack.</p>
+<p>The browser video then cuts to the existing order-fulfillment model: robots pull requested merchandise from the storage area and place it on the courtesy drop-off table for a sales associate.</p>
+<p>The movement is scripted for workflow communication. It does not validate autonomous unloading, forklift controls, grasp reliability, collision avoidance, stair safety, or any commercial robot's production capability. [DC-L]</p>
+<h2 id="deterministic-checks">Deterministic checks</h2>
+<p><code>retail_inbound_sequence.py</code> verifies that the pallet starts inside the truck, the forklift moves it out to receiving, the two cartons end on their intended racks, the upper-route height matches each physical tread, and the two humanoid centerlines remain separated.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -1,5 +1,5 @@
 ROBOTICS PORTFOLIO — WINDOWS SYNC PACKAGE
-Release date: 2026-08-23
+Release date: 2026-08-24
 
 1. Extract the ZIP. Keep the top-level folder and all relative paths intact.
 2. Copy the extracted folder into the location you use for the portfolio repository, or open it directly in GitHub Desktop.
@@ -12,10 +12,10 @@ Useful entry points:
 - docs\index.html — generated public site
 - pm-operating-system\ — reusable Word, Excel, CSV, and AI tools
 - quality-control\ — independent Claude and Grok review packages
-- RUN_RETAIL_DEMO_WINDOWS.bat — corrected retail workflow plus viewer
-- RENDER_RETAIL_VIDEO_WINDOWS.bat — corrected retail video and validation
+- RUN_RETAIL_DEMO_WINDOWS.bat — inbound-to-fulfillment checks plus order-picking viewer
+- RENDER_RETAIL_VIDEO_WINDOWS.bat — combined truck-unload, stocking, order-pick, and courtesy-drop-off video
 - RUN_SUPPORT_WORKFLOW_WINDOWS.bat — data-only support workflow
 - RENDER_SUPPORT_WORKFLOW_VIDEO_WINDOWS.bat — support data workflow animation
-- RENDER_ALL_MUJOCO_VIDEOS_WINDOWS.bat — five simulator videos plus support animation
+- RENDER_ALL_MUJOCO_VIDEOS_WINDOWS.bat — three refreshable simulator videos plus support animation; approved restroom clip remains locked
 
 All scenarios are fictional and all example inputs require human validation. Evidence labels and confidence fields are controls, not proof of production readiness.
