@@ -36,11 +36,11 @@ Annual recurring planning cost is $218,000: software/remote operations $96,000; 
 
 ## Benefit build
 
-The fictional measurement yields 4,965 associate-hours annually. At the U.S. Bureau of Labor Statistics retail-trade total-compensation benchmark of $26.64 per hour, capacity value is $132,267.60, rounded to $132,268. A fictional controlled comparison adds $52,200 of annual gross-margin recovery. Finance does not classify either number as cash savings without evidence of changed payroll, overtime, vacancies, scheduling, or verified incremental transactions.
+The fictional measurement yields 4,965 associate-hours annually. Glassdoor's June 2026 U.S. Retail Sales Associate average salary is $40,242 per year, based on 94,388 anonymously submitted salaries. Dividing by 2,080 paid hours gives a $19.3471/hour planning equivalent; 4,965 hours therefore produce $96,058.43 of annual capacity value, rounded to $96,058. A fictional controlled comparison adds $52,200 of annual gross-margin recovery. Glassdoor is a crowd-sourced research benchmark [RBE-M], not Meridian payroll. Finance does not classify either number as cash savings without evidence of changed payroll, benefits, overtime, vacancies, scheduling, or verified incremental transactions.
 
 ## Decision sensitivity
 
-Current annual gross value is $184,468; recurring cost is $218,000; therefore current annual net operating value is -$33,532 before recovery of installation. Five-year break-even requires $346,000 gross value per year. The second-site gate remains closed until a quote-backed model meets or exceeds that value without increasing safety or support risk.
+Current annual gross value is $148,258; recurring cost is $218,000; therefore current annual net operating value is -$69,742 before recovery of installation. Five-year break-even requires $346,000 gross value per year. The second-site gate remains closed until a quote-backed model meets or exceeds that value without increasing safety or support risk.
 
 ## Revalidation triggers
 

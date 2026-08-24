@@ -1,4 +1,4 @@
-<mujoco model="retail_backroom_humanoid_fulfillment_v3">
+<mujoco model="retail_backroom_humanoid_fulfillment_v4">
   <compiler angle="degree"/>
   <option timestep="0.01" gravity="0 0 -9.81"/>
   <statistic center="0 0 1.1" extent="10"/>
@@ -24,13 +24,18 @@
     <light pos="5 4 7" dir="-0.2 -0.15 -1" diffuse="0.55 0.60 0.65"/>
     <geom name="floor" type="plane" size="10 6 0.1" material="floor" contype="1" conaffinity="1"/>
     <camera name="overview" pos="-10 -11 8.2" xyaxes="0.74 -0.67 0 0.34 0.38 0.86"/>
-    <camera name="stairs" pos="-0.8 -7.2 4.0" xyaxes="1 0 0 0 0.82 0.57"/>
-    <camera name="shelves" pos="8.2 -7.5 5.1" xyaxes="0.68 0.73 0 -0.34 0.32 0.88"/>
-    <camera name="handoff" pos="-8.8 -5.6 4.2" xyaxes="0.45 -0.89 0 0.42 0.21 0.88"/>
+    <camera name="stairs" pos="-0.8 -6.2 3.8" xyaxes="0.95171 -0.307 0 0.16064 0.49798 0.85218"/>
+    <camera name="shelves" pos="7.0 -5.5 4.5" xyaxes="0.82722 0.56188 0 -0.25106 0.36962 0.89462"/>
+    <camera name="courtesy" pos="-2.2 -4.8 3.6" xyaxes="0.82404 0.56653 0 -0.23091 0.33588 0.91316"/>
 
-    <!-- Ground-level receiving and employee handoff zone. -->
-    <geom name="handoff_counter" type="box" pos="-5.6 0 0.55" size="0.45 1.55 0.55" material="wood"/>
-    <geom name="tablet" type="box" pos="-5.55 -0.45 1.15" size="0.20 0.30 0.035" material="teal"/>
+    <!-- Courtesy drop-off table where sales associates collect requested merchandise. -->
+    <geom name="courtesy_dropoff_table" type="box" pos="-5.6 0 0.96" size="0.70 1.55 0.08" material="wood"/>
+    <geom type="box" pos="-6.05 -1.20 0.48" size="0.09 0.09 0.48" material="shelf"/>
+    <geom type="box" pos="-6.05 1.20 0.48" size="0.09 0.09 0.48" material="shelf"/>
+    <geom type="box" pos="-5.15 -1.20 0.48" size="0.09 0.09 0.48" material="shelf"/>
+    <geom type="box" pos="-5.15 1.20 0.48" size="0.09 0.09 0.48" material="shelf"/>
+    <geom name="courtesy_table_edge" type="box" pos="-4.88 0 1.06" size="0.035 1.55 0.035" material="teal"/>
+    <geom name="tablet" type="box" pos="-5.55 0 1.08" size="0.20 0.30 0.035" material="teal"/>
     <geom type="box" pos="-6.9 0 1.4" size="0.08 5.2 1.4" material="white"/>
     <geom type="box" pos="0 5.2 1.4" size="6.9 0.08 1.4" material="white"/>
 
@@ -54,19 +59,20 @@
     <geom type="box" pos="4.15 -1.15 1.80" size="0.28 0.20 0.12" material="box"/>
     <geom type="box" pos="3.45 -1.15 2.33" size="0.28 0.20 0.12" material="box"/>
 
-    <!-- Ground-level garment processing and receiving. -->
+    <!-- Ground-level merchandise storage. -->
     <geom name="garment_post_a" type="cylinder" pos="3.2 2.55 1.25" size="0.045 1.25" material="rail"/>
     <geom name="garment_post_b" type="cylinder" pos="5.4 2.55 1.25" size="0.045 1.25" material="rail"/>
     <geom name="garment_rail" type="box" pos="4.3 2.55 2.25" size="1.1 0.045 0.045" material="rail"/>
     <geom type="box" pos="3.55 2.55 1.62" size="0.18 0.04 0.52" material="garment"/>
     <geom type="box" pos="4.25 2.55 1.55" size="0.20 0.04 0.58" rgba="0.10 0.42 0.72 1"/>
     <geom type="box" pos="4.95 2.55 1.68" size="0.19 0.04 0.45" rgba="0.80 0.60 0.16 1"/>
-    <geom name="receiving_table" type="box" pos="1.8 2.7 0.52" size="1.25 0.65 0.10" material="wood"/>
-    <geom type="box" pos="1.28 2.72 0.82" size="0.34 0.28 0.18" material="box"/>
-
-    <!-- Ground-level destination for the green robot's visible receiving put-away task. -->
-    <geom name="putaway_cart" type="box" pos="-3.10 4.25 0.55" size="0.70 0.45 0.55" material="shelf"/>
-    <geom type="box" pos="-3.10 4.25 1.13" size="0.74 0.49 0.03" material="teal"/>
+    <geom name="ground_stock_rack_left" type="box" pos="2.55 3.35 1.10" size="0.08 0.85 1.10" material="shelf"/>
+    <geom name="ground_stock_rack_right" type="box" pos="3.75 3.35 1.10" size="0.08 0.85 1.10" material="shelf"/>
+    <geom type="box" pos="3.15 3.35 0.42" size="0.66 0.85 0.06" material="shelf"/>
+    <geom type="box" pos="3.15 3.35 1.18" size="0.66 0.85 0.06" material="shelf"/>
+    <geom type="box" pos="3.15 3.35 2.12" size="0.66 0.85 0.06" material="shelf"/>
+    <geom type="box" pos="3.48 3.35 0.78" size="0.28 0.22 0.13" material="box"/>
+    <geom type="box" pos="2.84 3.35 1.55" size="0.28 0.22 0.13" material="box"/>
 
     <body name="robot_1" mocap="true" pos="-4.8 -1.55 0">
       <geom type="box" pos="0 0 1.22" size="0.23 0.18 0.34" material="blue"/>
@@ -87,6 +93,6 @@
       <geom type="capsule" fromto="0 0.11 0.90 0 0.15 0.10" size="0.085" material="white"/>
     </body>
     <body name="shoe_box_1" mocap="true" pos="3.20 -1.55 1.32"><geom type="box" size="0.30 0.22 0.13" material="box"/></body>
-    <body name="shoe_box_2" mocap="true" pos="2.20 2.70 0.85"><geom type="box" size="0.30 0.22 0.13" material="box"/></body>
+    <body name="shoe_box_2" mocap="true" pos="3.15 2.92 1.52"><geom type="box" size="0.30 0.22 0.13" material="box"/></body>
   </worldbody>
 </mujoco>

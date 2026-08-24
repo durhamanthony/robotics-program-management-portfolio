@@ -17,11 +17,11 @@
 <h2 id="installation-and-commissioning">Installation and commissioning</h2>
 <ol type="1">
 <li>Confirm serial numbers, software, checksums, certificates, warranties, spares, and shipping condition.</li>
-<li>Verify route, stair, doors, fire egress, handoff, charger, exception zone, and stock-cart parking against the signed drawing.</li>
+<li>Verify truck position, ramp/threshold, pallet staging, forklift park, zone interlock, route, four-step stair, doors, fire egress, courtesy drop-off table, charger, exception zone, and stock-cart parking against the signed drawing.</li>
 <li>Connect each robot with least-privilege identity; validate access logging and revocation.</li>
 <li>Load the approved map, speed, stop, item, reach, charging, retention, and safe-state configuration.</li>
-<li>Test tablet, inventory lookup, mission creation, pick scan, handoff scan, event, and case correlation.</li>
-<li>Run empty routes, approved items, human/cart intrusions, blocked route, wrong location, network loss, low battery, sensor fault, and emergency stop.</li>
+<li>Test receiving schedule, pallet identification, forklift mission, pallet-stable state, parked/zone-clear signal, stocking scan, tablet, inventory lookup, pick, courtesy drop-off, event, and case correlation.</li>
+<li>Run full-pallet unload and clear-zone cycles, lower/raised stocking, empty routes, approved items, human/cart intrusions, blocked route, wrong location, network loss, low battery, sensor fault, and emergency stop.</li>
 <li>Execute Site Acceptance Test (SAT); record witness, configuration, timestamp, result, and defect for each case.</li>
 <li>Complete 100-request User Acceptance Testing (UAT) in shadow mode before pilot authorization.</li>
 </ol>
@@ -34,7 +34,7 @@
 <li>Baseline queries and daily KPI report are frozen and versioned.</li>
 </ul>
 <h2 id="stop-and-rollback-triggers">Stop and rollback triggers</h2>
-<p>Any contact/injury; safety-control bypass; robot outside route; fire-egress interference; repeated uncontrolled drop; security compromise; wrong-item rate above 0.5%; mission success below 97% for two days; or unavailable human fallback. Stop missions, establish safe state, notify authority, preserve evidence, reconcile transactions, and route all requests to human picking. Restore only after root-cause, approved change, regression test, and signed restart.</p>
+<p>Any contact/injury; forklift/humanoid overlap; unstable pallet; safety-control bypass; robot outside route; fire-egress interference; repeated uncontrolled drop; security compromise; wrong-item rate above 0.5%; mission success below 97% for two days; or unavailable human fallback. Stop missions, establish safe state, notify authority, preserve evidence, reconcile transactions, and route receiving/picking to the human fallback. Restore only after root-cause, approved change, regression test, and signed restart.</p>
 <h2 id="hypercare">Hypercare</h2>
 <p>Thirty days: onsite opening/closing owner, daily issue/KPI huddle, weekly sponsor/Finance review, and 24/7 Severity-1 remote coverage. Exit requires five consecutive days above operational thresholds, trained ownership, tested support, accepted known errors, reconciled benefit data, and recorded financial decision.</p>
 </article></main>

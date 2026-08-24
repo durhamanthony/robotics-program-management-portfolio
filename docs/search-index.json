@@ -560,7 +560,7 @@
     "path": "library/simulations/quadruped_security/README.html"
   },
   {
-    "title": "MuJoCo Operations and Capability Demonstrations",
+    "title": "MuJoCo Operations Demonstrations",
     "path": "library/simulations/README.html"
   },
   {
@@ -568,12 +568,12 @@
     "path": "library/simulations/restroom_cleaning/README.html"
   },
   {
-    "title": "MuJoCo Demo \u2014 Retail Backroom Humanoid Fulfillment",
+    "title": "MuJoCo Demo \u2014 Retail Backroom Inbound and Fulfillment",
     "path": "library/simulations/retail_humanoids/README.html"
   },
   {
-    "title": "Warehouse Palletizing and Truck Loading \u2014 MuJoCo Capability Demo",
-    "path": "library/simulations/warehouse_capability/README.html"
+    "title": "Retail Backroom Inbound Receiving \u2014 MuJoCo Story Segment",
+    "path": "library/simulations/retail_inbound/README.html"
   },
   {
     "title": "Robotics Support Reference Architecture",

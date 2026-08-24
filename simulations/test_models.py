@@ -18,17 +18,17 @@ def compile_and_step(relative_path: str, steps: int = 100) -> tuple[int, int, in
 
 def main() -> None:
     results = {
-        "retail": compile_and_step("retail_humanoids/retail.xml"),
+        "retail_inbound": compile_and_step("retail_inbound/retail_inbound.xml"),
+        "retail_orders": compile_and_step("retail_humanoids/retail.xml"),
         "security": compile_and_step("quadruped_security/security.xml"),
         "openquad": compile_and_step("open_quadruped_raas/open_quadruped.xml"),
         "restroom": compile_and_step("restroom_cleaning/restroom.xml"),
-        "warehouse": compile_and_step("warehouse_capability/warehouse.xml"),
     }
-    assert results["retail"][0] >= 5
+    assert results["retail_inbound"][0] >= 7
+    assert results["retail_orders"][0] >= 5
     assert results["security"][0] >= 4
     assert results["openquad"][0] >= 4
     assert results["restroom"][0] >= 5
-    assert results["warehouse"][0] >= 7
     print("MuJoCo model smoke tests passed:", results)
 
 

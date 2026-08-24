@@ -21,12 +21,12 @@ SOURCE_DIRS = ("scenarios", "tools", "pm-operating-system", "quality-control")
 SOURCE_FILES = (
     "portfolio/EXECUTIVE_PORTFOLIO.md",
     "simulations/README.md",
+    "simulations/retail_inbound/README.md",
     "simulations/retail_humanoids/README.md",
     "simulations/quadruped_security/README.md",
     "simulations/open_quadruped_raas/README.md",
     "tools/support-operations-lab/README.md",
     "simulations/restroom_cleaning/README.md",
-    "simulations/warehouse_capability/README.md",
 )
 GOVERNANCE_FILES = (
     "governance/README.md",

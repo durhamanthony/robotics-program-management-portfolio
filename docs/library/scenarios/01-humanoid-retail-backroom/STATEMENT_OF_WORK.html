@@ -13,7 +13,7 @@
 <p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
 </blockquote>
 <h2 id="purpose">Purpose</h2>
-<p>Configure and deploy two vendor-supplied humanoid robots at fictional Meridian Store 214 for an employee-only backroom workflow. A sales associate submits an item request from a tablet; the robot verifies the request, walks an approved existing route, retrieves a shoe box or already-hung garment, delivers it to an employee handoff point, and records the transaction. Between requests, robots perform approved put-away and cycle-count missions.</p>
+<p>Configure and deploy two vendor-supplied humanoid robots plus a robot-operated forklift interface at fictional Meridian Store 214 for an employee-only backroom workflow. At inbound receipt, the forklift removes a full pallet from the truck and clears the receiving zone; humanoids then transfer approved cartons to lower and raised storage racks. For fulfillment, a sales associate submits an item request from a tablet; the robot verifies the request, walks an approved route, retrieves a shoe box or already-hung garment, places it on the courtesy drop-off table, and records the transaction. Between requests, robots perform approved return put-away and cycle-count missions. [SA-L]</p>
 <h2 id="deliverables-and-acceptance-evidence">Deliverables and acceptance evidence</h2>
 <p class="table-title"><strong>Table 1. Deliverables and acceptance evidence — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
@@ -32,36 +32,42 @@
 <td>signed task/envelope map</td>
 </tr>
 <tr class="even">
+<td>Inbound receiving cell</td>
+<td>configure truck-to-receiving forklift path, pallet state, work-zone interlock, and carton-release logic</td>
+<td>provide dock window, traffic rules, pallet standard, and witnesses</td>
+<td>20 witnessed unload/clear/release cycles without overlap</td>
+</tr>
+<tr class="odd">
 <td>Route and safety design</td>
 <td>map aisles, doors, stair, stops, faults</td>
 <td>approve access and emergency rules</td>
 <td>hazard log and design review</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Tablet/inventory integration</td>
 <td>configure identity, request, scan, event, retry</td>
 <td>provide test tenant and data</td>
 <td>20 normal/fault interface tests pass</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Configured fleet</td>
 <td>robot, charger, end effector, telemetry</td>
 <td>provide power, network, staging</td>
 <td>Factory Acceptance Test (FAT) report</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Commissioned store</td>
 <td>install, map, calibrate, test safe states</td>
 <td>provide access and trained witnesses</td>
 <td>Site Acceptance Test (SAT) report</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Controlled pilot</td>
 <td>hypercare, daily review, defects, reports</td>
 <td>operate, log exceptions, measure benefits</td>
 <td>30-day User Acceptance Testing (UAT) report</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Handoff/closeout</td>
 <td>runbooks, spares, training, final report</td>
 <td>accept owners and residual risks</td>
@@ -70,7 +76,7 @@
 </tbody>
 </table>
 <h2 id="boundaries">Boundaries</h2>
-<p>Only approved shoe boxes from 0.3 to 8 kilograms and already-hung garments within the validated reach envelope are handled. Tangled hangers, torn cartons, loose clothing, heavy or hazardous items, customer-floor work, ladders, and electrical work route to a human exception queue.</p>
+<p>Only standard, stable full pallets at the approved truck interface; approved shoe boxes from 0.3 to 8 kilograms; and already-hung garments within the validated reach envelope are handled. Mixed forklift/humanoid traffic, unstable pallets, damaged cartons, tangled hangers, loose clothing, heavy or hazardous items, customer-floor work, ladders, and electrical work route to a human exception queue.</p>
 <h2 id="commercial-assumptions">Commercial assumptions</h2>
 <p>The $640,000 pilot budget and $218,000 annual recurring cost are fictional planning allowances, not market quotes. The customer must obtain binding robot, integration, software, support, insurance, freight, and tax quotations before procurement or rollout.</p>
 <h2 id="completion">Completion</h2>

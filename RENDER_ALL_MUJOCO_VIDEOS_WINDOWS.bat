@@ -25,7 +25,8 @@ if errorlevel 1 goto :error
 if errorlevel 1 goto :error
 
 echo.
-echo Five MuJoCo videos and one data-workflow animation were created in media\videos.
+echo Three refreshable MuJoCo videos and one data-workflow animation were created in media\videos.
+echo The approved restroom video was intentionally preserved without replacement.
 echo Open GitHub Desktop, commit the changed MP4 files, and Push origin.
 pause
 exit /b 0

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simplified MuJoCo operations visualization for retail backroom fulfillment."""
+"""Validate the composed retail inbound-to-fulfillment operations story."""
 
 from __future__ import annotations
 
@@ -7,12 +7,17 @@ import argparse
 import csv
 import json
 import math
+import sys
 import time
 from pathlib import Path
 
 import mujoco
 
 from retail_sequence import frame_at, route_clearance_report
+
+INBOUND_DIR = Path(__file__).resolve().parents[1] / "retail_inbound"
+sys.path.insert(0, str(INBOUND_DIR))
+from retail_inbound_sequence import route_validation_report as inbound_validation_report
 
 
 def mocap_id(model: mujoco.MjModel, body_name: str) -> int:
@@ -65,6 +70,7 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
                         "state": state,
                         "x_m": round(x, 2),
                         "y_m": round(y, 2),
+                        "z_m": round(z, 2),
                         "carrying": carrying,
                         "evidence_class": "Derived calculation",
                         "confidence": "Low",
@@ -88,23 +94,24 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     with (output_dir / "retail_humanoid_telemetry.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=[
-            "table_title", "second", "robot", "state", "x_m", "y_m", "carrying",
+            "table_title", "second", "robot", "state", "x_m", "y_m", "z_m", "carrying",
             "evidence_class", "confidence", "source_or_validation",
         ])
         writer.writeheader()
         writer.writerows(rows)
     states = sorted({str(row["state"]) for row in rows})
     required_states = {
-        "blue_walk_stair_route", "blue_verify_and_pick", "blue_carry_to_employee",
-        "blue_employee_handoff", "blue_inventory_confirmed",
-        "green_receive_putaway_request", "green_walk_clear_receiving_aisle",
-        "green_pick_receiving_carton", "green_carry_carton_to_putaway",
-        "green_place_carton_on_putaway_cart", "green_putaway_complete",
+        "blue_walk_stair_route", "blue_verify_and_pick", "blue_carry_to_courtesy_table",
+        "blue_courtesy_dropoff", "blue_inventory_confirmed",
+        "green_receive_pick_request", "green_walk_to_ground_stock",
+        "green_pick_requested_carton", "green_carry_to_courtesy_table",
+        "green_courtesy_dropoff", "green_inventory_confirmed",
     }
     clearance = route_clearance_report()
+    inbound = inbound_validation_report()
     summary = {
-        "scenario": "Retail backroom humanoid fulfillment",
-        "model": "retail_backroom_humanoid_fulfillment",
+        "scenario": "Retail backroom inbound receiving and fulfillment",
+        "models": ["retail_backroom_inbound_receiving_v1", "retail_backroom_humanoid_fulfillment_v4"],
         "duration_seconds": duration,
         "robots": 2,
         "scope": "workflow visualization only",
@@ -114,14 +121,16 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
             "both_robots_sampled": {int(row["robot"]) for row in rows} == {1, 2},
             "blue_item_carry_observed": any(row["robot"] == 1 and row["carrying"] for row in rows),
             "green_item_carry_observed": any(row["robot"] == 2 and row["carrying"] for row in rows),
+            "inbound_story_checks_passed": all(value for value in inbound.values() if isinstance(value, bool)),
+            "inbound_story": inbound,
             **clearance,
-            "camera_name": "overview",
+            "camera_sequence": ["overview", "stairs", "shelves", "courtesy"],
             "stair_platform_height_m": 1.0,
         },
     }
     summary["passed"] = all(
         value for key, value in summary["validation"].items()
-        if key not in {"camera_name", "stair_platform_height_m", "minimum_robot_center_separation_m"}
+        if key not in {"camera_sequence", "stair_platform_height_m", "minimum_robot_center_separation_m", "inbound_story"}
     )
     (output_dir / "retail_humanoid_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))

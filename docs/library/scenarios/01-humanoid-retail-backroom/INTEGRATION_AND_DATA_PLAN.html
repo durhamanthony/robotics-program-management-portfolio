@@ -13,7 +13,8 @@
 <p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
 </blockquote>
 <h2 id="transaction-flow">Transaction flow</h2>
-<p>Associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → employee handoff scan → inventory/event update → telemetry and support case when required.</p>
+<p>Inbound: receiving schedule → truck/pallet identifier → forklift mission → pallet-stable confirmation → forklift parked/zone-clear signal → humanoid stocking missions → rack-location scans → inventory/event update.</p>
+<p>Fulfillment: associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → courtesy drop-off scan → inventory/event update → telemetry and support case when required.</p>
 <h2 id="interface-controls">Interface controls</h2>
 <p class="table-title"><strong>Table 1. Interface controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
@@ -27,8 +28,22 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td>Dock/pallet receipt</td>
+<td>truck, dock, pallet, arrival, stability</td>
+<td>one active unload mission; no silent retry</td>
+<td>hold forklift and humanoids; notify dock lead</td>
+<td>20 normal/fault unload cases</td>
+</tr>
+<tr class="even">
+<td>Zone interlock</td>
+<td>forklift parked and receiving zone clear → release stocking</td>
+<td>positive confirmation required</td>
+<td>keep humanoid missions inhibited</td>
+<td>20 witnessed clear/release cycles</td>
+</tr>
+<tr class="odd">
 <td>Tablet/identity</td>
-<td>user, store, role, item, handoff</td>
+<td>user, store, role, item, drop-off point</td>
 <td>5 seconds; one retry</td>
 <td>no anonymous mission; show explicit error</td>
 <td>authentication and revocation tests</td>
@@ -48,9 +63,9 @@
 <td>duplicate/replay test</td>
 </tr>
 <tr class="even">
-<td>Pick/handoff scan</td>
-<td>item and employee handoff confirmation</td>
-<td>scan at pick and delivery</td>
+<td>Stock/pick/drop-off scan</td>
+<td>pallet, item, rack, pick, and courtesy-table confirmation</td>
+<td>scan at each custody change</td>
 <td>reject mismatch; return to exception point</td>
 <td>transaction reconciliation</td>
 </tr>
@@ -67,7 +82,7 @@
 <p>Meridian owns requests, inventory, employee identity, and business measures. The vendor owns robot diagnostic data subject to contract. Video is limited to navigation/manipulation evidence in employee-only zones; no facial recognition. Operational clips retain 7 days unless attached to an incident; incident evidence retains 90 days or the legal schedule. Access is role-based, logged, reviewed monthly, and revoked at role termination.</p>
 <h2 id="data-quality-rules">Data-quality rules</h2>
 <ul>
-<li>SKU, size, color, location, request, mission, and handoff identifiers must reconcile one-to-one.</li>
+<li>Truck, pallet, carton, rack, SKU, size, color, request, mission, and courtesy-drop-off identifiers must reconcile one-to-one.</li>
 <li>Times use synchronized Universal Time Coordinated (UTC) plus displayed local time.</li>
 <li>Missing or low-confidence location data blocks autonomous retrieval.</li>
 <li>Dashboard measures are produced from versioned queries; the animation never supplies KPI data.</li>

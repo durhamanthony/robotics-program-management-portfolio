@@ -14,19 +14,23 @@ from typing import Callable
 import imageio_ffmpeg
 import mujoco
 import numpy as np
+from PIL import Image, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
 VIDEO_DIR = ROOT / "media" / "videos"
 RESTROOM_SIM_DIR = ROOT / "simulations" / "restroom_cleaning"
 RETAIL_SIM_DIR = ROOT / "simulations" / "retail_humanoids"
+RETAIL_INBOUND_SIM_DIR = ROOT / "simulations" / "retail_inbound"
 SECURITY_SIM_DIR = ROOT / "simulations" / "quadruped_security"
 sys.path.insert(0, str(RESTROOM_SIM_DIR))
 sys.path.insert(0, str(RETAIL_SIM_DIR))
+sys.path.insert(0, str(RETAIL_INBOUND_SIM_DIR))
 sys.path.insert(0, str(SECURITY_SIM_DIR))
 
 from restroom_sequence import SEQUENCE_END_SECONDS, update as restroom_sequence_update
 from retail_sequence import frame_at as retail_frame_at
+from retail_inbound_sequence import frame_at as inbound_frame_at
 from security_sequence import frame_at as security_frame_at
 
 
@@ -94,6 +98,21 @@ def retail_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
     return frame.camera
 
 
+def inbound_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
+    frame = inbound_frame_at(t)
+    set_mocap(model, data, "inbound_forklift", frame.forklift_pose)
+    set_mocap(model, data, "inbound_pallet", frame.pallet_pose)
+    set_mocap(model, data, "stock_worker_low", frame.low_worker_pose)
+    set_mocap(model, data, "stock_carton_low", frame.low_carton_pose)
+    set_mocap(model, data, "stock_worker_high", frame.high_worker_pose)
+    set_mocap(model, data, "stock_carton_high", frame.high_carton_pose)
+    model.geom_rgba[geom_id(model, "inbound_stack_7")][3] = 1.0 if t < 0.51 else 0.0
+    model.geom_rgba[geom_id(model, "inbound_stack_6")][3] = 1.0 if t < 0.54 else 0.0
+    model.geom_rgba[geom_id(model, "stock_carton_low_geom")][3] = 1.0 if t >= 0.51 else 0.0
+    model.geom_rgba[geom_id(model, "stock_carton_high_geom")][3] = 1.0 if t >= 0.54 else 0.0
+    return frame.camera
+
+
 def security_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
     frame = security_frame_at(t)
     set_mocap(model, data, "quadruped_01", frame.perimeter_pose)
@@ -122,51 +141,13 @@ def restroom_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str
     return camera
 
 
-def warehouse_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    worker = path_pose(min(t / 0.45, 1.0), [(-2.2, -1.5, 0.0), (-3.0, -1.5, 0.0), (-2.2, -1.5, 0.0), (0.0, -1.0, 0.0), (2.0, 0.0, 0.0)])
-    set_mocap(model, data, "worker_1", worker)
-    set_mocap(model, data, "worker_2", path_pose((t * 1.1) % 1.0, [(-2.2, 1.5, 0.0), (-3.0, 1.5, 0.0), (-1.0, 1.2, 0.0), (1.6, 0.5, 0.0), (-2.2, 1.5, 0.0)]))
-    if t < 0.16:
-        carton = path_pose(t / 0.16, [(-6.0, -1.5, 0.95), (-3.35, -1.5, 0.95)])
-    elif t < 0.40:
-        x_pos, y_pos, z_pos, yaw = worker
-        carton = (x_pos + 0.42, y_pos, z_pos + 1.05, yaw)
-    else:
-        carton = (2.3, 0, 2.05, 0.0)
-    set_mocap(model, data, "active_carton", carton)
-    for index in range(1, 8):
-        model.geom_rgba[geom_id(model, f"stack_{index}")][3] = 1.0 if t >= 0.12 + index * 0.055 else 0.0
-    if t < 0.58:
-        fork = (3.8, -3.8, 0.0, 0.0)
-        load = (2.3, 0.0, 0.0, 0.0)
-    elif t < 0.72:
-        fork = path_pose((t - 0.58) / 0.14, [(3.8, -3.8, 0.0), (3.2, -1.5, 0.0), (2.0, 0.0, 0.0)])
-        load = (2.3, 0.0, 0.0, 0.0)
-    elif t < 0.90:
-        fork = path_pose((t - 0.72) / 0.18, [(2.0, 0.0, 0.0), (5.0, 0.0, 0.0), (8.0, 0.0, 0.0)])
-        load = (fork[0] + 0.9, fork[1], 0.0, fork[3])
-    else:
-        fork = path_pose((t - 0.90) / 0.10, [(8.0, 0.0, 0.0), (5.3, 0.0, 0.0), (3.8, -1.5, 0.0)])
-        load = (8.7, 0.0, 0.45, 0.0)
-    set_mocap(model, data, "forklift", fork)
-    set_mocap(model, data, "pallet_load", load)
-    replacement = (1.0, 3.6, 0.0, 0.0) if t < 0.92 else path_pose((t - 0.92) / 0.08, [(1.0, 3.6, 0.0), (1.4, 1.8, 0.0), (2.3, 0.0, 0.0)])
-    set_mocap(model, data, "replacement_pallet", replacement)
-    if t < 0.48:
-        return "overview"
-    if t < 0.72:
-        return "pallet"
-    return "truck"
-
-
 SCENES = {
     scene.name: scene
     for scene in (
-        Scene("retail", ROOT / "simulations/retail_humanoids/retail.xml", "retail-humanoid-fulfillment.mp4", 18.0, retail_update),
+        Scene("retail", ROOT / "simulations/retail_humanoids/retail.xml", "retail-humanoid-fulfillment.mp4", 40.0, retail_update),
         Scene("security", ROOT / "simulations/quadruped_security/security.xml", "quadruped-night-security.mp4", 18.0, security_update),
         Scene("openquad", ROOT / "simulations/open_quadruped_raas/open_quadruped.xml", "open-quadruped-raas-productization.mp4", 14.0, openquad_update),
         Scene("restroom", ROOT / "simulations/restroom_cleaning/restroom.xml", "restroom-cleaning-humanoid.mp4", SEQUENCE_END_SECONDS, restroom_update),
-        Scene("warehouse", ROOT / "simulations/warehouse_capability/warehouse.xml", "warehouse-palletizing-truck-loading.mp4", 16.0, warehouse_update),
     )
 }
 
@@ -175,19 +156,102 @@ SCENES = {
 # bulk refresh of the other portfolio clips.
 DEFAULT_SCENES = [name for name in SCENES if name != "restroom"]
 
+INBOUND_SECONDS = 22.0
+ORDER_SECONDS = 18.0
+FONT_BOLD = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
+FONT_REGULAR = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
+
+
+def stage_label(segment: str, progress: float) -> tuple[str, str]:
+    if segment == "inbound":
+        if progress < 0.31:
+            return "01  UNLOAD THE TRUCK", "Robot-operated forklift brings the full pallet out to receiving"
+        if progress < 0.58:
+            return "02  OPEN THE PALLET", "Humanoids take cartons only after the forklift clears the work zone"
+        if progress < 0.70:
+            return "03  STOCK THE LOWER RACK", "Carton remains visibly attached to the teal robot"
+        return "04  STOCK THE UPPER RACK", "Blue robot climbs each visible stair tread while carrying a carton"
+    if progress < 0.40:
+        return "05  PULL THE ORDERS", "Robots retrieve merchandise from lower and raised storage"
+    if progress < 0.76:
+        return "06  RETURN THROUGH THE AISLES", "Both requested cartons remain visibly attached in transit"
+    return "07  COURTESY DROP-OFF TABLE", "Sales associates collect requested merchandise here"
+
+
+def add_stage_overlay(frame: np.ndarray, segment: str, progress: float) -> np.ndarray:
+    title, subtitle = stage_label(segment, progress)
+    image = Image.fromarray(frame)
+    draw = ImageDraw.Draw(image, "RGBA")
+    width, height = image.size
+    draw.rounded_rectangle((24, 22, min(width - 24, 760), 106), radius=14, fill=(3, 26, 24, 225))
+    draw.rectangle((24, 22, 34, 106), fill=(22, 188, 164, 255))
+    font_title = ImageFont.truetype(str(FONT_BOLD), 28)
+    font_subtitle = ImageFont.truetype(str(FONT_REGULAR), 17)
+    draw.text((52, 34), title, font=font_title, fill=(255, 255, 255, 255))
+    draw.text((52, 72), subtitle, font=font_subtitle, fill=(208, 239, 234, 255))
+    draw.rounded_rectangle((width - 286, height - 48, width - 22, height - 20), radius=10, fill=(3, 26, 24, 210))
+    draw.text((width - 270, height - 43), "SCRIPTED OPERATIONS VISUALIZATION", font=ImageFont.truetype(str(FONT_BOLD), 12), fill=(208, 239, 234, 255))
+    return np.asarray(image)
+
+
+def encoder_command(output: Path, width: int, height: int, fps: int) -> list[str]:
+    return [
+        imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error", "-f", "rawvideo", "-vcodec", "rawvideo",
+        "-pix_fmt", "rgb24", "-s", f"{width}x{height}", "-r", str(fps), "-i", "-", "-an",
+        "-vcodec", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(output),
+    ]
+
+
+def render_retail_story(scene: Scene, width: int, height: int, fps: int) -> Path:
+    inbound_model = mujoco.MjModel.from_xml_path(str(ROOT / "simulations/retail_inbound/retail_inbound.xml"))
+    inbound_data = mujoco.MjData(inbound_model)
+    inbound_renderer = mujoco.Renderer(inbound_model, height=height, width=width)
+    order_model = mujoco.MjModel.from_xml_path(str(scene.xml))
+    order_data = mujoco.MjData(order_model)
+    order_renderer = mujoco.Renderer(order_model, height=height, width=width)
+    VIDEO_DIR.mkdir(parents=True, exist_ok=True)
+    output = VIDEO_DIR / scene.output
+    process = subprocess.Popen(encoder_command(output, width, height, fps), stdin=subprocess.PIPE)
+    assert process.stdin is not None
+    try:
+        frames = max(1, round((INBOUND_SECONDS + ORDER_SECONDS) * fps))
+        for frame_index in range(frames):
+            elapsed = frame_index / fps
+            if elapsed < INBOUND_SECONDS:
+                segment = "inbound"
+                progress = min(elapsed / INBOUND_SECONDS, 1.0)
+                camera = inbound_update(inbound_model, inbound_data, progress)
+                mujoco.mj_forward(inbound_model, inbound_data)
+                inbound_renderer.update_scene(inbound_data, camera=camera)
+                frame = inbound_renderer.render()
+            else:
+                segment = "orders"
+                progress = min((elapsed - INBOUND_SECONDS) / ORDER_SECONDS, 1.0)
+                camera = retail_update(order_model, order_data, progress)
+                mujoco.mj_forward(order_model, order_data)
+                order_renderer.update_scene(order_data, camera=camera)
+                frame = order_renderer.render()
+            process.stdin.write(np.ascontiguousarray(add_stage_overlay(frame, segment, progress)).tobytes())
+    finally:
+        process.stdin.close()
+        return_code = process.wait()
+        inbound_renderer.close()
+        order_renderer.close()
+    if return_code:
+        raise RuntimeError(f"FFmpeg failed for {scene.name} with exit code {return_code}")
+    print(f"Rendered {scene.name}: {output.relative_to(ROOT)}")
+    return output
+
 
 def render(scene: Scene, width: int, height: int, fps: int) -> Path:
+    if scene.name == "retail":
+        return render_retail_story(scene, width, height, fps)
     model = mujoco.MjModel.from_xml_path(str(scene.xml))
     data = mujoco.MjData(model)
     renderer = mujoco.Renderer(model, height=height, width=width)
     VIDEO_DIR.mkdir(parents=True, exist_ok=True)
     output = VIDEO_DIR / scene.output
-    command = [
-        imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error", "-f", "rawvideo", "-vcodec", "rawvideo",
-        "-pix_fmt", "rgb24", "-s", f"{width}x{height}", "-r", str(fps), "-i", "-", "-an",
-        "-vcodec", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(output),
-    ]
-    process = subprocess.Popen(command, stdin=subprocess.PIPE)
+    process = subprocess.Popen(encoder_command(output, width, height, fps), stdin=subprocess.PIPE)
     assert process.stdin is not None
     try:
         frames = max(1, round(scene.duration * fps))

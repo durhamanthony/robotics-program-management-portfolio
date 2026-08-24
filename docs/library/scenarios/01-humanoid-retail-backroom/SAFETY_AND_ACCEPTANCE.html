@@ -13,7 +13,7 @@
 <p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
 </blockquote>
 <h2 id="operating-limits">Operating limits</h2>
-<p>Employee-only backroom; approved mapped route; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited.</p>
+<p>Employee-only backroom; approved truck and pallet interface; time-separated forklift and humanoid missions; stable-pallet confirmation; approved mapped routes; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, trailer entry by humanoids, mixed forklift/humanoid traffic, unstable pallets, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited. [SA-L]</p>
 <h2 id="principal-hazards-and-controls">Principal hazards and controls</h2>
 <p class="table-title"><strong>Table 1. Principal hazards and controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
@@ -25,6 +25,18 @@
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>forklift/humanoid overlap</td>
+<td>scheduled unload window; interlocked receiving zone; marked park position</td>
+<td>positive parked/zone-clear signal before humanoid mission release</td>
+<td>inhibit missions; stop work; dock lead resets by checklist</td>
+</tr>
+<tr class="even">
+<td>unstable pallet or carton</td>
+<td>approved pallet standard; visual/stability check before release</td>
+<td>load-state and carton-envelope verification</td>
+<td>quarantine pallet; human material-handling response</td>
+</tr>
 <tr class="odd">
 <td>person/cart in aisle</td>
 <td>right-of-way, low speed, marked parking</td>
@@ -40,7 +52,7 @@
 <tr class="odd">
 <td>dropped/wrong item</td>
 <td>approved grasp set; scan before pick</td>
-<td>grip/load monitoring; pick/handoff scan</td>
+<td>grip/load monitoring; stock/pick/drop-off scan</td>
 <td>safe stop; human exception</td>
 </tr>
 <tr class="even">
@@ -79,6 +91,16 @@
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>SAT-001 truck unload and work-zone handoff</td>
+<td>20/20 full-pallet unloads end stable in receiving; forklift parked and zone clear before humanoid release</td>
+<td>pass</td>
+</tr>
+<tr class="even">
+<td>SAT-002 inbound stocking</td>
+<td>20/20 approved cartons reach the assigned lower or raised rack with scan reconciliation</td>
+<td>pass</td>
+</tr>
 <tr class="odd">
 <td>FAT-010 approved-item handling</td>
 <td>100 varied picks with at least 97% success and no uncontrolled drop</td>

@@ -5,7 +5,7 @@
 
 ## Accepted operating model
 
-Meridian Store Operations owns daily mission authority, route condition, inventory exceptions, employee right-of-way, and benefit measurement. The vendor Level 1 (L1) service desk owns initial robot triage; Level 2 (L2) engineering owns software/controls escalation; field service owns physical recovery and repair. Safety retains stop-work authority.
+Meridian Store Operations owns the inbound dock window, forklift-to-humanoid zone handoff, daily mission authority, route condition, inventory exceptions, employee right-of-way, and benefit measurement. The vendor Level 1 (L1) service desk owns initial robot triage; Level 2 (L2) engineering owns software/controls escalation; field service owns physical recovery and repair. Safety retains stop-work authority.
 
 ## Service targets
 
@@ -20,11 +20,11 @@ Meridian Store Operations owns daily mission authority, route condition, invento
 
 ## Daily controls
 
-Opening inspection; route and fire-door check; charger/battery check; test request; open-defect review. During operation, supervisors can pause or recall the fleet. Closing includes unresolved mission reconciliation, exception-zone count, cleaning/inspection, charge, and handoff log.
+Opening inspection; receiving-zone, forklift-park, route, stair, fire-door, courtesy-table, charger/battery, test-request, and open-defect checks. During operation, the dock lead releases stocking only after the forklift is parked and the receiving zone is clear; supervisors can pause or recall the fleet. Closing includes unresolved mission reconciliation, exception-zone count, cleaning/inspection, charge, and shift handoff log.
 
 ## Mandatory case evidence
 
-Robot, store, mission, item, request, configuration, software version, timestamps, fault code, safety state, last commands, telemetry bundle, photo/video if permitted, operator observation, attempted action, and current fallback.
+Robot or forklift, store, truck/pallet/carton, mission, item, request, rack/drop-off point, configuration, software version, timestamps, fault code, safety state, zone-clear state, last commands, telemetry bundle, photo/video if permitted, operator observation, attempted action, and current fallback.
 
 ## Residual risks and owners
 

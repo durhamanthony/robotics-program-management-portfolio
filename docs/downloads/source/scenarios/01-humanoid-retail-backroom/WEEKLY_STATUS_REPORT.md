@@ -7,14 +7,14 @@
 **Schedule:** Green — week-20 closeout complete  
 **Budget:** Green for fictional pilot — $640,000 authorized and spent  
 **Safety:** Green — zero recordable events/control bypasses  
-**Commercial:** Red — $184,468 annual gross value below $346,000 scale gate
+**Commercial:** Red — $148,258 annual gross value below $346,000 scale gate
 
 ## Accomplished
 
 - Completed 30-day employee-only pilot and reconciled all mission/item transactions.
 - Passed 98.1% retrieval success, 3.4-minute median wait, 98.7% location accuracy, 2.2 interventions per 100, and 0.2% damage/wrong-item gates.
 - Completed Severity-1 support drill, training assessments, configuration archive, known-error review, and residual-risk transfer.
-- Recalculated economics from U.S. Bureau of Labor Statistics benchmark and disclosed planning allowances.
+- Recalculated economics from Glassdoor's June 2026 U.S. Retail Sales Associate salary benchmark and disclosed planning allowances.
 
 ## Decisions
 
@@ -24,7 +24,7 @@
 |---|---|---|---|
 | accept store operating procedure | Store Sponsor | approved | UAT and handoff |
 | close pilot project | Program Sponsor | approved | closeout checklist |
-| authorize chain rollout | Finance | not approved | five-year value shortfall $807,662 |
+| authorize chain rollout | Finance | not approved | five-year value shortfall $988,708 |
 | continue cost/value discovery | Product/Procurement | approved as research only | quote and benefit action list |
 
 ## Open follow-up outside closed pilot
