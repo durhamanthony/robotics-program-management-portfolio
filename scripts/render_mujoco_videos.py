@@ -19,9 +19,15 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 VIDEO_DIR = ROOT / "media" / "videos"
 RESTROOM_SIM_DIR = ROOT / "simulations" / "restroom_cleaning"
+RETAIL_SIM_DIR = ROOT / "simulations" / "retail_humanoids"
+SECURITY_SIM_DIR = ROOT / "simulations" / "quadruped_security"
 sys.path.insert(0, str(RESTROOM_SIM_DIR))
+sys.path.insert(0, str(RETAIL_SIM_DIR))
+sys.path.insert(0, str(SECURITY_SIM_DIR))
 
 from restroom_sequence import SEQUENCE_END_SECONDS, update as restroom_sequence_update
+from retail_sequence import frame_at as retail_frame_at
+from security_sequence import frame_at as security_frame_at
 
 
 def smooth(value: float) -> float:
@@ -80,53 +86,22 @@ class Scene:
 
 
 def retail_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    stairs = [(-4.8, -1.55, 0.0), (-1.0, -1.55, 0.0), (-0.4, -1.55, 0.20), (0.25, -1.55, 0.40), (0.82, -1.55, 0.60), (1.55, -1.55, 1.0), (3.65, -1.55, 1.0)]
-    if t < 0.46:
-        pose = path_pose(t / 0.46, stairs)
-        carried = False
-        camera = "overview"
-    elif t < 0.56:
-        pose = (3.65, -1.55, 1.0, 0.0)
-        carried = t >= 0.50
-        camera = "overview"
-    elif t < 0.90:
-        reverse = list(reversed(stairs)) + [(-4.9, -0.6, 0.0)]
-        pose = path_pose((t - 0.56) / 0.34, reverse)
-        carried = True
-        camera = "overview"
-    else:
-        pose = (-4.9, -0.6, 0.0, math.pi)
-        carried = False
-        camera = "overview"
-    set_mocap(model, data, "robot_1", pose)
-    if carried:
-        x_pos, y_pos, z_pos, yaw = pose
-        set_mocap(model, data, "shoe_box_1", (x_pos + 0.42 * math.cos(yaw), y_pos + 0.42 * math.sin(yaw), z_pos + 1.08, yaw))
-    elif t >= 0.90:
-        set_mocap(model, data, "shoe_box_1", (-5.25, -0.6, 1.25, 0.0))
-    else:
-        set_mocap(model, data, "shoe_box_1", (3.65, -1.55, 1.32, 0.0))
-    second = path_pose((t * 1.15) % 1.0, [(-4.3, 2.15, 0.0), (1.0, 2.15, 0.0), (3.5, 2.25, 0.0), (1.8, 2.7, 0.0), (-4.3, 2.15, 0.0)])
-    set_mocap(model, data, "robot_2", second)
-    return camera
+    frame = retail_frame_at(t)
+    set_mocap(model, data, "robot_1", frame.blue_pose)
+    set_mocap(model, data, "shoe_box_1", frame.blue_item_pose)
+    set_mocap(model, data, "robot_2", frame.green_pose)
+    set_mocap(model, data, "shoe_box_2", frame.green_item_pose)
+    return frame.camera
 
 
 def security_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    route_a = [(-6.7, -5.1, 0.0), (5.7, -5.1, 0.0), (6.6, -1.4, 0.0), (6.6, 3.0, 0.0), (2.5, 5.1, 0.0)]
-    route_b = [(-5.35, -5.1, 0.0), (-5.2, 2.8, 0.0), (-3.9, 3.85, 0.12), (2.25, 3.75, 0.0), (3.0, 3.75, 0.35), (3.7, 3.75, 0.72), (4.3, 3.75, 1.24)]
-    set_mocap(model, data, "quadruped_01", path_pose(min(t / 0.72, 1.0), route_a))
-    set_mocap(model, data, "quadruped_02", path_pose(min(t / 0.78, 1.0), route_b))
-    reserve = (-4.0, -5.1, 0.0, 0.0) if t < 0.72 else path_pose((t - 0.72) / 0.28, [(-4.0, -5.1, 0.0), (-4.0, -5.55, 0.0)])
-    set_mocap(model, data, "quadruped_03", reserve)
+    frame = security_frame_at(t)
+    set_mocap(model, data, "quadruped_01", frame.perimeter_pose)
+    set_mocap(model, data, "quadruped_02", frame.stair_pose)
+    set_mocap(model, data, "quadruped_03", frame.reserve_pose)
     beacon = geom_id(model, "event_beacon")
     model.geom_rgba[beacon] = (1.0, 0.08, 0.03, 1.0) if 0.34 < t < 0.60 else (1.0, 0.58, 0.05, 1.0)
-    if t < 0.28:
-        return "overview"
-    if t < 0.58:
-        return "gate"
-    if t < 0.82:
-        return "terrain"
-    return "dock"
+    return frame.camera
 
 
 def openquad_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
@@ -187,13 +162,18 @@ def warehouse_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> st
 SCENES = {
     scene.name: scene
     for scene in (
-        Scene("retail", ROOT / "simulations/retail_humanoids/retail.xml", "retail-humanoid-fulfillment.mp4", 14.0, retail_update),
-        Scene("security", ROOT / "simulations/quadruped_security/security.xml", "quadruped-night-security.mp4", 14.0, security_update),
+        Scene("retail", ROOT / "simulations/retail_humanoids/retail.xml", "retail-humanoid-fulfillment.mp4", 18.0, retail_update),
+        Scene("security", ROOT / "simulations/quadruped_security/security.xml", "quadruped-night-security.mp4", 18.0, security_update),
         Scene("openquad", ROOT / "simulations/open_quadruped_raas/open_quadruped.xml", "open-quadruped-raas-productization.mp4", 14.0, openquad_update),
         Scene("restroom", ROOT / "simulations/restroom_cleaning/restroom.xml", "restroom-cleaning-humanoid.mp4", SEQUENCE_END_SECONDS, restroom_update),
         Scene("warehouse", ROOT / "simulations/warehouse_capability/warehouse.xml", "warehouse-palletizing-truck-loading.mp4", 16.0, warehouse_update),
     )
 }
+
+# Restroom v4.4 is an explicitly approved 146-second release asset.  Keep it
+# available for an intentional `restroom` render, but never replace it during a
+# bulk refresh of the other portfolio clips.
+DEFAULT_SCENES = [name for name in SCENES if name != "restroom"]
 
 
 def render(scene: Scene, width: int, height: int, fps: int) -> Path:
@@ -234,7 +214,7 @@ def main() -> None:
     parser.add_argument("--height", type=int, default=540)
     parser.add_argument("--fps", type=int, default=15)
     args = parser.parse_args()
-    for name in (args.scenes or list(SCENES)):
+    for name in (args.scenes or DEFAULT_SCENES):
         render(SCENES[name], args.width, args.height, args.fps)
 
 

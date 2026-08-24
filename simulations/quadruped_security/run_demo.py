@@ -13,6 +13,7 @@ PROJECT_ROOT = SIM_ROOT.parent
 sys.path.insert(0, str(SIM_ROOT))
 
 from common.telemetry import write_records, write_summary  # noqa: E402
+from quadruped_security.security_sequence import frame_at, route_clearance_report  # noqa: E402
 
 
 def _smooth(value: float) -> float:
@@ -104,7 +105,6 @@ def run(
     model = mujoco.MjModel.from_xml_path(str(Path(__file__).with_name("security.xml")))
     data = mujoco.MjData(model)
     robots = ["quadruped_01", "quadruped_02", "quadruped_03"]
-    routes = [ROBOT_A_ROUTE, ROBOT_B_ROUTE, ROBOT_C_ROUTE]
     mocap_ids = [_body_mocap_id(model, robot) for robot in robots]
     sensor_ids = [_geom_id(model, f"sensor_{index:02d}") for index in range(1, 4)]
     event_beacon_id = _geom_id(model, "event_beacon")
@@ -129,7 +129,7 @@ def run(
         sim_time = float(data.time)
 
         flags["route_traversal"] = flags["route_traversal"] or sim_time >= 10.0
-        flags["stair_and_terrain_traversal"] = flags["stair_and_terrain_traversal"] or sim_time >= 23.0
+        flags["stair_and_terrain_traversal"] = flags["stair_and_terrain_traversal"] or sim_time >= 34.0
         flags["anomaly_detected"] = flags["anomaly_detected"] or sim_time >= 18.0
         flags["human_verified"] = flags["human_verified"] or sim_time >= 22.0
         flags["network_safe_stop"] = flags["network_safe_stop"] or sim_time >= 28.0
@@ -143,9 +143,14 @@ def run(
         model.geom_rgba[sensor_ids[2]] = [0.08, 0.85, 0.30, 1.0] if sim_time >= 50.0 else [0.05, 0.75, 0.95, 1.0]
         model.geom_rgba[dock_light_id] = [0.08, 0.85, 0.30, 1.0] if sim_time >= 50.0 else [0.08, 0.35, 0.18, 1.0]
 
-        for index, (robot, route, mocap_id) in enumerate(zip(robots, routes, mocap_ids)):
-            x_pos, y_pos, z_pos, yaw = _timeline_pose(sim_time, route)
-            state = "scheduled_patrol"
+        frame = frame_at(sim_time / 60.0)
+        visual_states = [
+            (frame.perimeter_pose, frame.perimeter_state),
+            (frame.stair_pose, frame.stair_state),
+            (frame.reserve_pose, frame.reserve_state),
+        ]
+        for index, (robot, mocap_id, visual) in enumerate(zip(robots, mocap_ids, visual_states)):
+            (x_pos, y_pos, z_pos, yaw), state = visual
             safety = "normal"
             fault = ""
             severity = ""
@@ -199,6 +204,7 @@ def run(
             if sim_time + 1e-9 >= next_sample:
                 records.append(
                     {
+                        "table_title": "Table 1. Quadruped security scripted telemetry",
                         "timestamp_ns": 1_800_100_000_000_000_000 + int(sim_time * 1e9),
                         "sim_time_s": round(sim_time, 3),
                         "scenario": "three_quadruped_night_security",
@@ -220,6 +226,9 @@ def run(
                         "correlation_id": f"SEC-{robot[-2:]}-{int(sim_time):04d}" if fault else "",
                         "human_verification": "verified" if index == 0 and 22.0 <= sim_time < 25.0 else "",
                         "message": message,
+                        "evidence_class": "Derived calculation",
+                        "confidence": "Low",
+                        "source_or_validation": "Deterministic scripted MuJoCo workflow; not production autonomy evidence",
                     }
                 )
         if sim_time + 1e-9 >= next_sample:
@@ -229,38 +238,19 @@ def run(
     if viewer_enabled:
         from mujoco import viewer
 
-        camera_views = [
-            ([0.0, 0.0, 0.8], 20.5, 127.0, -33.0),
-            ([2.2, 1.0, 0.9], 15.5, 145.0, -27.0),
-            ([-0.5, -0.5, 0.8], 19.0, 112.0, -32.0),
-        ]
-
-        def camera_stage(sim_time: float) -> int:
-            if sim_time < 16.0:
-                return 0
-            if sim_time < 39.0:
-                return 1
-            return 2
-
-        def apply_camera(active_camera, stage: int) -> None:
-            lookat, distance, azimuth, elevation = camera_views[stage]
-            active_camera.lookat[:] = lookat
-            active_camera.distance = distance
-            active_camera.azimuth = azimuth
-            active_camera.elevation = elevation
-
         with viewer.launch_passive(model, data, show_left_ui=False, show_right_ui=False) as active_viewer:
-            active_viewer.cam.type = mujoco.mjtCamera.mjCAMERA_FREE
-            active_stage = camera_stage(float(data.time))
-            apply_camera(active_viewer.cam, active_stage)
+            active_camera_name = frame_at(0.0).camera
+            if cinematic_camera:
+                active_viewer.cam.type = mujoco.mjtCamera.mjCAMERA_FIXED
+                active_viewer.cam.fixedcamid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_CAMERA, active_camera_name)
             active_viewer.sync()
             while data.time < duration and active_viewer.is_running():
                 started = time.time()
                 one_step()
-                next_stage = camera_stage(float(data.time))
-                if cinematic_camera and next_stage != active_stage:
-                    active_stage = next_stage
-                    apply_camera(active_viewer.cam, active_stage)
+                next_camera_name = frame_at(float(data.time) / 60.0).camera
+                if cinematic_camera and next_camera_name != active_camera_name:
+                    active_camera_name = next_camera_name
+                    active_viewer.cam.fixedcamid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_CAMERA, active_camera_name)
                 active_viewer.sync()
                 remaining = model.opt.timestep - (time.time() - started)
                 if remaining > 0:
@@ -275,10 +265,13 @@ def run(
         "robots": len(robots),
         "simulated_duration_s": round(float(data.time), 2),
         "telemetry_records": len(records),
-        "acceptance_checks": {"model_loaded": True, **flags},
+        "acceptance_checks": {"model_loaded": True, **flags, **route_clearance_report()},
         "outputs": paths,
     }
-    summary["passed"] = all(summary["acceptance_checks"].values())
+    summary["passed"] = all(
+        value for key, value in summary["acceptance_checks"].items()
+        if key != "minimum_active_robot_center_separation_m"
+    )
     summary["summary_path"] = write_summary(summary, output_dir, "quadruped_security")
     return summary
 

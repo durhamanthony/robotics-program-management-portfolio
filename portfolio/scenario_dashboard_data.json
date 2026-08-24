@@ -311,7 +311,7 @@
       "demo": {
         "title": "MuJoCo Retail Backroom Humanoid Simulation",
         "filename": "retail-humanoid-fulfillment.mp4",
-        "caption": "Rendered from a MuJoCo backroom model with human-scale aisles, a receiving area, garment rack, four-step stock platform, shoe shelving, tablet station, and employee handoff. Scripted robot motion shows the workflow; it is not locomotion, grasp, or safety-performance validation.",
+        "caption": "Rendered from a MuJoCo backroom model with human-scale aisles, a receiving area, garment rack, four-step stock platform, shoe shelving, tablet station, and employee handoff. The blue robot retrieves and hands off a shoe carton. The green robot picks up a receiving carton, visibly carries it through a clear aisle, and places it on the put-away cart. Scripted motion is not locomotion, grasp, collision-avoidance, or safety-performance validation.",
         "model_source": "simulations/retail_humanoids/README.md",
         "sequence": [
           "Receive tablet request",
@@ -637,7 +637,7 @@
       "demo": {
         "title": "MuJoCo Quadruped Security-Site Simulation",
         "filename": "quadruped-night-security.mp4",
-        "caption": "Rendered from a MuJoCo fenced industrial site with a building, guard booth, vehicle gate, pavement, rough-ground test area, steps, loading platform, lights, and charging docks. The earlier colored route lines were removed; robot position and the physical site now show the patrol sequence directly.",
+        "caption": "Rendered from a MuJoCo fenced industrial site with a building, guard booth, vehicle gate, pavement, rough ground, illuminated steps, loading platform, and charging docks. The blue quadruped follows the outside pavement around the warehouse. A close stair camera shows the green quadruped climb and descend each physical tread. This scripted visualization is not locomotion, collision-avoidance, or safety validation.",
         "model_source": "simulations/quadruped_security/README.md",
         "sequence": [
           "Dispatch two routes",
@@ -1726,7 +1726,7 @@
       "demo": {
         "title": "MuJoCo v4.4 Airport Restroom Humanoid Cleaning",
         "filename": "restroom-cleaning-humanoid.mp4",
-        "caption": "Accelerated browser clip rendered from the audit-approved MuJoCo v4.4 public-restroom model. A scripted humanoid services two toilets, one urinal, the open floor, two sinks, and two mirrors, then returns to the labeled charging station. The live source sequence runs two 58-second cleaning loops separated by a 30-second charging wait. This is an operations visualization, not cleaning-efficacy or autonomous-performance validation.",
+        "caption": "Approved corrected 146-second video rendered from the locked MuJoCo v4.4 public-restroom layout and camera sequence. A scripted humanoid completes two 58-second cleaning loops separated by a 30-second charging wait, servicing two toilets, one urinal, the open floor, two sinks, and two mirrors before returning to the labeled charging station. This is an operations visualization, not cleaning-efficacy or autonomous-performance validation.",
         "model_source": "simulations/restroom_cleaning/README.md",
         "sequence": [
           "Verify closed empty room",
