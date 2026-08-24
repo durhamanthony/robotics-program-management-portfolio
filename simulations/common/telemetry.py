@@ -7,6 +7,7 @@ from typing import Any, Iterable
 
 
 TELEMETRY_FIELDS = [
+    "table_title",
     "timestamp_ns",
     "sim_time_s",
     "scenario",
@@ -21,11 +22,15 @@ TELEMETRY_FIELDS = [
     "network_rssi_dbm",
     "x_m",
     "y_m",
+    "z_m",
     "component",
     "fault_code",
     "severity",
     "correlation_id",
     "message",
+    "evidence_class",
+    "confidence",
+    "source_or_validation",
 ]
 
 
@@ -95,4 +100,3 @@ def write_summary(summary: dict[str, Any], output_dir: Path, prefix: str) -> str
     path = output_dir / f"{prefix}_summary.json"
     path.write_text(json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8")
     return str(path)
-

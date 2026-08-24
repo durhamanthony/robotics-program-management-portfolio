@@ -5,7 +5,9 @@
 
 ## What the viewer shows
 
-The scene is a fenced industrial campus with a warehouse, guard station, vehicle gate, pavement, stairs, raised loading platform, rough-terrain section, three charging docks, perimeter lighting, and a human Security Operations Center responder. Earlier colored map-like route lines were removed because they were visually ambiguous; the physical pavement, terrain, robot positions, gate beacon, and docks now communicate the patrol sequence.
+The scene is a fenced industrial campus with a warehouse, guard station, vehicle gate, pavement, stairs, raised loading platform, rough-terrain section, three charging docks, perimeter lighting, and a human Security Operations Center responder. The blue quadruped follows the outside pavement and detours visibly around the guard booth and warehouse. The green quadruped approaches around the west/north side of the warehouse, then a close camera shows it climb and descend all four illuminated treads. It never emerges through the warehouse geometry.
+
+The sequence uses deterministic footprint-clearance and tread-height checks. Those are visual-route checks only; the model does not claim physical locomotion, collision avoidance, stair safety, or production autonomy.
 
 The 60-second sequence demonstrates:
 
