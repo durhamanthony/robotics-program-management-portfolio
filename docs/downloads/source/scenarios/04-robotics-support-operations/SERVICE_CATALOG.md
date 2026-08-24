@@ -1,6 +1,11 @@
 # Robotics Service Catalog
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Customer-facing services
+
+**Table 1. Customer-facing services — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Service | Scope | Request path | Target/entitlement |
 |---|---|---|---|

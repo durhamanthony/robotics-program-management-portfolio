@@ -1,8 +1,13 @@
 # Weekly Status Report — Week 28 / Final
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Overall status: Amber
 
 The pilot is operationally accepted and formally closed. Expansion remains on hold because the scale-economics gate was not met.
+
+**Table 1. Overall status: Amber — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Dimension | Status | Evidence |
 |---|---|---|
@@ -24,10 +29,11 @@ The pilot is operationally accepted and formally closed. Expansion remains on ho
 
 ## Open actions after closeout
 
+**Table 2. Open actions after closeout — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
 | Action | Owner | Due | Status |
 |---|---|---|---|
 | Obtain binding scale quotations | Airport Procurement | Before any expansion request | Open |
 | Complete 60-day extended evidence collection | Airport Service Owner | Day 60 | Open |
 | Qualify additional fixture and chemical families | Manufacturer | Product roadmap | Open product gate |
 | Review access and retention | Airport Cybersecurity | Quarterly | Recurring |
-

@@ -9,11 +9,14 @@
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/RAAS_PRICING_AND_UNIT_ECONOMICS.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="robotics-as-a-service-pricing-and-unit-economics">Robotics-as-a-Service Pricing and Unit Economics</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
+</blockquote>
 <h2 id="purpose">Purpose</h2>
 <p>This artifact tests whether a Robotics-as-a-Service (RaaS) structure can be affordable to the airport and financially plausible for a provider. It does not quote or represent any robotics company.</p>
 <h2 id="customer-price-sensitivity">Customer price sensitivity</h2>
 <p>Assumptions held constant: two robots, 60 months, $150,000 initial integration, $400,000 retained human support, and $1,609,650 five-year task-capacity value.</p>
-<table>
+<p class="table-title"><strong>Table 1. Customer price sensitivity — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Monthly price per robot</th>
@@ -56,13 +59,13 @@
 </table>
 <p>The $6,595 row differs by $25 from the exact mathematical 20% ceiling because the monthly rate is rounded to whole dollars.</p>
 <h2 id="provider-screen">Provider screen</h2>
-<p>The planning proxies are a $149,200 released unit cost and $18,000 annual direct service cost per robot. These must be replaced with provider quotations and audited cost data.</p>
-<table>
+<p>The independent planning proxies are a $185,000 provider asset cost and $24,000 annual direct service cost per humanoid. These are scenario assumptions, not figures carried from another portfolio case, vendor quotations, or audited provider data.</p>
+<p class="table-title"><strong>Table 2. Provider screen — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Monthly price</th>
 <th style="text-align: right;">Five-year revenue</th>
-<th style="text-align: right;">Unit plus direct service</th>
+<th style="text-align: right;">Asset plus direct service</th>
 <th style="text-align: right;">Contribution before omitted costs</th>
 </tr>
 </thead>
@@ -70,36 +73,74 @@
 <tr class="odd">
 <td style="text-align: right;">$4,000</td>
 <td style="text-align: right;">$240,000</td>
-<td style="text-align: right;">$239,200</td>
-<td style="text-align: right;">$800</td>
+<td style="text-align: right;">$305,000</td>
+<td style="text-align: right;">($65,000)</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">$5,750</td>
 <td style="text-align: right;">$345,000</td>
-<td style="text-align: right;">$239,200</td>
-<td style="text-align: right;">$105,800</td>
+<td style="text-align: right;">$305,000</td>
+<td style="text-align: right;">$40,000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">$6,000</td>
 <td style="text-align: right;">$360,000</td>
-<td style="text-align: right;">$239,200</td>
-<td style="text-align: right;">$120,800</td>
+<td style="text-align: right;">$305,000</td>
+<td style="text-align: right;">$55,000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">$6,595</td>
 <td style="text-align: right;">$395,700</td>
-<td style="text-align: right;">$239,200</td>
-<td style="text-align: right;">$156,500</td>
+<td style="text-align: right;">$305,000</td>
+<td style="text-align: right;">$90,700</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">$7,000</td>
 <td style="text-align: right;">$420,000</td>
-<td style="text-align: right;">$239,200</td>
-<td style="text-align: right;">$180,800</td>
+<td style="text-align: right;">$305,000</td>
+<td style="text-align: right;">$115,000</td>
 </tr>
 </tbody>
 </table>
 <p>Financing, insurance, warranty reserve, sales expense, overhead, taxes, product-development recovery, and profit are omitted. Therefore, contribution is not margin and the provider must approve its own floor price.</p>
+<h2 id="utilization-protection">Utilization protection</h2>
+<p class="table-title"><strong>Table 3. Utilization protection — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Productive fleet-hours/day</th>
+<th style="text-align: right;">Five-year customer net benefit</th>
+<th style="text-align: right;">Customer ROI</th>
+<th>Commercial interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">28.0</td>
+<td style="text-align: right;">$339,650</td>
+<td style="text-align: right;">26.7%</td>
+<td>Base planning case</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24.0</td>
+<td style="text-align: right;">$109,700</td>
+<td style="text-align: right;">8.6%</td>
+<td>Fails 20% target</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">Approximately $0</td>
+<td style="text-align: right;">0%</td>
+<td>Break-even only</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">($5,275)</td>
+<td style="text-align: right;">Negative</td>
+<td>Stop or redesign</td>
+</tr>
+</tbody>
+</table>
+<p>The base offer therefore needs both a price corridor and a workload floor. A price below the provider floor is not sustainable; a price above the customer ceiling or utilization below 22.1 hours/day is not affordable.</p>
 <h2 id="commercial-decision-rule">Commercial decision rule</h2>
 <p>Award only when the negotiated rate is at or below the customer's ceiling and at or above the provider's approved floor. If the ranges do not overlap, reduce integration burden, increase verified productive utilization, add approved adjacent tasks, change risk allocation, or stop the procurement.</p>
 </article></main>

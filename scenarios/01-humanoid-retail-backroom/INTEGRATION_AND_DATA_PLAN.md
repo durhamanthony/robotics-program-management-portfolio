@@ -1,10 +1,15 @@
 # Integration and Data Plan — Retail Backroom Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Transaction flow
 
 Associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → employee handoff scan → inventory/event update → telemetry and support case when required.
 
 ## Interface controls
+
+**Table 1. Interface controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Interface | Request/response | Timeout/retry | Failure behavior | Evidence |
 |---|---|---|---|---|

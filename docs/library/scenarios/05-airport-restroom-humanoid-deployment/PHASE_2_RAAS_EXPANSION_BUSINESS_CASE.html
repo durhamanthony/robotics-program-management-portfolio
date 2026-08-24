@@ -9,11 +9,14 @@
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/airport-restroom-humanoid-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 05 — Airport restroom</span> <span class="tag muted-tag">Initiate / Discover</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/05-airport-restroom-humanoid-deployment/PHASE_2_RAAS_EXPANSION_BUSINESS_CASE.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="phase-2-robotics-as-a-service-expansion-business-case">Phase 2 Robotics-as-a-Service Expansion Business Case</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
+</blockquote>
 <h2 id="decision">Decision</h2>
 <p>Should Pacific Gateway International Airport contract for two humanoid robots under a five-year Robotics-as-a-Service (RaaS) agreement after the four-restroom pilot?</p>
 <p><strong>Recommendation: conditional approval.</strong> Proceed to competitive quotation and contract negotiation only if the final design covers at least 12 restrooms, schedules at least 28 productive fleet-hours per day, and holds the base subscription at or below <strong>USD 6,595 per robot per month</strong>. This is a planning threshold, not a vendor quote.</p>
 <h2 id="number-confidence-at-a-glance">Number confidence at a glance</h2>
-<table>
+<p class="table-title"><strong>Table 1. Number confidence at a glance — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Input or result</th>
@@ -83,11 +86,23 @@
 <td>Derived calculations</td>
 <td>Final terms, inflation, discount rate, taxes, insurance, and realized utilization</td>
 </tr>
+<tr class="odd">
+<td>Five-year NPV at 8%</td>
+<td style="text-align: right;">USD 241,006</td>
+<td>Derived calculation</td>
+<td>Finance-approved discount rate and cash realization</td>
+</tr>
+<tr class="even">
+<td>Break-even productive fleet time</td>
+<td style="text-align: right;">22.1 hours/day</td>
+<td>Derived calculation</td>
+<td>Measured task time and achievable dispatch/utilization</td>
+</tr>
 </tbody>
 </table>
 <p>Phase 1 remains an Amber result: the four-room pilot was technically accepted but did not pass its economic gate. Phase 2 is a different operating design and must not be presented as an achieved deployment.</p>
 <h2 id="scaled-operating-design">Scaled operating design</h2>
-<table>
+<p class="table-title"><strong>Table 2. Scaled operating design — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Workload</th>
@@ -115,8 +130,9 @@
 </table>
 <p>Two robots each deliver 14 productive hours per day. The remaining 10 hours per robot per day cover charging, travel, room-closure delays, preventive maintenance, software updates, and exceptions. Coverage is staggered rather than claiming uninterrupted robot operation.</p>
 <p>Annual productive time is 28 × 365 = <strong>10,220 hours</strong>. At the fictional loaded task rate of USD 31.50 per hour, the annual capacity value is <strong>USD 321,930</strong>. Capacity value is not booked cash savings: custodians retain inspection, contamination response, corrective cleaning, supply custody, and room-reopening authority.</p>
+<p>The May 2025 U.S. Bureau of Labor Statistics national mean wage for janitors and cleaners is <strong>USD 18.64 per hour</strong>. That public wage benchmark is not the airport's loaded cost. The fictional USD 31.50 rate is 1.69 times the wage benchmark and is assumed to include benefits, shift differential, supervision, insurance, and contractor overhead. If the public mean wage were used instead, 28 productive fleet-hours per day would create only USD 190,501 of annual capacity value, below the modeled USD 224,000 recurring subscription and retained-support cost.</p>
 <h2 id="customer-five-year-economics">Customer five-year economics</h2>
-<table>
+<p class="table-title"><strong>Table 3. Customer five-year economics — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Cost or value</th>
@@ -162,13 +178,56 @@
 </tr>
 </tbody>
 </table>
-<p>Recurring annual benefit after integration is USD 321,930 − USD 144,000 − USD 80,000 = <strong>USD 97,930</strong>. Simple payback on the USD 150,000 integration cost is approximately <strong>18 months</strong>. These values exclude discounting, taxes, inflation, and terminal value.</p>
+<p>Recurring annual benefit after integration is USD 321,930 − USD 144,000 − USD 80,000 = <strong>USD 97,930</strong>. Simple payback on the USD 150,000 integration cost is <strong>1.53 years</strong>. At an 8% discount rate, five-year Net Present Value (NPV) is approximately <strong>USD 241,006</strong>. Taxes, inflation, financing, and terminal value remain excluded.</p>
+<h2 id="utilization-break-even">Utilization break-even</h2>
+<p>The five-year model must recover USD 150,000 of integration plus USD 224,000 of annual subscription and retained support. Required annual gross capacity value is therefore USD 254,000, or <strong>22.1 productive fleet-hours per day</strong> at USD 31.50 per hour.</p>
+<p class="table-title"><strong>Table 4. Utilization break-even — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Productive fleet-hours/day</th>
+<th style="text-align: right;">Five-year capacity value</th>
+<th style="text-align: right;">Five-year net benefit</th>
+<th style="text-align: right;">ROI</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">28.0</td>
+<td style="text-align: right;">$1,609,650</td>
+<td style="text-align: right;">$339,650</td>
+<td style="text-align: right;">26.7%</td>
+<td>Conditional pass</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24.0</td>
+<td style="text-align: right;">$1,379,700</td>
+<td style="text-align: right;">$109,700</td>
+<td style="text-align: right;">8.6%</td>
+<td>Fails 20% target</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">Approximately $1,270,000</td>
+<td style="text-align: right;">Approximately $0</td>
+<td style="text-align: right;">0%</td>
+<td>Break-even only</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">$1,264,725</td>
+<td style="text-align: right;">($5,275)</td>
+<td style="text-align: right;">Negative</td>
+<td>Fails</td>
+</tr>
+</tbody>
+</table>
 <h2 id="contract-price-ceiling">Contract price ceiling</h2>
 <p>To preserve a 20% five-year customer ROI, total five-year cost cannot exceed USD 1,609,650 ÷ 1.20 = USD 1,341,375. After USD 150,000 of integration and USD 400,000 of retained support, the maximum subscription pool is USD 791,375. Across 120 robot-months, the ceiling is <strong>USD 6,594.79 per robot per month</strong>, rounded down to <strong>USD 6,595</strong>.</p>
 <p>The contract must also define availability, response time, included maintenance, software, parts, battery replacement, insurance, escalation, data handling, annual price adjustment, early termination, and end-of-term removal.</p>
 <h2 id="provider-sustainability-screen">Provider sustainability screen</h2>
-<p>The portfolio's AD-01 development case supplies two fictional planning proxies: USD 149,200 released unit cost and USD 18,000 annual direct service cost. At USD 6,000 per month:</p>
-<table>
+<p>This case uses independent fictional provider proxies of USD 185,000 asset cost and USD 24,000 annual direct service cost per humanoid. They are not carried from another portfolio scenario and must be replaced with provider audited costs. At USD 6,000 per month:</p>
+<p class="table-title"><strong>Table 5. Provider sustainability screen — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Provider measure</th>
@@ -181,20 +240,20 @@
 <td style="text-align: right;">$360,000</td>
 </tr>
 <tr class="even">
-<td>Unit-cost proxy</td>
-<td style="text-align: right;">$(149,200)</td>
+<td>Asset-cost proxy</td>
+<td style="text-align: right;">$(185,000)</td>
 </tr>
 <tr class="odd">
 <td>Direct service proxy</td>
-<td style="text-align: right;">$(90,000)</td>
+<td style="text-align: right;">$(120,000)</td>
 </tr>
 <tr class="even">
 <td>Preliminary contribution</td>
-<td style="text-align: right;"><strong>$120,800</strong></td>
+<td style="text-align: right;"><strong>$55,000</strong></td>
 </tr>
 </tbody>
 </table>
-<p>This contribution is before financing, insurance, warranty reserve, sales expense, corporate overhead, and product-development recovery. It is a screening calculation, not a claim about any vendor's margin. At USD 4,000 per month, five-year revenue would be USD 240,000 and would leave only USD 800 before those omitted costs; that price is therefore not used as the base case.</p>
+<p>This contribution is before financing, insurance, warranty reserve, sales expense, corporate overhead, and product-development recovery. It is a screening calculation, not a claim about any vendor's margin. At USD 4,000 per month, five-year revenue would be USD 240,000, which is USD 65,000 below the two disclosed direct-cost proxies before omitted costs.</p>
 <h2 id="approval-gates">Approval gates</h2>
 <ol type="1">
 <li>Replace all RaaS and integration assumptions with binding quotations.</li>

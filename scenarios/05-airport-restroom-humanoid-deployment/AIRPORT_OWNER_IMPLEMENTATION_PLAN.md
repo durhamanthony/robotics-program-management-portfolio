@@ -1,5 +1,8 @@
 # Airport Owner / Operator Implementation Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Accountable outcome
 
 Introduce the pilot without degrading passenger service, worker safety, accessibility, privacy, cleaning quality, or business continuity; accept only evidence-backed capability; and retain authority over daily operation and expansion.
@@ -22,4 +25,3 @@ The Airport Duty Manager may suspend the pilot. The custodian controls room reop
 ## Completed result
 
 Airport operations accepted the controlled pilot and operating handoff. It did not authorize workforce reduction or airport-wide rollout. The airport approved a 60-day evidence extension only within the existing rooms, hours, chemicals, staffing, and support controls.
-

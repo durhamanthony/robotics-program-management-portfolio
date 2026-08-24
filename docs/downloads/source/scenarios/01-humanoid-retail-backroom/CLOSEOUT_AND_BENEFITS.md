@@ -1,11 +1,16 @@
 # Closeout and Benefits Report — Retail Backroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Customer:** Meridian Department Store, Store 214 (fictional)  
 **Close date:** Week 20  
 **Operational decision:** accepted  
 **Chain-rollout decision:** held at financial gate
 
 ## Acceptance results
+
+**Table 1. Acceptance results — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Gate | Fictional result | Status |
 |---|---:|---:|---|

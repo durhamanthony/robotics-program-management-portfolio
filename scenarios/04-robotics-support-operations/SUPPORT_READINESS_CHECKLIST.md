@@ -1,5 +1,8 @@
 # Support Readiness Gate
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Product and evidence
 
 - [ ] Serial/configuration/version/installed-base data model defined.
@@ -34,4 +37,3 @@
 ## Gate rule
 
 No release/deployment when a credible safety escalation has no staffed path, a core fault cannot produce evidence, a critical FRU has no recovery plan, or support cannot identify the customer/robot/configuration/entitlement.
-

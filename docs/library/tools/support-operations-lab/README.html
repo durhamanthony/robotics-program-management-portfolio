@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support Operations Workflow Lab - Data Only | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../artifacts.html">← Back to artifact library</a><div><span class="tag">Portfolio controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/tools/support-operations-lab/README.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="support-operations-workflow-lab---data-only">Support Operations Workflow Lab - Data Only</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> Synthetic events and results are fictional scenario assumptions [SA-L]. Routing logic and arithmetic are deterministic derived calculations [DC-L]. A production workflow requires approved service design, customer data, security review, and platform configuration [UPV].</p>
+</blockquote>
+<p>This data-only lab supports Case 04 without a physics simulator. It turns synthetic robot events into a deduplicated support-case register, severity assignment, owner queue, next action, and operational scorecard. It demonstrates the information handoffs among fleet telemetry, customer cases, installed-product data, Robotics Level 2, field service, engineering, and customer communication.</p>
+<h2 id="windows-run">Windows run</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\python.exe tools\support-operations-lab\build_cases.py</span></code></pre></div>
+<p>The command reads <code>sample_robot_events.csv</code> and writes <code>support_case_register.csv</code>, <code>support_scorecard.csv</code>, and <code>support_workflow_summary.json</code> into <code>outputs/support_workflow/</code>.</p>
+<p class="table-title"><strong>Table 1. Lab inputs and outputs - Evidence: synthetic [SA-L] and deterministic [DC-L]; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Purpose</th>
+<th>Production replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sample_robot_events.csv</td>
+<td>Safe synthetic event input</td>
+<td>Approved telemetry/event contract</td>
+</tr>
+<tr class="even">
+<td>build_cases.py</td>
+<td>Deduplication and routing demonstration</td>
+<td>Governed automation in the service platform</td>
+</tr>
+<tr class="odd">
+<td>support_case_register.csv</td>
+<td>Traceable case record</td>
+<td>System-of-record cases and work orders</td>
+</tr>
+<tr class="even">
+<td>support_scorecard.csv</td>
+<td>Evidence completeness and severity view</td>
+<td>Service dashboard with approved definitions</td>
+</tr>
+</tbody>
+</table>
+<p>The lab never authorizes a remote robot action. A human retains safety, severity, recovery, dispatch, engineering-escalation, and customer-communication authority.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

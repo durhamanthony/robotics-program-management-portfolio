@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research and Assumptions - Open-Source Quadruped Productization | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/open-source-quadruped-raas-productization.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 03 — Open-source RaaS productization</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/03-open-source-quadruped-raas-productization/RESEARCH_AND_ASSUMPTIONS.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="research-and-assumptions---open-source-quadruped-productization">Research and Assumptions - Open-Source Quadruped Productization</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
+</blockquote>
+<h2 id="public-anchors">Public anchors</h2>
+<p class="table-title"><strong>Table 1. Public source register - Evidence: public benchmarks [PB-H] unless noted; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Source</th>
+<th>Portfolio use</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open Dynamic Robot Initiative</td>
+<td><a href="https://open-dynamic-robot-initiative.github.io/">https://open-dynamic-robot-initiative.github.io/</a></td>
+<td>Confirms open hardware/software objective and BSD 3-Clause statement</td>
+<td>Does not approve this product or its commercial claims</td>
+</tr>
+<tr class="even">
+<td>Solo12 hardware</td>
+<td><a href="https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1/README.html">https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1/README.md</a></td>
+<td>Confirms 12 active degrees of freedom and documented build components</td>
+<td>Reference design, not a provider BOM or quote</td>
+</tr>
+<tr class="odd">
+<td>Autonomy upgrade</td>
+<td><a href="https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1.1/README.html">https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/quadruped_robot_12dof_v1.1/README.md</a></td>
+<td>Supports battery, wireless, e-stop, monitoring, and payload-interface feasibility screening</td>
+<td>Prototype documentation; production verification still required</td>
+</tr>
+<tr class="even">
+<td>Solo low-level interface</td>
+<td><a href="https://github.com/open-dynamic-robot-initiative/solo">https://github.com/open-dynamic-robot-initiative/solo</a></td>
+<td>Confirms a BSD-3-Clause repository and low-level interface</td>
+<td>Every transitive dependency needs its own review</td>
+</tr>
+<tr class="odd">
+<td>Solo configuration files</td>
+<td><a href="https://github.com/open-dynamic-robot-initiative/robot_properties_solo">https://github.com/open-dynamic-robot-initiative/robot_properties_solo</a></td>
+<td>Confirms configuration resources and BSD-3-Clause repository</td>
+<td>Does not establish provider configuration correctness</td>
+</tr>
+<tr class="even">
+<td>Master Board</td>
+<td><a href="https://github.com/open-dynamic-robot-initiative/master-board">https://github.com/open-dynamic-robot-initiative/master-board</a></td>
+<td>Confirms board function and BSD-2-Clause repository</td>
+<td>Hardware availability and lifecycle are [UPV]</td>
+</tr>
+<tr class="odd">
+<td>Secure Software Development Framework</td>
+<td><a href="https://csrc.nist.gov/pubs/sp/800/218/final">https://csrc.nist.gov/pubs/sp/800/218/final</a></td>
+<td>Secure development and supplier communication structure</td>
+<td>Guidance, not product certification</td>
+</tr>
+<tr class="even">
+<td>2026 SBOM minimum elements</td>
+<td><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom">https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom</a></td>
+<td>Release SBOM content baseline</td>
+<td>Legal/security review still required</td>
+</tr>
+</tbody>
+</table>
+<p>Research checked 2026-08-23.</p>
+<h2 id="scenario-assumptions">Scenario assumptions</h2>
+<p>Six pilot sites, 12 robots, 60 days, 48-hour eligible advance replacement, $2.4 million development, $28,000 direct unit cost, $7,200 annual direct service cost, $2,950 monthly subscription, $12,000 site onboarding, 1,200 customer hours released per year, and $78 loaded capacity value are all [SA-L]. None is a vendor quote, customer actual, or market forecast.</p>
+<h2 id="open-unknowns">Open unknowns</h2>
+<p>Supplier quotations, export/import treatment, battery transport, insurance, customer data terms, product liability, accessibility, independent safety review, component obsolescence, support demand, repair yield, warranty reserve, churn, collections, and actual conversion volume are [UPV] and must close before General Availability.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

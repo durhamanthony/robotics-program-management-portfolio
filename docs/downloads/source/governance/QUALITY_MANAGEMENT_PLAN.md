@@ -1,10 +1,15 @@
 # Quality Management Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Quality objective
 
 Deliver a robotics product or deployment that is traceable to approved requirements, safe within its intended operating envelope, repeatable in the target workflow, supportable after launch, and accepted with objective evidence.
 
 ## Quality controls by phase
+
+**Table 1. Quality controls by phase — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Phase | Prevention | Detection | Required record |
 |---|---|---|---|

@@ -1,5 +1,8 @@
 # Privacy, Safety, and Acceptance
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Human authority
 
 The robot produces observations and alerts. A trained human verifies alerts and decides whether to dispatch, notify, or escalate. The system must show uncertainty and health status; an unavailable or degraded sensor cannot silently imply “all clear.”
@@ -9,6 +12,8 @@ The robot produces observations and alerts. A trained human verifies alerts and 
 Purpose limitation; approved camera/thermal zones; restricted-area masks; least-privilege access; encryption; audit log; retention and deletion; export/evidence approval; incident hold; third-party/cloud terms; signage and workforce notice; privacy escalation; periodic review.
 
 ## Acceptance tests
+
+**Table 1. Acceptance tests — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | ID | Test | Expected result |
 |---|---|---|

@@ -1,5 +1,8 @@
 # Business Case and Total Cost of Ownership — Retail Backroom Humanoids
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Decision
 
 Fund one controlled store pilot to test operational feasibility in an unchanged human workspace. Do not approve chain rollout until binding vendor quotations replace planning allowances and measured annual gross value reaches at least $346,000.
@@ -13,6 +16,8 @@ The labor rate is a **public benchmark**. The workflow relevance is a **research
 The fictional store has standard doors, narrow aisles, mixed shelf heights, garment rails, a short stair route, hand-carried merchandise, and employee handoff points. These are human interfaces. Sanctuary AI reported a retail pilot covering front- and back-of-store activities; Agility Robotics states that its humanoid is designed for spaces and infrastructure built for people. That is evidence that the category is relevant, not evidence that this scenario's robot will meet its targets.
 
 ## Five-year planning model
+
+**Table 1. Five-year planning model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Item | Formula | Five-year value | Evidence class |
 |---|---|---:|---|
@@ -40,6 +45,8 @@ The fictional pilot produced $184,468 annualized gross value:
 The annual gap is $161,532. Because gross value is below recurring cost, there is no positive simple payback at current inputs.
 
 ## Sensitivity
+
+**Table 2. Sensitivity — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Case | Installed | Recurring/year | Gross value/year | Five-year net | Decision |
 |---|---:|---:|---:|---:|---|

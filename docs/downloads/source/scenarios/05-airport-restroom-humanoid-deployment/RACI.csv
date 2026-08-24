@@ -1,14 +1,13 @@
-Deliverable_or_decision,Airport_Sponsor,Integrated_Program_Manager,Airport_Project_Manager,Seller_Project_Manager,Manufacturer_Project_Manager,Airport_Safety,Custodial_Operations,Cybersecurity_Procurement
-Charter and funding,A,R,C,C,C,C,C,C
-Workflow and benefits baseline,I,A,R,C,C,C,R,C
-Integrated design,I,A,C,R,R,C,C,C
-Pilot product release,I,C,C,C,A,R,C,I
-Factory Acceptance Test,I,A,C,R,R,C,C,I
-Site Acceptance Test,I,A,R,R,C,R,C,C
-Room closure and daily operating authority,I,C,A,C,I,C,R,I
-Chemical and Safety Data Sheet control,I,C,A,C,C,R,R,I
-Pilot acceptance,A,R,R,C,C,R,R,C
-Commercial expansion decision,A,R,R,C,C,C,C,R
-Manufacturer General Availability decision,I,I,I,C,A,C,C,I
-Closeout and handoff,A,R,R,R,R,C,R,C
-
+table_title,Deliverable_or_decision,Airport_Sponsor,Integrated_Program_Manager,Airport_Project_Manager,Seller_Project_Manager,Manufacturer_Project_Manager,Airport_Safety,Custodial_Operations,Cybersecurity_Procurement,evidence_class,confidence,source_or_validation
+Table 1. Raci,Charter and funding,A,R,C,C,C,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Workflow and benefits baseline,I,A,R,C,C,C,R,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Integrated design,I,A,C,R,R,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Pilot product release,I,C,C,C,A,R,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Factory Acceptance Test,I,A,C,R,R,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Site Acceptance Test,I,A,R,R,C,R,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Room closure and daily operating authority,I,C,A,C,I,C,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Chemical and Safety Data Sheet control,I,C,A,C,C,R,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Pilot acceptance,A,R,R,C,C,R,R,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Commercial expansion decision,A,R,R,C,C,C,C,R,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Manufacturer General Availability decision,I,I,I,C,A,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Closeout and handoff,A,R,R,R,R,C,R,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals

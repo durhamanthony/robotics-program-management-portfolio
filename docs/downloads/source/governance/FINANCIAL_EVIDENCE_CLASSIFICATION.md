@@ -1,10 +1,15 @@
 # Financial Evidence Classification and Number Confidence
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Purpose
 
 This portfolio uses fictional generic scenarios to demonstrate project and program management. Numbers are included so that decisions can be tested rather than described only with qualitative language. They are planning-grade unless a document explicitly identifies an actual result or binding quotation.
 
 ## Evidence labels
+
+**Table 1. Evidence labels — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Label | Meaning | Permitted claim |
 |---|---|---|

@@ -1,8 +1,13 @@
 # Robotics Program Governance Library
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This folder contains the cross-program controls used by all five portfolio scenarios. The scenario folders contain the project-specific evidence; this folder defines how a robotics project or program manager governs the work.
 
 ## Control set
+
+**Table 1. Control set — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Control | Purpose |
 |---|---|

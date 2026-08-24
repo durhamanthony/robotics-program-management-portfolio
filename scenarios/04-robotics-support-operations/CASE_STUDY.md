@@ -1,5 +1,8 @@
 # Case Study 4 — Build Robotics Support Operations
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Scenario
 
 A growing robotics company supports 250 humanoid and quadruped robots across 60 customer sites but lacks a scalable support mechanism. Salesforce is the CRM (Customer Relationship Management) platform, Jira is used by engineering, and the company has either ServiceNow or Zendesk. The program manager must stand up frontline customer support, remote robotics support, field service, incident/problem management, knowledge, training, parts/RMA (Return Material Authorization), telemetry, and governance.

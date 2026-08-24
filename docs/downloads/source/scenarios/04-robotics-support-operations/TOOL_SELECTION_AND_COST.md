@@ -1,8 +1,13 @@
 # Tool Selection and Cost Model — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 Abbreviations used below are Customer Relationship Management (CRM), Customer Service Management (CSM), Field Service Management (FSM), Over-the-Air software delivery (OTA), Continuous Integration (CI), Application Programming Interface (API), and Total Cost of Ownership (TCO). MCAP is the name of the robotics log-container format.
 
 ## Recommended target stack
+
+**Table 1. Recommended target stack — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Layer | Preferred pattern | Why |
 |---|---|---|
@@ -24,4 +29,4 @@ Score each candidate 1–5 for functional fit, safety/security, evidence/data po
 
 ## Portfolio lab
 
-Use MuJoCo, MCAP, Foxglove free allowance, Prometheus/Grafana free or local, Jira/JSM free allowance, and GitHub. Simulate correlation from robot event to service case, engineering defect, release, work order and knowledge article. Never present a free/noncommercial tier as production approval.
+Use synthetic CSV event inputs, a deterministic Python correlation lab, MCAP, Foxglove free allowance, Prometheus/Grafana free or local, Jira/JSM free allowance, and GitHub. Demonstrate correlation from robot event to service case, engineering defect, release, work order, and knowledge article. Never present a free/noncommercial tier as production approval.

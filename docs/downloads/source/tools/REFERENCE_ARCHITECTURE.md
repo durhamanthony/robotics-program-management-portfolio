@@ -1,6 +1,11 @@
 # Robotics Support Reference Architecture
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Support tiers
+
+**Table 1. Support tiers — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Tier | Owner | Typical scope | Exit condition |
 |---|---|---|---|
@@ -25,4 +30,3 @@
 ## Safety boundary
 
 Support tooling is not the safety system. Remote commands must respect manufacturer controls, site safety procedures, authorization, and a positive confirmation that the work area is clear. E-stops, protective stops, energy isolation, and functional-safety controls must remain independent of dashboards and customer-service platforms.
-

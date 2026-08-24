@@ -1,6 +1,11 @@
 # Artifact Index — Quadruped Night-Security Deployment
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This package links the decision, delivery, safety, privacy, operating, and financial evidence for a human-supervised three-quadruped night-patrol scenario.
+
+**Table 1. Artifact Index — Quadruped Night-Security Deployment — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Lifecycle | Artifact | Decision or evidence supported |
 |---|---|---|

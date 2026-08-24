@@ -1,10 +1,15 @@
 # Statement of Work — Seller and System Integrator
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Parties and purpose
 
 The fictional seller will integrate two manufacturer-supplied humanoid robots into four approved Terminal 4 restrooms and deliver a controlled 90-day pilot to Pacific Gateway International Airport.
 
 ## Deliverables
+
+**Table 1. Deliverables — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | ID | Deliverable | Completion evidence | Acceptance owner |
 |---|---|---|---|
@@ -22,6 +27,8 @@ The fictional seller will integrate two manufacturer-supplied humanoid robots in
 The seller does not warrant pathogen removal, generalized humanoid performance, public co-occupancy, biohazard response, or an economic return. Chemical efficacy follows the product label and airport procedure. The airport controls room closure, reopening, approved chemicals, and specialist response.
 
 ## Milestones and payment
+
+**Table 2. Milestones and payment — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Milestone | Week | Share | Amount |
 |---|---:|---:|---:|
@@ -43,4 +50,3 @@ These are pilot targets, not a public commercial Service-Level Agreement.
 ## Change control
 
 Any added room, task, chemical, tool, operating hour, public interaction, data use, or performance claim requires a written change request. Safety, privacy, manufacturer release, airport operations, cost, schedule, and acceptance impacts are assessed before authorization.
-

@@ -1,11 +1,11 @@
-requirement_id,source,requirement,verification,acceptance_threshold,evidence_owner,planned_gate,status
-QS-PAT-001,SOW,"Complete approved patrol schedule",Operational test,">=98% scheduled patrol completion",Security Operations,UAT,Planned
-QS-REL-001,SOW,"Fleet available during patrol window",Telemetry review,">=95% excluding approved windows",Service Lead,Hypercare,Planned
-QS-GEO-001,Policy,"Remain inside approved geofence",Route and fault tests,"0 violations",Robotics Lead,SAT,Planned
-QS-ALR-001,SOW,"Deliver critical alert to human operator",End-to-end test,"50 of 50 witnessed critical alerts reach the Security Operations Center within 15 seconds",SOC Lead,SAT,Planned
-QS-ALR-010,SOW,"Limit operator workload from false alerts",Thirty-night telemetry review,"No more than 6 operator-reviewed false alerts per 10-hour night after tuning",SOC Lead,UAT,Planned
-QS-SAFE-001,Safety,"Return dock or enter approved safe state on faults",Fault injection,"100% mandatory scenarios pass",Safety Lead,SAT,Planned
-QS-PRI-001,Privacy,"Collection retention access and deletion follow approved policy",Inspection/drill,"100% mandatory controls pass",Privacy Lead,Go-live,Planned
-QS-SEC-001,Security,"Unique identity RBAC MFA remote-access audit and update controls",Security test,"100% mandatory controls pass",Security Lead,Go-live,Planned
-QS-SUP-001,Support,"Alert case field and engineering chain is operational",Support drill,"Severity-1 drill acknowledged within 5 minutes; field dispatch decision recorded within 30 minutes",Service Lead,Go-live,Planned
-QS-TRN-001,Training,"All designated users demonstrate competence",Assessment,"100% pass before access",Training Lead,Go-live,Planned
+table_title,requirement_id,source,requirement,verification,acceptance_threshold,evidence_owner,planned_gate,status,evidence_class,confidence,source_or_validation
+Table 1. Requirements Traceability,QS-PAT-001,SOW,Complete approved patrol schedule,Operational test,>=98% scheduled patrol completion,Security Operations,UAT,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-REL-001,SOW,Fleet available during patrol window,Telemetry review,>=95% excluding approved windows,Service Lead,Hypercare,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-GEO-001,Policy,Remain inside approved geofence,Route and fault tests,0 violations,Robotics Lead,SAT,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-ALR-001,SOW,Deliver critical alert to human operator,End-to-end test,50 of 50 witnessed critical alerts reach the Security Operations Center within 15 seconds,SOC Lead,SAT,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-ALR-010,SOW,Limit operator workload from false alerts,Thirty-night telemetry review,No more than 6 operator-reviewed false alerts per 10-hour night after tuning,SOC Lead,UAT,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-SAFE-001,Safety,Return dock or enter approved safe state on faults,Fault injection,100% mandatory scenarios pass,Safety Lead,SAT,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-PRI-001,Privacy,Collection retention access and deletion follow approved policy,Inspection/drill,100% mandatory controls pass,Privacy Lead,Go-live,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-SEC-001,Security,Unique identity RBAC MFA remote-access audit and update controls,Security test,100% mandatory controls pass,Security Lead,Go-live,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-SUP-001,Support,Alert case field and engineering chain is operational,Support drill,Severity-1 drill acknowledged within 5 minutes; field dispatch decision recorded within 30 minutes,Service Lead,Go-live,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Requirements Traceability,QS-TRN-001,Training,All designated users demonstrate competence,Assessment,100% pass before access,Training Lead,Go-live,Planned,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals

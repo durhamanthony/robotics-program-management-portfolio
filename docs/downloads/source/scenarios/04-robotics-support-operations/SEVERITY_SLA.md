@@ -1,6 +1,11 @@
 # Severity and Service Targets
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 Targets are planning values and must align with executed Service-Level Agreements (SLAs), product risk, staffing, geography, and safety authority. Severity 1 (S1) is critical, Severity 2 (S2) is high, Severity 3 (S3) is medium, and Severity 4 (S4) is low.
+
+**Table 1. Severity and Service Targets — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Severity | Definition | Acknowledge | Customer update | Restore target | Leadership/escalation |
 |---|---|---:|---:|---:|---|

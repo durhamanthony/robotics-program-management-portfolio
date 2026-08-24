@@ -1,10 +1,15 @@
 # Integration and Data Plan — Night Security
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Workflow
 
 Schedule/dispatcher → fleet mission → quadruped route → observation/health event → human operator verification → security case/dispatch if warranted → retained evidence and audit.
 
 ## Interface controls
+
+**Table 1. Interface controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Interface | Required data | Failure response |
 |---|---|---|

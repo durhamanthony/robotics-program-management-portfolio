@@ -1,5 +1,8 @@
 # Manufacturer Project Manager Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Accountable outcome
 
 Release and support a traceable pilot configuration that can execute the four-room routine scope, produce verification evidence, and fail safely. The release is limited to the pilot; it is not General Availability.
@@ -14,6 +17,8 @@ Release and support a traceable pilot configuration that can execute the four-ro
 - Telemetry bundle for mission, configuration, fault, intervention, and inspection correlation.
 
 ## Verification plan
+
+**Table 1. Verification plan — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Area | Evidence | Release threshold | Result |
 |---|---|---:|---:|
@@ -31,4 +36,3 @@ Every defect links to configuration, evidence, severity, workaround, correction,
 ## Closeout
 
 The manufacturer accepted the v4.4 pilot baseline for the four mapped rooms. General Availability remained blocked by broader chemical compatibility, additional fixture families, long-duration reliability, production cost, and second-source evidence.
-

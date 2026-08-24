@@ -1,11 +1,16 @@
 # Closeout and Benefits — Quadruped Night Security
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Customer:** Sentinel Ridge Industrial Campus  
 **Program duration:** 20 weeks plus a 30-night pilot  
 **Closeout decision:** Pilot accepted for two recurring quadruped patrol posts with one onsite human responder retained  
 **Financial authorization / final spend:** $730,250 / $730,250
 
 ## Thirty-night acceptance record
+
+**Table 1. Thirty-night acceptance record — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Required result | Final result | Disposition |
 |---|---:|---:|---|

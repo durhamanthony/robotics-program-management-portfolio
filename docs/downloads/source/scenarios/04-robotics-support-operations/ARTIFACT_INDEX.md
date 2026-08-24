@@ -1,6 +1,11 @@
 # Artifact Index — Robotics Support Operations
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This package assumes Salesforce Customer Relationship Management, Jira engineering, and either ServiceNow or Zendesk, then links the service, staffing, cost, data, field, and governance decisions for 250 robots across 60 sites.
+
+**Table 1. Artifact Index — Robotics Support Operations — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Capability | Artifact | Decision or evidence supported |
 |---|---|---|

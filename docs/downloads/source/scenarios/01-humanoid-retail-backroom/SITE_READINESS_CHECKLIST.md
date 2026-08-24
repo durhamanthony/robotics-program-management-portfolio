@@ -1,5 +1,10 @@
 # Site Readiness Checklist — Meridian Store 214
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
+**Table 1. Site Readiness Checklist — Meridian Store 214 — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
 | Area | Requirement | Evidence / accountable owner | Final state |
 |---|---|---|---|
 | Scope | approved shoe boxes and already-hung garments identified | item catalog / Inventory Lead | ready |

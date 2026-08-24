@@ -1,0 +1,6 @@
+table_title,event_id,event_time_utc,site_id,robot_id,robot_model,software_version,fault_code,safety_state,message,correlation_id,evidence_class,confidence,source_or_validation
+Synthetic support workflow input,EVT-001,2026-08-20T01:00:00Z,SITE-042,R-184,Quadruped-X,6.4.2,NETWORK_LOSS,safe_stop,Communications lost; robot entered approved safe stop,CORR-1001,Scenario assumption,Low,Synthetic portfolio event
+Synthetic support workflow input,EVT-002,2026-08-20T01:00:05Z,SITE-042,R-184,Quadruped-X,6.4.2,NETWORK_LOSS,safe_stop,Duplicate network alarm from the same event,CORR-1001,Scenario assumption,Low,Synthetic portfolio event
+Synthetic support workflow input,EVT-003,2026-08-20T01:14:00Z,SITE-017,H-031,Humanoid-Y,3.8.0,THERMAL_LIMIT,controlled_stop,Joint thermal limit exceeded during scheduled mission,CORR-1002,Scenario assumption,Low,Synthetic portfolio event
+Synthetic support workflow input,EVT-004,2026-08-20T02:20:00Z,SITE-009,Q-204,Quadruped-X,6.4.2,LOW_BATTERY_RETURN,normal,Early return to dock reduced route coverage,CORR-1003,Scenario assumption,Low,Synthetic portfolio event
+Synthetic support workflow input,EVT-005,2026-08-20T03:45:00Z,SITE-055,H-118,Humanoid-Y,3.8.0,GRIPPER_FORCE_VARIANCE,controlled_stop,Repeated force variance rejected the item,CORR-1004,Scenario assumption,Low,Synthetic portfolio event

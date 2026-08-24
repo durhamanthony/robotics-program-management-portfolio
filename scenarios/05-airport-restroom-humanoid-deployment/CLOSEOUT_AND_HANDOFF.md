@@ -1,10 +1,15 @@
 # Closeout and Handoff — Airport Restroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Closure statement
 
 The Executive Steering Committee closed the 28-week implementation and 90-day pilot after accepting contracted deliverables, safety and quality evidence, cost reconciliation, support readiness, operating ownership, and residual-risk transfer.
 
 ## Final performance
+
+**Table 1. Final performance — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Threshold | Result | Decision |
 |---|---:|---:|---|
@@ -42,4 +47,3 @@ The airport accepted no more than a 60-day controlled extension in the same four
 3. Quality sampling needs denominators, defect categories, and named inspection authority.
 4. A technically accepted pilot can still produce a “do not scale” financial decision.
 5. Seller delivery, manufacturer release, and airport operational acceptance require separate accountable owners.
-

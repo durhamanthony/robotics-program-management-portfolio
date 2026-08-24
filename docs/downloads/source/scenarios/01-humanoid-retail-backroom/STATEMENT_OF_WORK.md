@@ -1,10 +1,15 @@
 # Statement of Work — Retail Backroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Purpose
 
 Configure and deploy two vendor-supplied humanoid robots at fictional Meridian Store 214 for an employee-only backroom workflow. A sales associate submits an item request from a tablet; the robot verifies the request, walks an approved existing route, retrieves a shoe box or already-hung garment, delivers it to an employee handoff point, and records the transaction. Between requests, robots perform approved put-away and cycle-count missions.
 
 ## Deliverables and acceptance evidence
+
+**Table 1. Deliverables and acceptance evidence — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Deliverable | Vendor/Program team | Meridian | Acceptance evidence |
 |---|---|---|---|

@@ -6,9 +6,12 @@ date: "August 2026"
 
 # Portfolio purpose
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 I build the operating system around complex technology: the plan, people, readiness gates, telemetry, support model, vendor controls, and customer handoff that turn a technical product into a reliable service.
 
-This portfolio applies enterprise-scale program and service-operations leadership to five fictional robotics scenarios. It demonstrates judgment, completed artifacts, governance, browser-playable MuJoCo-rendered evidence, and the source models used to produce each clip.
+This portfolio applies enterprise-scale program and service-operations leadership to five fictional robotics scenarios. It demonstrates judgment, completed artifacts, governance, browser-playable operations evidence, and the source models or data workflows used to produce each clip.
 
 # Professional foundation
 
@@ -35,13 +38,13 @@ The package includes SOW/business case, route and site readiness, requirements, 
 
 **Boundary:** robots observe and report. They do not confront, pursue, detain, use force, or make unsupervised law-enforcement decisions.
 
-# Case 3 — AD-01 through first sale
+# Case 3 — Open-source quadruped to supported RaaS
 
-**Program outcome:** move a fictional compact mobile manipulator from validated customer need through Engineering Verification Testing (EVT), Design Verification Testing (DVT), Production Validation Testing (PVT), first shipment, acceptance, and the General Availability (GA) decision.
+**Program outcome:** turn a generic open-source quadruped reference design into a narrow, supported, supervised lab-inspection RaaS offer with licensing, configuration, safety, manufacturing, service, and commercial gates.
 
-The package includes discovery, product brief/PRD, roadmap, requirements traceability, business case, integrated stage gates, supplier/manufacturing readiness, V&V, reliability/serviceability, budget/headcount, commercial launch, first-customer plan, status reporting, and lessons.
+The package includes discovery, product brief/PRD, roadmap, requirements traceability, an auditable 41-unit break-even case, open-source compliance and Software Bill of Materials (SBOM) controls, integrated stage gates, supplier/manufacturing readiness, verification and validation, reliability/serviceability, RaaS service design, commercial launch, first-customer plan, status reporting, and lessons.
 
-**Program principle:** narrow the first-release envelope and retire safety, technical, supplier, manufacturing, service, and commercial risk with evidence before funding the next gate.
+**Program principle:** preserve upstream license obligations, narrow the first-release envelope, and retire safety, technical, supplier, manufacturing, service, and commercial risk with signed evidence before funding the next gate.
 
 # Case 4 — Robotics support operations
 

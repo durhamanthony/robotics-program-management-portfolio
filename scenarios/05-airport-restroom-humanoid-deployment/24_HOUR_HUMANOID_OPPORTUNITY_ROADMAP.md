@@ -1,8 +1,13 @@
 # 24-Hour Humanoid Opportunity Roadmap
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Selection rule
 
 Prioritize work where a human-form machine can reuse doors, stairs, carts, shelves, tools, and human-height interfaces, and where demand is dense enough to keep the robot productive. Do not use a humanoid merely because a task occurs around the clock.
+
+**Table 1. Selection rule — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Rank | Operating area | Humanoid fit | First measurable workflow | Portfolio position |
 |---:|---|---|---|---|
@@ -26,4 +31,3 @@ A wheeled autonomous mobile robot, fixed arm, conveyor, or conventional scrubber
 - Figure announced a retail-distribution agreement with Catalyst Brands.
 
 These are vendor-reported commercial or operating examples. They support workflow plausibility, not the airport scenario's cost, safety, quality, or ROI assumptions.
-

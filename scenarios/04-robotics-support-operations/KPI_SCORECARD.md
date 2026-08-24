@@ -1,5 +1,8 @@
 # Robotics Service KPI Scorecard
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Fleet/customer outcomes
 
 Fleet availability; mission success; planned versus completed missions; mean missions between intervention; human interventions per 100 missions; customer workflow throughput; safety events/near misses; Customer Satisfaction (CSAT).
@@ -17,6 +20,8 @@ Incidents by subsystem/version/site; fault recurrence; mean time/distance/missio
 Dispatch/onsite/repair duration; parts fill; Return Material Authorization (RMA) cycle/no-fault-found; service labor/parts/travel/cloud cost; cost per robot/month; warranty reserve; support contacts per robot; remote-resolution rate.
 
 ## Day-180 operating scorecard
+
+**Table 1. Day-180 operating scorecard — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Metric | Target | Actual | Trend | Segment/root cause | Owner/action |
 |---|---:|---:|---|---|---|

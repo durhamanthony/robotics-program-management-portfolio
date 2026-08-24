@@ -1,10 +1,15 @@
 # Training and Change Plan — Retail Backroom Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Change objective
 
 Keep associates on the customer floor while the robot handles approved backroom retrieval. The message is specific: this pilot changes how an item request is fulfilled; it does not authorize customer-floor operation, remove emergency authority from employees, or guarantee chain rollout.
 
 ## Role curriculum and qualification
+
+**Table 1. Role curriculum and qualification — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Audience | Content | Practice | Pass criterion | Owner |
 |---|---|---|---|---|

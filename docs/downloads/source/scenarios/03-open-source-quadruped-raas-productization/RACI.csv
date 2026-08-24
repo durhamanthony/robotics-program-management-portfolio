@@ -1,0 +1,6 @@
+table_title,deliverable_or_decision,Executive Sponsor,Productization Program Manager,Product and Systems,Engineering and Security,Manufacturing and Quality,Service and Customer Success,Legal and Finance,evidence_class,confidence,source_or_validation
+Case 03 responsibility matrix,Operating envelope and PRD,I,A,R,C,C,C,C,Scenario assumption,Medium,Sponsor-approved organization
+Case 03 responsibility matrix,Open-source compliance and release SBOM,I,A,C,R,C,I,R,Scenario assumption,Medium,Named accountable owners
+Case 03 responsibility matrix,Production validation and release,I,A,C,R,R,C,C,Scenario assumption,Medium,Gate charter
+Case 03 responsibility matrix,Pilot acceptance,I,A,C,C,C,R,I,Scenario assumption,Medium,Executed acceptance plan
+Case 03 responsibility matrix,Limited Availability / General Availability,A,R,C,C,C,C,C,Scenario assumption,Medium,Executive governance

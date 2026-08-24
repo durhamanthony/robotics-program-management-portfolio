@@ -1,10 +1,15 @@
 # Statement of Work — Three-Quadruped Security Deployment
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Purpose
 
 Deploy three quadruped robots for scheduled observation patrols on approved nighttime routes at one fenced industrial campus. Robots observe and report; licensed or authorized human security personnel verify alerts and decide any response.
 
 ## Deliverables
+
+**Table 1. Deliverables — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Deliverable | Acceptance evidence |
 |---|---|

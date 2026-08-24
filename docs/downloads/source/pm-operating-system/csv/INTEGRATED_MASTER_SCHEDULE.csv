@@ -1,0 +1,5 @@
+table_title,activity_id,workstream,activity,owner,start_date,finish_date,predecessor,gate,percent_complete,status,evidence_class,confidence,source_or_validation
+"Table 1. Integrated master schedule",IMS-010,Program,"Charter and outcome baseline",Program Lead,2026-08-31,2026-09-04,,G0,0,Not started,SA-L,Low,"Illustrative dates; replace with approved baseline"
+"Table 1. Integrated master schedule",IMS-020,Safety,"Hazard analysis and acceptance thresholds",Safety Lead,2026-09-07,2026-09-18,IMS-010,G1,0,Not started,SA-L,Low,"Replace with approved safety plan and owner commitment"
+"Table 1. Integrated master schedule",IMS-030,Site,"Network, facilities, and workflow readiness",Site Lead,2026-09-14,2026-10-02,IMS-010,G2,0,Not started,SA-L,Low,"Replace with signed readiness checklist"
+"Table 1. Integrated master schedule",IMS-040,Acceptance,"FAT, SAT, and UAT execution",Test Lead,2026-10-05,2026-10-16,"IMS-020;IMS-030",G3,0,Not started,SA-L,Low,"Replace with signed test evidence"

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open-Source Compliance and SBOM Plan | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/open-source-quadruped-raas-productization.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 03 — Open-source RaaS productization</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/03-open-source-quadruped-raas-productization/OPEN_SOURCE_COMPLIANCE_AND_SBOM.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="open-source-compliance-and-sbom-plan">Open-Source Compliance and SBOM Plan</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
+</blockquote>
+<h2 id="control-objective">Control objective</h2>
+<p>Ship a reproducible commercial service while preserving every applicable copyright notice, license condition, source/binary redistribution obligation, security record, and non-endorsement boundary. "Open source" is not treated as a single license or as permission to ignore third-party dependencies.</p>
+<h2 id="release-controls">Release controls</h2>
+<p class="table-title"><strong>Table 1. Open-source release controls - Evidence: control design [SA-L], source statements [PB-H]; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Owner</th>
+<th>Gate evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approved component and license inventory</td>
+<td>Product Security</td>
+<td>SBOM, component hash, version, supplier, license, relationship, and generation context</td>
+</tr>
+<tr class="even">
+<td>Copyright and notice preservation</td>
+<td>Legal / Release Manager</td>
+<td>Binary notice bundle and source-offer decision where applicable</td>
+</tr>
+<tr class="odd">
+<td>Upstream-to-fork traceability</td>
+<td>Software Lead</td>
+<td>Upstream commit, provider patch set, customer configuration, and signed release tag</td>
+</tr>
+<tr class="even">
+<td>Dependency exception</td>
+<td>Architecture Review Board</td>
+<td>Written disposition before merge or shipment</td>
+</tr>
+<tr class="odd">
+<td>Vulnerability intake and response</td>
+<td>Product Security</td>
+<td>Advisory intake, severity, affected releases, mitigation, and customer notice</td>
+</tr>
+<tr class="even">
+<td>Reproducible build</td>
+<td>Release Engineering</td>
+<td>Clean build from pinned sources and retained artifacts</td>
+</tr>
+<tr class="odd">
+<td>No endorsement claim</td>
+<td>Product / Legal</td>
+<td>Approved name, attribution, and marketing review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="minimum-release-packet">Minimum release packet</h2>
+<p>Each release contains the signed image, hardware/configuration manifest, SBOM, license and notice bundle, build provenance, known issues, security fixes, calibration version, rollback target, test result, change approval, and customer-facing release note. CISA's 2026 SBOM minimum-elements publication and NIST Secure Software Development Framework are planning references, not certifications.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

@@ -1,6 +1,11 @@
 # Research and Assumptions — Quadruped Night Security
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Public capability and price anchors
+
+**Table 1. Public capability and price anchors — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Topic | Source | Portfolio use | Limitation |
 |---|---|---|---|
@@ -8,7 +13,7 @@
 | Industrial quadruped terrain | [Unitree B2](https://www.unitree.com/mobile/b2/) | Category feasibility screening for stairs and uneven terrain | Manufacturer claim; customer route testing remains mandatory |
 | Quadruped operating envelope | [Boston Dynamics Spot](https://bostondynamics.com/products/spot/) | Independent category reference for slope, step, ingress protection, runtime, payload, and sensing | Not a quote and not the selected product |
 | Existing human infrastructure | [Agility logistics product description](https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work) | Supports the limited claim that legged/human-form robots may reduce retrofit needs | Does not mean zero site modification |
-| Guard wage reasonableness | [BLS Security Guards, May 2023](https://www.bls.gov/oes/2023/may/oes339032.htm) | Tests whether the fictional $45/hour contractor invoice is directionally plausible after burden, overhead, insurance, and margin | Customer invoice remains required |
+| Guard wage benchmark | [BLS national employment and wage data, May 2025](https://www.bls.gov/news.release/ocwage.t01.htm) | Identifies the $20.42 national mean hourly wage for security guards; the scenario's $45 contractor invoice is 2.20 times this wage | A wage is not a contractor invoice; customer contract, burden, supervision, insurance, overhead, margin, and change rights remain required |
 | Privacy risk | [NIST Privacy Framework](https://www.nist.gov/privacy-framework) | Risk-based privacy structure | Does not determine local surveillance law |
 | Cybersecurity risk | [NIST Cybersecurity Framework 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20) | Governance, identification, protection, detection, response, and recovery outcomes | Does not prescribe the technical design |
 

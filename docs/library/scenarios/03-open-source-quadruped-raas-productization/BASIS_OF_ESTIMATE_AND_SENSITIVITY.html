@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basis of Estimate and Sensitivity - OpenQuad RaaS | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/open-source-quadruped-raas-productization.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 03 — Open-source RaaS productization</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/03-open-source-quadruped-raas-productization/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="basis-of-estimate-and-sensitivity---openquad-raas">Basis of Estimate and Sensitivity - OpenQuad RaaS</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
+</blockquote>
+<h2 id="material-inputs">Material inputs</h2>
+<p class="table-title"><strong>Table 1. Decision inputs and replacement evidence - Evidence and confidence shown per row</strong></p><table>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th style="text-align: right;">Base</th>
+<th>Evidence / confidence</th>
+<th>Required replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open hardware/software and Solo12 reference</td>
+<td style="text-align: right;">Available under published repository licenses</td>
+<td>[PB-H]</td>
+<td>Release-specific legal review and retained notices</td>
+</tr>
+<tr class="even">
+<td>Productization program</td>
+<td style="text-align: right;">$2,400,000</td>
+<td>[SA-L]</td>
+<td>Approved resource-loaded estimate and actuals</td>
+</tr>
+<tr class="odd">
+<td>Build/calibration/delivery</td>
+<td style="text-align: right;">$28,000 per robot</td>
+<td>[SA-L]</td>
+<td>Supplier quotes, routings, yield, freight, tax, and warranty reserve</td>
+</tr>
+<tr class="even">
+<td>Direct service/cloud reserve</td>
+<td style="text-align: right;">$7,200 per robot-year</td>
+<td>[SA-L]</td>
+<td>Observed cases, cloud bills, spares consumption, and repair history</td>
+</tr>
+<tr class="odd">
+<td>Subscription</td>
+<td style="text-align: right;">$2,950 per robot-month</td>
+<td>[SA-L]</td>
+<td>Executed order and collection terms</td>
+</tr>
+<tr class="even">
+<td>Customer capacity</td>
+<td style="text-align: right;">1,200 hours per site-year</td>
+<td>[SA-L]</td>
+<td>Time study and approved work-redesign plan</td>
+</tr>
+<tr class="odd">
+<td>Loaded capacity value</td>
+<td style="text-align: right;">$78 per hour</td>
+<td>[SA-L]</td>
+<td>Customer payroll/contract ledger and Finance approval</td>
+</tr>
+</tbody>
+</table>
+<h2 id="provider-sensitivity">Provider sensitivity</h2>
+<p class="table-title"><strong>Table 2. Provider 36-month sensitivity - Evidence: [DC-L] derived from [SA-L] inputs; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th style="text-align: right;">Monthly price</th>
+<th style="text-align: right;">Direct 3-year cost</th>
+<th style="text-align: right;">Contribution including allocated onboarding</th>
+<th style="text-align: right;">Units to recover $2.4M</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Base</td>
+<td style="text-align: right;">$2,950</td>
+<td style="text-align: right;">$49,600</td>
+<td style="text-align: right;">$58,600</td>
+<td style="text-align: right;">41</td>
+<td>Conditional pass</td>
+</tr>
+<tr class="even">
+<td>Price -10%</td>
+<td style="text-align: right;">$2,655</td>
+<td style="text-align: right;">$49,600</td>
+<td style="text-align: right;">$47,980</td>
+<td style="text-align: right;">51</td>
+<td>Fails 48-unit cohort</td>
+</tr>
+<tr class="odd">
+<td>Service cost +50%</td>
+<td style="text-align: right;">$2,950</td>
+<td style="text-align: right;">$60,400</td>
+<td style="text-align: right;">$47,800</td>
+<td style="text-align: right;">51</td>
+<td>Fails 48-unit cohort</td>
+</tr>
+<tr class="even">
+<td>Build cost +25%</td>
+<td style="text-align: right;">$2,950</td>
+<td style="text-align: right;">$56,600</td>
+<td style="text-align: right;">$51,600</td>
+<td style="text-align: right;">47</td>
+<td>Narrow pass before omitted costs</td>
+</tr>
+<tr class="odd">
+<td>Price -10% and service +50%</td>
+<td style="text-align: right;">$2,655</td>
+<td style="text-align: right;">$60,400</td>
+<td style="text-align: right;">$37,180</td>
+<td style="text-align: right;">65</td>
+<td>Stop / redesign</td>
+</tr>
+</tbody>
+</table>
+<h2 id="customer-sensitivity">Customer sensitivity</h2>
+<p class="table-title"><strong>Table 3. Customer two-robot value sensitivity - Evidence: [DC-L] derived from [SA-L] inputs; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Released hours per year</th>
+<th style="text-align: right;">Loaded value/hour</th>
+<th style="text-align: right;">Three-year gross capacity value</th>
+<th style="text-align: right;">Net value vs. $236,400 TCO</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">$78</td>
+<td style="text-align: right;">$280,800</td>
+<td style="text-align: right;">$44,400</td>
+<td>18.8% ROI</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">$78</td>
+<td style="text-align: right;">$234,000</td>
+<td style="text-align: right;">($2,400)</td>
+<td>Fails</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">$78</td>
+<td style="text-align: right;">$210,600</td>
+<td style="text-align: right;">($25,800)</td>
+<td>Fails</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">$60</td>
+<td style="text-align: right;">$216,000</td>
+<td style="text-align: right;">($20,400)</td>
+<td>Fails</td>
+</tr>
+</tbody>
+</table>
+<p>The case is intentionally easy to fail. A correct calculation does not raise the confidence of its assumed inputs.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

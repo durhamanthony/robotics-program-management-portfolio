@@ -1,5 +1,8 @@
 # Restroom MuJoCo v4.2 — Camera Revision
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This revision responds to the v10, v11, and v12 visual audit screenshots.
 
 1. The sink/mirror camera was moved from the fixture side to a centered position directly behind and above the robot.

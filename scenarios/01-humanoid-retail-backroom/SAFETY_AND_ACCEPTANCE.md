@@ -1,10 +1,15 @@
 # Safety and Acceptance Plan — Retail Backroom Humanoids
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Operating limits
 
 Employee-only backroom; approved mapped route; low-speed shared-space mode; approved shoe boxes 0.3–8 kilograms and already-hung garments; trained employees present; human emergency-stop and work-stop authority. Customer-floor work, tangled hangers, loose garments, ladders, electrical work, spills, and hazardous goods are prohibited.
 
 ## Principal hazards and controls
+
+**Table 1. Principal hazards and controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Hazard | Preventive control | Detection/protective control | Recovery |
 |---|---|---|---|
@@ -17,6 +22,8 @@ Employee-only backroom; approved mapped route; low-speed shared-space mode; appr
 | privacy/security misuse | employee-only purpose, least privilege | access logs, masks, retention/deletion checks | revoke access; incident process |
 
 ## Mandatory acceptance tests
+
+**Table 2. Mandatory acceptance tests — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Test | Witnessed criterion | Result |
 |---|---|---|

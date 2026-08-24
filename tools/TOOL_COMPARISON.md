@@ -1,5 +1,8 @@
 # Robotics Support and Troubleshooting Tool Comparison
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 Pricing checked: August 16, 2026. Public prices change; verify with the vendor before procurement. “Custom” means the vendor does not publish a complete production price.
 
 Abbreviations used below are Return Material Authorization (RMA), Over-the-Air software delivery (OTA), Robot Operating System (ROS), Incident Response Management (IRM), Customer Service Management (CSM), Field Service Management (FSM), Customer Relationship Management (CRM), Continuous Integration (CI), Service-Level Objective (SLO), Configuration Management Database (CMDB), and Application Programming Interface (API). MCAP is the name of the robotics log-container format.
@@ -9,6 +12,8 @@ Abbreviations used below are Return Material Authorization (RMA), Over-the-Air s
 Do not force one product to serve four different jobs. A robotics support stack needs: customer case management, field work/parts/RMA, robot telemetry and replay, infrastructure monitoring, secure remote access/OTA, and engineering defect escalation.
 
 ## Shortlist
+
+**Table 1. Shortlist — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Layer | Tool | Primary use | Free/portfolio option | Public production price snapshot | Recommendation |
 |---|---|---|---|---|---|

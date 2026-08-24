@@ -1,5 +1,8 @@
 # Closeout and Maturity Roadmap — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Company:** Orion Field Robotics  
 **Program duration:** 180 days  
 **Installed base:** 250 robots at 60 customer sites  
@@ -7,6 +10,8 @@
 **Year-one authorization / final spend:** $4,668,000 / $4,412,000; $256,000 reserve returned
 
 ## Final operating results
+
+**Table 1. Final operating results — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Target | Day-180 result | Disposition |
 |---|---:|---:|---|
@@ -24,6 +29,8 @@ Salesforce cases, the service workflow, Jira engineering defects, field work, an
 The service owner accepted the operating model and its Key Performance Indicator (KPI), capacity, financial, continuity, and product-feedback controls. High-confidence predictive alert-to-case automation remains a phase-two improvement. It was deliberately excluded from the closure gate until alert precision and ownership are proven.
 
 ## Maturity roadmap
+
+**Table 2. Maturity roadmap — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Level | Characteristics | Next evidence |
 |---|---|---|

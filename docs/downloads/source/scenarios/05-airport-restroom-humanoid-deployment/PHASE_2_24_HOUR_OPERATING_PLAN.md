@@ -1,10 +1,15 @@
 # Phase 2 24-Hour Operating Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Service objective
 
 Provide scheduled restroom service across a continuously operating terminal without claiming that either robot works continuously. Two robots are staggered so charging, maintenance, and exception recovery do not remove all fleet capacity at once.
 
 ## Daily demand model
+
+**Table 1. Daily demand model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Service class | Rooms | Frequency | Standard time | Daily hours |
 |---|---:|---:|---:|---:|
@@ -15,6 +20,8 @@ Provide scheduled restroom service across a continuously operating terminal with
 Short visits cover approved fixture touch-up, dispensers, visible litter, waste-bin status, and inspection evidence. Deep cleans cover the full approved fixture and floor sequence. Prohibited contamination always transfers to trained human responders.
 
 ## Staggered coverage
+
+**Table 2. Staggered coverage — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Window | Robot A | Robot B | Operations control |
 |---|---|---|---|
@@ -36,6 +43,8 @@ The table is an operating pattern, not a minute-by-minute dispatch plan. The fle
 
 ## Performance dashboard
 
+**Table 3. Performance dashboard — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
 | Measure | Conditional threshold | Evidence |
 |---|---:|---|
 | Productive fleet utilization | At least 28 hours/day | Dispatch and mission logs |
@@ -49,4 +58,3 @@ The table is an operating pattern, not a minute-by-minute dispatch plan. The fle
 ## Approved adjacency backlog
 
 Restroom cleaning remains the anchor workload. If the 12-room schedule has unused capacity, the change-control board may test supply-cart loading and delivery, paper and soap replenishment, waste movement, spill-response support, facilities inspection, lost-item transfer, overnight concession supply movement, and nontechnical condition reporting. Each task requires its own route, payload, safety, privacy, acceptance, and economic review.
-

@@ -9,6 +9,9 @@
 <main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/quadruped-security-deployment.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 02 — Security</span> <span class="tag muted-tag">Initiate / Discover</span></div></div>
 <div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.md" download>Download MD</a></div></div>
 <article class="article"><h1 id="business-case-and-tco-total-cost-of-ownership--quadruped-night-security">Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
+</blockquote>
 <h2 id="decision">Decision</h2>
 <p>Deploy the three purchased quadrupeds through a 30-night controlled pilot. Approve the three-robot operating plan only if the customer can remove <strong>two contracted walking-rover posts per night while retaining an on-site human responder</strong>, and if the patrol, alert, privacy, safety, and support tests pass.</p>
 <p>The base case pays back in 3.22 years. If operations can remove only one rover post, payback increases to 11.7 years. That conservative result does not justify expansion.</p>
@@ -24,7 +27,7 @@
 <p>These statements support route screening, not final acceptance. Legged mobility can reduce continuous-path reconstruction compared with a wheeled robot and can avoid a fixed arm's engineered work cell, but the project still requires docks, power, wireless coverage, lighting review, signs, geofences, route repair, and a retrieval method.</p>
 <h2 id="cost-model">Cost model</h2>
 <p>The public Unitree B2-W listing of $100,000 is used only as a current industrial-quadruped price reference. It is not a vendor selection or a claim that the listed configuration is suitable for security. Sensor payloads, docks, software, integration, support, insurance, taxes, and compliance remain quote-required.</p>
-<table>
+<p class="table-title"><strong>Table 1. Cost model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Cost</th>
@@ -63,7 +66,8 @@
 <p>Line-item sources and replacement evidence are in <a href="BUDGET.html">BUDGET.csv</a>.</p>
 <h2 id="benefit-model">Benefit model</h2>
 <p>The customer scenario input is a $45/hour contracted rover invoice rate. It includes vendor wages, benefits, management, insurance, and margin; it is not represented as a BLS wage. The customer must replace it with actual invoices.</p>
-<table>
+<p>The May 2025 U.S. Bureau of Labor Statistics (BLS) national mean wage for security guards is $20.42 per hour. The fictional $45 invoice assumption is 2.20 times that wage benchmark. That multiplier is not presented as a market fact; it is an explicit placeholder for payroll burden, supervision, insurance, overhead, and contractor margin. The economic gate uses the customer's executed invoice and contract-change rights, not the BLS wage.</p>
+<p class="table-title"><strong>Table 2. Benefit model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Benefit</th>
@@ -101,48 +105,56 @@
 </table>
 <p>The existing fixed-post human responder remains. Robot alerts are verified by that authorized human; the model does not remove human incident authority. No theft prevention, liability avoidance, or incident avoidance is monetized.</p>
 <h2 id="base-and-conservative-results">Base and conservative results</h2>
-<table>
+<p class="table-title"><strong>Table 3. Base and conservative results — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
 <tr class="header">
 <th>Result</th>
-<th style="text-align: right;">Base: two rover posts removed</th>
-<th style="text-align: right;">Conservative: one rover post removed</th>
+<th style="text-align: right;">Base: two posts at $45/hour</th>
+<th style="text-align: right;">Two posts at $35/hour</th>
+<th style="text-align: right;">Conservative: one post at $45/hour</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Annual gross benefit</td>
 <td style="text-align: right;">$343,500</td>
+<td style="text-align: right;">$270,500</td>
 <td style="text-align: right;">$179,250</td>
 </tr>
 <tr class="even">
 <td>Annual net benefit after recurring cost</td>
 <td style="text-align: right;">$226,500</td>
+<td style="text-align: right;">$153,500</td>
 <td style="text-align: right;">$62,250</td>
 </tr>
 <tr class="odd">
 <td>Simple payback</td>
 <td style="text-align: right;">3.22 years</td>
+<td style="text-align: right;">4.76 years</td>
 <td style="text-align: right;">11.73 years</td>
 </tr>
 <tr class="even">
 <td>Five-year net benefit</td>
 <td style="text-align: right;">$402,250</td>
+<td style="text-align: right;">$37,250</td>
 <td style="text-align: right;">($419,000)</td>
 </tr>
 <tr class="odd">
 <td>Five-year ROI (Return on Investment)</td>
 <td style="text-align: right;">30.6%</td>
+<td style="text-align: right;">2.8%</td>
 <td style="text-align: right;">Negative</td>
 </tr>
 <tr class="even">
 <td>Five-year NPV (Net Present Value) at 8%</td>
 <td style="text-align: right;">$174,099</td>
 <td style="text-align: right;">Negative</td>
+<td style="text-align: right;">Negative</td>
 </tr>
 </tbody>
 </table>
 <p>The minimum gross annual benefit for five-year simple payback is $263,050: $730,250 ÷ 5 + $117,000.</p>
+<p>The corresponding break-even two-post rover invoice is **<span class="math inline">33.98<em>p</em><em>e</em><em>r</em><em>h</em><em>o</em><em>u</em><em>r</em> *  *  : (</span>263,050 required gross benefit - $15,000 vehicle) / (2 posts x 10 hours x 365 nights). At the $45 base rate, discounted payback at 8% is 3.88 years. At $35 per hour, the project barely clears simple five-year payback and fails the 8% NPV screen. This is deliberate: the program should stop if the labor contract cannot be reduced or reassigned as modeled.</p>
 <h2 id="thirty-night-acceptance-tied-to-the-scenario">Thirty-night acceptance tied to the scenario</h2>
 <ol type="1">
 <li>Robots A and B complete eight combined scheduled patrol circuits per night; Robot C provides charging rotation and reserve coverage.</li>
@@ -159,11 +171,11 @@
 <li><a href="https://shop.unitree.com/products/unitree-b2-w">Unitree B2-W product page and public price reference</a></li>
 <li><a href="https://bostondynamics.com/products/spot/">Boston Dynamics Spot specifications</a></li>
 <li><a href="https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work">Agility human-environment deployment rationale</a></li>
-<li><a href="https://www.bls.gov/oes/2023/may/oes339032.htm">BLS Security Guards, May 2023</a>, used only to test the reasonableness of a customer contract rate</li>
+<li><a href="https://www.bls.gov/news.release/ocwage.t01.htm">BLS national employment and wage data, May 2025</a>, used only to identify the $20.42 national mean wage benchmark for security guards</li>
 <li><a href="https://www.nist.gov/privacy-framework">NIST Privacy Framework</a></li>
 <li><a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST Cybersecurity Framework 2.0</a></li>
 </ul>
-<p>Research checked August 16, 2026. See <a href="RESEARCH_AND_ASSUMPTIONS.html">Research and Assumptions</a> for limits and replacement rules.</p>
+<p>Research checked August 23, 2026. See <a href="RESEARCH_AND_ASSUMPTIONS.html">Research and Assumptions</a> for limits and replacement rules.</p>
 </article></main>
 <footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
 These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>

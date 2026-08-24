@@ -1,5 +1,8 @@
 # Deployment Runbook — Retail Backroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Preconditions
 
 Approved configuration and route; signed readiness checklist; change freeze; trained onsite authority; rollback owner; inventory test tenant; segmented network; chargers; emergency equipment; representative item/exception set; Factory Acceptance Test (FAT) exit; defect list with no open critical item.

@@ -1,10 +1,15 @@
 # Business Continuity — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Critical service dependencies
 
 Customer intake, identity/access, case/work order, robot/fleet telemetry, communications, engineering escalation, on-call paging, parts logistics, field dispatch, cloud/network, knowledge and customer/site contacts.
 
 ## Continuity playbooks
+
+**Table 1. Continuity playbooks — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Disruption | Minimum service mode |
 |---|---|

@@ -1,5 +1,8 @@
 # Integrated Program Charter — Airport Restroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Authorization
 
 Pacific Gateway International Airport authorizes a $1,874,500 controlled pilot to determine whether two humanoid robots can perform routine cleaning and replenishment in four existing Terminal 4 restrooms while preserving human safety, service quality, workforce authority, and the current physical layout.
@@ -9,6 +12,8 @@ Pacific Gateway International Airport authorizes a $1,874,500 controlled pilot t
 Public restrooms require frequent, repetitive fixture and floor service during continuous airport operations. Open-floor machines address only part of the work. Permanent retrofit would disrupt passenger facilities that remain designed for people. The airport needs evidence—not a presumption—on whether a human-scale robot can cover a broader routine task set without construction and without transferring biohazard, passenger-protection, or quality decisions away from trained people.
 
 ## Objectives and acceptance thresholds
+
+**Table 1. Objectives and acceptance thresholds — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Objective | Measure | Threshold | Evidence owner |
 |---|---|---:|---|
@@ -48,4 +53,3 @@ Construction, public co-occupancy, biohazard remediation, sharps pickup, electri
 ## Closeout
 
 The pilot can close successfully even if scale is not authorized. Successful project closeout requires accepted deliverables, reconciled cost, controlled residual risks, named operating owners, retained evidence, and a documented decision on expansion.
-

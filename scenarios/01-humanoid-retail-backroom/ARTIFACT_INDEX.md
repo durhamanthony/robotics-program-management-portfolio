@@ -1,8 +1,13 @@
 # Artifact Index — Retail Backroom Humanoid Deployment
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Scenario:** Meridian Department Store, Store 214 (fictional)  
 **Program:** Two-humanoid, employee-only backroom fulfillment pilot  
 **Closeout:** Operationally accepted; chain rollout held at the financial gate
+
+**Table 1. Artifact Index — Retail Backroom Humanoid Deployment — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Phase | Completed evidence | Decision supported |
 |---|---|---|

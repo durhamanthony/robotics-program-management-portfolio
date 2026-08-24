@@ -1,10 +1,15 @@
 # Operations Handoff — Retail Backroom Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Accepted operating model
 
 Meridian Store Operations owns daily mission authority, route condition, inventory exceptions, employee right-of-way, and benefit measurement. The vendor Level 1 (L1) service desk owns initial robot triage; Level 2 (L2) engineering owns software/controls escalation; field service owns physical recovery and repair. Safety retains stop-work authority.
 
 ## Service targets
+
+**Table 1. Service targets — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Severity | Example | Acknowledge | Restore/workaround | Escalation |
 |---|---|---:|---:|---|

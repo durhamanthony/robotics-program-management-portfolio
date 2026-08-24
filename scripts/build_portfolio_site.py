@@ -17,14 +17,14 @@ DOCS = ROOT / "docs"
 LIBRARY = DOCS / "library"
 DOWNLOADS = DOCS / "downloads" / "source"
 DATA_FILE = ROOT / "portfolio" / "scenario_dashboard_data.json"
-SOURCE_DIRS = ("scenarios", "tools")
+SOURCE_DIRS = ("scenarios", "tools", "pm-operating-system", "quality-control")
 SOURCE_FILES = (
     "portfolio/EXECUTIVE_PORTFOLIO.md",
     "simulations/README.md",
     "simulations/retail_humanoids/README.md",
     "simulations/quadruped_security/README.md",
-    "simulations/new_robot_npi/README.md",
-    "simulations/support_lab/README.md",
+    "simulations/open_quadruped_raas/README.md",
+    "tools/support-operations-lab/README.md",
     "simulations/restroom_cleaning/README.md",
     "simulations/warehouse_capability/README.md",
 )
@@ -53,7 +53,7 @@ def evidence_legend() -> str:
 <span class="evidence-item evidence-assumption"><b>Scenario assumption</b> Fictional input selected to make the demonstration model complete.</span>
 <span class="evidence-item evidence-derived"><b>Derived calculation</b> Reproducible arithmetic calculated from identified inputs.</span>
 <span class="evidence-item evidence-unknown"><b>Unknown / pending validation</b> Requires a time study, customer data, competitive quote, or contract.</span>
-</div></div>"""
+</div><p><b>Confidence:</b> High = authoritative source or controlled fact; Medium = reasoned estimate/control design; Low = fictional or unvalidated scenario input. A calculation inherits its least-certain material input.</p></div>"""
 
 
 def write(path: Path, text: str) -> None:
@@ -97,7 +97,7 @@ def scenario_name(path: Path) -> str:
     return {
         "01-humanoid-retail-backroom": "Case 01 — Retail backroom",
         "02-quadruped-security-deployment": "Case 02 — Security",
-        "03-new-robot-first-sale": "Case 03 — New product",
+        "03-open-source-quadruped-raas-productization": "Case 03 — Open-source RaaS productization",
         "04-robotics-support-operations": "Case 04 — Support",
         "05-airport-restroom-humanoid-deployment": "Case 05 — Airport restroom",
     }.get(rel.parts[1], rel.parts[1])
@@ -130,6 +130,10 @@ def build_register(paths: list[Path]) -> None:
             "status": "Completed scenario evidence",
             "owner": "Program Manager",
             "public_safe": "Yes",
+            "table_title": "Public artifact register",
+            "evidence_class": "Derived calculation",
+            "confidence": "High",
+            "source_or_validation": "Generated from the repository source inventory",
         })
     register.parent.mkdir(parents=True, exist_ok=True)
     with register.open("w", newline="", encoding="utf-8") as handle:
@@ -146,10 +150,16 @@ def markdown_fragment(path: Path) -> str:
         capture_output=True,
         text=True,
     )
-    return re.sub(
+    fragment = re.sub(
         r'href="([^"?#]+)\.(?:md|csv)([?#][^"]*)?"',
         lambda match: f'href="{match.group(1)}.html{match.group(2) or ""}"',
         result.stdout,
+        flags=re.IGNORECASE,
+    )
+    return re.sub(
+        r"<p><strong>(Table\s+[^<]+)</strong></p>\s*(?=<table>)",
+        r'<p class="table-title"><strong>\1</strong></p>',
+        fragment,
         flags=re.IGNORECASE,
     )
 
@@ -159,12 +169,20 @@ def csv_fragment(path: Path) -> str:
         rows = list(csv.reader(handle))
     if not rows:
         return "<p>No rows.</p>"
-    head = "".join(f"<th>{esc(cell)}</th>" for cell in rows[0])
+    headers = rows[0]
+    title = title_for(path)
+    if "table_title" in headers:
+        title_index = headers.index("table_title")
+        if len(rows) > 1 and title_index < len(rows[1]) and rows[1][title_index].strip():
+            title = rows[1][title_index].strip()
+        headers = [cell for index, cell in enumerate(headers) if index != title_index]
+        rows = [rows[0]] + [[cell for index, cell in enumerate(row) if index != title_index] for row in rows[1:]]
+    head = "".join(f"<th>{esc(cell)}</th>" for cell in headers)
     body = "".join(
         "<tr>" + "".join(f"<td>{esc(cell)}</td>" for cell in row) + "</tr>"
         for row in rows[1:]
     )
-    return f'<div class="table-wrap"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+    return f'<p class="table-title"><strong>{esc(title)}</strong></p><div class="table-wrap"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
 def shell(title: str, body: str, depth: int = 0, description: str = "") -> str:
@@ -195,7 +213,7 @@ def page_for_source(path: Path) -> tuple[Path, str]:
     scenario_returns = {
         "01-humanoid-retail-backroom": "retail-humanoid-backroom",
         "02-quadruped-security-deployment": "quadruped-security-deployment",
-        "03-new-robot-first-sale": "ad01-new-robot-first-sale",
+        "03-open-source-quadruped-raas-productization": "open-source-quadruped-raas-productization",
         "04-robotics-support-operations": "robotics-support-operations",
         "05-airport-restroom-humanoid-deployment": "airport-restroom-humanoid-deployment",
     }
@@ -219,7 +237,7 @@ def artifact_url(source_path: str, dashboard_depth: int = 1) -> str:
 
 def metric_cards(scenario: dict) -> str:
     return "".join(
-        f'<article class="kpi-card {esc(item.get("state", ""))}"><span>{esc(item["label"])}</span><strong>{esc(item["value"])}</strong><small>{esc(item["note"])}</small></article>'
+        f'<article class="kpi-card {esc(item.get("state", ""))}"><span>{esc(item["label"])}</span><strong>{esc(item["value"])}</strong><small>{esc(item["note"])}</small><em class="evidence-meta">{esc(item.get("evidence_class", "Unknown"))} · {esc(item.get("confidence", "Open"))} confidence</em></article>'
         for item in scenario["metrics"]
     )
 
@@ -243,7 +261,7 @@ def financial_chart(scenario: dict) -> str:
     rows = []
     for item in scenario["financials"]:
         width = max((item["value"] / highest) * 100, 3)
-        rows.append(f"""<div class="finance-row"><div><span>{esc(item['label'])}</span><strong>{esc(item['display'])}</strong></div><div class="finance-track"><span style="width:{width:.2f}%"></span></div></div>""")
+        rows.append(f"""<div class="finance-row"><div><span>{esc(item['label'])}</span><strong>{esc(item['display'])}</strong><em class="evidence-meta">{esc(item.get('evidence_class', 'Unknown'))} · {esc(item.get('confidence', 'Open'))} confidence</em></div><div class="finance-track"><span style="width:{width:.2f}%"></span></div></div>""")
     return "".join(rows)
 
 
@@ -272,7 +290,9 @@ def demo_markup(scenario: dict) -> str:
         player = '<div class="video-placeholder"><span>Demo recording in production</span><strong>No terminal or software installation is required.</strong><p>The final MP4 will play directly in this panel.</p></div>'
     steps = "".join(f'<li><span>{i}</span>{esc(step)}</li>' for i, step in enumerate(scenario["demo"]["sequence"], 1))
     model_link = artifact_url(scenario["demo"]["model_source"])
-    return f'<div class="demo-grid"><div>{player}</div><div><h3>{esc(scenario["demo"]["title"])}</h3><p>{esc(scenario["demo"]["caption"])}</p><p><a href="{model_link}">Open MuJoCo model notes →</a></p><ol class="sequence">{steps}</ol></div></div>'
+    evidence_type = scenario["demo"].get("type", "MuJoCo operations visualization")
+    link_label = "Open workflow lab notes" if "workflow" in evidence_type.lower() else "Open MuJoCo model notes"
+    return f'<div class="demo-grid"><div>{player}</div><div><span class="tag">{esc(evidence_type)}</span><h3>{esc(scenario["demo"]["title"])}</h3><p>{esc(scenario["demo"]["caption"])}</p><p><a href="{model_link}">{esc(link_label)} →</a></p><ol class="sequence">{steps}</ol></div></div>'
 
 
 def build_dashboard(scenario: dict) -> None:
@@ -302,11 +322,11 @@ def build_dashboard(scenario: dict) -> None:
 <div class="kpi-grid">{metric_cards(scenario)}</div></section>
 <section id="schedule" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Integrated plan</span><h2>Schedule and stage gates</h2></div><span class="tag">{esc(scenario['duration'])}</span></div>{gantt(scenario)}</section>
 <section id="financials" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Decision economics</span><h2>Budget and Total Cost of Ownership</h2></div></div>{evidence_legend()}<div class="finance-chart">{financial_chart(scenario)}</div><div class="callout"><strong>Decision rule and confidence limits</strong><p>{esc(scenario['financial_note'])}</p></div></section>
-<section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
+<section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><p class="table-title"><strong>Table: Top scenario risks and closeout controls</strong></p><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 {perspective_panel}
 <section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
-<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable MuJoCo simulation</h2></div></div>{demo_markup(scenario)}</section>
+<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable operations evidence</h2></div></div>{demo_markup(scenario)}</section>
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
 </div></main>"""
     write(DOCS / "scenarios" / f"{scenario['slug']}.html", shell(scenario["title"], body, depth=1, description=scenario["summary"]))
@@ -323,8 +343,8 @@ def build_index(data: dict, count: int) -> None:
 <div class="button-row"><a class="button" href="#cases">Explore {scenario_count} scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
 <main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div>{evidence_legend()}<p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable MuJoCo evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
-<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch MuJoCo</strong><p>Play browser-based MuJoCo-rendered clips—no terminal commands or software installation.</p></article></div></section></main>"""
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div>{evidence_legend()}<p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable operations evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch or run evidence</strong><p>Play browser videos or inspect the data-only support workflow; no terminal is required for website review.</p></article></div></section></main>"""
     write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
 
 
@@ -337,7 +357,7 @@ def build_artifact_page(paths: list[Path]) -> None:
         search = esc(f"{title} {rel} {lifecycle_for(path.name)} {scenario_name(path)}".lower())
         items.append(f'<article class="artifact-item" data-search="{search}"><div><span class="tag">{esc(scenario_name(path))}</span><span class="tag muted-tag">{esc(lifecycle_for(path.name))}</span></div><h3><a href="{url}">{esc(title)}</a></h3><p>{esc(rel.as_posix())}</p></article>')
     body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Completed evidence library</div><h1>Project, program, product, and service artifacts</h1>
-<p class="section-intro">Search {len(paths)} completed scenario documents and supporting program controls. Internal career materials, publishing instructions, and blank templates are excluded.</p>
+<p class="section-intro">Search {len(paths)} completed scenario documents, reusable PM operating-system tools, quality-control packages, and supporting program controls. Internal career materials and publishing instructions are excluded.</p>
 <input id="artifact-search" class="search" type="search" placeholder="Search by scenario, artifact, phase, or file" aria-label="Search artifacts"></section>
 <section class="artifact-list" id="artifact-list">{''.join(items)}</section></main>"""
     write(DOCS / "artifacts.html", shell("Completed Artifact Library", body))
@@ -363,6 +383,7 @@ def build_videos(data: dict) -> None:
             "filename": scenario["demo"]["filename"],
             "href": f'scenarios/{scenario["slug"]}.html#demo',
             "model_source": scenario["demo"]["model_source"],
+            "type": scenario["demo"].get("type", "MuJoCo operations visualization"),
             "label": "Open case dashboard",
         }
         for scenario in data["scenarios"]
@@ -379,10 +400,27 @@ def build_videos(data: dict) -> None:
         model_url = (Path("library") / Path(entry["model_source"]).with_suffix(".html")).as_posix()
         links = f'<a href="{esc(entry["href"])}">{esc(entry["label"])} →</a>'
         if entry["href"] != model_url:
-            links += f' · <a href="{esc(model_url)}">MuJoCo model notes →</a>'
-        cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(entry["code"])}</span><h2>{esc(entry["title"])}</h2><p>{esc(entry["caption"])}</p><p>{links}</p></div></article>')
-    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>MuJoCo Simulation Gallery</h1><p class="section-intro">All {len(entries)} clips on this page are rendered from MuJoCo models in this repository. The motions are scripted operational visualizations—not learned locomotion, grasp-performance validation, certified controls, or vendor digital twins. Recruiters and hiring managers can play them directly in the browser without Python, a terminal, or MuJoCo.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
-    write(DOCS / "videos.html", shell("MuJoCo Simulation Gallery", body))
+            note_label = "Workflow lab notes" if "workflow" in entry.get("type", "").lower() else "MuJoCo model notes"
+            links += f' · <a href="{esc(model_url)}">{esc(note_label)} →</a>'
+        cards.append(f'<article class="demo-card">{media}<div><span class="panel-kicker">{esc(entry["code"])} · {esc(entry.get("type", "Operations visualization"))}</span><h2>{esc(entry["title"])}</h2><p>{esc(entry["caption"])}</p><p>{links}</p></div></article>')
+    body = f"""<main id="main" class="container"><section class="page-intro"><div class="eyebrow dark">Visual evidence</div><h1>Robotics Operations Evidence Gallery</h1><p class="section-intro">The gallery contains scripted physics-simulator operations visualizations plus a data-workflow support animation. Simulator clips are not learned locomotion, grasp-performance validation, certified controls, or vendor digital twins. The support workflow uses synthetic event data and never authorizes robot action. Recruiters can play every clip directly in the browser.</p></section><section class="demo-list">{''.join(cards)}</section></main>"""
+    write(DOCS / "videos.html", shell("Robotics Operations Evidence Gallery", body))
+
+
+def copy_binary_assets() -> None:
+    allowed = {".docx", ".xlsx", ".zip", ".json", ".txt"}
+    for directory in ("pm-operating-system", "quality-control"):
+        base = ROOT / directory
+        if not base.exists():
+            continue
+        for source in base.rglob("*"):
+            if not source.is_file() or source.suffix.lower() not in allowed:
+                continue
+            rel = source.relative_to(ROOT)
+            for target_root in (LIBRARY, DOWNLOADS):
+                target = target_root / rel
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source, target)
 
 
 def main() -> None:
@@ -397,6 +435,7 @@ def main() -> None:
     for path in paths:
         out, content = page_for_source(path)
         write(out, content)
+    copy_binary_assets()
     shutil.copy2(ROOT / "site" / "styles.css", DOCS / "styles.css")
     shutil.copy2(ROOT / "site" / "app.js", DOCS / "app.js")
     for image in (ROOT / "media" / "images").glob("*"):

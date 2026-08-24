@@ -1,0 +1,5 @@
+table_title,cost_id,cost_category,item,quantity,unit_cost,total_cost,timing,owner,actual_or_forecast,evidence_class,confidence,source_or_validation
+"Table 1. Budget and TCO model",CAP-001,Capital,"Robot and approved accessories",2,150000,300000,Year 0,Finance Lead,Forecast,RBE-M,Medium,"Obtain competitive supplier quote"
+"Table 1. Budget and TCO model",IMP-001,Implementation,"Integration, safety, training, and launch",1,95000,95000,Year 0,Program Lead,Forecast,SA-L,Low,"Replace with work-breakdown estimate and approved labor rates"
+"Table 1. Budget and TCO model",OPE-001,Operating,"Support, cloud, connectivity, spares, and field service",3,42000,126000,Years 1-3,Service Lead,Forecast,RBE-M,Medium,"Replace with contract and operating baseline"
+"Table 1. Budget and TCO model",CON-001,Contingency,"Risk reserve",1,47400,47400,Year 0,Program Lead,Forecast,DC-L,Low,"12% of capital plus implementation; recalculate from approved risk analysis"

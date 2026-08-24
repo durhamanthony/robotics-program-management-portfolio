@@ -1,5 +1,8 @@
 # Case Study 1 — Retail Backroom Humanoid Fulfillment
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Scenario
 
 Fictional Meridian Store 214 has a backroom designed for people: 0.9–1.2 meter aisles, standard doors, a short six-step split-level route, mixed shelf heights, garment rails, stock carts, and an employee handoff counter. Sales associates leave customers to locate shoe sizes and garments. The store will not rebuild the backroom for dedicated wheeled-robot lanes or fixed automation during this pilot.
@@ -14,6 +17,8 @@ Two humanoid robots are deployed for employee-only retrieval, return put-away, a
 4. Required every cost to be labeled as a public benchmark, fictional result, planning allowance, calculated value, or binding quote required.
 
 ## Pilot results
+
+**Table 1. Pilot results — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Gate | Fictional 30-day result | Outcome |
 |---|---:|---:|---|
