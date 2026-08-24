@@ -1,6 +1,6 @@
 # Number Assurance and Evidence Rules
 
-> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
 
 
 ## Purpose
@@ -27,7 +27,7 @@ The portfolio uses complete fictional scenarios to demonstrate decision-making. 
 |---|---|---|
 | Retail backroom | Five-year Total Cost of Ownership (TCO) = $640,000 + 5 × $218,000 = $1,730,000; annual gross value = $132,268 + $52,200 = $184,468; five-year value shortfall = $807,662 | Operational pilot accepted; financial scale gate closed |
 | Quadruped security | Five-year TCO = $730,250 + 5 × $117,000 = $1,315,250; annual net value = $343,500 − $117,000 = $226,500; payback = 3.22 years | Base case passes only when two contracted rover posts are removed and one responder remains |
-| Open quadruped RaaS | Contract revenue = $2,950 × 36 = $106,200 per robot; contribution = $106,200 − $49,600 + $2,000 allocated onboarding contribution = $58,600; development recovery = ceiling($2,400,000 ÷ $58,600) = 41 robots | Fictional scenario assumptions; licenses, supplier quotes, demand, utilization, and service-loss data remain validation gates |
+| Open quadruped RaaS | Contract revenue = $2,400 × 36 = $86,400 per robot; direct 36-month cost = $24,000 + $12,672 = $36,672; contribution = $86,400 − $36,672 + $770 allocated onboarding contribution = $50,498; development recovery = ceiling($2,397,233.62 ÷ $50,498) = 48 robots | Glassdoor, BLS, and Unitree are dated benchmarks; staffing, allowances, demand, utilization, and service-loss data remain low-confidence validation gates |
 | Support operations | Year-one authorization = $3,950,000 + $718,000 = $4,668,000; three-year TCO = $4,668,000 + 2 × $2,970,000 = $10,608,000 | Operating model accepted; vendor prices and workload calibration remain open inputs |
 | Airport restroom pilot | Five-year capital-path TCO = $1,874,500 + 4 × $315,000 = $3,134,500; annual task-capacity value = $68,985 | Technical pilot accepted; capital expansion fails the economic gate |
 | Airport Phase 2 RaaS | Annual capacity value = 28 hours/day × 365 × $31.50 = $321,930; five-year TCO = $150,000 + $720,000 + $400,000 = $1,270,000; five-year net benefit = $339,650; ROI = 26.7% | Conditional planning case only; subscription, integration, support, workload, and realization require validation |

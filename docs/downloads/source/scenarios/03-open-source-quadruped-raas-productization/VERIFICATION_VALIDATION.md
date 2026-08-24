@@ -1,12 +1,12 @@
 # Verification and Validation - OpenQuad RaaS
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Evidence strategy
 
 Verification proves the product was built to its controlled requirements. Validation proves the supported service solves the disclosed customer problem within the laboratory envelope.
 
-**Table 1. Release verification and pilot validation - Evidence: scenario plan/results [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Release verification and pilot validation - Evidence: scenario plan/results [SA-L]; Confidence: low**
 
 | Layer | Test | Threshold | Fictional closeout |
 |---|---|---|---|

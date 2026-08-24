@@ -1,12 +1,12 @@
 # First Customer Launch - OpenQuad RaaS
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Launch pattern
 
 The first customer receives two serialized robots in an access-controlled laboratory. The provider and customer complete network approval, data settings, operator training, emergency response, baseline experiment, update/rollback, support-case, and replacement drills before the 60-day acceptance clock begins.
 
-**Table 1. First-customer acceptance - Evidence: fictional pilot results [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. First-customer acceptance - Evidence: fictional pilot results [SA-L]; Confidence: low**
 
 | Acceptance item | Target | Result | Disposition |
 |---|---:|---:|---|

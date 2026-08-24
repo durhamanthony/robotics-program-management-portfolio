@@ -1,6 +1,6 @@
 # Case Study - Open-Source Quadruped to Supported RaaS
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
 ## Productization challenge
 
@@ -25,7 +25,7 @@ The product is a supported derivative, not a relabeled community project. The re
 
 The 12-month productization plan and six-site, 12-robot, 60-day pilot met the fictional release gates: 97.8% scheduled experiment completion, 95.6% fleet availability, 100% release-image reproducibility, complete component/license records, and seven of seven advance replacements within 48 hours. Leadership approved limited availability for the supervised-lab envelope.
 
-General Availability remains conditional. The provider must convert at least 41 robots on 36-month terms to recover the $2.4 million productization investment in the disclosed contribution model, qualify a second source for two electronics assemblies, and replace all cost and demand assumptions with executed contracts and audited provider costs.
+General Availability remains conditional. The provider must contract at least 48 robots on 36-month terms to recover the modeled $2,397,234 productization investment at the $2,400 monthly decision price, qualify a second source for two electronics assemblies, and replace every scenario allowance with executed contracts and audited provider costs. The calculation is traceable to dated public benchmarks, but it is still a planning model rather than a market forecast.
 
 ## Why this case belongs in the portfolio
 

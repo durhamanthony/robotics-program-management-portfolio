@@ -231,7 +231,8 @@ def page_for_source(path: Path) -> tuple[Path, str]:
 
 
 def artifact_url(source_path: str, dashboard_depth: int = 1) -> str:
-    rel = Path(source_path).with_suffix(".html")
+    source = Path(source_path)
+    rel = source if source.suffix.lower() in {".docx", ".xlsx", ".zip", ".json", ".txt"} else source.with_suffix(".html")
     return "../" * dashboard_depth + (Path("library") / rel).as_posix()
 
 
@@ -409,7 +410,7 @@ def build_videos(data: dict) -> None:
 
 def copy_binary_assets() -> None:
     allowed = {".docx", ".xlsx", ".zip", ".json", ".txt"}
-    for directory in ("pm-operating-system", "quality-control"):
+    for directory in ("scenarios", "pm-operating-system", "quality-control"):
         base = ROOT / directory
         if not base.exists():
             continue

@@ -677,10 +677,10 @@
       "health": "Amber",
       "role": "Productization Program Manager",
       "duration": "12 months plus 60-day pilot",
-      "budget": "$2.400M productization authorization",
-      "tco": "$236.4K customer three-year RaaS TCO for two robots",
+      "budget": "$2.397M modeled productization authorization",
+      "tco": "$184.8K customer three-year RaaS TCO for two robots",
       "summary": "Convert the Open Dynamic Robot Initiative Solo12 research reference into a supported supervised-laboratory Robotics-as-a-Service offer. The provider adds controlled sourcing, assembly and calibration, battery and emergency-stop integration, signed images, Software Bill of Materials and license notices, telemetry, a replacement pool, onboarding, service levels, and release governance without claiming upstream endorsement or industrial certification.",
-      "decision": "The six-site, 12-robot pilot passed the fictional reproducibility, safety-state, availability, experiment-completion, service, and open-source release gates. Limited availability is approved for the controlled laboratory envelope. General Availability remains held until at least 41 robots are contracted on the modeled terms, two electronics second sources are qualified, and audited unit/service costs and independent compliance review replace planning assumptions.",
+      "decision": "The six-site, 12-robot pilot passed the fictional reproducibility, safety-state, availability, experiment-completion, service, and open-source release gates. Limited availability is approved for the controlled laboratory envelope. General Availability remains held until at least 48 robots are contracted at or above the $2,384.57 monthly price floor, two electronics second sources are qualified, and customer time studies, audited unit/service costs, and independent compliance review replace planning assumptions.",
       "metrics": [
         {
           "label": "Scheduled experiment completion",
@@ -724,8 +724,8 @@
         },
         {
           "label": "Provider break-even gate",
-          "value": "41 robots",
-          "note": "$2.4M / $58.6K contribution; omitted costs remain",
+          "value": "48 robots",
+          "note": "$2.397M / $50.498K contribution; omitted costs remain",
           "state": "watch",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
@@ -786,48 +786,48 @@
       "financials": [
         {
           "label": "Productization investment",
-          "value": 2400000,
-          "display": "$2,400,000",
-          "evidence_class": "Scenario assumption",
+          "value": 2397234,
+          "display": "$2,397,234",
+          "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
         {
           "label": "Two-robot customer three-year TCO",
-          "value": 236400,
-          "display": "$236,400",
+          "value": 184800,
+          "display": "$184,800",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
         {
           "label": "Three-year subscription revenue per robot",
-          "value": 106200,
-          "display": "$106,200",
+          "value": 86400,
+          "display": "$86,400",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
         {
           "label": "Contribution per robot including onboarding allocation",
-          "value": 58600,
-          "display": "$58,600",
+          "value": 50498,
+          "display": "$50,498",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
         {
           "label": "Three-year customer capacity value",
-          "value": 280800,
-          "display": "$280,800",
+          "value": 222000,
+          "display": "$222,000",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         },
         {
           "label": "Customer net capacity value",
-          "value": 44400,
-          "display": "$44,400",
+          "value": 37200,
+          "display": "$37,200",
           "evidence_class": "Derived calculation",
           "confidence": "Low"
         }
       ],
-      "financial_note": "Public sources establish that the reference hardware/software is open and document the Solo12 architecture; they do not establish this product's cost, price, service load, demand, or performance. Provider break-even is $2.4M / $58.6K = 41 robots. Customer three-year TCO is $12K onboarding + $212.4K subscription + $12K lab-network allowance = $236.4K. Modeled capacity value is 1,200 hours/year x $78 x 3 = $280.8K. The 18.8% ROI fails at 1,000 hours/year, so executed contracts, time studies, and audited costs are mandatory.",
+      "financial_note": "Glassdoor's May 2026 U.S. Robotics Software Engineer benchmark is $154,709/year or $74/hour [PB-M]. BLS reports private-industry wages at 69.9% of compensation in March 2026 [PB-H], producing a $221,329 loaded planning cost before the fictional staffing mix [DC-M]. Unitree's official $15,900 Go2 EDU price is a current research-quadruped comparator [PB-M], not a Solo12 quote. The resulting $2.397M program, $24K unit cost, $12.672K 36-month service cost, $2,400 monthly price, 48-unit recovery gate, $184.8K two-robot TCO, and 20.1% customer ROI are [DC-L] because staffing, hours, allowances, utilization, and demand are [SA-L]. Executed contracts, customer time studies, audited costs, and realized cash savings remain mandatory.",
       "risks": [
         {
           "id": "R-001",
@@ -845,10 +845,10 @@
         },
         {
           "id": "R-003",
-          "risk": "Electronics obsolescence delays scale",
+          "risk": "Discontinued Solo12 sales and electronics obsolescence delay scale",
           "score": 16,
           "status": "Open General Availability gate",
-          "response": "Buffer and two dated second-source qualifications"
+          "response": "Treat Solo12 as a reference only; qualify a supported architecture and two dated second sources"
         },
         {
           "id": "R-004",
@@ -862,7 +862,7 @@
           "risk": "Price, cost, or conversion volume misses break-even",
           "score": 20,
           "status": "Open General Availability gate",
-          "response": "41-unit minimum and downside sensitivity; stop if ranges do not overlap"
+          "response": "48-unit minimum and downside sensitivity; stop if ranges do not overlap"
         }
       ],
       "team": [
@@ -910,6 +910,11 @@
         {
           "label": "Basis of estimate and sensitivity",
           "path": "scenarios/03-open-source-quadruped-raas-productization/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md",
+          "category": "Financial"
+        },
+        {
+          "label": "Formula-based financial model",
+          "path": "scenarios/03-open-source-quadruped-raas-productization/OPENQUAD_RAAS_FINANCIAL_MODEL.xlsx",
           "category": "Financial"
         },
         {
@@ -980,7 +985,7 @@
       },
       "closure": {
         "schedule": "Completed at the month-12 Limited Availability gate after a 60-day pilot",
-        "budget": "$2,400,000 scenario authorization reconciled; actual market costs remain pending",
+        "budget": "$2,397,234 modeled authorization reconciled to Glassdoor/BLS labor anchors and disclosed assumptions; actual market costs remain pending",
         "acceptance": [
           "Twelve pilot units rebuilt from the approved release and passed configuration audit",
           "Scheduled experiment completion reached 97.8% and fleet availability 95.6%",

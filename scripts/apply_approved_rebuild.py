@@ -13,6 +13,7 @@ CASE3 = ROOT / "scenarios" / "03-open-source-quadruped-raas-productization"
 
 EVIDENCE = (
     "> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; "
+    "[PB-M] public benchmark/medium applicability or source confidence; "
     "[RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; "
     "[DC-L] derived calculation whose confidence inherits low-confidence inputs; "
     "[UPV] unknown or pending validation."
@@ -63,7 +64,7 @@ The product is a supported derivative, not a relabeled community project. The re
 
 The 12-month productization plan and six-site, 12-robot, 60-day pilot met the fictional release gates: 97.8% scheduled experiment completion, 95.6% fleet availability, 100% release-image reproducibility, complete component/license records, and seven of seven advance replacements within 48 hours. Leadership approved limited availability for the supervised-lab envelope.
 
-General Availability remains conditional. The provider must convert at least 41 robots on 36-month terms to recover the $2.4 million productization investment in the disclosed contribution model, qualify a second source for two electronics assemblies, and replace all cost and demand assumptions with executed contracts and audited provider costs.
+General Availability remains conditional. The provider must contract at least 48 robots on 36-month terms to recover the modeled $2,397,234 productization investment at the $2,400 monthly decision price, qualify a second source for two electronics assemblies, and replace every scenario allowance with executed contracts and audited provider costs. The calculation is traceable to dated public benchmarks, but it is still a planning model rather than a market forecast.
 
 ## Why this case belongs in the portfolio
 
@@ -79,7 +80,7 @@ Provide a reproducible two-robot research-lab capability with predictable monthl
 
 ## Users and jobs
 
-**Table 1. Users and jobs to be done - Evidence: scenario discovery synthesis [SA-L]**
+**Table 1. Users and jobs to be done - Evidence: scenario discovery synthesis [SA-L]; Confidence: low**
 
 | User | Job | Product response |
 |---|---|---|
@@ -119,50 +120,50 @@ Provide a reproducible two-robot research-lab capability with predictable monthl
         """
 ## Decision
 
-Authorize limited availability for a 48-robot launch cohort only if signed 36-month subscriptions support a provider break-even screen of at least 41 robots and each customer accepts the supervised-laboratory scope. The model is a planning screen, not a quotation.
+Authorize limited availability for a 48-robot launch cohort only if signed 36-month subscriptions support the $2,400 per robot-month decision price and each customer accepts the supervised-laboratory scope. At the disclosed inputs, 48 robots recover the modeled $2,397,234 productization investment. The model is a planning screen, not a quotation or demand forecast.
 
 ## Evidence status
 
-Open-source availability, the Solo12 architecture, and published license statements are [PB-H]. Productization cost, unit cost, service cost, subscription price, customer hours, loaded labor value, conversion volume, and performance are [SA-L]. All totals, payback screens, and Return on Investment (ROI) values are [DC-L]. Executed orders, audited costs, cash savings, and warranty history remain [UPV].
+Open-source availability, the Solo12 architecture, PAL Robotics' discontinued-sales notice, and published license statements are [PB-H]. Glassdoor's May 2026 U.S. Robotics Software Engineer benchmark and the official Unitree Go2 EDU list price are [PB-M]. The March 2026 Bureau of Labor Statistics (BLS) private-industry compensation split is [PB-H]. Staffing mix, labor hours, allowances, service demand, subscription price, customer capacity, cohort size, and fictional pilot performance are [SA-L]. All totals, recovery screens, and Return on Investment (ROI) values inherit low confidence as [DC-L]. Executed orders, audited costs, realized cash savings, and warranty history remain [UPV].
 
 ## Provider unit economics
 
-**Table 1. Provider economics per robot over a 36-month term - Evidence: [SA-L] inputs and [DC-L] calculations**
+**Table 1. Provider economics per robot over a 36-month term - Evidence: [PB-M], [SA-L], and [DC-L]; Confidence: low overall**
 
 | Item | Calculation | Amount |
 |---|---:|---:|
-| Subscription revenue | $2,950 x 36 months | $106,200 |
-| Build, calibration, and delivery | Scenario allowance | ($28,000) |
-| Direct service, cloud, and replacement reserve | $7,200 x 3 years | ($21,600) |
-| Contribution before onboarding | $106,200 - $49,600 | **$56,600** |
-| Onboarding contribution per robot | ($12,000 price - $8,000 delivery cost) / 2 robots | **$2,000** |
-| Total contribution per robot | $56,600 + $2,000 | **$58,600** |
+| Subscription revenue [SA-L] | $2,400 x 36 months | $86,400 |
+| Build, calibration, and delivery [DC-L] | $15,900 Go2 EDU comparator [PB-M] + 50 hours x $74 [SA-L/PB-M] + $4,400 allowance [SA-L] | ($24,000) |
+| Direct service, cloud, and reserve [DC-L] | 36 hours/year x $74 x 3 + $600/year cloud x 3 + 12% of build cost | ($12,672) |
+| Contribution before onboarding [DC-L] | $86,400 - $36,672 | **$49,728** |
+| Onboarding contribution per robot [DC-L] | ($6,000 price - (40 hours x $74 + $1,500)) / 2 robots | **$770** |
+| Total contribution per robot [DC-L] | $49,728 + $770 | **$50,498** |
 
-Development recovery screen = $2,400,000 / $58,600 = 40.96, rounded up to **41 subscribing robots**. A 48-robot cohort produces $2,812,800 of modeled contribution and $412,800 above the productization authorization before sales expense, corporate overhead, financing, taxes, bad debt, and profit. Those omissions prevent this figure from being called net margin.
+The unrounded price floor is **$2,384.57 per robot-month**: (($2,397,233.62 / 48) + $24,000 + $12,672 - $770) / 36. The decision price rounds up to $2,400. Development recovery = $2,397,233.62 / $50,498 = 47.47, rounded up to **48 subscribing robots**. A 48-robot cohort produces $2,423,904 of modeled contribution, only $26,670 above the rounded authorization, before sales expense, corporate overhead, financing, taxes, bad debt, or profit. Those omissions prevent this figure from being called net margin.
 
 ## Customer screen for a two-robot lab
 
-**Table 2. Customer 36-month value screen - Evidence: [SA-L] inputs and [DC-L] calculations**
+**Table 2. Customer 36-month value screen - Evidence: [PB-M], [SA-L], and [DC-L]; Confidence: low overall**
 
 | Item | Calculation | Amount |
 |---|---:|---:|
-| Onboarding | One site | $12,000 |
-| Subscription | 2 robots x $2,950 x 36 months | $212,400 |
-| Subscription plus onboarding subtotal | $12,000 + $212,400 | **$224,400** |
-| Three-year RaaS TCO including lab network allowance | $224,400 + $12,000 | **$236,400** |
-| Engineering/support capacity value | 1,200 hours/year x $78 x 3 years | **$280,800** |
-| Net capacity value | $280,800 - $236,400 | **$44,400** |
-| Three-year ROI | $44,400 / $236,400 | **18.8%** |
+| Onboarding [SA-L] | One site | $6,000 |
+| Subscription [DC-L] | 2 robots x $2,400 x 36 months | $172,800 |
+| Subscription plus onboarding subtotal [DC-L] | $6,000 + $172,800 | **$178,800** |
+| Three-year RaaS TCO [DC-L] | $178,800 + $6,000 lab-network allowance [SA-L] | **$184,800** |
+| Engineering/support capacity value [DC-L] | 1,000 hours/year [SA-L] x $74 Glassdoor rate [PB-M] x 3 years | **$222,000** |
+| Net capacity value [DC-L] | $222,000 - $184,800 | **$37,200** |
+| Three-year ROI [DC-L] | $37,200 / $184,800 | **20.1%** |
 
-The separate $12,000 lab-network allowance is an explicit customer scenario input, not a hidden arithmetic plug. Released engineering time is capacity, not booked cash savings unless an invoice, overtime payment, contractor expense, or funded position is actually avoided.
+The separate $6,000 lab-network allowance is an explicit customer scenario input, not a hidden arithmetic plug. The $74 hourly value is the Glassdoor U.S. average salary rate for a Robotics Software Engineer as of May 2026; it is not a customer payroll actual or a fully loaded employer cost. Released engineering time is capacity, not booked cash savings unless an invoice, overtime payment, contractor expense, or funded position is actually avoided.
 
 ## Price and utilization gates
 
-At the 1,200-hour annual capacity assumption, the maximum subscription price that preserves a 15% three-year customer ROI is **$3,225 per robot per month**, rounded from $3,224.64. At only 900 released hours per year, three-year capacity value falls to $210,600 and the base offer produces a $25,800 value deficit. Limited availability therefore requires a customer-specific time study and a price at or below the approved ceiling.
+At 1,000 released hours per year and $74 per hour, the maximum subscription price that preserves a 15% three-year customer ROI is **$2,514 per robot-month**, rounded down from $2,514.49. The base $2,400 offer has a 20.1% modeled ROI. At 900 hours, ROI falls to 8.1% and misses the 15% gate; at 800 hours, net value is negative. The break-even utilization is 833 released hours per year after rounding up from 832.43. Limited availability therefore requires a customer-specific time study and a price at or below the approved ceiling.
 
 ## Decision outcome
 
-Limited availability is conditionally approved for the disclosed lab envelope. General Availability is not approved until 41 units are contracted, supplier and cost assumptions are replaced, the 48-unit service load is capacity-tested, and an independent license/security review closes all [UPV] items.
+Limited availability is conditionally approved for the disclosed lab envelope. General Availability is not approved until 48 units are contracted at or above the price floor, salary and capacity inputs are replaced with customer evidence, supplier and service allowances are replaced with audited costs, the 48-unit service load is capacity-tested, and an independent license/security review closes all [UPV] items.
 """))
 
     write(CASE3 / "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", document(
@@ -175,35 +176,40 @@ Limited availability is conditionally approved for the disclosed lab envelope. G
 | Input | Base | Evidence / confidence | Required replacement |
 |---|---:|---|---|
 | Open hardware/software and Solo12 reference | Available under published repository licenses | [PB-H] | Release-specific legal review and retained notices |
-| Productization program | $2,400,000 | [SA-L] | Approved resource-loaded estimate and actuals |
-| Build/calibration/delivery | $28,000 per robot | [SA-L] | Supplier quotes, routings, yield, freight, tax, and warranty reserve |
-| Direct service/cloud reserve | $7,200 per robot-year | [SA-L] | Observed cases, cloud bills, spares consumption, and repair history |
-| Subscription | $2,950 per robot-month | [SA-L] | Executed order and collection terms |
-| Customer capacity | 1,200 hours per site-year | [SA-L] | Time study and approved work-redesign plan |
-| Loaded capacity value | $78 per hour | [SA-L] | Customer payroll/contract ledger and Finance approval |
+| Glassdoor U.S. Robotics Software Engineer | $154,709/year or $74/hour; May 2026 | [PB-M] | Customer payroll/contract ledger and Finance approval |
+| BLS private-industry compensation split | Wages 69.9%; benefits 30.1%; March 2026 | [PB-H] | Company-specific benefit and payroll burden |
+| Loaded planning labor cost | $154,709 / 69.9% = $221,329 per FTE-year | [DC-M] | Approved employer labor model |
+| Productization program | $2,397,234 rounded | [DC-L] from 7.0 FTE-years and [SA-L] allowances | Approved resource-loaded estimate and actuals |
+| Unitree Go2 EDU list price comparator | $15,900 | [PB-M] | Product-specific binding BOM and supplier quote |
+| Build/calibration/delivery | $24,000 per robot | [DC-L] | Supplier quotes, routings, yield, freight, tax, and warranty reserve |
+| Direct 36-month service/cloud reserve | $12,672 per robot | [DC-L] | Observed cases, cloud bills, spares consumption, and repair history |
+| Subscription decision price | $2,400 per robot-month | [DC-L] from 48-unit recovery target | Executed order and collection terms |
+| Customer capacity | 1,000 hours per site-year | [SA-L] | Time study and approved work-redesign plan |
+| Customer capacity value | $74 per hour | [PB-M] Glassdoor salary rate, not loaded cost | Customer payroll/contract ledger and Finance approval |
 
 ## Provider sensitivity
 
-**Table 2. Provider 36-month sensitivity - Evidence: [DC-L] derived from [SA-L] inputs**
+**Table 2. Provider 36-month sensitivity - Evidence: [DC-L] derived from mixed inputs; Confidence: low overall**
 
-| Case | Monthly price | Direct 3-year cost | Contribution including allocated onboarding | Units to recover $2.4M | Decision |
+| Case | Monthly price | Direct 3-year cost | Contribution including allocated onboarding | Units to recover $2.397M | Decision |
 |---|---:|---:|---:|---:|---|
-| Base | $2,950 | $49,600 | $58,600 | 41 | Conditional pass |
-| Price -10% | $2,655 | $49,600 | $47,980 | 51 | Fails 48-unit cohort |
-| Service cost +50% | $2,950 | $60,400 | $47,800 | 51 | Fails 48-unit cohort |
-| Build cost +25% | $2,950 | $56,600 | $51,600 | 47 | Narrow pass before omitted costs |
-| Price -10% and service +50% | $2,655 | $60,400 | $37,180 | 65 | Stop / redesign |
+| Base | $2,400 | $36,672 | $50,498 | 48 | Conditional pass; $26,670 cohort buffer |
+| Price -10% | $2,160 | $36,672 | $41,858 | 58 | Fails 48-unit cohort |
+| Service cost +50% | $2,400 | $43,008 | $44,162 | 55 | Fails 48-unit cohort |
+| Build cost +25% | $2,400 | $42,672 | $44,498 | 54 | Fails 48-unit cohort |
+| Price -10% and service +50% | $2,160 | $43,008 | $35,522 | 68 | Stop / redesign |
 
 ## Customer sensitivity
 
-**Table 3. Customer two-robot value sensitivity - Evidence: [DC-L] derived from [SA-L] inputs**
+**Table 3. Customer two-robot value sensitivity - Evidence: [DC-L] from [PB-M]/[SA-L] inputs; Confidence: low overall**
 
-| Released hours per year | Loaded value/hour | Three-year gross capacity value | Net value vs. $236,400 TCO | Result |
+| Released hours per year | Salary value/hour | Three-year gross capacity value | Net value vs. $184,800 TCO | Result |
 |---:|---:|---:|---:|---|
-| 1,200 | $78 | $280,800 | $44,400 | 18.8% ROI |
-| 1,000 | $78 | $234,000 | ($2,400) | Fails |
-| 900 | $78 | $210,600 | ($25,800) | Fails |
-| 1,200 | $60 | $216,000 | ($20,400) | Fails |
+| 1,200 | $74 | $266,400 | $81,600 | 44.2% ROI |
+| 1,000 | $74 | $222,000 | $37,200 | 20.1% ROI; passes 15% gate |
+| 900 | $74 | $199,800 | $15,000 | 8.1% ROI; below gate |
+| 800 | $74 | $177,600 | ($7,200) | Fails |
+| 1,000 | $60 | $180,000 | ($4,800) | Fails |
 
 The case is intentionally easy to fail. A correct calculation does not raise the confidence of its assumed inputs.
 """))
@@ -213,7 +219,7 @@ The case is intentionally easy to fail. A correct calculation does not raise the
         """
 ## Public anchors
 
-**Table 1. Public source register - Evidence: public benchmarks [PB-H] unless noted**
+**Table 1. Public source register - Evidence: public benchmarks [PB-H]/[PB-M]; Confidence: high/medium by row**
 
 | Topic | Source | Portfolio use | Limitation |
 |---|---|---|---|
@@ -225,12 +231,16 @@ The case is intentionally easy to fail. A correct calculation does not raise the
 | Master Board | https://github.com/open-dynamic-robot-initiative/master-board | Confirms board function and BSD-2-Clause repository | Hardware availability and lifecycle are [UPV] |
 | Secure Software Development Framework | https://csrc.nist.gov/pubs/sp/800/218/final | Secure development and supplier communication structure | Guidance, not product certification |
 | 2026 SBOM minimum elements | https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom | Release SBOM content baseline | Legal/security review still required |
+| PAL Robotics Solo12 status | https://solo.pal-robotics.com/solo | Confirms commercial Solo12 sales are discontinued | Treats the reference as an obsolescence/supply-chain gate, not a purchasable product |
+| Unitree Go2 EDU | https://www.unitree-robot.com/shop/products/unitree-go2 | Current $15,900 official research/developer quadruped comparator | Different platform and configuration; not a Solo12 quote or endorsed substitute [PB-M] |
+| Glassdoor U.S. Robotics Software Engineer salary | https://www.glassdoor.com/Salaries/gyor-robotics-software-engineer-salary-SRCH_IL.0%2C4_KO5%2C31.htm | $154,709/year or $74/hour average, 435 salaries, as of May 2026 | Crowdsourced/model-based benchmark; not customer payroll or fully loaded labor [PB-M] |
+| BLS Employer Costs for Employee Compensation | https://www.bls.gov/charts/employer-costs-for-employee-compensation/costs-by-industry.htm | March 2026 private-industry split: wages 69.9%, benefits 30.1% | Aggregate load factor; not company-specific [PB-H] |
 
-Research checked 2026-08-23.
+Research checked 2026-08-24.
 
 ## Scenario assumptions
 
-Six pilot sites, 12 robots, 60 days, 48-hour eligible advance replacement, $2.4 million development, $28,000 direct unit cost, $7,200 annual direct service cost, $2,950 monthly subscription, $12,000 site onboarding, 1,200 customer hours released per year, and $78 loaded capacity value are all [SA-L]. None is a vendor quote, customer actual, or market forecast.
+Six pilot sites, 12 robots, 60 days, 48-hour eligible advance replacement, 7.0 FTE-years, 50 configuration/calibration hours per robot, a $4,400 unit allowance, 36 service hours per robot-year, $600 annual cloud cost, a 12% spares/warranty reserve, $1,500 onboarding travel/materials, a $6,000 customer network allowance, 1,000 released customer hours per year, a 48-robot recovery cohort, and the resulting $2,400 subscription decision price are [SA-L]. Glassdoor, BLS, and Unitree provide anchors; they do not validate these quantities or conversion volume.
 
 ## Open unknowns
 
@@ -246,7 +256,7 @@ Ship a reproducible commercial service while preserving every applicable copyrig
 
 ## Release controls
 
-**Table 1. Open-source release controls - Evidence: control design [SA-L], source statements [PB-H]**
+**Table 1. Open-source release controls - Evidence: control design [SA-L], source statements [PB-H]; Confidence: low/high by row**
 
 | Control | Owner | Gate evidence |
 |---|---|---|
@@ -272,7 +282,7 @@ The provider owns the serialized base unit, supported release, remote diagnosis,
 
 ## Service levels
 
-**Table 1. Planning service levels - Evidence: scenario assumptions [SA-L]**
+**Table 1. Planning service levels - Evidence: scenario assumptions [SA-L]; Confidence: low**
 
 | Service | Target | Measurement | Exclusion |
 |---|---|---|---|
@@ -297,7 +307,7 @@ Determine whether customers value reproducibility and support enough to choose a
 
 ## Interview and evidence plan
 
-**Table 1. Discovery questions and decision evidence - Evidence: scenario plan [SA-L]**
+**Table 1. Discovery questions and decision evidence - Evidence: scenario plan [SA-L]; Confidence: low**
 
 | Hypothesis | Question / observation | Evidence required | Decision |
 |---|---|---|---|
@@ -313,7 +323,7 @@ The team must conduct at least 20 interviews across investigators, lab engineers
     write(CASE3 / "NPI_STAGE_GATE_PLAN.md", document(
         "NPI Stage-Gate Plan - OpenQuad RaaS",
         """
-**Table 1. Productization stage gates - Evidence: scenario governance design [SA-L]**
+**Table 1. Productization stage gates - Evidence: scenario governance design [SA-L]; Confidence: low**
 
 | Gate | Month | Required evidence | Exit decision |
 |---|---:|---|---|
@@ -331,7 +341,7 @@ Gate owners can hold or stop the program. Schedule pressure cannot waive safety,
     write(CASE3 / "PRODUCT_ROADMAP.md", document(
         "Product Roadmap - OpenQuad Managed Lab",
         """
-**Table 1. Twelve-month roadmap - Evidence: scenario schedule [SA-L]**
+**Table 1. Twelve-month roadmap - Evidence: scenario schedule [SA-L]; Confidence: low**
 
 | Horizon | Product | Platform / security | Operations / commercial |
 |---|---|---|---|
@@ -352,7 +362,7 @@ The roadmap intentionally excludes public autonomy, industrial safety claims, an
 
 Verification proves the product was built to its controlled requirements. Validation proves the supported service solves the disclosed customer problem within the laboratory envelope.
 
-**Table 1. Release verification and pilot validation - Evidence: scenario plan/results [SA-L]**
+**Table 1. Release verification and pilot validation - Evidence: scenario plan/results [SA-L]; Confidence: low**
 
 | Layer | Test | Threshold | Fictional closeout |
 |---|---|---|---|
@@ -372,7 +382,7 @@ MuJoCo validates only that the portfolio's generic demonstration model compiles 
     write(CASE3 / "SUPPLIER_MANUFACTURING_READINESS.md", document(
         "Supplier and Manufacturing Readiness - OpenQuad RaaS",
         """
-**Table 1. Production-readiness controls - Evidence: scenario controls [SA-L]**
+**Table 1. Production-readiness controls - Evidence: scenario controls [SA-L]; Confidence: low**
 
 | Area | Release control | Gate |
 |---|---|---|
@@ -391,7 +401,7 @@ The provider does not claim that an open design eliminates manufacturing enginee
     write(CASE3 / "RELIABILITY_SERVICEABILITY_PLAN.md", document(
         "Reliability and Serviceability Plan - OpenQuad RaaS",
         """
-**Table 1. Reliability and serviceability measures - Evidence: scenario targets [SA-L]**
+**Table 1. Reliability and serviceability measures - Evidence: scenario targets [SA-L]; Confidence: low**
 
 | Measure | Target | Trigger / action |
 |---|---:|---|
@@ -413,7 +423,7 @@ The service team maintains serialized spare state, calibration currency, battery
 
 The limited-availability offer is a two-robot, 36-month supervised-lab subscription with onboarding, supported release images, SBOM/license packet, remote diagnosis, standard maintenance, advance-replacement eligibility, and quarterly service review.
 
-**Table 1. Launch evidence and claims controls - Evidence: scenario plan [SA-L]**
+**Table 1. Launch evidence and claims controls - Evidence: scenario plan [SA-L]; Confidence: low**
 
 | Workstream | Deliverable | Claim boundary |
 |---|---|---|
@@ -434,7 +444,7 @@ General Availability requires 41 contracted robots and provider capacity for the
 
 The first customer receives two serialized robots in an access-controlled laboratory. The provider and customer complete network approval, data settings, operator training, emergency response, baseline experiment, update/rollback, support-case, and replacement drills before the 60-day acceptance clock begins.
 
-**Table 1. First-customer acceptance - Evidence: fictional pilot results [SA-L]**
+**Table 1. First-customer acceptance - Evidence: fictional pilot results [SA-L]; Confidence: low**
 
 | Acceptance item | Target | Result | Disposition |
 |---|---:|---:|---|
@@ -454,13 +464,13 @@ One fan-duct thermal issue was corrected and regression-tested before acceptance
         """
 **Overall health: Amber.** Limited availability is accepted; General Availability remains gated by volume, second sources, and cost evidence.
 
-**Table 1. Executive status - Evidence: fictional closeout status [SA-L]**
+**Table 1. Executive status - Evidence: fictional closeout status [SA-L]; Confidence: low**
 
 | Dimension | Status | Evidence / next action |
 |---|---|---|
 | Scope | Green | Supervised-lab Release 1 accepted; industrial/public uses excluded |
 | Schedule | Green | Month-12 gate completed after 60-day pilot |
-| Budget | Green | $2.4M authorization fully allocated in the scenario |
+| Budget | Green | $2.397M model reconciled to Glassdoor/BLS labor anchors and disclosed allowances |
 | Quality | Green | Acceptance and release-image gates passed |
 | Supply | Amber | Two electronics second sources due before General Availability |
 | Commercial | Amber | 48-unit demand hypothesis; executed 41-unit minimum still [UPV] |
@@ -477,7 +487,7 @@ Limited availability is approved for the supervised indoor laboratory envelope. 
 
 ## Accepted evidence
 
-**Table 1. Closeout evidence - Evidence: fictional scenario results [SA-L]**
+**Table 1. Closeout evidence - Evidence: fictional scenario results [SA-L]; Confidence: low**
 
 | Area | Evidence | Status |
 |---|---|---|
@@ -502,7 +512,7 @@ Limited availability is approved for the supervised indoor laboratory envelope. 
         """
 This package connects open-source intake, product definition, engineering, manufacturing, service, customer acceptance, and RaaS economics.
 
-**Table 1. Case 03 artifact package - Evidence: repository inventory [DC-H]**
+**Table 1. Case 03 artifact package - Evidence: repository inventory [DC-H]; Confidence: high**
 
 | Lifecycle | Artifact | Decision supported |
 |---|---|---|
@@ -510,7 +520,7 @@ This package connects open-source intake, product definition, engineering, manuf
 | Define | PRODUCT_BRIEF_AND_PRD.md | Product and measurable requirements |
 | Govern | OPEN_SOURCE_COMPLIANCE_AND_SBOM.md / NPI_STAGE_GATE_PLAN.md | License, security, and release gates |
 | Plan | PRODUCT_ROADMAP.md / SCHEDULE.csv / RACI.csv / RAID.csv | Integrated delivery control |
-| Fund | BUSINESS_CASE.md / BASIS_OF_ESTIMATE_AND_SENSITIVITY.md / BUDGET_AND_HEADCOUNT.csv | Provider and customer decision economics |
+| Fund | BUSINESS_CASE.md / BASIS_OF_ESTIMATE_AND_SENSITIVITY.md / BUDGET_AND_HEADCOUNT.csv / OPENQUAD_RAAS_FINANCIAL_MODEL.xlsx | Provider and customer decision economics with formula-based workbook |
 | Build | SUPPLIER_MANUFACTURING_READINESS.md / RELIABILITY_SERVICEABILITY_PLAN.md | Repeatable unit and service readiness |
 | Validate | SYSTEM_REQUIREMENTS_TRACEABILITY.csv / VERIFICATION_VALIDATION.md | Traceable test and acceptance |
 | Launch | RAAS_SERVICE_DESIGN.md / COMMERCIAL_LAUNCH_PLAN.md / FIRST_CUSTOMER_LAUNCH.md | Contract, onboarding, service, and customer gate |
@@ -522,15 +532,16 @@ def build_case3_csvs() -> None:
     write_csv(CASE3 / "BUDGET_AND_HEADCOUNT.csv",
         ["table_title", "cost_category", "amount_usd", "primary_capacity", "evidence_class", "confidence", "source_or_validation"],
         [
-            {"table_title":"Case 03 productization budget","cost_category":"Product systems and open-source compliance","amount_usd":220000,"primary_capacity":"Product, systems, legal","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Approved resource-loaded estimate and actuals"},
-            {"table_title":"Case 03 productization budget","cost_category":"Hardware design reliability and safety","amount_usd":420000,"primary_capacity":"Hardware, safety, reliability","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Staffing plan and supplier quotes"},
-            {"table_title":"Case 03 productization budget","cost_category":"Software platform and DevSecOps","amount_usd":520000,"primary_capacity":"Embedded, platform, security","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Backlog, labor rates, cloud quote"},
-            {"table_title":"Case 03 productization budget","cost_category":"Manufacturing engineering and fixtures","amount_usd":350000,"primary_capacity":"ME, quality, test","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Routing, fixture quote, yield plan"},
-            {"table_title":"Case 03 productization budget","cost_category":"Fleet service and customer operations","amount_usd":250000,"primary_capacity":"Service, support, customer success","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Service demand and staffing model"},
-            {"table_title":"Case 03 productization budget","cost_category":"Twelve pilot units","amount_usd":336000,"primary_capacity":"$28,000 x 12","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Binding BOM, labor, freight, yield"},
-            {"table_title":"Case 03 productization budget","cost_category":"Independent testing legal insurance","amount_usd":120000,"primary_capacity":"External services","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Binding proposals"},
-            {"table_title":"Case 03 productization budget","cost_category":"Program and commercial launch","amount_usd":100000,"primary_capacity":"Program, sales enablement","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Resource-loaded plan"},
-            {"table_title":"Case 03 productization budget","cost_category":"Management reserve","amount_usd":84000,"primary_capacity":"Sponsor-controlled","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Risk-priced estimate"},
+            {"table_title":"Case 03 productization budget","cost_category":"Program product systems compliance labor","amount_usd":331993.56,"primary_capacity":"1.5 FTE-years x $221,329 loaded planning cost","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption"},
+            {"table_title":"Case 03 productization budget","cost_category":"Hardware reliability and safety labor","amount_usd":331993.56,"primary_capacity":"1.5 FTE-years x $221,329 loaded planning cost","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption"},
+            {"table_title":"Case 03 productization budget","cost_category":"Software security and release labor","amount_usd":442658.08,"primary_capacity":"2.0 FTE-years x $221,329 loaded planning cost","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption"},
+            {"table_title":"Case 03 productization budget","cost_category":"Manufacturing and quality labor","amount_usd":221329.04,"primary_capacity":"1.0 FTE-year x $221,329 loaded planning cost","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption"},
+            {"table_title":"Case 03 productization budget","cost_category":"Service and customer operations labor","amount_usd":221329.05,"primary_capacity":"1.0 FTE-year x $221,329 loaded planning cost","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Glassdoor May 2026 salary / BLS March 2026 wage share / staffing assumption"},
+            {"table_title":"Case 03 productization budget","cost_category":"Twelve pilot units","amount_usd":288000,"primary_capacity":"$24,000 modeled direct cost x 12","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Unitree comparator plus assumed labor and unit allowance; replace with binding BOM"},
+            {"table_title":"Case 03 productization budget","cost_category":"Fixtures and laboratory equipment","amount_usd":120000,"primary_capacity":"Scenario allowance","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Binding equipment and fixture quotes"},
+            {"table_title":"Case 03 productization budget","cost_category":"External safety legal and insurance","amount_usd":150000,"primary_capacity":"Scenario allowance","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Binding proposals and insurance terms"},
+            {"table_title":"Case 03 productization budget","cost_category":"Cloud data and pilot operations","amount_usd":72000,"primary_capacity":"Scenario allowance","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Cloud bills and operating plan"},
+            {"table_title":"Case 03 productization budget","cost_category":"Management reserve","amount_usd":217930.33,"primary_capacity":"10% of $2,179,303.29 subtotal","evidence_class":"Derived calculation","confidence":"Low","source_or_validation":"Risk-priced estimate and sponsor approval"},
         ])
 
     write_csv(CASE3 / "SCHEDULE.csv",
@@ -543,7 +554,7 @@ def build_case3_csvs() -> None:
             {"table_title":"Case 03 integrated schedule","id":"S-05","phase":"Pilot site onboarding","start_month":7,"end_month":9,"exit_gate":"G4","owner":"Customer Success","status":"Complete","evidence_class":"Scenario assumption","confidence":"Medium","source_or_validation":"Site checklist and contracts"},
             {"table_title":"Case 03 integrated schedule","id":"S-06","phase":"Six-site 60-day pilot","start_month":9,"end_month":11,"exit_gate":"Pilot acceptance","owner":"Program Manager","status":"Complete","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Fictional pilot evidence"},
             {"table_title":"Case 03 integrated schedule","id":"S-07","phase":"Corrections and release candidate","start_month":11,"end_month":12,"exit_gate":"G5","owner":"Engineering / Quality","status":"Complete","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Fictional closeout record"},
-            {"table_title":"Case 03 integrated schedule","id":"S-08","phase":"General Availability scale gate","start_month":13,"end_month":15,"exit_gate":"G6","owner":"Executive Sponsor","status":"Held","evidence_class":"Unknown / pending validation","confidence":"Open","source_or_validation":"41 executed unit commitments and actual cost evidence"},
+            {"table_title":"Case 03 integrated schedule","id":"S-08","phase":"General Availability scale gate","start_month":13,"end_month":15,"exit_gate":"G6","owner":"Executive Sponsor","status":"Held","evidence_class":"Unknown / pending validation","confidence":"Open","source_or_validation":"48 executed unit commitments at or above price floor and actual cost evidence"},
         ])
 
     write_csv(CASE3 / "RACI.csv",
@@ -561,9 +572,9 @@ def build_case3_csvs() -> None:
         [
             {"table_title":"Case 03 RAID register","id":"R-001","type":"Risk","statement":"A transitive dependency has incompatible or unrecorded terms","probability_1_5":3,"impact_1_5":5,"score":15,"owner":"Legal / Product Security","response":"Dependency-level inventory, exception gate, notice bundle","trigger":"Unknown license or missing provenance","closeout_status":"Transferred to release control","evidence_class":"Scenario assumption","confidence":"Medium","source_or_validation":"Independent review"},
             {"table_title":"Case 03 RAID register","id":"R-002","type":"Risk","statement":"Customer forks destroy reproducibility and service capacity","probability_1_5":4,"impact_1_5":5,"score":20,"owner":"Product / Service","response":"Supported baseline and explicit fork exclusion","trigger":"Unapproved image or configuration","closeout_status":"Closed by service boundary","evidence_class":"Scenario assumption","confidence":"Medium","source_or_validation":"Pilot case evidence"},
-            {"table_title":"Case 03 RAID register","id":"R-003","type":"Risk","statement":"Electronics obsolescence delays the 48-unit cohort","probability_1_5":4,"impact_1_5":4,"score":16,"owner":"Supply Chain","response":"Buffer and two second-source qualifications","trigger":"Lead time above 16 weeks","closeout_status":"Open General Availability gate","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Supplier commitments"},
+            {"table_title":"Case 03 RAID register","id":"R-003","type":"Risk","statement":"Discontinued Solo12 sales and electronics obsolescence delay the 48-unit cohort","probability_1_5":4,"impact_1_5":4,"score":16,"owner":"Supply Chain","response":"Treat Solo12 as a reference only; qualify supported architecture and two second sources","trigger":"No supportable BOM or lead time above 16 weeks","closeout_status":"Open General Availability gate","evidence_class":"Public benchmark plus scenario response","confidence":"Low","source_or_validation":"PAL Robotics discontinued-sales notice and supplier commitments"},
             {"table_title":"Case 03 RAID register","id":"R-004","type":"Risk","statement":"Research users infer industrial safety or public autonomy","probability_1_5":3,"impact_1_5":5,"score":15,"owner":"Product / Legal","response":"Operating envelope, training, claims review, technical controls","trigger":"Out-of-scope sales request","closeout_status":"Transferred to operations","evidence_class":"Scenario assumption","confidence":"Medium","source_or_validation":"Contract and usage review"},
-            {"table_title":"Case 03 RAID register","id":"R-005","type":"Risk","statement":"Price or service cost misses provider break-even","probability_1_5":4,"impact_1_5":5,"score":20,"owner":"Finance","response":"41-unit gate and downside sensitivity","trigger":"Price below $2,950 or service cost above plan","closeout_status":"Open General Availability gate","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Executed orders and audited costs"},
+            {"table_title":"Case 03 RAID register","id":"R-005","type":"Risk","statement":"Price or service cost misses provider break-even","probability_1_5":4,"impact_1_5":5,"score":20,"owner":"Finance","response":"48-unit gate and downside sensitivity","trigger":"Price below $2,384.57 floor or direct 36-month cost above $36,672","closeout_status":"Open General Availability gate","evidence_class":"Scenario assumption","confidence":"Low","source_or_validation":"Executed orders and audited costs"},
         ])
 
     write_csv(CASE3 / "SYSTEM_REQUIREMENTS_TRACEABILITY.csv",
@@ -593,17 +604,17 @@ def build_case3_dashboard() -> None:
         "health": "Amber",
         "role": "Productization Program Manager",
         "duration": "12 months plus 60-day pilot",
-        "budget": "$2.400M productization authorization",
-        "tco": "$236.4K customer three-year RaaS TCO for two robots",
+        "budget": "$2.397M modeled productization authorization",
+        "tco": "$184.8K customer three-year RaaS TCO for two robots",
         "summary": "Convert the Open Dynamic Robot Initiative Solo12 research reference into a supported supervised-laboratory Robotics-as-a-Service offer. The provider adds controlled sourcing, assembly and calibration, battery and emergency-stop integration, signed images, Software Bill of Materials and license notices, telemetry, a replacement pool, onboarding, service levels, and release governance without claiming upstream endorsement or industrial certification.",
-        "decision": "The six-site, 12-robot pilot passed the fictional reproducibility, safety-state, availability, experiment-completion, service, and open-source release gates. Limited availability is approved for the controlled laboratory envelope. General Availability remains held until at least 41 robots are contracted on the modeled terms, two electronics second sources are qualified, and audited unit/service costs and independent compliance review replace planning assumptions.",
+        "decision": "The six-site, 12-robot pilot passed the fictional reproducibility, safety-state, availability, experiment-completion, service, and open-source release gates. Limited availability is approved for the controlled laboratory envelope. General Availability remains held until at least 48 robots are contracted at or above the $2,384.57 monthly price floor, two electronics second sources are qualified, and customer time studies, audited unit/service costs, and independent compliance review replace planning assumptions.",
         "metrics": [
             {"label":"Scheduled experiment completion","value":"97.8%","note":"Fictional 60-day pilot; target at least 97%","state":"pass","evidence_class":"Scenario assumption","confidence":"Low"},
             {"label":"Fleet availability","value":"95.6%","note":"Fictional pilot; target at least 95%","state":"pass","evidence_class":"Scenario assumption","confidence":"Low"},
             {"label":"Release-image reproducibility","value":"12 of 12","note":"Fictional clean-build and install tests","state":"pass","evidence_class":"Scenario assumption","confidence":"Low"},
             {"label":"License / SBOM completeness","value":"100%","note":"Internal release audit; independent review still pending","state":"pass","evidence_class":"Scenario assumption","confidence":"Low"},
             {"label":"Eligible advance replacements","value":"7 of 7","note":"Fictional dispatches shipped within 48 hours","state":"pass","evidence_class":"Scenario assumption","confidence":"Low"},
-            {"label":"Provider break-even gate","value":"41 robots","note":"$2.4M / $58.6K contribution; omitted costs remain","state":"watch","evidence_class":"Derived calculation","confidence":"Low"}
+            {"label":"Provider break-even gate","value":"48 robots","note":"$2.397M / $50.498K contribution; omitted costs remain","state":"watch","evidence_class":"Derived calculation","confidence":"Low"}
         ],
         "phases": [
             {"name":"Discovery and operating envelope","start":1,"end":2,"status":"Complete"},
@@ -617,20 +628,20 @@ def build_case3_dashboard() -> None:
         ],
         "timeline_unit":"Month","timeline_max":12,
         "financials": [
-            {"label":"Productization investment","value":2400000,"display":"$2,400,000","evidence_class":"Scenario assumption","confidence":"Low"},
-            {"label":"Two-robot customer three-year TCO","value":236400,"display":"$236,400","evidence_class":"Derived calculation","confidence":"Low"},
-            {"label":"Three-year subscription revenue per robot","value":106200,"display":"$106,200","evidence_class":"Derived calculation","confidence":"Low"},
-            {"label":"Contribution per robot including onboarding allocation","value":58600,"display":"$58,600","evidence_class":"Derived calculation","confidence":"Low"},
-            {"label":"Three-year customer capacity value","value":280800,"display":"$280,800","evidence_class":"Derived calculation","confidence":"Low"},
-            {"label":"Customer net capacity value","value":44400,"display":"$44,400","evidence_class":"Derived calculation","confidence":"Low"}
+            {"label":"Productization investment","value":2397234,"display":"$2,397,234","evidence_class":"Derived calculation","confidence":"Low"},
+            {"label":"Two-robot customer three-year TCO","value":184800,"display":"$184,800","evidence_class":"Derived calculation","confidence":"Low"},
+            {"label":"Three-year subscription revenue per robot","value":86400,"display":"$86,400","evidence_class":"Derived calculation","confidence":"Low"},
+            {"label":"Contribution per robot including onboarding allocation","value":50498,"display":"$50,498","evidence_class":"Derived calculation","confidence":"Low"},
+            {"label":"Three-year customer capacity value","value":222000,"display":"$222,000","evidence_class":"Derived calculation","confidence":"Low"},
+            {"label":"Customer net capacity value","value":37200,"display":"$37,200","evidence_class":"Derived calculation","confidence":"Low"}
         ],
-        "financial_note":"Public sources establish that the reference hardware/software is open and document the Solo12 architecture; they do not establish this product's cost, price, service load, demand, or performance. Provider break-even is $2.4M / $58.6K = 41 robots. Customer three-year TCO is $12K onboarding + $212.4K subscription + $12K lab-network allowance = $236.4K. Modeled capacity value is 1,200 hours/year x $78 x 3 = $280.8K. The 18.8% ROI fails at 1,000 hours/year, so executed contracts, time studies, and audited costs are mandatory.",
+        "financial_note":"Glassdoor's May 2026 U.S. Robotics Software Engineer benchmark is $154,709/year or $74/hour [PB-M]. BLS reports private-industry wages at 69.9% of compensation in March 2026 [PB-H], producing a $221,329 loaded planning cost before the fictional staffing mix [DC-M]. Unitree's official $15,900 Go2 EDU price is a current research-quadruped comparator [PB-M], not a Solo12 quote. The resulting $2.397M program, $24K unit cost, $12.672K 36-month service cost, $2,400 monthly price, 48-unit recovery gate, $184.8K two-robot TCO, and 20.1% customer ROI are [DC-L] because staffing, hours, allowances, utilization, and demand are [SA-L]. Executed contracts, customer time studies, audited costs, and realized cash savings remain mandatory.",
         "risks": [
             {"id":"R-001","risk":"A dependency has incompatible or unrecorded terms","score":15,"status":"Controlled; independent review open","response":"Dependency-level SBOM, notices, exception gate, and release hold"},
             {"id":"R-002","risk":"Customer forks destroy reproducibility and service capacity","score":20,"status":"Closed by service boundary","response":"Supported baseline, entitlement checks, and explicit fork exclusion"},
-            {"id":"R-003","risk":"Electronics obsolescence delays scale","score":16,"status":"Open General Availability gate","response":"Buffer and two dated second-source qualifications"},
+            {"id":"R-003","risk":"Discontinued Solo12 sales and electronics obsolescence delay scale","score":16,"status":"Open General Availability gate","response":"Treat Solo12 as a reference only; qualify a supported architecture and two dated second sources"},
             {"id":"R-004","risk":"Users infer industrial safety or public autonomy","score":15,"status":"Transferred to operations","response":"Controlled lab envelope, training, claims review, and contract controls"},
-            {"id":"R-005","risk":"Price, cost, or conversion volume misses break-even","score":20,"status":"Open General Availability gate","response":"41-unit minimum and downside sensitivity; stop if ranges do not overlap"}
+            {"id":"R-005","risk":"Price, cost, or conversion volume misses break-even","score":20,"status":"Open General Availability gate","response":"48-unit minimum and downside sensitivity; stop if ranges do not overlap"}
         ],
         "team": [
             {"role":"Executive sponsor","accountability":"Funding tranches, Limited Availability, and General Availability decision"},
@@ -645,6 +656,7 @@ def build_case3_dashboard() -> None:
             {"label":"Product brief and requirements","path":"scenarios/03-open-source-quadruped-raas-productization/PRODUCT_BRIEF_AND_PRD.md","category":"Product"},
             {"label":"Business case","path":"scenarios/03-open-source-quadruped-raas-productization/BUSINESS_CASE.md","category":"Financial"},
             {"label":"Basis of estimate and sensitivity","path":"scenarios/03-open-source-quadruped-raas-productization/BASIS_OF_ESTIMATE_AND_SENSITIVITY.md","category":"Financial"},
+            {"label":"Formula-based financial model","path":"scenarios/03-open-source-quadruped-raas-productization/OPENQUAD_RAAS_FINANCIAL_MODEL.xlsx","category":"Financial"},
             {"label":"Open-source compliance and SBOM","path":"scenarios/03-open-source-quadruped-raas-productization/OPEN_SOURCE_COMPLIANCE_AND_SBOM.md","category":"Governance"},
             {"label":"NPI stage-gate plan","path":"scenarios/03-open-source-quadruped-raas-productization/NPI_STAGE_GATE_PLAN.md","category":"Governance"},
             {"label":"Integrated schedule","path":"scenarios/03-open-source-quadruped-raas-productization/SCHEDULE.csv","category":"Control"},
@@ -666,7 +678,7 @@ def build_case3_dashboard() -> None:
         },
         "closure": {
             "schedule":"Completed at the month-12 Limited Availability gate after a 60-day pilot",
-            "budget":"$2,400,000 scenario authorization reconciled; actual market costs remain pending",
+            "budget":"$2,397,234 modeled authorization reconciled to Glassdoor/BLS labor anchors and disclosed assumptions; actual market costs remain pending",
             "acceptance":["Twelve pilot units rebuilt from the approved release and passed configuration audit","Scheduled experiment completion reached 97.8% and fleet availability 95.6%","All emergency-stop, network-loss, update, rollback, and authorized-recovery tests passed","Seven of seven eligible advance replacements shipped within 48 hours","Internal SBOM and license-notice audit was complete; independent review remains a scale condition"],
             "lessons":["Open access is a starting point, not a finished product","Supported configuration boundaries protect reproducibility and service capacity","Contribution is not margin and capacity value is not automatic cash savings","Limited Availability can pass while General Availability remains correctly held"]
         }

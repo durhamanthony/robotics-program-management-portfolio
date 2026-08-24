@@ -1,8 +1,8 @@
 # Product Roadmap - OpenQuad Managed Lab
 
-> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
+> **Evidence-confidence key:** [PB-H] public benchmark/high source confidence; [PB-M] public benchmark/medium applicability or source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.
 
-**Table 1. Twelve-month roadmap - Evidence: scenario schedule [SA-L]; Confidence: see evidence key and row/source notes**
+**Table 1. Twelve-month roadmap - Evidence: scenario schedule [SA-L]; Confidence: low**
 
 | Horizon | Product | Platform / security | Operations / commercial |
 |---|---|---|---|
