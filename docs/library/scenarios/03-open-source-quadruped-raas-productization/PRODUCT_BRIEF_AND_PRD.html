@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenQuad Managed Lab Product Brief and Product Requirements Document | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../index.html">⌂ Home</a><a href="../../../index.html#cases">Scenarios</a><a href="../../../artifacts.html">Artifacts</a><a href="../../../videos.html">Demos</a><a href="../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../scenarios/open-source-quadruped-raas-productization.html#artifacts">← Back to scenario artifacts</a><div><span class="tag">Case 03 — Open-source RaaS productization</span> <span class="tag muted-tag">Plan / Design</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../index.html">⌂ Home</a><a class="button" href="../../../downloads/source/scenarios/03-open-source-quadruped-raas-productization/PRODUCT_BRIEF_AND_PRD.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="openquad-managed-lab-product-brief-and-product-requirements-document">OpenQuad Managed Lab Product Brief and Product Requirements Document</h1>
+<blockquote>
+<p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark/high source confidence; [RBE-M] research-based estimate/medium; [SA-L] fictional scenario assumption/low; [DC-L] derived calculation whose confidence inherits low-confidence inputs; [UPV] unknown or pending validation.</p>
+</blockquote>
+<h2 id="product-promise">Product promise</h2>
+<p>Provide a reproducible two-robot research-lab capability with predictable monthly spend, maintained release images, traceable open-source provenance, remote diagnosis, and an advance-replacement path. The offer does not convert research hardware into an industrially certified robot.</p>
+<h2 id="users-and-jobs">Users and jobs</h2>
+<p class="table-title"><strong>Table 1. Users and jobs to be done - Evidence: scenario discovery synthesis [SA-L]; Confidence: see evidence key and row/source notes</strong></p><table>
+<thead>
+<tr class="header">
+<th>User</th>
+<th>Job</th>
+<th>Product response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Principal investigator</td>
+<td>Start experiments without a semester-long build program</td>
+<td>Calibrated units, onboarding, reference experiments, and release notes</td>
+</tr>
+<tr class="even">
+<td>Lab engineer</td>
+<td>Reproduce a known configuration and recover faults safely</td>
+<td>Versioned images, configuration manifest, diagnostics, and recovery runbook</td>
+</tr>
+<tr class="odd">
+<td>Procurement / finance</td>
+<td>Compare a term commitment with self-managed ownership</td>
+<td>Transparent 36-month TCO, inclusions, exclusions, and exit terms</td>
+</tr>
+<tr class="even">
+<td>Security / IT</td>
+<td>Know software components, access, data flow, and update ownership</td>
+<td>SBOM, signed images, least privilege, retention choices, and audit records</td>
+</tr>
+<tr class="odd">
+<td>Provider service owner</td>
+<td>Maintain uptime without uncontrolled product variants</td>
+<td>Configuration baseline, swap pool, serialized assets, and change gates</td>
+</tr>
+</tbody>
+</table>
+<h2 id="release-1-requirements">Release 1 requirements</h2>
+<p class="table-title"><strong>Table 2. Product requirements summary - Evidence: scenario requirements [SA-L]; confidence medium after stakeholder review</strong></p><table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Requirement</th>
+<th>Release threshold</th>
+<th>Verification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PRD-001</td>
+<td>Every shipped unit has a serialized configuration and build record</td>
+<td>100%</td>
+<td>Record audit</td>
+</tr>
+<tr class="even">
+<td>PRD-002</td>
+<td>The golden software image installs reproducibly</td>
+<td>12 of 12 pilot units</td>
+<td>Clean-image rebuild</td>
+</tr>
+<tr class="odd">
+<td>PRD-003</td>
+<td>Hardware and software components have license/provenance records</td>
+<td>100% of shipped components</td>
+<td>SBOM and notice audit</td>
+</tr>
+<tr class="even">
+<td>PRD-004</td>
+<td>Emergency stop and authorized recovery work in every defined test</td>
+<td>100%</td>
+<td>Witnessed fault injection</td>
+</tr>
+<tr class="odd">
+<td>PRD-005</td>
+<td>Scheduled fleet availability during pilot</td>
+<td>At least 95%</td>
+<td>Service telemetry</td>
+</tr>
+<tr class="even">
+<td>PRD-006</td>
+<td>Scheduled experiment completion during pilot</td>
+<td>At least 97%</td>
+<td>Mission/event records</td>
+</tr>
+<tr class="odd">
+<td>PRD-007</td>
+<td>Provider can ship an advance replacement for an eligible failure</td>
+<td>Within 48 hours for at least 95%</td>
+<td>Service-case audit</td>
+</tr>
+<tr class="even">
+<td>PRD-008</td>
+<td>Customer data retention and export follow the executed order</td>
+<td>100%</td>
+<td>Configuration and deletion test</td>
+</tr>
+<tr class="odd">
+<td>PRD-009</td>
+<td>Unapproved forks cannot enter the supported release</td>
+<td>Zero</td>
+<td>Release-control audit</td>
+</tr>
+<tr class="even">
+<td>PRD-010</td>
+<td>Field updates are signed, staged, observable, and reversible</td>
+<td>100% of releases</td>
+<td>Deployment and rollback test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="product-principles">Product principles</h2>
+<ol type="1">
+<li>Preserve upstream notices and do not imply contributor endorsement.</li>
+<li>Treat every dependency by its own license; do not infer that an entire stack is BSD-licensed.</li>
+<li>Keep community reference, provider-maintained fork, customer configuration, and experimental code as separate controlled layers.</li>
+<li>Sell service outcomes and support boundaries, not unsupported industrial autonomy claims.</li>
+</ol>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
+These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

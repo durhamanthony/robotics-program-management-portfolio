@@ -1,5 +1,8 @@
 # Case 05 — Airport Restroom Humanoid Cleaning Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Scenario
 
 Pacific Gateway International Airport is a fictional large international airport. Terminal 4 operates continuously and cannot be rebuilt around a cleaning machine. The airport authorized a controlled 90-day pilot using two humanoid robots in four existing public restrooms. The rooms retain their current doors, stalls, toilets, urinals, sinks, mirrors, dispensers, waste bins, and human-accessible clearances.

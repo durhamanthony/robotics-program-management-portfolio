@@ -1,5 +1,8 @@
 # Seller / Integrator Project Manager Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Accountable outcome
 
 Deliver the contracted two-robot pilot, integrate manufacturer and airport work, produce acceptance evidence, and hand off a supportable four-room service without expanding the approved operating envelope.
@@ -26,4 +29,3 @@ Deliver the contracted two-robot pilot, integrate manufacturer and airport work,
 ## Completed result
 
 All eight deliverables were accepted. Actual seller/integrator spend was $304,200 against the $310,000 planning work package. Two noncritical punch-list items—cabinet label durability and one charger cable guard—closed before handoff. Warranty and Severity 1/Severity 2 support began at pilot acceptance.
-

@@ -1,0 +1,56 @@
+<mujoco model="generic_openquad_raas_validation_cell">
+  <compiler angle="degree"/>
+  <option timestep="0.01" gravity="0 0 -9.81"/>
+  <statistic center="0 0 0.8" extent="9"/>
+  <visual><global offwidth="960" offheight="540"/><headlight ambient="0.45 0.45 0.45" diffuse="0.78 0.78 0.78"/></visual>
+  <default><geom contype="0" conaffinity="0"/></default>
+  <asset>
+    <texture name="floor_tex" type="2d" builtin="checker" rgb1="0.15 0.18 0.19" rgb2="0.22 0.25 0.26" width="256" height="256"/>
+    <material name="floor" texture="floor_tex" texrepeat="9 6"/>
+    <material name="navy" rgba="0.03 0.23 0.20 1"/>
+    <material name="teal" rgba="0.03 0.72 0.64 1"/>
+    <material name="blue" rgba="0.12 0.42 0.74 1"/>
+    <material name="white" rgba="0.88 0.93 0.92 1"/>
+    <material name="amber" rgba="0.94 0.57 0.08 1"/>
+    <material name="red" rgba="0.86 0.10 0.08 1"/>
+  </asset>
+  <worldbody>
+    <light pos="-3 -3 8" dir="0.2 0.1 -1" diffuse="0.9 0.9 0.9"/>
+    <geom name="floor" type="plane" size="9 6 0.1" material="floor" contype="1" conaffinity="1"/>
+    <camera name="overview" pos="-10 -11 7.8" xyaxes="0.73 -0.68 0 0.36 0.39 0.85"/>
+    <camera name="test_lane" pos="0 -9 3.7" xyaxes="1 0 0 0 0.91 0.42"/>
+
+    <geom type="box" pos="-5.2 -2.0 0.45" size="0.75 0.7 0.45" material="navy"/>
+    <geom type="box" pos="-2.5 -2.0 0.12" size="0.8 0.7 0.12" material="blue"/>
+    <geom type="box" pos="0 0 0.06" size="1.2 1.2 0.06" material="white"/>
+    <geom type="box" pos="2.8 1.8 0.45" size="0.8 0.7 0.45" material="amber"/>
+    <geom type="box" pos="5.2 1.8 0.12" size="0.8 0.7 0.12" material="teal"/>
+    <geom type="box" pos="5.2 -2.2 0.10" size="0.7 0.65 0.10" material="navy"/>
+    <geom name="fault_beacon" type="cylinder" pos="2.8 1.8 1.2" size="0.12 0.32" material="red"/>
+
+    <body name="build_unit" mocap="true" pos="-5.2 -2.0 0">
+      <geom type="box" pos="0 0 0.58" size="0.48 0.25 0.16" material="blue"/>
+      <geom type="box" pos="0.40 0 0.65" size="0.14 0.20 0.12" material="teal"/>
+      <geom type="capsule" fromto="-0.30 -0.18 0.50 -0.38 -0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="-0.30 0.18 0.50 -0.38 0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="0.28 -0.18 0.50 0.36 -0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="0.28 0.18 0.50 0.36 0.23 0.08" size="0.055" material="white"/>
+    </body>
+    <body name="test_unit" mocap="true" pos="-5.2 -2.0 0">
+      <geom type="box" pos="0 0 0.58" size="0.48 0.25 0.16" material="teal"/>
+      <geom type="box" pos="0.40 0 0.65" size="0.14 0.20 0.12" material="navy"/>
+      <geom type="capsule" fromto="-0.30 -0.18 0.50 -0.38 -0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="-0.30 0.18 0.50 -0.38 0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="0.28 -0.18 0.50 0.36 -0.23 0.08" size="0.055" material="white"/>
+      <geom type="capsule" fromto="0.28 0.18 0.50 0.36 0.23 0.08" size="0.055" material="white"/>
+    </body>
+    <body name="swap_unit" mocap="true" pos="5.2 -2.2 0">
+      <geom type="box" pos="0 0 0.58" size="0.48 0.25 0.16" material="white"/>
+      <geom type="box" pos="0.40 0 0.65" size="0.14 0.20 0.12" material="teal"/>
+      <geom type="capsule" fromto="-0.30 -0.18 0.50 -0.38 -0.23 0.08" size="0.055" material="navy"/>
+      <geom type="capsule" fromto="-0.30 0.18 0.50 -0.38 0.23 0.08" size="0.055" material="navy"/>
+      <geom type="capsule" fromto="0.28 -0.18 0.50 0.36 -0.23 0.08" size="0.055" material="navy"/>
+      <geom type="capsule" fromto="0.28 0.18 0.50 0.36 0.23 0.08" size="0.055" material="navy"/>
+    </body>
+  </worldbody>
+</mujoco>

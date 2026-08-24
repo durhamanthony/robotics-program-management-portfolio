@@ -1,5 +1,8 @@
 # Quadruped Night-Security Operations Demo
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## What the viewer shows
 
 The scene is a fenced industrial campus with a warehouse, guard station, vehicle gate, pavement, stairs, raised loading platform, rough-terrain section, three charging docks, perimeter lighting, and a human Security Operations Center responder. Earlier colored map-like route lines were removed because they were visually ambiguous; the physical pavement, terrain, robot positions, gate beacon, and docks now communicate the patrol sequence.

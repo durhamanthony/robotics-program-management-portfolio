@@ -1,5 +1,8 @@
 # Restroom MuJoCo v4.3 — Fixture Camera Revision
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This camera-only refinement follows the review of the v4.2 sequence.
 
 1. Toilet 1, toilet 2, and urinal cleaning now use the approved v3 elevated diagonal audit angle.

@@ -1,5 +1,8 @@
 # Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Decision
 
 Deploy the three purchased quadrupeds through a 30-night controlled pilot. Approve the three-robot operating plan only if the customer can remove **two contracted walking-rover posts per night while retaining an on-site human responder**, and if the patrol, alert, privacy, safety, and support tests pass.
@@ -24,6 +27,8 @@ These statements support route screening, not final acceptance. Legged mobility 
 
 The public Unitree B2-W listing of $100,000 is used only as a current industrial-quadruped price reference. It is not a vendor selection or a claim that the listed configuration is suitable for security. Sensor payloads, docks, software, integration, support, insurance, taxes, and compliance remain quote-required.
 
+**Table 1. Cost model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
 | Cost | Calculation | Amount |
 |---|---:|---:|
 | Base one-time items | Robots, payloads, docks, integration, site, controls, training, logistics | $635,000 |
@@ -38,6 +43,10 @@ Line-item sources and replacement evidence are in [BUDGET.csv](BUDGET.csv).
 
 The customer scenario input is a $45/hour contracted rover invoice rate. It includes vendor wages, benefits, management, insurance, and margin; it is not represented as a BLS wage. The customer must replace it with actual invoices.
 
+The May 2025 U.S. Bureau of Labor Statistics (BLS) national mean wage for security guards is $20.42 per hour. The fictional $45 invoice assumption is 2.20 times that wage benchmark. That multiplier is not presented as a market fact; it is an explicit placeholder for payroll burden, supervision, insurance, overhead, and contractor margin. The economic gate uses the customer's executed invoice and contract-change rights, not the BLS wage.
+
+**Table 2. Benefit model — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
 | Benefit | Calculation | Annual value |
 |---|---:|---:|
 | Two walking-rover posts avoided | 2 rovers × 10 hours × 365 nights × $45/hour | $328,500 |
@@ -50,16 +59,20 @@ The existing fixed-post human responder remains. Robot alerts are verified by th
 
 ## Base and conservative results
 
-| Result | Base: two rover posts removed | Conservative: one rover post removed |
-|---|---:|---:|
-| Annual gross benefit | $343,500 | $179,250 |
-| Annual net benefit after recurring cost | $226,500 | $62,250 |
-| Simple payback | 3.22 years | 11.73 years |
-| Five-year net benefit | $402,250 | ($419,000) |
-| Five-year ROI (Return on Investment) | 30.6% | Negative |
-| Five-year NPV (Net Present Value) at 8% | $174,099 | Negative |
+**Table 3. Base and conservative results — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
+
+| Result | Base: two posts at $45/hour | Two posts at $35/hour | Conservative: one post at $45/hour |
+|---|---:|---:|---:|
+| Annual gross benefit | $343,500 | $270,500 | $179,250 |
+| Annual net benefit after recurring cost | $226,500 | $153,500 | $62,250 |
+| Simple payback | 3.22 years | 4.76 years | 11.73 years |
+| Five-year net benefit | $402,250 | $37,250 | ($419,000) |
+| Five-year ROI (Return on Investment) | 30.6% | 2.8% | Negative |
+| Five-year NPV (Net Present Value) at 8% | $174,099 | Negative | Negative |
 
 The minimum gross annual benefit for five-year simple payback is $263,050: $730,250 ÷ 5 + $117,000.
+
+The corresponding break-even two-post rover invoice is **$33.98 per hour**: ($263,050 required gross benefit - $15,000 vehicle) / (2 posts x 10 hours x 365 nights). At the $45 base rate, discounted payback at 8% is 3.88 years. At $35 per hour, the project barely clears simple five-year payback and fails the 8% NPV screen. This is deliberate: the program should stop if the labor contract cannot be reduced or reassigned as modeled.
 
 ## Thirty-night acceptance tied to the scenario
 
@@ -77,8 +90,8 @@ The minimum gross annual benefit for five-year simple payback is $263,050: $730,
 - [Unitree B2-W product page and public price reference](https://shop.unitree.com/products/unitree-b2-w)
 - [Boston Dynamics Spot specifications](https://bostondynamics.com/products/spot/)
 - [Agility human-environment deployment rationale](https://www.agilityrobotics.com/content/agility-robotics-launches-next-generation-of-digit-worlds-first-human-centric-multi-purpose-robot-made-for-logistics-work)
-- [BLS Security Guards, May 2023](https://www.bls.gov/oes/2023/may/oes339032.htm), used only to test the reasonableness of a customer contract rate
+- [BLS national employment and wage data, May 2025](https://www.bls.gov/news.release/ocwage.t01.htm), used only to identify the $20.42 national mean wage benchmark for security guards
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 - [NIST Cybersecurity Framework 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20)
 
-Research checked August 16, 2026. See [Research and Assumptions](RESEARCH_AND_ASSUMPTIONS.md) for limits and replacement rules.
+Research checked August 23, 2026. See [Research and Assumptions](RESEARCH_AND_ASSUMPTIONS.md) for limits and replacement rules.

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Build four browser-playable workflow animations for the public portfolio."""
+"""Build selected browser-playable workflow animations for the public portfolio."""
 
 from __future__ import annotations
 
 import math
+import argparse
 import subprocess
 from pathlib import Path
 
@@ -266,45 +267,6 @@ def security_scene(frame: int) -> Image.Image:
     return image
 
 
-def npi_scene(frame: int) -> Image.Image:
-    stages = ["Receive tote", "Verify payload", "Travel route", "Place at station", "Return mission", "Controlled fault"]
-    idx, local, progress = stage_info(frame)
-    image, draw = base_frame("AD-01 first-customer workflow", stages[idx], idx + 1, progress)
-    rounded(draw, (46, 160, 1234, 620), WHITE, "#cbdad7", 18, 2)
-    draw.rectangle((92, 245, 322, 515), fill="#e6efed", outline=INK, width=2)
-    draw.rectangle((958, 245, 1188, 515), fill="#e6efed", outline=INK, width=2)
-    label(draw, (207, 285), "STATION A", GREEN, F18B, "mm")
-    label(draw, (1073, 285), "STATION B", GREEN, F18B, "mm")
-    draw.rectangle((132, 375, 282, 425), fill="#c7d8d5", outline=INK, width=2)
-    draw.rectangle((998, 375, 1148, 425), fill="#c7d8d5", outline=INK, width=2)
-    draw.line((322, 487, 958, 487), fill="#a9c4c0", width=8)
-    for x in range(370, 950, 90):
-        draw.ellipse((x, 479, x+14, 493), fill=TEAL)
-    x = [358, 405, 400+500*local, 900+80*local, 900-500*local, 650][idx]
-    carrying = idx in (0, 1, 2, 3)
-    mobile_robot(draw, x, 490, 1.15, carrying=carrying and not (idx == 3 and local > .7))
-    if idx == 0:
-        arrow(draw, (240, 360), (350, 405))
-    elif idx == 1:
-        rounded(draw, (455, 245, 806, 355), "#e8f5f2", GREEN, 14, 2)
-        label(draw, (630, 278), "PAYLOAD CHECK", GREEN, F14, "mm")
-        label(draw, (630, 318), "11.8 kg • approved tote", INK, F22B, "mm")
-    elif idx == 2:
-        arrow(draw, (390, 548), (890, 548))
-    elif idx == 3 and local > .7:
-        draw.rectangle((1015, 345, 1128, 390), fill="#d99243", outline=INK, width=2)
-    elif idx == 5:
-        radius = 25+int(12*abs(math.sin(local*5*math.pi)))
-        draw.ellipse((650-radius, 393-radius, 650+radius, 393+radius), outline=RED, width=6)
-        rounded(draw, (462, 220, 838, 330), "#fff0ea", RED, 14, 2)
-        label(draw, (650, 253), "CONTROLLED SAFE STATE", RED, F18B, "mm")
-        label(draw, (650, 294), "Mission stopped • evidence retained", INK, F16, "mm")
-    labels = ["Tote accepted", "Mass and barcode pass", "Mapped 18 m route", "Placement confirmed", "Ready for next mission", "Fault isolated; human notified"]
-    rounded(draw, (396, 564, 884, 603), NAVY, radius=18)
-    label(draw, (640, 584), labels[idx], WHITE, F16, "mm")
-    return image
-
-
 def support_scene(frame: int) -> Image.Image:
     stages = ["Fleet alert", "Customer correlation", "Severity decision", "Evidence package", "Restore or dispatch", "Customer confirmation"]
     idx, local, progress = stage_info(frame)
@@ -352,6 +314,48 @@ def support_scene(frame: int) -> Image.Image:
     return image
 
 
+def product_scene(frame: int) -> Image.Image:
+    stages = ["Source and serialize", "Calibrate", "Functional test", "Capture fault evidence", "Rotate replacement", "Release to service"]
+    idx, local, progress = stage_info(frame)
+    image, draw = base_frame("Open quadruped to supported RaaS", stages[idx], idx + 1, progress)
+    rounded(draw, (46, 160, 1234, 620), WHITE, "#cbdad7", 18, 2)
+    stations = [
+        ("01", "SOURCE", "License + provenance"),
+        ("02", "CALIBRATE", "Serial + config"),
+        ("03", "TEST", "Acceptance script"),
+        ("04", "EVIDENCE", "Fault package"),
+        ("05", "SERVICE", "Replacement pool"),
+        ("06", "RELEASE", "Signed gate"),
+    ]
+    for n, (number, heading, detail) in enumerate(stations):
+        x = 72 + n * 191
+        active = n <= idx
+        fill = NAVY if n == idx else ("#e8f5f2" if active else "#edf2f1")
+        outline = TEAL if active else "#cbdad7"
+        rounded(draw, (x, 222, x + 155, 382), fill, outline, 14, 3 if active else 1)
+        label(draw, (x + 18, 246), number, CYAN if active else MUTED, F14)
+        label(draw, (x + 18, 284), heading, CYAN if n == idx else GREEN if active else MUTED, F12)
+        label(draw, (x + 18, 326), detail, WHITE if n == idx else INK, F12)
+        if n < 5:
+            arrow(draw, (x + 158, 304), (x + 184, 304), TEAL if active else "#b5c6c3", 3)
+    x = 126 + idx * 191 + 45 * local
+    quadruped(draw, min(x, 1110), 482, 1.05, CYAN if idx not in (3,) else "#f1aa9f")
+    if idx >= 4:
+        quadruped(draw, 1045, 535, .82, "#81b9e6")
+        label(draw, (1045, 580), "REPLACEMENT POOL", MUTED, F12, "mm")
+    messages = [
+        "Upstream license and source revision recorded",
+        "Serialized build and calibration evidence linked",
+        "Functional threshold executed in the approved envelope",
+        "Fault reproduction, log bundle, and owner preserved",
+        "Customer continuity protected with a controlled swap",
+        "Service release requires signed evidence and human approval",
+    ]
+    rounded(draw, (220, 520, 1005, 578), "#f6faf9", "#cbdad7", 14, 2)
+    label(draw, (612, 549), messages[idx], INK, F16, "mm")
+    return image
+
+
 def encode(filename: str, renderer) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     target = OUT / filename
@@ -371,10 +375,24 @@ def encode(filename: str, renderer) -> None:
 
 
 def main() -> None:
-    encode("retail-humanoid-fulfillment.mp4", retail_scene)
-    encode("quadruped-night-security.mp4", security_scene)
-    encode("ad01-new-robot-npi.mp4", npi_scene)
-    encode("robotics-support-triage.mp4", support_scene)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "scenes",
+        nargs="*",
+        choices=("retail", "security", "product", "support"),
+        default=("support",),
+        help="Animations to render. The default is the support data-workflow animation only.",
+    )
+    args = parser.parse_args()
+    scenes = {
+        "retail": ("retail-humanoid-fulfillment.mp4", retail_scene),
+        "security": ("quadruped-night-security.mp4", security_scene),
+        "product": ("open-quadruped-raas-productization.mp4", product_scene),
+        "support": ("robotics-support-triage.mp4", support_scene),
+    }
+    for name in args.scenes:
+        filename, renderer = scenes[name]
+        encode(filename, renderer)
 
 
 if __name__ == "__main__":

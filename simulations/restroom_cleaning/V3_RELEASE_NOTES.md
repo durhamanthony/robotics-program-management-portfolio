@@ -1,5 +1,8 @@
 # Restroom MuJoCo v3 — Hybrid Layout Audit Update
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This revision combines the requested elements from the two reviewed layouts.
 
 ## Retained from version 2

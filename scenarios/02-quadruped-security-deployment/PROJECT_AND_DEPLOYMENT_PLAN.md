@@ -1,5 +1,8 @@
 # Project and Deployment Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Scope
 
 Three quadrupeds; routes/geofences; docks; network; operator console; approved video/thermal data; alert integration; identity/remote access; telemetry; training; commissioning; patrol acceptance; support/spares/Return Material Authorization (RMA); hypercare.
@@ -9,6 +12,8 @@ Three quadrupeds; routes/geofences; docks; network; operator console; approved v
 Facial recognition unless separately approved and lawful; weapons; physical intervention; autonomous law-enforcement decisions; public-space deployment; route changes outside formal review; surveillance beyond the documented purpose and retention policy.
 
 ## Milestones
+
+**Table 1. Milestones — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Gate | Week | Evidence |
 |---|---:|---|

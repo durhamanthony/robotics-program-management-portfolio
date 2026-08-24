@@ -1,5 +1,8 @@
 # Case Study 2 — Three Quadrupeds for Night Security
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Scenario
 
 A company has purchased three quadruped robots to patrol a fenced industrial campus at night. The robots perform scheduled routes, collect approved video/thermal observations, detect defined anomalies, and escalate to a human security operator. They do not confront, pursue, detain, or use force.
@@ -17,6 +20,8 @@ Launch a human-supervised, privacy-governed patrol service with defined geofence
 - The robot observes and reports. Human security retains authority for incident decisions.
 
 ## Success measures
+
+**Table 1. Success measures — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Measure | Threshold |
 |---|---:|

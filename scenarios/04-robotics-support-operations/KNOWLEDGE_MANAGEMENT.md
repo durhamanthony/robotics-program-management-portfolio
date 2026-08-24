@@ -1,5 +1,8 @@
 # Knowledge Management — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Content types
 
 Customer article, L1 script, L2 diagnostic runbook, field procedure, safety notice, known-error/workaround, release note, training module, escalation checklist, and post-incident learning.

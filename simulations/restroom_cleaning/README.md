@@ -1,5 +1,8 @@
 # Public Restroom Humanoid Cleaning — MuJoCo Capability Demo v4.4
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 This fictional generic demonstration supports Case 05, the Pacific Gateway International Airport controlled restroom-cleaning pilot. It shows a human-scale robot cleaning an existing public restroom without retooling the room for a wheeled platform. It is a visualization of a planned operating sequence, not a certified cleaning process or a claim of autonomous production performance.
 
 The corresponding program dashboard separates three accountable viewpoints: seller/integrator Project Manager, humanoid manufacturer Project Manager, and airport owner/operator Project Manager. The completed case artifacts are in `scenarios/05-airport-restroom-humanoid-deployment/`.
@@ -18,6 +21,8 @@ The corresponding program dashboard separates three accountable viewpoints: sell
 - The sink/mirror camera is centered directly behind and above the robot, keeping its body, both animated arms, both sinks, and both mirrors visible during wiping.
 
 ## Complete 146-second sequence
+
+**Table 1. Complete 146-second sequence — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Time | Camera | Demonstrated action |
 |---:|---|---|

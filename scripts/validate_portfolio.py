@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 import sys
 from html.parser import HTMLParser
@@ -99,7 +100,7 @@ def check_dashboards(errors: list[str]) -> None:
     pages = (
         "retail-humanoid-backroom.html",
         "quadruped-security-deployment.html",
-        "ad01-new-robot-first-sale.html",
+        "open-source-quadruped-raas-productization.html",
         "robotics-support-operations.html",
         "airport-restroom-humanoid-deployment.html",
     )
@@ -118,7 +119,7 @@ def check_scenarios(errors: list[str]) -> None:
     required = {
         "01-humanoid-retail-backroom": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "CLOSEOUT_AND_BENEFITS.md"),
         "02-quadruped-security-deployment": ("ARTIFACT_INDEX.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "INCIDENT_AND_ESCALATION_PLAN.md"),
-        "03-new-robot-first-sale": ("ARTIFACT_INDEX.md", "BUSINESS_CASE.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "PRODUCT_ROADMAP.md", "SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "COMMERCIAL_LAUNCH_PLAN.md"),
+        "03-open-source-quadruped-raas-productization": ("ARTIFACT_INDEX.md", "BUSINESS_CASE.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "PRODUCT_ROADMAP.md", "SYSTEM_REQUIREMENTS_TRACEABILITY.csv", "COMMERCIAL_LAUNCH_PLAN.md", "OPEN_SOURCE_COMPLIANCE_AND_SBOM.md", "RAAS_SERVICE_DESIGN.md"),
         "04-robotics-support-operations": ("ARTIFACT_INDEX.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "OPERATING_BASELINE_AND_COST_ASSUMPTIONS.md", "SERVICE_CATALOG.md", "TOOL_SELECTION_AND_COST.md", "OBSERVABILITY_AND_DATA_PLAN.md", "BUSINESS_CONTINUITY.md"),
         "05-airport-restroom-humanoid-deployment": ("ARTIFACT_INDEX.md", "CASE_STUDY.md", "INTEGRATED_PROGRAM_CHARTER.md", "STATEMENT_OF_WORK.md", "BUSINESS_CASE_AND_TCO.md", "BASIS_OF_ESTIMATE_AND_SENSITIVITY.md", "RESEARCH_AND_ASSUMPTIONS.md", "BUDGET.csv", "REQUIREMENTS_TRACEABILITY.csv", "SELLER_INTEGRATOR_PROJECT_PLAN.md", "MANUFACTURER_PROJECT_PLAN.md", "AIRPORT_OWNER_IMPLEMENTATION_PLAN.md", "SAFETY_QUALITY_AND_ACCEPTANCE_PLAN.md", "CLOSEOUT_AND_HANDOFF.md"),
     }
@@ -169,6 +170,10 @@ def check_csv(errors: list[str]) -> None:
             errors.append(f"Empty CSV: {path.relative_to(ROOT)}")
             continue
         width = len(rows[0])
+        required_evidence = {"table_title", "evidence_class", "confidence", "source_or_validation"}
+        missing_evidence = required_evidence - set(rows[0])
+        if missing_evidence:
+            errors.append(f"CSV missing table/evidence fields {sorted(missing_evidence)}: {path.relative_to(ROOT)}")
         for number, row in enumerate(rows[1:], 2):
             if len(row) != width:
                 errors.append(f"CSV width mismatch: {path.relative_to(ROOT)} line {number}")
@@ -198,6 +203,103 @@ def check_navigation(errors: list[str]) -> None:
             errors.append(f"Generated page lacks explicit Back control: {path.relative_to(ROOT)}")
 
 
+def check_rebuild_acceptance(errors: list[str]) -> None:
+    searchable = {".md", ".txt", ".csv", ".html", ".json", ".py", ".bat"}
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or ignored(path) or path.suffix.lower() not in searchable:
+            continue
+        if path.resolve() == Path(__file__).resolve() or "docs" in path.parts:
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if re.search(r"\bAD-?01\b|ad01-new-robot|new_robot_npi|03-new-robot-first-sale", text, re.I):
+            errors.append(f"Retired AD-01 reference remains: {path.relative_to(ROOT)}")
+    for obsolete in (
+        ROOT / "scenarios" / "03-new-robot-first-sale",
+        ROOT / "simulations" / "new_robot_npi",
+        ROOT / "simulations" / "support_lab",
+        ROOT / "media" / "videos" / "ad01-new-robot-npi.mp4",
+    ):
+        if obsolete.exists():
+            errors.append(f"Retired path remains: {obsolete.relative_to(ROOT)}")
+
+    support_paths = [
+        ROOT / "scenarios" / "04-robotics-support-operations",
+        ROOT / "tools" / "support-operations-lab",
+    ]
+    for base in support_paths:
+        for path in base.rglob("*") if base.exists() else []:
+            if path.is_file() and path.suffix.lower() in searchable:
+                text = path.read_text(encoding="utf-8", errors="replace")
+                if "mujoco" in text.lower() and "no mujoco" not in text.lower():
+                    errors.append(f"Support case still depends on MuJoCo: {path.relative_to(ROOT)}")
+    data = json.loads((ROOT / "portfolio" / "scenario_dashboard_data.json").read_text(encoding="utf-8"))
+    for scenario in data["scenarios"]:
+        for item in (*scenario.get("metrics", []), *scenario.get("financials", [])):
+            if not item.get("evidence_class") or not item.get("confidence"):
+                errors.append(f"Dashboard item lacks evidence/confidence: {scenario['slug']} -> {item.get('label')}")
+    support = data["scenarios"][3]
+    if "mujoco" in json.dumps(support.get("demo", {})).lower():
+        errors.append("Support dashboard demo still claims MuJoCo")
+
+
+def check_table_titles_and_evidence(errors: list[str]) -> None:
+    source_roots = ("scenarios", "governance", "tools", "portfolio", "simulations", "pm-operating-system", "quality-control")
+    for root_name in source_roots:
+        base = ROOT / root_name
+        if not base.exists():
+            continue
+        for path in base.rglob("*.md"):
+            lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+            if not any("Evidence-confidence key" in line for line in lines[:14]):
+                errors.append(f"Markdown lacks evidence-confidence key: {path.relative_to(ROOT)}")
+            for index, line in enumerate(lines):
+                if not line.startswith("|") or index + 1 >= len(lines) or not re.match(r"^\|?\s*:?-{3,}", lines[index + 1]):
+                    continue
+                previous = index - 1
+                while previous >= 0 and not lines[previous].strip():
+                    previous -= 1
+                title = lines[previous].strip() if previous >= 0 else ""
+                if not re.match(r"^\*\*Table\s+", title, re.I):
+                    errors.append(f"Markdown table lacks title immediately above it: {path.relative_to(ROOT)} line {index + 1}")
+                elif "evidence" not in title.lower() or "confidence" not in title.lower():
+                    errors.append(f"Markdown table title lacks evidence/confidence: {path.relative_to(ROOT)} line {index + 1}")
+    for page in DOCS.rglob("*.html"):
+        text = page.read_text(encoding="utf-8", errors="replace")
+        if text.count("<table") > text.count('class="table-title"'):
+            errors.append(f"Generated table lacks a visible title above it: {page.relative_to(ROOT)}")
+
+
+def check_operating_system_and_qc(errors: list[str]) -> None:
+    required = (
+        "pm-operating-system/README.md",
+        "pm-operating-system/word/ROBOTICS_PROGRAM_BRIEF.docx",
+        "pm-operating-system/word/STAGE_GATE_DECISION_MEMO.docx",
+        "pm-operating-system/word/WEEKLY_EXECUTIVE_STATUS.docx",
+        "pm-operating-system/word/SITE_ACCEPTANCE_TEST_PLAN.docx",
+        "pm-operating-system/excel/ROBOTICS_PM_OPERATING_SYSTEM.xlsx",
+        "pm-operating-system/csv/RAID_REGISTER.csv",
+        "pm-operating-system/csv/REQUIREMENTS_TRACEABILITY.csv",
+        "pm-operating-system/csv/INTEGRATED_MASTER_SCHEDULE.csv",
+        "pm-operating-system/csv/BUDGET_TCO.csv",
+        "pm-operating-system/csv/BENEFITS_REGISTER.csv",
+        "pm-operating-system/csv/EVIDENCE_REGISTER.csv",
+        "pm-operating-system/ai/AI_WORKFLOW_PLAYBOOK.md",
+        "quality-control/CLAUDE_QC_PACKAGE.zip",
+        "quality-control/GROK_QC_PACKAGE.zip",
+    )
+    for item in required:
+        path = ROOT / item
+        if not path.exists() or (path.is_file() and path.stat().st_size == 0):
+            errors.append(f"Missing reusable operating-system/QC deliverable: {item}")
+
+    for batch in ("RUN_RETAIL_DEMO_WINDOWS.bat", "RENDER_RETAIL_VIDEO_WINDOWS.bat", "RUN_SUPPORT_WORKFLOW_WINDOWS.bat", "VALIDATE_PORTFOLIO_WINDOWS.bat"):
+        path = ROOT / batch
+        if not path.exists():
+            errors.append(f"Missing Windows workflow: {batch}")
+        elif "%~dp0" not in path.read_text(encoding="utf-8", errors="replace"):
+            errors.append(f"Windows workflow is not repository-relative: {batch}")
+
+
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -213,6 +315,9 @@ def main() -> int:
     check_csv(errors)
     check_media(errors, warnings)
     check_navigation(errors)
+    check_rebuild_acceptance(errors)
+    check_table_titles_and_evidence(errors)
+    check_operating_system_and_qc(errors)
     print(f"Validation summary: {len(errors)} error(s), {len(warnings)} warning(s)")
     for warning in warnings:
         print(f"WARNING: {warning}")

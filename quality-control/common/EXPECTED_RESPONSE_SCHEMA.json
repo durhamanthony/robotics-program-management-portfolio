@@ -1,0 +1,22 @@
+{
+  "reviewer": "Claude or Grok",
+  "review_date": "YYYY-MM-DD",
+  "scope_sha256_manifest": "FILE_MANIFEST.csv",
+  "overall_decision": "PASS | PASS_WITH_CONDITIONS | HOLD",
+  "findings": [
+    {
+      "finding_id": "QC-0001",
+      "severity": "critical | high | medium | low",
+      "domain": "scope | economics | evidence | simulation | support | artifact | web | privacy",
+      "file": "relative/path",
+      "section_or_row": "heading, table, row, or line locator",
+      "claim": "the exact claim or control reviewed",
+      "evidence": "source or calculation actually available",
+      "analysis": "concise reproducible reasoning",
+      "recommended_correction": "specific change or validation action",
+      "confidence": "high | medium | low"
+    }
+  ],
+  "reconciliations": [],
+  "unreviewed_items": []
+}

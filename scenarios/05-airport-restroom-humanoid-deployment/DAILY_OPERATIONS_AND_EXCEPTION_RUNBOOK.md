@@ -1,5 +1,8 @@
 # Daily Operations and Exception Runbook
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Start-of-shift release
 
 1. Airport custodian checks room assignment, public-service window, warning signs, barrier, occupancy status, and manual fallback.
@@ -19,6 +22,8 @@
 - Custodian performs the twelve-point inspection and either reopens or assigns corrective work.
 
 ## Stop conditions
+
+**Table 1. Stop conditions — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Condition | Robot action | Human action | Reopen authority |
 |---|---|---|---|
@@ -40,4 +45,3 @@
 ## End-of-shift
 
 Reconcile scheduled versus completed missions, inspections, exceptions, supplies, chemical use, battery, faults, interventions, public complaints, support cases, and room downtime. The Airport Project Manager reviews daily during commissioning and weekly during steady pilot operation.
-

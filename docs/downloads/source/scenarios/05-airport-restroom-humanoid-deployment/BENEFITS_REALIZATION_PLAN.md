@@ -1,6 +1,11 @@
 # Benefits Realization Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Benefit owners and measures
+
+**Table 1. Benefit owners and measures — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Benefit | Baseline | Pilot measure | Result | Owner | Decision use |
 |---|---:|---:|---:|---|---|
@@ -23,4 +28,3 @@
 ## Scale gate
 
 The pilot passed service and control thresholds but did not establish economic scale. The Benefits Owner recommended no rollout until the airport measures a broader workload, obtains quotations, and identifies non-labor value that can be verified without double counting.
-

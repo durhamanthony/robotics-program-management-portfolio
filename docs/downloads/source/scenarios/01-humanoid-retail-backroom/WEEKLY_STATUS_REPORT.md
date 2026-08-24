@@ -1,5 +1,8 @@
 # Weekly Status Report — Week 20 Closeout
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Overall:** Amber — operations accepted; financial scale gate failed  
 **Schedule:** Green — week-20 closeout complete  
 **Budget:** Green for fictional pilot — $640,000 authorized and spent  
@@ -14,6 +17,8 @@
 - Recalculated economics from U.S. Bureau of Labor Statistics benchmark and disclosed planning allowances.
 
 ## Decisions
+
+**Table 1. Decisions — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Decision | Owner | Outcome | Evidence |
 |---|---|---|---|

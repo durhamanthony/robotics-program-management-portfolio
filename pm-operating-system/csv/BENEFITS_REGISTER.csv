@@ -1,0 +1,4 @@
+table_title,benefit_id,outcome,metric,baseline,target,measurement_method,frequency,owner,start_date,status,evidence_class,confidence,source_or_validation
+"Table 1. Benefits register",BEN-001,"Recover productive capacity","Qualified productive hours per week",0,40,"Approved task taxonomy and sampled telemetry",Weekly,Operations Lead,2026-10-19,Planned,SA-L,Low,"Replace with signed baseline and production telemetry"
+"Table 1. Benefits register",BEN-002,"Improve service reliability","Mission success rate",TBD,95%,"Eligible completed missions divided by eligible attempted missions",Weekly,Service Lead,2026-10-19,Planned,SA-L,Low,"Definition and target require customer approval"
+"Table 1. Benefits register",BEN-003,"Reduce safety exposure","Recordable robot-caused safety events",TBD,0,"Approved safety incident register",Monthly,Safety Lead,2026-10-19,Planned,PB-H,High,"Zero critical-event threshold; baseline requires approved records"

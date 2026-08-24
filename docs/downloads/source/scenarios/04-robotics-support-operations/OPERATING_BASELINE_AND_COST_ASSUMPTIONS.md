@@ -1,8 +1,13 @@
 # Operating Baseline and Cost Assumptions — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Installed base and workload
 
 The planning baseline is 250 robots across 60 customer sites, with humanoid and quadruped products, business-hours customer intake, and 24-hour on-call coverage for safety and Severity-1 incidents.
+
+**Table 1. Installed base and workload — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Monthly demand input | Calculation | Volume |
 |---|---:|---:|
@@ -15,6 +20,8 @@ The planning baseline is 250 robots across 60 customer sites, with humanoid and 
 The organization must replace these inputs with at least 90 days of actual cases, telemetry precision, maintenance plans, release schedules, travel time, case handling time, severity mix, and service contracts. Telemetry events that do not require human action are not counted as cases.
 
 ## Launch staffing and loaded annual planning cost
+
+**Table 2. Launch staffing and loaded annual planning cost — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Function | People | Loaded annual cost per person | Annual cost |
 |---|---:|---:|---:|

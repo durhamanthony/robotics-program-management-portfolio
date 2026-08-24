@@ -160,88 +160,96 @@
     "path": "library/scenarios/02-quadruped-security-deployment/WEEKLY_STATUS_REPORT.html"
   },
   {
-    "title": "Artifact Index \u2014 AD-01 New Robot Through First Sale",
-    "path": "library/scenarios/03-new-robot-first-sale/ARTIFACT_INDEX.html"
+    "title": "Artifact Index - Open-Source Quadruped RaaS Productization",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Basis of Estimate and Sensitivity \u2014 AD-01 New Product Introduction",
-    "path": "library/scenarios/03-new-robot-first-sale/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
+    "title": "Basis of Estimate and Sensitivity - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
     "title": "Budget And Headcount",
-    "path": "library/scenarios/03-new-robot-first-sale/BUDGET_AND_HEADCOUNT.html"
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/BUDGET_AND_HEADCOUNT.html"
   },
   {
-    "title": "Business Case \u2014 AD-01 Mobile Manipulator Through First Sale",
-    "path": "library/scenarios/03-new-robot-first-sale/BUSINESS_CASE.html"
+    "title": "Business Case - Open-Source Quadruped RaaS Productization",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/BUSINESS_CASE.html"
   },
   {
-    "title": "Case Study 3 \u2014 Develop a New Robot Through First Sale",
-    "path": "library/scenarios/03-new-robot-first-sale/CASE_STUDY.html"
+    "title": "Case Study - Open-Source Quadruped to Supported RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Lessons \u2014 AD-01 First Sale",
-    "path": "library/scenarios/03-new-robot-first-sale/CLOSEOUT_AND_LESSONS.html"
+    "title": "Closeout and Lessons - OpenQuad RaaS Productization",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/CLOSEOUT_AND_LESSONS.html"
   },
   {
-    "title": "Commercial Launch Plan \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/COMMERCIAL_LAUNCH_PLAN.html"
+    "title": "Commercial Launch Plan - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/COMMERCIAL_LAUNCH_PLAN.html"
   },
   {
-    "title": "Customer Discovery Plan \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/CUSTOMER_DISCOVERY_PLAN.html"
+    "title": "Customer Discovery Plan - Managed Research Quadrupeds",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/CUSTOMER_DISCOVERY_PLAN.html"
   },
   {
-    "title": "First Customer Launch Plan",
-    "path": "library/scenarios/03-new-robot-first-sale/FIRST_CUSTOMER_LAUNCH.html"
+    "title": "First Customer Launch - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/FIRST_CUSTOMER_LAUNCH.html"
   },
   {
-    "title": "New Product Introduction Stage-Gate Plan",
-    "path": "library/scenarios/03-new-robot-first-sale/NPI_STAGE_GATE_PLAN.html"
+    "title": "NPI Stage-Gate Plan - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/NPI_STAGE_GATE_PLAN.html"
   },
   {
-    "title": "AD-01 Product Brief and Product Requirements Document",
-    "path": "library/scenarios/03-new-robot-first-sale/PRODUCT_BRIEF_AND_PRD.html"
+    "title": "Open-Source Compliance and SBOM Plan",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/OPEN_SOURCE_COMPLIANCE_AND_SBOM.html"
   },
   {
-    "title": "Product Roadmap \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/PRODUCT_ROADMAP.html"
+    "title": "OpenQuad Managed Lab Product Brief and Product Requirements Document",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/PRODUCT_BRIEF_AND_PRD.html"
+  },
+  {
+    "title": "Product Roadmap - OpenQuad Managed Lab",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/PRODUCT_ROADMAP.html"
+  },
+  {
+    "title": "RaaS Service Design - OpenQuad Managed Lab",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/RAAS_SERVICE_DESIGN.html"
   },
   {
     "title": "Raci",
-    "path": "library/scenarios/03-new-robot-first-sale/RACI.html"
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/RACI.html"
   },
   {
     "title": "Raid",
-    "path": "library/scenarios/03-new-robot-first-sale/RAID.html"
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/RAID.html"
   },
   {
-    "title": "Reliability and Serviceability Plan \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/RELIABILITY_SERVICEABILITY_PLAN.html"
+    "title": "Reliability and Serviceability Plan - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/RELIABILITY_SERVICEABILITY_PLAN.html"
   },
   {
-    "title": "Research and Assumptions \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/RESEARCH_AND_ASSUMPTIONS.html"
+    "title": "Research and Assumptions - Open-Source Quadruped Productization",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/RESEARCH_AND_ASSUMPTIONS.html"
   },
   {
     "title": "Schedule",
-    "path": "library/scenarios/03-new-robot-first-sale/SCHEDULE.html"
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/SCHEDULE.html"
   },
   {
-    "title": "Supplier and Manufacturing Readiness \u2014 AD-01",
-    "path": "library/scenarios/03-new-robot-first-sale/SUPPLIER_MANUFACTURING_READINESS.html"
+    "title": "Supplier and Manufacturing Readiness - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/SUPPLIER_MANUFACTURING_READINESS.html"
   },
   {
     "title": "System Requirements Traceability",
-    "path": "library/scenarios/03-new-robot-first-sale/SYSTEM_REQUIREMENTS_TRACEABILITY.html"
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/SYSTEM_REQUIREMENTS_TRACEABILITY.html"
   },
   {
-    "title": "Verification and Validation Strategy",
-    "path": "library/scenarios/03-new-robot-first-sale/VERIFICATION_VALIDATION.html"
+    "title": "Verification and Validation - OpenQuad RaaS",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/VERIFICATION_VALIDATION.html"
   },
   {
-    "title": "Weekly Status Report \u2014 AD-01 New Product Introduction",
-    "path": "library/scenarios/03-new-robot-first-sale/WEEKLY_STATUS_REPORT.html"
+    "title": "Weekly Status Report - OpenQuad Productization Closeout",
+    "path": "library/scenarios/03-open-source-quadruped-raas-productization/WEEKLY_STATUS_REPORT.html"
   },
   {
     "title": "Artifact Index \u2014 Robotics Support Operations",
@@ -492,12 +500,60 @@
     "path": "library/governance/TRAINING_CHANGE_ADOPTION.html"
   },
   {
+    "title": "AI-Assisted Robotics PM Workflow Playbook",
+    "path": "library/pm-operating-system/ai/AI_WORKFLOW_PLAYBOOK.html"
+  },
+  {
+    "title": "Benefits Register",
+    "path": "library/pm-operating-system/csv/BENEFITS_REGISTER.html"
+  },
+  {
+    "title": "Budget Tco",
+    "path": "library/pm-operating-system/csv/BUDGET_TCO.html"
+  },
+  {
+    "title": "Evidence Register",
+    "path": "library/pm-operating-system/csv/EVIDENCE_REGISTER.html"
+  },
+  {
+    "title": "Integrated Master Schedule",
+    "path": "library/pm-operating-system/csv/INTEGRATED_MASTER_SCHEDULE.html"
+  },
+  {
+    "title": "Raid Register",
+    "path": "library/pm-operating-system/csv/RAID_REGISTER.html"
+  },
+  {
+    "title": "Requirements Traceability",
+    "path": "library/pm-operating-system/csv/REQUIREMENTS_TRACEABILITY.html"
+  },
+  {
+    "title": "Reusable Robotics Program Management Operating System",
+    "path": "library/pm-operating-system/README.html"
+  },
+  {
     "title": "Portfolio purpose",
     "path": "library/portfolio/EXECUTIVE_PORTFOLIO.html"
   },
   {
-    "title": "MuJoCo Demo \u2014 AD-01 Autonomous Tote Transfer Robot",
-    "path": "library/simulations/new_robot_npi/README.html"
+    "title": "Claude Independent QC Prompt",
+    "path": "library/quality-control/claude/CLAUDE_QC_PROMPT.html"
+  },
+  {
+    "title": "Evidence and Confidence Standard",
+    "path": "library/quality-control/common/EVIDENCE_LABEL_STANDARD.html"
+  },
+  {
+    "title": "Qc Checklist",
+    "path": "library/quality-control/common/QC_CHECKLIST.html"
+  },
+  {
+    "title": "Grok Source-Verification and QC Prompt",
+    "path": "library/quality-control/grok/GROK_QC_PROMPT.html"
+  },
+  {
+    "title": "MuJoCo Demo - Open-Source Quadruped RaaS Validation Cell",
+    "path": "library/simulations/open_quadruped_raas/README.html"
   },
   {
     "title": "Quadruped Night-Security Operations Demo",
@@ -516,10 +572,6 @@
     "path": "library/simulations/retail_humanoids/README.html"
   },
   {
-    "title": "MuJoCo Support Lab \u2014 Robotics Field-Service Bay",
-    "path": "library/simulations/support_lab/README.html"
-  },
-  {
     "title": "Warehouse Palletizing and Truck Loading \u2014 MuJoCo Capability Demo",
     "path": "library/simulations/warehouse_capability/README.html"
   },
@@ -530,6 +582,14 @@
   {
     "title": "Research Sources",
     "path": "library/tools/RESEARCH_SOURCES.html"
+  },
+  {
+    "title": "Support Operations Workflow Lab - Data Only",
+    "path": "library/tools/support-operations-lab/README.html"
+  },
+  {
+    "title": "Sample Robot Events",
+    "path": "library/tools/support-operations-lab/sample_robot_events.html"
   },
   {
     "title": "Robotics Support and Troubleshooting Tool Comparison",

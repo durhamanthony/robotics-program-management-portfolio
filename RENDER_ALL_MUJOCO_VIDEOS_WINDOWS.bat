@@ -12,8 +12,20 @@ if errorlevel 1 goto :error
 .venv\Scripts\python.exe scripts\render_mujoco_videos.py
 if errorlevel 1 goto :error
 
+.venv\Scripts\python.exe scripts\build_demo_videos.py support
+if errorlevel 1 goto :error
+
+.venv\Scripts\python.exe tools\support-operations-lab\build_cases.py
+if errorlevel 1 goto :error
+
+.venv\Scripts\python.exe scripts\build_portfolio_site.py
+if errorlevel 1 goto :error
+
+.venv\Scripts\python.exe scripts\validate_portfolio.py
+if errorlevel 1 goto :error
+
 echo.
-echo Six MuJoCo videos were created in media\videos.
+echo Five MuJoCo videos and one data-workflow animation were created in media\videos.
 echo Open GitHub Desktop, commit the changed MP4 files, and Push origin.
 pause
 exit /b 0

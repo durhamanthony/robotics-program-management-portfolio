@@ -1,8 +1,13 @@
 # Basis of Estimate and Sensitivity — Robotics Support Operations
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Planning basis
 
 This model sizes a support organization for a fictional installed base of 250 robots across 60 customer sites. It is an operating-model estimate, not a vendor quotation or claim about an existing fleet.
+
+**Table 1. Planning basis — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Input | Base value | Evidence class | Required replacement evidence |
 |---|---:|---|---|
@@ -34,6 +39,8 @@ The staffing plan triggers review when usable capacity exceeds 75% for six conse
 - Three-year Total Cost of Ownership (TCO), assuming the year-two run rate repeats in year three and the full reserve is consumed, = $4,668,000 + 2 × $2,970,000 = **$10,608,000**.
 
 ## Sensitivity
+
+**Table 2. Sensitivity — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Change | Operating effect | Financial treatment |
 |---|---|---|

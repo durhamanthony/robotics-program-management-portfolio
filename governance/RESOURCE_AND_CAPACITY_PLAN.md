@@ -1,6 +1,11 @@
 # Resource and Capacity Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Core delivery roles
+
+**Table 1. Core delivery roles — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Role | Discover/design | Build/test | Site/launch | Steady state |
 |---|---:|---:|---:|---:|

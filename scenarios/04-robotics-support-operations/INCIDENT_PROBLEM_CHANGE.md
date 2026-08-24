@@ -1,5 +1,8 @@
 # Incident, Problem, and Change Management
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Incident flow
 
 Detect/report → establish safety state → identify customer/site/robot/version/entitlement → classify impact/severity → open correlation ID and incident roles → collect evidence → diagnose/restore → validate return to service → customer confirmation → review and link follow-up.

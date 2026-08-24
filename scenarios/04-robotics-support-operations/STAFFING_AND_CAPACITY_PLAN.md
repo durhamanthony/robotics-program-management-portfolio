@@ -1,10 +1,15 @@
 # Staffing and Capacity Plan — Robotics Support
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Demand model
 
 Monthly workload = installed robots × contacts/robot + telemetry-created actionable incidents + planned maintenance + deployments/updates + field work + problem/knowledge/admin demand. Segment by model, site maturity, version, severity, geography, skill and coverage window.
 
 ## Initial 15-person launch team
+
+**Table 1. Initial 15-person launch team — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Role | Initial coverage assumption | Capacity trigger |
 |---|---|---|

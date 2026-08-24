@@ -1,15 +1,15 @@
-deliverable_or_decision,Store Sponsor,Program Manager,Store Operations,Engineering,Safety,IT and Security,Field Service,Finance
-Charter and pilot authorization,A,R,C,C,C,C,I,C
-Workflow baseline,A,R,R,C,C,C,I,C
-Requirements and exclusions,A,R,C,R,C,C,I,I
-Route and safety design,A,C,C,R,R,C,C,I
-Tablet inventory and identity integration,I,A,C,R,C,R,C,I
-Factory Acceptance Test (FAT),I,A,C,R,C,C,R,I
-Site Acceptance Test (SAT),A,R,C,R,R,C,R,I
-User Acceptance Testing (UAT),A,R,R,C,C,C,C,I
-Thirty-day pilot,A,R,R,C,C,C,R,C
-Incident and emergency authority,A,C,R,C,R,C,R,I
-Operational acceptance,A,R,R,C,C,C,C,I
-Financial chain-rollout gate,C,R,C,I,I,I,I,A
-Operations handoff,A,R,R,C,C,C,R,I
-Legend,"R=Responsible; A=Accountable; C=Consulted; I=Informed",,,,,,,
+table_title,deliverable_or_decision,Store Sponsor,Program Manager,Store Operations,Engineering,Safety,IT and Security,Field Service,Finance,evidence_class,confidence,source_or_validation
+Table 1. Raci,Charter and pilot authorization,A,R,C,C,C,C,I,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Workflow baseline,A,R,R,C,C,C,I,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Requirements and exclusions,A,R,C,R,C,C,I,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Route and safety design,A,C,C,R,R,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Tablet inventory and identity integration,I,A,C,R,C,R,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Factory Acceptance Test (FAT),I,A,C,R,C,C,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Site Acceptance Test (SAT),A,R,C,R,R,C,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,User Acceptance Testing (UAT),A,R,R,C,C,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Thirty-day pilot,A,R,R,C,C,C,R,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Incident and emergency authority,A,C,R,C,R,C,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Operational acceptance,A,R,R,C,C,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Financial chain-rollout gate,C,R,C,I,I,I,I,A,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Operations handoff,A,R,R,C,C,C,R,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Legend,R=Responsible; A=Accountable; C=Consulted; I=Informed,,,,,,,,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals

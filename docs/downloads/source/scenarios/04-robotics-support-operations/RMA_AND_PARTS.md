@@ -1,5 +1,8 @@
 # RMA, Parts, and Field Service Process
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Workflow
 
 1. Case and remote diagnosis establish the affected asset and suspected FRU.
@@ -18,4 +21,3 @@ Installed base and failure rate; lead time; service level; criticality; repair y
 ## Field performance metrics
 
 Dispatch response, travel, onsite time, repair time, first-time fix, repeat visit, part fill rate, van/depot stockout, RMA cycle time, no-fault-found, repair yield, return-to-service pass rate, safety observations, and cost per visit/robot.
-

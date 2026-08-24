@@ -1,6 +1,11 @@
 # Research and Assumptions — Retail Backroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Public evidence used
+
+**Table 1. Public evidence used — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Source | What it supports | What it does not support |
 |---|---|---|
@@ -17,6 +22,8 @@ Store layout, route, requests, staffing, baseline wait, inventory accuracy, miss
 Robot purchase/lease; manipulation package; software; remote operations; inventory integration; freight; tax; insurance; cybersecurity review; site work; charging; spare parts; battery replacement; field service; training; support response; and decommissioning.
 
 ## Assumption register
+
+**Table 2. Assumption register — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | ID | Assumption | Owner | Validation | If false |
 |---|---|---|---|---|

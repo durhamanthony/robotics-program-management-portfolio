@@ -1,0 +1,9 @@
+table_title,check_id,domain,test,pass_condition,severity_if_failed,evidence_class,confidence,source_or_validation
+"Table 1. Independent portfolio QC checklist",QC-001,Scope,"Retired product case is absent","No retired case names, paths, dashboards, or media remain",High,DC-L,Low,"Full-text and path scan"
+"Table 1. Independent portfolio QC checklist",QC-002,Support,"Support case is data-workflow only","No physics-simulator dependency appears in support source, dashboard, or video manifest",High,DC-L,Low,"Source and manifest inspection"
+"Table 1. Independent portfolio QC checklist",QC-003,Retail,"Retail workflow is internally coherent","Named camera exists; routes, steps, states, and outputs pass deterministic validation",High,DC-L,Low,"XML compile and headless workflow result"
+"Table 1. Independent portfolio QC checklist",QC-004,Economics,"Case 02, 03, and 05 economics reconcile","All inputs, equations, units, totals, thresholds, and sensitivities agree across formats",Critical,DC-L,Low,"Independent recalculation"
+"Table 1. Independent portfolio QC checklist",QC-005,Evidence,"Evidence labels are complete","Every material number and table carries class, confidence, and validation path",High,DC-L,Low,"Markdown, CSV, dashboard, DOCX, and XLSX inspection"
+"Table 1. Independent portfolio QC checklist",QC-006,Usability,"Reusable assets work on Windows","Repository-relative batch files, valid DOCX/XLSX/CSV, and clean ZIP paths",High,DC-L,Low,"Extracted-package validation"
+"Table 1. Independent portfolio QC checklist",QC-007,Privacy,"Public content is safe","No private phone, email, local profile path, credentials, or hidden customer data",Critical,DC-L,Low,"Automated scan plus human review"
+"Table 1. Independent portfolio QC checklist",QC-008,Web,"Generated site is complete","No broken internal links; all dashboards, downloads, and videos resolve",High,DC-L,Low,"HTML/link validation"

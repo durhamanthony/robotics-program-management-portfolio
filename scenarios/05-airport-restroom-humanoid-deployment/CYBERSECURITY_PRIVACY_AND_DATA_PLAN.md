@@ -1,10 +1,15 @@
 # Cybersecurity, Privacy, and Data Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Purpose limitation
 
 Sensors support navigation, safety, fixture service, exception detection, and evidence inside a closed restroom. The pilot prohibits facial recognition, identity inference, passenger analytics, marketing, law-enforcement use, and operation while the room is occupied.
 
 ## Control design
+
+**Table 1. Control design — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Control area | Required control | Acceptance evidence |
 |---|---|---|
@@ -25,4 +30,3 @@ The airport owns operational and inspection records. Manufacturer access is limi
 ## Exit
 
 At pilot termination, the seller returns airport data, provides the retained-data inventory, deletes unneeded copies, removes credentials, and certifies remote-access closure. The airport preserves only records required by policy, contract, incident, or legal hold.
-

@@ -1,5 +1,8 @@
 # Training, Change, and Workforce Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Change principle
 
 The pilot assigns routine tasks; it does not authorize position elimination. Custodians help define the work, inspect results, own exceptions, and control reopening. Employee feedback is a formal acceptance input.
@@ -9,6 +12,8 @@ The pilot assigns routine tasks; it does not authorize position elimination. Cus
 Airport custodians; custodial supervisors; Airport Duty Managers; Facilities; Safety and Health; Accessibility; Cybersecurity and Privacy; Procurement; Finance; terminal operations; passenger experience; seller support; manufacturer field engineering; and employee representatives.
 
 ## Role-based training
+
+**Table 1. Role-based training — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Audience | Required capability | Assessment | Result |
 |---|---|---|---|
@@ -31,4 +36,3 @@ Airport custodians; custodial supervisors; Airport Duty Managers; Facilities; Sa
 ## Completed change actions
 
 Employee review added an explicit body-fluid safe-stop category, moved the charging envelope out of an accessible route, simplified the inspection form, and retained one custodian as mission inspector during the entire pilot. These were recorded as implemented design changes, not informal comments.
-

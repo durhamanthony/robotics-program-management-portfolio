@@ -1,0 +1,4 @@
+table_title,evidence_id,claim_or_control,evidence_type,location,record_owner,approver,review_date,approval_state,evidence_class,confidence,source_or_validation
+"Table 1. Evidence register",EVD-001,"Safety acceptance thresholds are approved","Signed hazard and acceptance plan",[ATTACH],Safety Lead,Executive Sponsor,2026-09-18,Pending,UPV,Unverified,"Do not clear the gate without signed evidence"
+"Table 1. Evidence register",EVD-002,"Budget reflects current supplier and labor inputs","Quote and rate package",[ATTACH],Finance Lead,Executive Sponsor,2026-09-25,Pending,RBE-M,Medium,"Replace estimates with dated quote and approved burdened rates"
+"Table 1. Evidence register",EVD-003,"Acceptance tests satisfy each release requirement","Signed RTM and test report",[ATTACH],Test Lead,Customer Owner,2026-10-16,Pending,UPV,Unverified,"Every passed row requires traceable test evidence"

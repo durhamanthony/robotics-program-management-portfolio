@@ -1,9 +1,14 @@
 # Basis of Estimate and Sensitivity — Retail Backroom Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 **Estimate date:** August 18, 2026  
 **Estimate maturity:** planning estimate for a fictional portfolio scenario; not a supplier quote
 
 ## Evidence classes
+
+**Table 1. Evidence classes — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Class | Meaning | How it may be used |
 |---|---|---|
@@ -14,6 +19,8 @@
 | Binding quote required | supplier/customer evidence missing | cannot authorize procurement or rollout |
 
 ## Cost build
+
+**Table 2. Cost build — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Cost element | Basis | Amount | Range for sensitivity |
 |---|---|---:|---:|

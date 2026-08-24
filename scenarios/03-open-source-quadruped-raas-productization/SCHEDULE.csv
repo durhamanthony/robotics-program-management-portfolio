@@ -1,0 +1,9 @@
+table_title,id,phase,start_month,end_month,exit_gate,owner,status,evidence_class,confidence,source_or_validation
+Case 03 integrated schedule,S-01,Discovery and operating envelope,1,2,G0,Product,Complete,Scenario assumption,Medium,Approved integrated baseline
+Case 03 integrated schedule,S-02,Architecture license and hazard baseline,2,3,G1,Systems / Legal,Complete,Scenario assumption,Medium,Gate record
+Case 03 integrated schedule,S-03,Alpha hardware and platform,3,6,G2,Engineering,Complete,Scenario assumption,Medium,Engineering plan and results
+Case 03 integrated schedule,S-04,Manufacturing and service readiness,5,8,G3,Operations,Complete,Scenario assumption,Medium,Readiness audit
+Case 03 integrated schedule,S-05,Pilot site onboarding,7,9,G4,Customer Success,Complete,Scenario assumption,Medium,Site checklist and contracts
+Case 03 integrated schedule,S-06,Six-site 60-day pilot,9,11,Pilot acceptance,Program Manager,Complete,Scenario assumption,Low,Fictional pilot evidence
+Case 03 integrated schedule,S-07,Corrections and release candidate,11,12,G5,Engineering / Quality,Complete,Scenario assumption,Low,Fictional closeout record
+Case 03 integrated schedule,S-08,General Availability scale gate,13,15,G6,Executive Sponsor,Held,Unknown / pending validation,Open,41 executed unit commitments and actual cost evidence

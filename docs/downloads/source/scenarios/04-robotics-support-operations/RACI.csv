@@ -1,12 +1,11 @@
-Capability,Executive Sponsor,Service Ops,Customer Support,Robotics L2,Field Service,Engineering,Product,IT Security,Supply Chain
-Service strategy and funding,A,R,C,C,C,C,C,C,C
-Case intake and communication,I,A,R,C,I,I,I,I,I
-Remote diagnostics and recovery,I,C,C,A,C,C,I,C,I
-Field dispatch and repair,I,C,I,C,A,C,I,C,C
-Engineering defect and release,I,C,I,C,C,A,C,C,I
-Problem and reliability management,I,A,C,R,R,R,C,C,C
-Knowledge and training,I,A,R,R,R,C,C,C,I
-Remote access and security incident,I,C,I,C,C,C,I,A,I
-Parts depot and RMA,I,C,I,C,R,C,I,I,A
-Release and deployment support readiness,A,R,C,C,C,C,R,C,C
-
+table_title,Capability,Executive Sponsor,Service Ops,Customer Support,Robotics L2,Field Service,Engineering,Product,IT Security,Supply Chain,evidence_class,confidence,source_or_validation
+Table 1. Raci,Service strategy and funding,A,R,C,C,C,C,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Case intake and communication,I,A,R,C,I,I,I,I,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Remote diagnostics and recovery,I,C,C,A,C,C,I,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Field dispatch and repair,I,C,I,C,A,C,I,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Engineering defect and release,I,C,I,C,C,A,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Problem and reliability management,I,A,C,R,R,R,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Knowledge and training,I,A,R,R,R,C,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Remote access and security incident,I,C,I,C,C,C,I,A,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Parts depot and RMA,I,C,I,C,R,C,I,I,A,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Release and deployment support readiness,A,R,C,C,C,C,R,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals

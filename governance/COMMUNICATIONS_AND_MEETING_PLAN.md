@@ -1,6 +1,11 @@
 # Communications and Meeting Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Stakeholder communications
+
+**Table 1. Stakeholder communications — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Audience | Information | Cadence | Owner | Channel/output |
 |---|---|---|---|---|

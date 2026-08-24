@@ -1,5 +1,8 @@
 # Change and Configuration Control
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Controlled items
 
 - Contract scope, SOW deliverables, assumptions, exclusions, and acceptance criteria.
@@ -27,6 +30,8 @@ Emergency changes are limited to restoring safe service or containing a critical
 Configuration ID; robot serial/asset ID; hardware revision; firmware/software versions; safety configuration; maps/models/calibration; network/site configuration; installed options; release date; approver; linked test evidence; rollback version.
 
 ## Decision authority
+
+**Table 1. Decision authority — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Impact | Authority |
 |---|---|

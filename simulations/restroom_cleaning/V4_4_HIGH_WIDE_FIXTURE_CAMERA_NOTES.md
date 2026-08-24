@@ -1,5 +1,8 @@
 # Restroom MuJoCo v4.4 — Higher, Wider Fixture Camera
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Correction made
 
 The toilet-and-urinal camera is now higher and farther from the room than the v4.3 camera. It uses the same high, wide framing as the opening overview so the cleaning robot, both toilet bays, the urinal bay, and the complete restroom footprint remain visible when MuJoCo's two control panels are open.

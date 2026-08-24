@@ -1,11 +1,10 @@
-Deliverable,Sponsor,Program Manager,Security Ops,Robot Engineering,Privacy Legal,Safety EHS,IT Security,Field Support
-CONOPS and authority,A,R,R,C,C,C,C,I
-Route and site assessment,I,R,R,C,C,A,C,C
-Privacy impact and retention,I,C,C,I,A,I,C,I
-Mission geofence and alert design,I,A,R,R,C,C,C,I
-Network identity and remote access,I,C,C,C,C,C,A,I
-FAT and configuration release,I,A,C,R,C,C,C,C
-Commissioning and shadow patrol,I,A,R,R,C,C,C,R
-Acceptance and go-live,A,R,R,C,C,C,C,C
-Support handoff,A,R,R,C,I,C,C,R
-
+table_title,Deliverable,Sponsor,Program Manager,Security Ops,Robot Engineering,Privacy Legal,Safety EHS,IT Security,Field Support,evidence_class,confidence,source_or_validation
+Table 1. Raci,CONOPS and authority,A,R,R,C,C,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Route and site assessment,I,R,R,C,C,A,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Privacy impact and retention,I,C,C,I,A,I,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Mission geofence and alert design,I,A,R,R,C,C,C,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Network identity and remote access,I,C,C,C,C,C,A,I,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,FAT and configuration release,I,A,C,R,C,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Commissioning and shadow patrol,I,A,R,R,C,C,C,R,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Acceptance and go-live,A,R,R,C,C,C,C,C,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals
+Table 1. Raci,Support handoff,A,R,R,C,I,C,C,R,SA-L,Low,Fictional scenario record; replace assumptions with approved actuals

@@ -1,10 +1,15 @@
 # Research and Assumptions — Airport Restroom Humanoid Pilot
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Evidence hierarchy
 
 Public sources define safety and cleaning constraints. All airport names, volumes, costs, results, and benefit inputs below are fictional scenario data unless explicitly identified as a public benchmark. Robot procurement amounts are planning allowances, not vendor quotations.
 
 ## Public sources used
+
+**Table 1. Public sources used — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Source | What it supports | Portfolio use |
 |---|---|---|
@@ -13,7 +18,7 @@ Public sources define safety and cleaning constraints. All airport names, volume
 | United States Environmental Protection Agency, *Registered Antimicrobial Products Effective Against Norovirus — List G*, current page reviewed August 2026, https://www.epa.gov/pesticide-registration/epas-registered-antimicrobial-products-effective-against-norovirus-feline | Product registration and wet contact time must match the label | Approved-chemical list, dwell-time requirement, material-compatibility test |
 | Occupational Safety and Health Administration, *Hazard Communication*, 29 Code of Federal Regulations 1910.1200, https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.1200 | Labels, Safety Data Sheets, chemical information, and training | Chemical custody, storage, robot refill procedure, responder training |
 | Occupational Safety and Health Administration, *Bloodborne Pathogens — Overview*, https://www.osha.gov/bloodborne-pathogens/ | Employers determine exposure and use an exposure-control plan where occupational exposure exists | Sharps and visible-blood safe stop, site exposure determination, trained human response |
-| United States Bureau of Labor Statistics, *Janitors and Building Cleaners*, May 2024 wage data, https://www.bls.gov/ooh/building-and-grounds-cleaning/janitors-and-building-cleaners.htm | National median wage was $17.27 per hour; work commonly includes variable shifts | External reasonableness check only; not used as a local airport quotation |
+| United States Bureau of Labor Statistics, national employment and wage data, May 2025, https://www.bls.gov/news.release/ocwage.t01.htm | National mean wage for janitors and cleaners was $18.64 per hour | Public wage benchmark only; the fictional $31.50 loaded airport rate is 1.69 times the wage and must be replaced with payroll or contract data |
 | Metropolitan Washington Airports Authority, *Custodial Services at Ronald Reagan Washington National Airport*, solicitation 1-19-C001, https://www.mwaa.com/business/1-19-c001-custodial-services-national-airport | Public airport custodial scope runs 24 hours per day, 365 days per year and includes restrooms across approximately 1.5 million square feet; listed annual estimate was $10–11 million | Supports continuous-airport demand, not Pacific Gateway volumes or pricing |
 | TRAX Analytics, *Syracuse Hancock International Airport*, https://traxinsights.com/syracuse-hancock-international-airport/ | Vendor case reports 20 restroom locations, approximately 10 minutes per restroom, and demand-based cleaning | Reasonableness check for short-visit duration; vendor-reported case, not independent benchmark |
 | Agility Robotics, *GXO Signs Industry-First Multi-Year Agreement with Agility Robotics*, June 27, 2024, https://www.agilityrobotics.com/content/gxo-signs-industry-first-multi-year-agreement-with-agility-robotics | Commercial Robotics-as-a-Service deployment for tote movement in a live warehouse | Supports commercial model and dense logistics-workflow plausibility only |
@@ -24,6 +29,8 @@ Public sources define safety and cleaning constraints. All airport names, volume
 | Figure, *Agreement with Catalyst Brands*, https://www.figure.ai/news/figure-signs-agreement-with-catalyst-brands | Retail distribution commercial agreement | Supports retail opportunity ranking only |
 
 ## Fictional airport baseline
+
+**Table 2. Fictional airport baseline — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Input | Value | Evidence class | Owner / validation |
 |---|---:|---|---|
@@ -37,9 +44,11 @@ Public sources define safety and cleaning constraints. All airport names, volume
 | Annualized routine capacity | 4 × 3 × 365 × 0.50 = 2,190 hours | Derived | Benefits owner |
 | Annualized capacity value | 2,190 × $31.50 = $68,985 | Derived, not cash savings | Finance |
 
-The Bureau of Labor Statistics wage is a national wage benchmark, not a loaded airport cost. The scenario's $31.50 rate includes fictional benefits, shift premiums, and contractor overhead and must be replaced with the airport's actual payroll or contract data.
+The Bureau of Labor Statistics wage is a national wage benchmark, not a loaded airport cost. The scenario's $31.50 rate is 1.69 times the $18.64 May 2025 national mean wage and includes fictional benefits, shift premiums, supervision, insurance, and contractor overhead. It must be replaced with the airport's actual payroll or contract data.
 
 ## Phase 2 fictional planning inputs
+
+**Table 3. Phase 2 fictional planning inputs — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Input | Value | Validation required |
 |---|---:|---|
@@ -56,6 +65,8 @@ The Bureau of Labor Statistics wage is a national wage benchmark, not a loaded a
 Robotics-as-a-Service (RaaS) converts ownership into a subscription but does not eliminate integration, retained human work, or commercial risk. The rate ceiling is a customer affordability boundary; a provider must separately approve its cost floor.
 
 ## Cost assumptions requiring quotation
+
+**Table 4. Cost assumptions requiring quotation — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Cost input | Base | Low | High | Status |
 |---|---:|---:|---:|---|

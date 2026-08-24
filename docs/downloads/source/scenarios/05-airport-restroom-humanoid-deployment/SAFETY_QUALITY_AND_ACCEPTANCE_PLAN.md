@@ -1,10 +1,15 @@
 # Safety, Quality, and Acceptance Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Safety operating rule
 
 The robot operates only in a closed, verified-empty restroom. A human controls reopening. The system is not approved to clean around passengers.
 
 ## Hazard controls
+
+**Table 1. Hazard controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Hazard | Prevention | Detection | Response |
 |---|---|---|---|
@@ -33,4 +38,3 @@ An authorized custodian scores twelve points: toilet/urinal exterior; seat and c
 ## Acceptance authority
 
 The airport accepts the pilot. The seller accepts contract completion. The manufacturer accepts or rejects the pilot product release. None can substitute for another party's decision.
-

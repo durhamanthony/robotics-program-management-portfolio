@@ -129,26 +129,17 @@ def security_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str
     return "dock"
 
 
-def ad01_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    path = [(-6.2, -2.1, 0.0), (-2.8, -2.1, 0.0), (-2.6, -1.2, math.pi / 4), (0.0, -1.2, 0.0), (2.6, -1.2, 0.0), (3.0, 1.2, math.pi / 2), (6.2, 2.1, 0.0)]
-    carrying = 0.16 <= t < 0.73
-    if t < 0.16:
-        x_pos, y_pos, yaw = (-6.2, -2.1, 0.0)
-    elif t < 0.73:
-        x_pos, y_pos, _, yaw = path_pose((t - 0.16) / 0.57, [(x, y, 0.0) for x, y, _ in path])
-    elif t < 0.84:
-        x_pos, y_pos, yaw = (6.2, 2.1, 0.0)
+def openquad_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
+    route = [(-5.2, -2.0, 0.0), (-2.5, -2.0, 0.0), (0.0, 0.0, 0.0), (2.8, 1.8, 0.0), (5.2, 1.8, 0.0)]
+    set_mocap(model, data, "test_unit", path_pose(min(t / 0.82, 1.0), route))
+    if t < 0.66:
+        replacement = (5.2, -2.2, 0.0, math.pi)
     else:
-        x_pos, y_pos, _, yaw = path_pose((t - 0.84) / 0.16, [(6.2, 2.1, 0.0), (3.8, 1.6, 0.0), (2.7, 1.2, 0.0)])
-    data.qpos[:6] = (x_pos, y_pos, yaw, math.radians(38 if carrying else 5), math.radians(-75 if carrying else -20), 0.0)
-    data.qvel[:] = 0.0
-    if carrying:
-        set_mocap(model, data, "tote", (x_pos + 0.55 * math.cos(yaw), y_pos + 0.55 * math.sin(yaw), 1.25, yaw))
-    elif t >= 0.73:
-        set_mocap(model, data, "tote", (7.2, 2.1, 1.73, 0.0))
-    else:
-        set_mocap(model, data, "tote", (-7.2, -2.1, 1.73, 0.0))
-    return "overview"
+        replacement = path_pose((t - 0.66) / 0.34, [(5.2, -2.2, 0.0), (4.2, -0.5, 0.0), (2.8, 1.8, 0.0)])
+    set_mocap(model, data, "swap_unit", replacement)
+    beacon = geom_id(model, "fault_beacon")
+    model.geom_rgba[beacon] = (0.86, 0.10, 0.08, 1.0) if 0.50 < t < 0.72 else (0.94, 0.57, 0.08, 1.0)
+    return "test_lane" if 0.28 < t < 0.78 else "overview"
 
 
 def restroom_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
@@ -193,31 +184,12 @@ def warehouse_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> st
     return "truck"
 
 
-def support_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
-    robot = path_pose(t, [(-5.0, -1.4, 0.0), (-2.2, 0.0, 0.0), (-0.6, 1.4, 0.0), (1.4, 0.8, 0.0), (4.7, 0.0, 0.0)])
-    set_mocap(model, data, "service_robot", robot)
-    technician = (-1.0, 1.5, 0.0, 0.0) if t < 0.70 else path_pose((t - 0.70) / 0.30, [(-1.0, 1.5, 0.0), (1.2, 1.3, 0.0), (3.6, 0.7, 0.0)])
-    set_mocap(model, data, "technician", technician)
-    sensor = geom_id(model, "service_sensor")
-    case_light = geom_id(model, "case_light")
-    test_light = geom_id(model, "test_beacon")
-    model.geom_rgba[sensor] = (0.92, 0.08, 0.05, 1.0) if t < 0.62 else (0.02, 0.78, 0.56, 1.0)
-    model.geom_rgba[case_light] = (1.0, 0.58, 0.04, 1.0) if t < 0.75 else (0.02, 0.78, 0.56, 1.0)
-    model.geom_rgba[test_light] = (1.0, 0.58, 0.04, 1.0) if t < 0.86 else (0.02, 0.88, 0.45, 1.0)
-    if t < 0.28:
-        return "overview"
-    if t < 0.78:
-        return "diagnostic"
-    return "verification"
-
-
 SCENES = {
     scene.name: scene
     for scene in (
         Scene("retail", ROOT / "simulations/retail_humanoids/retail.xml", "retail-humanoid-fulfillment.mp4", 14.0, retail_update),
         Scene("security", ROOT / "simulations/quadruped_security/security.xml", "quadruped-night-security.mp4", 14.0, security_update),
-        Scene("ad01", ROOT / "simulations/new_robot_npi/ad01.xml", "ad01-new-robot-npi.mp4", 14.0, ad01_update),
-        Scene("support", ROOT / "simulations/support_lab/service_bay.xml", "robotics-support-triage.mp4", 12.0, support_update),
+        Scene("openquad", ROOT / "simulations/open_quadruped_raas/open_quadruped.xml", "open-quadruped-raas-productization.mp4", 14.0, openquad_update),
         Scene("restroom", ROOT / "simulations/restroom_cleaning/restroom.xml", "restroom-cleaning-humanoid.mp4", SEQUENCE_END_SECONDS, restroom_update),
         Scene("warehouse", ROOT / "simulations/warehouse_capability/warehouse.xml", "warehouse-palletizing-truck-loading.mp4", 16.0, warehouse_update),
     )

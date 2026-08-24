@@ -1,5 +1,8 @@
 # Diagnostic and Troubleshooting Runbook
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## First five actions
 
 1. Confirm people/area safety and robot state. Do not restart or remotely move a robot without authorization and a clear area.
@@ -9,6 +12,8 @@
 5. Choose the narrowest safe diagnostic branch and record every action.
 
 ## Diagnostic branches
+
+**Table 1. Diagnostic branches — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Symptom | Check | Tool/evidence | Safe escalation |
 |---|---|---|---|
@@ -27,4 +32,3 @@
 ## Return to service
 
 Authorized repair/change complete; configuration and serial updated; visual/mechanical inspection; calibration/diagnostic pass; safety-related checks by qualified owner; nominal and fault-recovery test; telemetry/alerts restored; area/customer notified; case evidence and knowledge updated.
-

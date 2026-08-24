@@ -1,5 +1,8 @@
 # Project Charter — Two Humanoids for Retail Backroom Fulfillment
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Authorization
 
 Meridian Department Store authorizes a 20-week, $640,000 controlled pilot at fictional Store 214. The Deployment Program Manager may coordinate the vendor, store, safety, information-security, inventory, and field-service work inside this charter. Any customer-floor operation, ladder work, electrical repair, new merchandise class, additional store, or budget increase requires sponsor-approved change control.
@@ -30,6 +33,8 @@ Tablet request; Stock-Keeping Unit (SKU), size, and color validation; shoe-box a
 Customer-floor operation; customer interaction; tangled-hanger separation; loose-garment folding; ladders; light-bulb or electrical work; spills or restroom cleaning; hazardous goods; construction; unsupervised safety decisions; facial recognition; chain rollout.
 
 ## Governance and gates
+
+**Table 1. Governance and gates — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Gate | Chair | Required evidence | Decision |
 |---|---|---|---|

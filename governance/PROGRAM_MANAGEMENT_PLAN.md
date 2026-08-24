@@ -1,10 +1,15 @@
 # Robotics Program Management Plan
 
+> **Evidence-confidence key:** [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.
+
+
 ## Purpose
 
 Provide one operating framework for moving a robotics initiative from approved need through safe, supportable operations. The plan applies to customer deployments, product/NPI programs, and service-operations implementations.
 
 ## Lifecycle and required gates
+
+**Table 1. Lifecycle and required gates — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes**
 
 | Phase | Required decision | Minimum evidence |
 |---|---|---|
