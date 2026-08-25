@@ -1,0 +1,8 @@
+table_title,deliverable,sponsor,project_manager,endpoint,infosec,procurement,asset_management,applications,service_desk,business_site,vendor,evidence_class,confidence,source_or_validation
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Charter / budget / method,A,R,C,C,C,C,C,C,C,I,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Device standard / build,I,C,A/R,C,C,C,C,C,I,R,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Security/compliance release,I,C,R,A,I,C,C,I,I,C,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Application/data readiness,I,R,R,C,I,I,A/R,C,C,C,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Wave go/no-go,A,R,R,A,C,R,R,R,A,C,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Asset return/sanitization,I,C,C,A,C,R,I,I,R,R,Scenario assumption,Low,Replace with approved project records
+"Hardware refresh RACI — A accountable, R responsible, C consulted, I informed",Service transition/closure,A,R,R,C,C,R,C,A/R,C,C,Scenario assumption,Low,Replace with approved project records

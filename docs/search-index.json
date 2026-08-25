@@ -452,6 +452,366 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/WEEKLY_STATUS_REPORT.html"
   },
   {
+    "title": "Hardware Hybrid Playbook Artifact Index",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Hardware Hybrid Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Hybrid Metrics",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/HYBRID_METRICS.html"
+  },
+  {
+    "title": "Hardware Hybrid Integrated Governance and Decision Matrix",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/INTEGRATED_GOVERNANCE.html"
+  },
+  {
+    "title": "Integrated Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/INTEGRATED_PLAN.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh \u2014 Hybrid Playbook",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/PLAYBOOK.html"
+  },
+  {
+    "title": "Hardware Hybrid Rolling-Wave and Flow Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/hybrid/ROLLING_WAVE_AND_FLOW_PLAN.html"
+  },
+  {
+    "title": "Hardware Kanban Playbook Artifact Index",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Hardware Kanban Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Hardware Kanban Explicit Policies and Service-Level Expectations",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/EXPLICIT_POLICIES.html"
+  },
+  {
+    "title": "Flow Metrics",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/FLOW_METRICS.html"
+  },
+  {
+    "title": "Kanban Board",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/KANBAN_BOARD.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh \u2014 Kanban Playbook",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/PLAYBOOK.html"
+  },
+  {
+    "title": "Hardware Kanban Service Delivery Review",
+    "path": "library/enterprise-programs/02-hardware-refresh/kanban/SERVICE_DELIVERY_REVIEW.html"
+  },
+  {
+    "title": "Hardware Predictive Playbook Artifact Index",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Earned Value",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/EARNED_VALUE.html"
+  },
+  {
+    "title": "Hardware Predictive Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Integrated Master Schedule",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/INTEGRATED_MASTER_SCHEDULE.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh \u2014 Predictive / Waterfall Playbook",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/PLAYBOOK.html"
+  },
+  {
+    "title": "Hardware Predictive PMBOK 8 Alignment Matrix",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/PMBOK8_ALIGNMENT.html"
+  },
+  {
+    "title": "Hardware Predictive Quality Management Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/QUALITY_MANAGEMENT_PLAN.html"
+  },
+  {
+    "title": "Hardware Predictive Stage Gates and Change Control",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/STAGE_GATES_AND_CHANGE_CONTROL.html"
+  },
+  {
+    "title": "Wbs",
+    "path": "library/enterprise-programs/02-hardware-refresh/predictive/WBS.html"
+  },
+  {
+    "title": "Hardware Scrum Playbook Artifact Index",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Hardware Scrum Definition of Done",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/DEFINITION_OF_DONE.html"
+  },
+  {
+    "title": "Hardware Scrum Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh \u2014 Scrum Playbook",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/PLAYBOOK.html"
+  },
+  {
+    "title": "Product Backlog",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/PRODUCT_BACKLOG.html"
+  },
+  {
+    "title": "Scrum Metrics",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/SCRUM_METRICS.html"
+  },
+  {
+    "title": "Sprint Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/scrum/SPRINT_PLAN.html"
+  },
+  {
+    "title": "Hardware Refresh Application and User-Data Readiness Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/APPLICATION_AND_DATA_READINESS.html"
+  },
+  {
+    "title": "Application Readiness",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/APPLICATION_READINESS.html"
+  },
+  {
+    "title": "Hardware Refresh Asset Retirement, Reconciliation, and Closeout Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/ASSET_RETIREMENT_AND_CLOSEOUT.html"
+  },
+  {
+    "title": "Hardware Refresh Assumptions, Evidence, and Experience Map",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/ASSUMPTIONS_AND_EXPERIENCE_MAP.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/BUDGET.html"
+  },
+  {
+    "title": "Hardware Refresh Communications, Training, and Support Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/COMMUNICATIONS_TRAINING_AND_SUPPORT.html"
+  },
+  {
+    "title": "Hardware Refresh Deployment, Hypercare, and Service Transition Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_HYPERCARE_AND_SERVICE_TRANSITION.html"
+  },
+  {
+    "title": "Deployment Waves",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_WAVES.html"
+  },
+  {
+    "title": "Hardware Refresh Device Build and Provisioning Standard",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.html"
+  },
+  {
+    "title": "Exception Log",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/EXCEPTION_LOG.html"
+  },
+  {
+    "title": "Hardware Refresh Governance, RACI, and Decision Rights",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/GOVERNANCE_AND_DECISION_RIGHTS.html"
+  },
+  {
+    "title": "Inventory And Asset Reconciliation",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/INVENTORY_AND_ASSET_RECONCILIATION.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh Portfolio Guide",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/PORTFOLIO_GUIDE.html"
+  },
+  {
+    "title": "Hardware Refresh Procurement, Staging, and Logistics Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/PROCUREMENT_STAGING_AND_LOGISTICS.html"
+  },
+  {
+    "title": "Enterprise Hardware Refresh Project Charter",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/PROJECT_CHARTER.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/RACI.html"
+  },
+  {
+    "title": "Raid Register",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/RAID_REGISTER.html"
+  },
+  {
+    "title": "Sanitization Chain Of Custody",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/SANITIZATION_CHAIN_OF_CUSTODY.html"
+  },
+  {
+    "title": "Hardware Refresh Security, Compliance, and Sanitization Plan",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/SECURITY_COMPLIANCE_AND_SANITIZATION.html"
+  },
+  {
+    "title": "Source Register",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/SOURCE_REGISTER.html"
+  },
+  {
+    "title": "User Data Validation",
+    "path": "library/enterprise-programs/02-hardware-refresh/common/USER_DATA_VALIDATION.html"
+  },
+  {
+    "title": "Agile Metrics",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/AGILE_METRICS.html"
+  },
+  {
+    "title": "M&A Agile Playbook Artifact Index",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "M&A Agile Definition of Ready and Definition of Done",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/DEFINITION_OF_READY_DONE.html"
+  },
+  {
+    "title": "M&A Agile Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Outcome Roadmap",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/OUTCOME_ROADMAP.html"
+  },
+  {
+    "title": "M&A IT Integration \u2014 Agile Delivery Playbook",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/PLAYBOOK.html"
+  },
+  {
+    "title": "Product Backlog",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/PRODUCT_BACKLOG.html"
+  },
+  {
+    "title": "Sprint Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/SPRINT_PLAN.html"
+  },
+  {
+    "title": "M&A Agile Working Agreement and Ceremonies",
+    "path": "library/enterprise-programs/01-ma-it-integration/agile/WORKING_AGREEMENT_AND_CEREMONIES.html"
+  },
+  {
+    "title": "M&A Predictive Playbook Artifact Index",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/ARTIFACT_INDEX.html"
+  },
+  {
+    "title": "Earned Value",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/EARNED_VALUE.html"
+  },
+  {
+    "title": "M&A Predictive Executive Status \u2014 Illustrative Checkpoint",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/EXECUTIVE_STATUS.html"
+  },
+  {
+    "title": "Integrated Master Schedule",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/INTEGRATED_MASTER_SCHEDULE.html"
+  },
+  {
+    "title": "M&A IT Integration \u2014 Predictive / Waterfall Playbook",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/PLAYBOOK.html"
+  },
+  {
+    "title": "M&A Predictive PMBOK 8 Alignment Matrix",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/PMBOK8_ALIGNMENT.html"
+  },
+  {
+    "title": "M&A Predictive Quality Management Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/QUALITY_MANAGEMENT_PLAN.html"
+  },
+  {
+    "title": "M&A Predictive Stage Gates and Integrated Change Control",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/STAGE_GATES_AND_CHANGE_CONTROL.html"
+  },
+  {
+    "title": "Wbs",
+    "path": "library/enterprise-programs/01-ma-it-integration/predictive/WBS.html"
+  },
+  {
+    "title": "Application Portfolio",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/APPLICATION_PORTFOLIO.html"
+  },
+  {
+    "title": "M&A Application Rationalization and Data Consolidation Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/APPLICATION_RATIONALIZATION_AND_DATA_PLAN.html"
+  },
+  {
+    "title": "M&A Assumptions, Evidence, and Experience Map",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/ASSUMPTIONS_AND_EXPERIENCE_MAP.html"
+  },
+  {
+    "title": "Budget",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/BUDGET.html"
+  },
+  {
+    "title": "M&A Change, Communications, Training, and Support Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/CHANGE_COMMUNICATIONS_AND_TRAINING.html"
+  },
+  {
+    "title": "M&A Collaboration and Workspace Migration Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/COLLABORATION_MIGRATION_PLAN.html"
+  },
+  {
+    "title": "M&A Integrated Cutover, Rollback, and Hypercare Runbook",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.html"
+  },
+  {
+    "title": "Day1 Readiness",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/DAY1_READINESS.html"
+  },
+  {
+    "title": "M&A Day 1 Employee Experience Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/DAY_1_EMPLOYEE_EXPERIENCE_PLAN.html"
+  },
+  {
+    "title": "Dependency Matrix",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/DEPENDENCY_MATRIX.html"
+  },
+  {
+    "title": "M&A Governance, RACI, and Decision Rights",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/GOVERNANCE_AND_DECISION_RIGHTS.html"
+  },
+  {
+    "title": "M&A Identity and Access Integration Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.html"
+  },
+  {
+    "title": "Migration Validation",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/MIGRATION_VALIDATION.html"
+  },
+  {
+    "title": "M&A Network and Infrastructure Integration Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.html"
+  },
+  {
+    "title": "M&A IT Integration Portfolio Guide",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.html"
+  },
+  {
+    "title": "M&A IT Integration Project Charter",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.html"
+  },
+  {
+    "title": "Raci",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/RACI.html"
+  },
+  {
+    "title": "Raid Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.html"
+  },
+  {
+    "title": "M&A Security, Privacy, and Legal-Hold Control Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.html"
+  },
+  {
+    "title": "Source Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/SOURCE_REGISTER.html"
+  },
+  {
+    "title": "M&A Vendor, Procurement, Contract, and Budget Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/VENDOR_PROCUREMENT_AND_BUDGET.html"
+  },
+  {
     "title": "Benefits Realization and Project Closeout",
     "path": "library/governance/BENEFITS_AND_CLOSEOUT.html"
   },

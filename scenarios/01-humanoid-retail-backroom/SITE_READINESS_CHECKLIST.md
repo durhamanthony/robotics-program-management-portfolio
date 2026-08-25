@@ -7,9 +7,9 @@
 
 | Area | Requirement | Evidence / accountable owner | Final state |
 |---|---|---|---|
-| Receiving | truck position, ramp/threshold, pallet standard, staging footprint, forklift park, and work-zone interlock verified | signed dock drawing and 20-cycle test / Dock Lead | ready |
+| Receiving | truck position, ramp/threshold, pallet standard, center staging footprint, forklift return into truck, and work-zone interlock verified | signed dock drawing and 20-cycle test / Dock Lead | ready |
 | Scope | approved shoe boxes and already-hung garments identified | item catalog / Inventory Lead | ready |
-| Route | aisle widths, doors, four physical demo treads, turns, lower/raised shelf reach, and courtesy drop-off table measured | signed route drawing / Safety Lead | ready |
+| Route | aisle widths, doors, four physical demo treads, turns, lower/raised shelf reach, courtesy drop-off table, and staffed service window measured | signed route drawing / Safety Lead | ready |
 | Exceptions | tangled hangers, torn boxes, loose garments, heavy items have labeled human queue | walkthrough / Store Operations | ready |
 | Shared space | right-of-way, speed, stops, signs, stock-cart parking defined | safety review / Safety Lead | ready |
 | Egress | fire doors, extinguishers, exits, electrical panels remain unobstructed | facilities inspection / Facilities | ready |

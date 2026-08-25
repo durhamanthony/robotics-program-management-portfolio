@@ -1,0 +1,1922 @@
+{
+  "notice": "Enterprise case studies are anonymized, experience-informed fictional scenarios. Company ABC and Company XYZ are placeholders; modeled dates, costs, counts, and results are not prior-employer claims.",
+  "sections": [
+    {
+      "id": "ma-integration",
+      "eyebrow": "Real-world technology transformation \u00b7 Scenario 01",
+      "title": "M&A IT Integration \u2014 Two Complete Delivery Playbooks",
+      "intro": "A full IT-integration control pack from deal restrictions and Day 1 through identity, network, collaboration migrations, application rationalization, hypercare, decommissioning, and benefits\u2014shown once in Agile and once in Predictive / Waterfall.",
+      "notice": "PMBOK Guide Eighth Edition is approach-neutral. The Predictive / Waterfall playbook is PMBOK 8 aligned; the Agile playbook uses iterative value delivery while retaining fixed legal, security, data, and Day 1 gates.",
+      "scenarios": [
+        {
+          "code": "M&A 01A",
+          "slug": "ma-it-integration-agile",
+          "title": "M&A IT Integration \u2014 Agile Playbook",
+          "methodology": "Agile",
+          "home_anchor": "ma-integration",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "M&A IT Technical Project Manager \u2014 Agile integration lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "20 weeks / 10 two-week sprints",
+          "budget": "$1.860M modeled authorization",
+          "tco": "Modeled forecast: $1.782M",
+          "summary": "Integrate Company XYZ into Company ABC through outcome-based releases: secure Day 1 employee experience, identity and network bridges, Google Workspace/Slack/Asana/Jira migration, application rationalization, hypercare, and controlled convergence.",
+          "decision": "Continue the migration release plan; hold the Jira production cohort until automation regression passes, close 15 Day 1 exceptions, and preserve source retention until legal-hold validation is accepted.",
+          "metrics": [
+            {
+              "label": "Day 1 fully ready",
+              "value": "665 / 680",
+              "note": "97.8%; 15 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Authentication success",
+              "value": "674 / 680",
+              "note": "99.1% at Day 1 checkpoint",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Pilot reconciliation",
+              "value": "99.7%",
+              "note": "Workspace pilot; defined exclusions retained",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Applications discovered",
+              "value": "142",
+              "note": "Every app requires owner and disposition",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Overlaps targeted",
+              "value": "22 / 37",
+              "note": "Retire or consolidate after acceptance",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast vs baseline",
+              "value": "$1.782M",
+              "note": "$78K below $1.860M authorization",
+              "state": "pass",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 20,
+          "phases": [
+            {
+              "name": "Foundation and discovery",
+              "start": 1,
+              "end": 4,
+              "status": "Complete"
+            },
+            {
+              "name": "Day 1 minimum viable experience",
+              "start": 3,
+              "end": 6,
+              "status": "Accepted with exceptions"
+            },
+            {
+              "name": "Pilot migrations and secure interconnect",
+              "start": 5,
+              "end": 8,
+              "status": "In progress"
+            },
+            {
+              "name": "Production migration waves",
+              "start": 9,
+              "end": 16,
+              "status": "Planned / rolling"
+            },
+            {
+              "name": "Convergence, decommission, and closure",
+              "start": 17,
+              "end": 20,
+              "status": "Planned"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 1860000,
+              "display": "$1.860M",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 1782000,
+              "display": "$1.782M",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 1126000,
+              "display": "$1.126M",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 1782000,
+              "display": "$1.782M",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 78000,
+              "display": "$78K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "All amounts are fictional planning assumptions. The Agile forecast is refreshed from accepted increments, vendor commitments, remaining backlog, reserve, and identified uncertainty. No projected license reduction is a realized saving until Finance validates the stopped invoice or contract.",
+          "risks": [
+            {
+              "id": "MA-R-001",
+              "risk": "Identity duplicates or stale contractor records block Day 1 access",
+              "score": 20,
+              "status": "Mitigating",
+              "response": "Roster reconciliation at T-10/T-3/T-0; named exception path."
+            },
+            {
+              "id": "MA-R-002",
+              "risk": "Overlapping subnets disrupt routing or DNS",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Collision register, NAT/renumber, isolated test, route-withdrawal rollback."
+            },
+            {
+              "id": "MA-R-003",
+              "risk": "Collaboration permissions, retention, or integrations differ after migration",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Identity-first mapping, legal review, pilot, counts/samples/permission validation."
+            },
+            {
+              "id": "MA-I-004",
+              "risk": "Fifteen workers remain on controlled Day 1 exceptions",
+              "score": 15,
+              "status": "Open",
+              "response": "Tested workarounds, named owners/expiry, daily burn-down and manager communication."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, target state, risk acceptance, and gate decisions."
+            },
+            {
+              "role": "M&A IT Technical Project Manager",
+              "accountability": "Integrated plan, dependencies, RAID, vendors, status, cutover command, and closure."
+            },
+            {
+              "role": "Corp Dev / Legal / Privacy / HR",
+              "accountability": "Deal restrictions, roster, legal hold, privacy, communications, and people decisions."
+            },
+            {
+              "role": "IAM / Endpoint / Network / Cloud",
+              "accountability": "Day 1 identity/device and secure, observable infrastructure integration."
+            },
+            {
+              "role": "Collaboration / Application / Data Owners",
+              "accountability": "Migration, rationalization, workflow, retention, validation, and decommission acceptance."
+            },
+            {
+              "role": "Security / Service Operations / Vendors",
+              "accountability": "Control approval, monitoring, support, rollback, hypercare, and durable handoff."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the two-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the M&A control workbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DAY_1_EMPLOYEE_EXPERIENCE_PLAN.md",
+              "category": "Day 1",
+              "label": "Employee experience plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.md",
+              "category": "Identity",
+              "label": "Identity and access plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.md",
+              "category": "Network",
+              "label": "Network and infrastructure plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/COLLABORATION_MIGRATION_PLAN.md",
+              "category": "Migration",
+              "label": "Collaboration migration plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_RATIONALIZATION_AND_DATA_PLAN.md",
+              "category": "Applications",
+              "label": "Application rationalization and data plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
+              "category": "Assurance",
+              "label": "Security, privacy, and legal-hold plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
+              "category": "Cutover",
+              "label": "Cutover, rollback, and hypercare runbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_PORTFOLIO.csv",
+              "category": "Inventory",
+              "label": "Application portfolio and dispositions"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Agile delivery playbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/OUTCOME_ROADMAP.csv",
+              "category": "Roadmap",
+              "label": "Outcome and release roadmap"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/PRODUCT_BACKLOG.csv",
+              "category": "Backlog",
+              "label": "Prioritized integration backlog"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/SPRINT_PLAN.csv",
+              "category": "Delivery",
+              "label": "Sprint plan and review record"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/DEFINITION_OF_READY_DONE.md",
+              "category": "Quality",
+              "label": "Definition of Ready and Done"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/AGILE_METRICS.csv",
+              "category": "Metrics",
+              "label": "Flow, quality, and outcome metrics"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Agile executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Forecast Week 20",
+            "budget": "Forecast $1.782M vs $1.860M",
+            "acceptance": [
+              "Day 1 employee readiness and exception evidence",
+              "Accepted identity/network/collaboration/application increments",
+              "Source/temporary control removal only after approval",
+              "Operations and benefits owners named"
+            ],
+            "lessons": [
+              "Identity-first sequencing reduces migration ambiguity",
+              "Fixed gates and adaptive discovery can coexist",
+              "Completion requires business, data, permission, and support evidence"
+            ]
+          }
+        },
+        {
+          "code": "M&A 01P",
+          "slug": "ma-it-integration-predictive",
+          "title": "M&A IT Integration \u2014 Predictive / Waterfall Playbook",
+          "methodology": "Predictive / Waterfall \u2014 PMBOK 8 aligned",
+          "home_anchor": "ma-integration",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "M&A IT Technical Project Manager \u2014 Predictive integration lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "24 weeks / seven stage gates",
+          "budget": "$1.860M modeled BAC",
+          "tco": "Modeled EAC: $1.782M",
+          "summary": "Deliver the same Company ABC/XYZ integration through formal scope, WBS, schedule and cost baselines; staged design, Day 1, migration, decommission, and closeout gates; integrated change control; quality assurance; and earned value reporting.",
+          "decision": "Maintain the Week 24 baseline and hold Jira production release. Use available schedule float for the collaboration recovery plan; do not reduce validation, rollback, or legal-hold controls to improve SPI.",
+          "metrics": [
+            {
+              "label": "Schedule performance",
+              "value": "SPI 0.97",
+              "note": "Week 24 finish remains forecast",
+              "state": "watch",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Cost performance",
+              "value": "CPI 1.02",
+              "note": "Modeled EAC $1.782M",
+              "state": "pass",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Day 1 fully ready",
+              "value": "665 / 680",
+              "note": "97.8%; 15 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Authentication success",
+              "value": "674 / 680",
+              "note": "99.1% at Day 1 checkpoint",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Pilot reconciliation",
+              "value": "99.7%",
+              "note": "Workspace pilot; defined exclusions retained",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Applications discovered",
+              "value": "142",
+              "note": "Every app requires owner and disposition",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 24,
+          "phases": [
+            {
+              "name": "Initiate and due diligence",
+              "start": 1,
+              "end": 3,
+              "status": "Complete"
+            },
+            {
+              "name": "Plan, design, and baseline",
+              "start": 2,
+              "end": 6,
+              "status": "Complete"
+            },
+            {
+              "name": "Build, pilot, and Day 1",
+              "start": 5,
+              "end": 10,
+              "status": "Accepted with exceptions"
+            },
+            {
+              "name": "Migration production waves",
+              "start": 9,
+              "end": 19,
+              "status": "In progress"
+            },
+            {
+              "name": "Converge and decommission",
+              "start": 18,
+              "end": 23,
+              "status": "Planned"
+            },
+            {
+              "name": "Close and transfer benefits",
+              "start": 24,
+              "end": 24,
+              "status": "Planned"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 1860000,
+              "display": "$1.860M",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 1782000,
+              "display": "$1.782M",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 1126000,
+              "display": "$1.126M",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 1782000,
+              "display": "$1.782M",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 78000,
+              "display": "$78K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "BAC, PV, EV, AC, EAC, and VAC are fictional. Earned value is credited only for accepted deliverables at the defined measurement rule; financial favorability never substitutes for quality, security, data, or business acceptance.",
+          "risks": [
+            {
+              "id": "MA-R-001",
+              "risk": "Identity duplicates or stale contractor records block Day 1 access",
+              "score": 20,
+              "status": "Mitigating",
+              "response": "Roster reconciliation at T-10/T-3/T-0; named exception path."
+            },
+            {
+              "id": "MA-R-002",
+              "risk": "Overlapping subnets disrupt routing or DNS",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Collision register, NAT/renumber, isolated test, route-withdrawal rollback."
+            },
+            {
+              "id": "MA-R-003",
+              "risk": "Collaboration permissions, retention, or integrations differ after migration",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Identity-first mapping, legal review, pilot, counts/samples/permission validation."
+            },
+            {
+              "id": "MA-I-004",
+              "risk": "Fifteen workers remain on controlled Day 1 exceptions",
+              "score": 15,
+              "status": "Open",
+              "response": "Tested workarounds, named owners/expiry, daily burn-down and manager communication."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, target state, risk acceptance, and gate decisions."
+            },
+            {
+              "role": "M&A IT Technical Project Manager",
+              "accountability": "Integrated plan, dependencies, RAID, vendors, status, cutover command, and closure."
+            },
+            {
+              "role": "Corp Dev / Legal / Privacy / HR",
+              "accountability": "Deal restrictions, roster, legal hold, privacy, communications, and people decisions."
+            },
+            {
+              "role": "IAM / Endpoint / Network / Cloud",
+              "accountability": "Day 1 identity/device and secure, observable infrastructure integration."
+            },
+            {
+              "role": "Collaboration / Application / Data Owners",
+              "accountability": "Migration, rationalization, workflow, retention, validation, and decommission acceptance."
+            },
+            {
+              "role": "Security / Service Operations / Vendors",
+              "accountability": "Control approval, monitoring, support, rollback, hypercare, and durable handoff."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the two-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the M&A control workbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DAY_1_EMPLOYEE_EXPERIENCE_PLAN.md",
+              "category": "Day 1",
+              "label": "Employee experience plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.md",
+              "category": "Identity",
+              "label": "Identity and access plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.md",
+              "category": "Network",
+              "label": "Network and infrastructure plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/COLLABORATION_MIGRATION_PLAN.md",
+              "category": "Migration",
+              "label": "Collaboration migration plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_RATIONALIZATION_AND_DATA_PLAN.md",
+              "category": "Applications",
+              "label": "Application rationalization and data plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
+              "category": "Assurance",
+              "label": "Security, privacy, and legal-hold plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
+              "category": "Cutover",
+              "label": "Cutover, rollback, and hypercare runbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_PORTFOLIO.csv",
+              "category": "Inventory",
+              "label": "Application portfolio and dispositions"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Predictive / Waterfall playbook"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/PMBOK8_ALIGNMENT.md",
+              "category": "PMBOK 8",
+              "label": "PMBOK 8 alignment matrix"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/WBS.csv",
+              "category": "Scope",
+              "label": "Work breakdown structure"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/INTEGRATED_MASTER_SCHEDULE.csv",
+              "category": "Schedule",
+              "label": "Integrated master schedule"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/STAGE_GATES_AND_CHANGE_CONTROL.md",
+              "category": "Governance",
+              "label": "Stage gates and change control"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/QUALITY_MANAGEMENT_PLAN.md",
+              "category": "Quality",
+              "label": "Quality management plan"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/EARNED_VALUE.csv",
+              "category": "Metrics",
+              "label": "Earned value status"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Predictive executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Baseline and forecast Week 24",
+            "budget": "EAC $1.782M vs BAC $1.860M",
+            "acceptance": [
+              "Gates G0\u2013G6 have documented decisions",
+              "WBS deliverables trace to quality and acceptance evidence",
+              "Changes update affected baselines and stakeholders",
+              "Operations, risks, contracts, financials, and benefits transferred"
+            ],
+            "lessons": [
+              "Rolling-wave detail protects an honest predictive baseline",
+              "EVM needs acceptance-based earning rules",
+              "Decommission is a governed deliverable, not an administrative afterthought"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "hardware-refresh",
+      "eyebrow": "Real-world digital workplace delivery \u00b7 Scenario 02",
+      "title": "Desktop, Laptop, and Phone Refresh \u2014 Four Complete Delivery Playbooks",
+      "intro": "One 360-device, four-site program with a shared technical/control pack and four distinct operating systems: Kanban, Scrum, Predictive / Waterfall, and Hybrid. Each has its own dashboard, planning artifacts, metrics, and executive status.",
+      "notice": "All four methods use the same mandatory endpoint, data, security, asset, sanitization, procurement, user, support, and closeout controls. Method selection changes how work is planned and governed\u2014not whether those controls exist.",
+      "scenarios": [
+        {
+          "code": "HW 02K",
+          "slug": "hardware-refresh-kanban",
+          "title": "Enterprise Hardware Refresh \u2014 Kanban Playbook",
+          "methodology": "Kanban",
+          "home_anchor": "hardware-refresh",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "Technical Project Manager \u2014 Kanban hardware refresh lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "18 weeks / four sites / 360 devices",
+          "budget": "$792K modeled authorization",
+          "tco": "Modeled forecast: $748.4K",
+          "summary": "Run the 360-device, four-site refresh as a pull system with WIP limits, service classes, explicit policies, aging and cycle-time evidence, while retaining full security, data, asset, sanitization, support, and closure controls.",
+          "decision": "Stop starting standard work; direct capacity to the 16 exception and remote-return items while preserving WIP limits and custody controls.",
+          "metrics": [
+            {
+              "label": "Latest throughput",
+              "value": "42 / week",
+              "note": "P85 cycle time 6.2 business days",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Devices deployed",
+              "value": "344 / 360",
+              "note": "95.6%; 16 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "First-time-right",
+              "value": "336 / 344",
+              "note": "97.7% accepted without rework",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Data validation",
+              "value": "342 / 344",
+              "note": "99.4% pass or approved no-data path",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Compliant within 24h",
+              "value": "339 / 344",
+              "note": "98.5%; five owned remediations",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Old devices returned",
+              "value": "334 / 344",
+              "note": "97.1%; remote return action open",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 18,
+          "phases": [
+            {
+              "name": "Design workflow, policy, and standards",
+              "start": 1,
+              "end": 4,
+              "status": "Complete"
+            },
+            {
+              "name": "Supply, build, and pilot flow",
+              "start": 3,
+              "end": 6,
+              "status": "Complete"
+            },
+            {
+              "name": "Continuous site/device delivery",
+              "start": 7,
+              "end": 15,
+              "status": "344 accepted"
+            },
+            {
+              "name": "Exception, return, and service closure",
+              "start": 16,
+              "end": 18,
+              "status": "In progress"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 792000,
+              "display": "$792K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 675500,
+              "display": "$675.5K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 43600,
+              "display": "$43.6K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "All values are fictional planning assumptions. The $792K authorization and $748.4K forecast require real purchase orders, invoices, labor, tax/shipping, credits, warranty, and reserve approvals before use. User productivity or released capacity is not cash savings without Finance validation.",
+          "risks": [
+            {
+              "id": "HW-R-003",
+              "risk": "Critical application, driver, VPN, or peripheral fails on the new build",
+              "score": 16,
+              "status": "Mitigating",
+              "response": "Persona pilot, versioned package, fallback, and owner acceptance."
+            },
+            {
+              "id": "HW-R-002",
+              "risk": "Local or application data is not protected before retirement",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Precheck, approved backup/KFM, validation, and sanitization hold."
+            },
+            {
+              "id": "HW-I-005",
+              "risk": "Sixteen application, accessibility, leave, or logistics exceptions remain",
+              "score": 15,
+              "status": "Open",
+              "response": "Named owners/dates/workarounds; specialized capacity and weekly steering."
+            },
+            {
+              "id": "HW-R-004",
+              "risk": "Returned-device custody or sanitization evidence is incomplete",
+              "score": 10,
+              "status": "Mitigating",
+              "response": "Serial scans, secure storage, evidence validation, and quarantine."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, scope/date, risk acceptance, and escalated exceptions."
+            },
+            {
+              "role": "Technical Project Manager",
+              "accountability": "Integrated delivery, methods, RAID, waves, vendors, reporting, and closure."
+            },
+            {
+              "role": "Endpoint Engineering / IAM / InfoSec",
+              "accountability": "Build, provisioning, join, policy, compliance, test, and release authority."
+            },
+            {
+              "role": "Procurement / Logistics / Asset Management",
+              "accountability": "Orders, receipts, serialized custody, staging, distribution, returns, and disposition."
+            },
+            {
+              "role": "Application / Data / Business Site Owners",
+              "accountability": "Persona readiness, data protection, task validation, user acceptance, and site impacts."
+            },
+            {
+              "role": "Service Desk / Field Support / Vendors",
+              "accountability": "Appointments, incident restoration, spares, knowledge, escalation, and service transition."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_FOUR_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the four-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the hardware control workbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.md",
+              "category": "Engineering",
+              "label": "Device build and provisioning standard"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROCUREMENT_STAGING_AND_LOGISTICS.md",
+              "category": "Supply",
+              "label": "Procurement, staging, and logistics plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/APPLICATION_AND_DATA_READINESS.md",
+              "category": "Readiness",
+              "label": "Application and data readiness plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SECURITY_COMPLIANCE_AND_SANITIZATION.md",
+              "category": "Assurance",
+              "label": "Security, compliance, and sanitization plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_HYPERCARE_AND_SERVICE_TRANSITION.md",
+              "category": "Deployment",
+              "label": "Deployment, hypercare, and transition plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/ASSET_RETIREMENT_AND_CLOSEOUT.md",
+              "category": "Closeout",
+              "label": "Asset retirement and closeout plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/INVENTORY_AND_ASSET_RECONCILIATION.csv",
+              "category": "Inventory",
+              "label": "Inventory and asset reconciliation"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_WAVES.csv",
+              "category": "Dashboard",
+              "label": "Deployment wave source data"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SANITIZATION_CHAIN_OF_CUSTODY.csv",
+              "category": "Custody",
+              "label": "Sanitization chain of custody"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Kanban delivery playbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/EXPLICIT_POLICIES.md",
+              "category": "Flow",
+              "label": "Explicit policies and SLEs"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/KANBAN_BOARD.csv",
+              "category": "Board",
+              "label": "Representative Kanban board"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/FLOW_METRICS.csv",
+              "category": "Metrics",
+              "label": "Flow and outcome metrics"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/SERVICE_DELIVERY_REVIEW.md",
+              "category": "Governance",
+              "label": "Service delivery review"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/kanban/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Kanban executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Forecast Week 18",
+            "budget": "Forecast $748.4K vs $792K",
+            "acceptance": [
+              "360 of 360 device assignments have accepted final disposition",
+              "New build, security, app, data, and user evidence accepted",
+              "Old assets reconcile through custody and sanitization/disposition",
+              "Service, vendor, financial, risks, lessons, and benefits transferred"
+            ],
+            "lessons": [
+              "Readiness and downstream capacity must govern wave size",
+              "A device is not Done at handoff; old-asset disposition closes the loop",
+              "Specialized personas and remote returns need explicit capacity and earlier discovery"
+            ]
+          }
+        },
+        {
+          "code": "HW 02S",
+          "slug": "hardware-refresh-scrum",
+          "title": "Enterprise Hardware Refresh \u2014 Scrum Playbook",
+          "methodology": "Scrum",
+          "home_anchor": "hardware-refresh",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "Technical Project Manager \u2014 Scrum hardware refresh lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "18 weeks / four sites / 360 devices",
+          "budget": "$792K modeled authorization",
+          "tco": "Modeled forecast: $748.4K",
+          "summary": "Deliver the same refresh through one Product Goal, an ordered Product Backlog, nine two-week Sprints, working accepted device/user/asset Increments, reviews, retrospectives, and a strict Definition of Done.",
+          "decision": "Keep 16 exception PBIs in the Product Backlog, allocate Sprint 9 to specialized closure, and do not count deferred items in the Increment.",
+          "metrics": [
+            {
+              "label": "Product Goal progress",
+              "value": "344 / 360",
+              "note": "Accepted Increments; 16 PBIs remain",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Devices deployed",
+              "value": "344 / 360",
+              "note": "95.6%; 16 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "First-time-right",
+              "value": "336 / 344",
+              "note": "97.7% accepted without rework",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Data validation",
+              "value": "342 / 344",
+              "note": "99.4% pass or approved no-data path",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Compliant within 24h",
+              "value": "339 / 344",
+              "note": "98.5%; five owned remediations",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Old devices returned",
+              "value": "334 / 344",
+              "note": "97.1%; remote return action open",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 18,
+          "phases": [
+            {
+              "name": "Sprints 1\u20132: foundation and pilot-ready build",
+              "start": 1,
+              "end": 4,
+              "status": "Complete"
+            },
+            {
+              "name": "Sprint 3: accepted pilot Increment",
+              "start": 5,
+              "end": 6,
+              "status": "Complete"
+            },
+            {
+              "name": "Sprints 4\u20137: site/wave Increments",
+              "start": 7,
+              "end": 14,
+              "status": "344 accepted"
+            },
+            {
+              "name": "Sprints 8\u20139: exceptions, transition, closure",
+              "start": 15,
+              "end": 18,
+              "status": "Active"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 792000,
+              "display": "$792K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 675500,
+              "display": "$675.5K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 43600,
+              "display": "$43.6K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "All values are fictional planning assumptions. The $792K authorization and $748.4K forecast require real purchase orders, invoices, labor, tax/shipping, credits, warranty, and reserve approvals before use. User productivity or released capacity is not cash savings without Finance validation.",
+          "risks": [
+            {
+              "id": "HW-R-003",
+              "risk": "Critical application, driver, VPN, or peripheral fails on the new build",
+              "score": 16,
+              "status": "Mitigating",
+              "response": "Persona pilot, versioned package, fallback, and owner acceptance."
+            },
+            {
+              "id": "HW-R-002",
+              "risk": "Local or application data is not protected before retirement",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Precheck, approved backup/KFM, validation, and sanitization hold."
+            },
+            {
+              "id": "HW-I-005",
+              "risk": "Sixteen application, accessibility, leave, or logistics exceptions remain",
+              "score": 15,
+              "status": "Open",
+              "response": "Named owners/dates/workarounds; specialized capacity and weekly steering."
+            },
+            {
+              "id": "HW-R-004",
+              "risk": "Returned-device custody or sanitization evidence is incomplete",
+              "score": 10,
+              "status": "Mitigating",
+              "response": "Serial scans, secure storage, evidence validation, and quarantine."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, scope/date, risk acceptance, and escalated exceptions."
+            },
+            {
+              "role": "Technical Project Manager",
+              "accountability": "Integrated delivery, methods, RAID, waves, vendors, reporting, and closure."
+            },
+            {
+              "role": "Endpoint Engineering / IAM / InfoSec",
+              "accountability": "Build, provisioning, join, policy, compliance, test, and release authority."
+            },
+            {
+              "role": "Procurement / Logistics / Asset Management",
+              "accountability": "Orders, receipts, serialized custody, staging, distribution, returns, and disposition."
+            },
+            {
+              "role": "Application / Data / Business Site Owners",
+              "accountability": "Persona readiness, data protection, task validation, user acceptance, and site impacts."
+            },
+            {
+              "role": "Service Desk / Field Support / Vendors",
+              "accountability": "Appointments, incident restoration, spares, knowledge, escalation, and service transition."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_FOUR_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the four-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the hardware control workbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.md",
+              "category": "Engineering",
+              "label": "Device build and provisioning standard"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROCUREMENT_STAGING_AND_LOGISTICS.md",
+              "category": "Supply",
+              "label": "Procurement, staging, and logistics plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/APPLICATION_AND_DATA_READINESS.md",
+              "category": "Readiness",
+              "label": "Application and data readiness plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SECURITY_COMPLIANCE_AND_SANITIZATION.md",
+              "category": "Assurance",
+              "label": "Security, compliance, and sanitization plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_HYPERCARE_AND_SERVICE_TRANSITION.md",
+              "category": "Deployment",
+              "label": "Deployment, hypercare, and transition plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/ASSET_RETIREMENT_AND_CLOSEOUT.md",
+              "category": "Closeout",
+              "label": "Asset retirement and closeout plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/INVENTORY_AND_ASSET_RECONCILIATION.csv",
+              "category": "Inventory",
+              "label": "Inventory and asset reconciliation"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_WAVES.csv",
+              "category": "Dashboard",
+              "label": "Deployment wave source data"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SANITIZATION_CHAIN_OF_CUSTODY.csv",
+              "category": "Custody",
+              "label": "Sanitization chain of custody"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Scrum delivery playbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/PRODUCT_BACKLOG.csv",
+              "category": "Backlog",
+              "label": "Product Backlog"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/SPRINT_PLAN.csv",
+              "category": "Delivery",
+              "label": "Sprint plan and review record"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/DEFINITION_OF_DONE.md",
+              "category": "Quality",
+              "label": "Definition of Done"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/SCRUM_METRICS.csv",
+              "category": "Metrics",
+              "label": "Sprint outcome and quality metrics"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/scrum/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Scrum executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Forecast Week 18",
+            "budget": "Forecast $748.4K vs $792K",
+            "acceptance": [
+              "360 of 360 device assignments have accepted final disposition",
+              "New build, security, app, data, and user evidence accepted",
+              "Old assets reconcile through custody and sanitization/disposition",
+              "Service, vendor, financial, risks, lessons, and benefits transferred"
+            ],
+            "lessons": [
+              "Readiness and downstream capacity must govern wave size",
+              "A device is not Done at handoff; old-asset disposition closes the loop",
+              "Specialized personas and remote returns need explicit capacity and earlier discovery"
+            ]
+          }
+        },
+        {
+          "code": "HW 02P",
+          "slug": "hardware-refresh-predictive",
+          "title": "Enterprise Hardware Refresh \u2014 Predictive / Waterfall Playbook",
+          "methodology": "Predictive / Waterfall \u2014 PMBOK 8 aligned",
+          "home_anchor": "hardware-refresh",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "Technical Project Manager \u2014 Predictive / Waterfall \u2014 PMBOK 8 aligned hardware refresh lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "18 weeks / four sites / 360 devices",
+          "budget": "$792K modeled authorization",
+          "tco": "Modeled forecast: $748.4K",
+          "summary": "Deliver the same refresh through PMBOK 8-aligned predictive baselines, WBS, integrated schedule, procurement and wave stage gates, quality management, integrated change control, and earned value reporting.",
+          "decision": "Use planned closure float to absorb the Wave 4 slip, maintain the Week 18 milestone, and approve specialized support without reducing acceptance or sanitization controls.",
+          "metrics": [
+            {
+              "label": "Schedule / cost",
+              "value": "0.97 / 1.03",
+              "note": "SPI / CPI at Week 15",
+              "state": "watch",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Devices deployed",
+              "value": "344 / 360",
+              "note": "95.6%; 16 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "First-time-right",
+              "value": "336 / 344",
+              "note": "97.7% accepted without rework",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Data validation",
+              "value": "342 / 344",
+              "note": "99.4% pass or approved no-data path",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Compliant within 24h",
+              "value": "339 / 344",
+              "note": "98.5%; five owned remediations",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Old devices returned",
+              "value": "334 / 344",
+              "note": "97.1%; remote return action open",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 18,
+          "phases": [
+            {
+              "name": "Initiate, plan, and baseline",
+              "start": 1,
+              "end": 4,
+              "status": "Complete"
+            },
+            {
+              "name": "Procure, build, test, and pilot",
+              "start": 2,
+              "end": 6,
+              "status": "Complete"
+            },
+            {
+              "name": "Production waves",
+              "start": 7,
+              "end": 16,
+              "status": "344 accepted"
+            },
+            {
+              "name": "Retirement, transition, and close",
+              "start": 16,
+              "end": 18,
+              "status": "In progress"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 792000,
+              "display": "$792K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 675500,
+              "display": "$675.5K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 43600,
+              "display": "$43.6K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "All values are fictional planning assumptions. The $792K authorization and $748.4K forecast require real purchase orders, invoices, labor, tax/shipping, credits, warranty, and reserve approvals before use. User productivity or released capacity is not cash savings without Finance validation.",
+          "risks": [
+            {
+              "id": "HW-R-003",
+              "risk": "Critical application, driver, VPN, or peripheral fails on the new build",
+              "score": 16,
+              "status": "Mitigating",
+              "response": "Persona pilot, versioned package, fallback, and owner acceptance."
+            },
+            {
+              "id": "HW-R-002",
+              "risk": "Local or application data is not protected before retirement",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Precheck, approved backup/KFM, validation, and sanitization hold."
+            },
+            {
+              "id": "HW-I-005",
+              "risk": "Sixteen application, accessibility, leave, or logistics exceptions remain",
+              "score": 15,
+              "status": "Open",
+              "response": "Named owners/dates/workarounds; specialized capacity and weekly steering."
+            },
+            {
+              "id": "HW-R-004",
+              "risk": "Returned-device custody or sanitization evidence is incomplete",
+              "score": 10,
+              "status": "Mitigating",
+              "response": "Serial scans, secure storage, evidence validation, and quarantine."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, scope/date, risk acceptance, and escalated exceptions."
+            },
+            {
+              "role": "Technical Project Manager",
+              "accountability": "Integrated delivery, methods, RAID, waves, vendors, reporting, and closure."
+            },
+            {
+              "role": "Endpoint Engineering / IAM / InfoSec",
+              "accountability": "Build, provisioning, join, policy, compliance, test, and release authority."
+            },
+            {
+              "role": "Procurement / Logistics / Asset Management",
+              "accountability": "Orders, receipts, serialized custody, staging, distribution, returns, and disposition."
+            },
+            {
+              "role": "Application / Data / Business Site Owners",
+              "accountability": "Persona readiness, data protection, task validation, user acceptance, and site impacts."
+            },
+            {
+              "role": "Service Desk / Field Support / Vendors",
+              "accountability": "Appointments, incident restoration, spares, knowledge, escalation, and service transition."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_FOUR_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the four-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the hardware control workbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.md",
+              "category": "Engineering",
+              "label": "Device build and provisioning standard"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROCUREMENT_STAGING_AND_LOGISTICS.md",
+              "category": "Supply",
+              "label": "Procurement, staging, and logistics plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/APPLICATION_AND_DATA_READINESS.md",
+              "category": "Readiness",
+              "label": "Application and data readiness plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SECURITY_COMPLIANCE_AND_SANITIZATION.md",
+              "category": "Assurance",
+              "label": "Security, compliance, and sanitization plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_HYPERCARE_AND_SERVICE_TRANSITION.md",
+              "category": "Deployment",
+              "label": "Deployment, hypercare, and transition plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/ASSET_RETIREMENT_AND_CLOSEOUT.md",
+              "category": "Closeout",
+              "label": "Asset retirement and closeout plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/INVENTORY_AND_ASSET_RECONCILIATION.csv",
+              "category": "Inventory",
+              "label": "Inventory and asset reconciliation"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_WAVES.csv",
+              "category": "Dashboard",
+              "label": "Deployment wave source data"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SANITIZATION_CHAIN_OF_CUSTODY.csv",
+              "category": "Custody",
+              "label": "Sanitization chain of custody"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Predictive / Waterfall playbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/PMBOK8_ALIGNMENT.md",
+              "category": "PMBOK 8",
+              "label": "PMBOK 8 alignment matrix"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/WBS.csv",
+              "category": "Scope",
+              "label": "Work breakdown structure"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/INTEGRATED_MASTER_SCHEDULE.csv",
+              "category": "Schedule",
+              "label": "Integrated master schedule"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/STAGE_GATES_AND_CHANGE_CONTROL.md",
+              "category": "Governance",
+              "label": "Stage gates and change control"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/QUALITY_MANAGEMENT_PLAN.md",
+              "category": "Quality",
+              "label": "Quality management plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/EARNED_VALUE.csv",
+              "category": "Metrics",
+              "label": "Earned value status"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/predictive/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Predictive executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Forecast Week 18",
+            "budget": "Forecast $748.4K vs $792K",
+            "acceptance": [
+              "360 of 360 device assignments have accepted final disposition",
+              "New build, security, app, data, and user evidence accepted",
+              "Old assets reconcile through custody and sanitization/disposition",
+              "Service, vendor, financial, risks, lessons, and benefits transferred"
+            ],
+            "lessons": [
+              "Readiness and downstream capacity must govern wave size",
+              "A device is not Done at handoff; old-asset disposition closes the loop",
+              "Specialized personas and remote returns need explicit capacity and earlier discovery"
+            ]
+          }
+        },
+        {
+          "code": "HW 02H",
+          "slug": "hardware-refresh-hybrid",
+          "title": "Enterprise Hardware Refresh \u2014 Hybrid Playbook",
+          "methodology": "Hybrid \u2014 recommended operating model",
+          "home_anchor": "hardware-refresh",
+          "program_type": "Experience-informed enterprise transformation case study",
+          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
+          "role": "Technical Project Manager \u2014 Hybrid \u2014 recommended operating model hardware refresh lead",
+          "status": "Illustrative checkpoint \u2014 Amber",
+          "health": "Amber",
+          "duration": "18 weeks / four sites / 360 devices",
+          "budget": "$792K modeled authorization",
+          "tco": "Modeled forecast: $748.4K",
+          "summary": "Combine fixed 360-device, budget, procurement, security, site, and sanitization guardrails with two-week rolling-wave planning, Kanban pull/WIP, exception aging, and wave retrospectives.",
+          "decision": "Maintain the Week 18/$792K baseline, shift rolling-wave capacity to exception/return lanes, and preserve formal security, data, custody, and closure gates.",
+          "metrics": [
+            {
+              "label": "Baseline + flow",
+              "value": "W18 / 42 week",
+              "note": "Final forecast / latest throughput",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Devices deployed",
+              "value": "344 / 360",
+              "note": "95.6%; 16 controlled exceptions",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "First-time-right",
+              "value": "336 / 344",
+              "note": "97.7% accepted without rework",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Data validation",
+              "value": "342 / 344",
+              "note": "99.4% pass or approved no-data path",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Compliant within 24h",
+              "value": "339 / 344",
+              "note": "98.5%; five owned remediations",
+              "state": "pass",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Old devices returned",
+              "value": "334 / 344",
+              "note": "97.1%; remote return action open",
+              "state": "watch",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            }
+          ],
+          "timeline_unit": "Week",
+          "timeline_max": 18,
+          "phases": [
+            {
+              "name": "Baseline guardrails and release system",
+              "start": 1,
+              "end": 4,
+              "status": "Complete"
+            },
+            {
+              "name": "Pilot and flow calibration",
+              "start": 3,
+              "end": 6,
+              "status": "Complete"
+            },
+            {
+              "name": "Gated rolling-wave delivery",
+              "start": 7,
+              "end": 16,
+              "status": "344 accepted"
+            },
+            {
+              "name": "Exception/asset/service closure",
+              "start": 16,
+              "end": 18,
+              "status": "In progress"
+            }
+          ],
+          "financials": [
+            {
+              "label": "Authorized baseline",
+              "value": 792000,
+              "display": "$792K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Current commitments",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Actual to checkpoint",
+              "value": 675500,
+              "display": "$675.5K",
+              "evidence_class": "Scenario assumption",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast at completion",
+              "value": 748400,
+              "display": "$748.4K",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            },
+            {
+              "label": "Forecast variance",
+              "value": 43600,
+              "display": "$43.6K favorable",
+              "evidence_class": "Derived calculation",
+              "confidence": "Low"
+            }
+          ],
+          "financial_note": "All values are fictional planning assumptions. The $792K authorization and $748.4K forecast require real purchase orders, invoices, labor, tax/shipping, credits, warranty, and reserve approvals before use. User productivity or released capacity is not cash savings without Finance validation.",
+          "risks": [
+            {
+              "id": "HW-R-003",
+              "risk": "Critical application, driver, VPN, or peripheral fails on the new build",
+              "score": 16,
+              "status": "Mitigating",
+              "response": "Persona pilot, versioned package, fallback, and owner acceptance."
+            },
+            {
+              "id": "HW-R-002",
+              "risk": "Local or application data is not protected before retirement",
+              "score": 15,
+              "status": "Mitigating",
+              "response": "Precheck, approved backup/KFM, validation, and sanitization hold."
+            },
+            {
+              "id": "HW-I-005",
+              "risk": "Sixteen application, accessibility, leave, or logistics exceptions remain",
+              "score": 15,
+              "status": "Open",
+              "response": "Named owners/dates/workarounds; specialized capacity and weekly steering."
+            },
+            {
+              "id": "HW-R-004",
+              "risk": "Returned-device custody or sanitization evidence is incomplete",
+              "score": 10,
+              "status": "Mitigating",
+              "response": "Serial scans, secure storage, evidence validation, and quarantine."
+            }
+          ],
+          "team": [
+            {
+              "role": "Executive Sponsor / Steering Committee",
+              "accountability": "Outcome, funding, scope/date, risk acceptance, and escalated exceptions."
+            },
+            {
+              "role": "Technical Project Manager",
+              "accountability": "Integrated delivery, methods, RAID, waves, vendors, reporting, and closure."
+            },
+            {
+              "role": "Endpoint Engineering / IAM / InfoSec",
+              "accountability": "Build, provisioning, join, policy, compliance, test, and release authority."
+            },
+            {
+              "role": "Procurement / Logistics / Asset Management",
+              "accountability": "Orders, receipts, serialized custody, staging, distribution, returns, and disposition."
+            },
+            {
+              "role": "Application / Data / Business Site Owners",
+              "accountability": "Persona readiness, data protection, task validation, user acceptance, and site impacts."
+            },
+            {
+              "role": "Service Desk / Field Support / Vendors",
+              "accountability": "Appointments, incident restoration, spares, knowledge, escalation, and service transition."
+            }
+          ],
+          "artifacts": [
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_FOUR_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the four-playbook Word guide"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/HARDWARE_REFRESH_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the hardware control workbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.md",
+              "category": "Engineering",
+              "label": "Device build and provisioning standard"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/PROCUREMENT_STAGING_AND_LOGISTICS.md",
+              "category": "Supply",
+              "label": "Procurement, staging, and logistics plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/APPLICATION_AND_DATA_READINESS.md",
+              "category": "Readiness",
+              "label": "Application and data readiness plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SECURITY_COMPLIANCE_AND_SANITIZATION.md",
+              "category": "Assurance",
+              "label": "Security, compliance, and sanitization plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_HYPERCARE_AND_SERVICE_TRANSITION.md",
+              "category": "Deployment",
+              "label": "Deployment, hypercare, and transition plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/ASSET_RETIREMENT_AND_CLOSEOUT.md",
+              "category": "Closeout",
+              "label": "Asset retirement and closeout plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/INVENTORY_AND_ASSET_RECONCILIATION.csv",
+              "category": "Inventory",
+              "label": "Inventory and asset reconciliation"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/DEPLOYMENT_WAVES.csv",
+              "category": "Dashboard",
+              "label": "Deployment wave source data"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SANITIZATION_CHAIN_OF_CUSTODY.csv",
+              "category": "Custody",
+              "label": "Sanitization chain of custody"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/common/SOURCE_REGISTER.csv",
+              "category": "Research",
+              "label": "Authoritative source register"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/PLAYBOOK.md",
+              "category": "Method",
+              "label": "Hybrid delivery playbook"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/INTEGRATED_GOVERNANCE.md",
+              "category": "Governance",
+              "label": "Integrated decision matrix"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/ROLLING_WAVE_AND_FLOW_PLAN.md",
+              "category": "Planning",
+              "label": "Rolling-wave and flow plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/INTEGRATED_PLAN.csv",
+              "category": "Plan",
+              "label": "Integrated baseline and rolling-wave plan"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/HYBRID_METRICS.csv",
+              "category": "Metrics",
+              "label": "Baseline, flow, quality, and outcome metrics"
+            },
+            {
+              "path": "enterprise-programs/02-hardware-refresh/hybrid/EXECUTIVE_STATUS.md",
+              "category": "Reporting",
+              "label": "Hybrid executive status"
+            }
+          ],
+          "closure": {
+            "schedule": "Forecast Week 18",
+            "budget": "Forecast $748.4K vs $792K",
+            "acceptance": [
+              "360 of 360 device assignments have accepted final disposition",
+              "New build, security, app, data, and user evidence accepted",
+              "Old assets reconcile through custody and sanitization/disposition",
+              "Service, vendor, financial, risks, lessons, and benefits transferred"
+            ],
+            "lessons": [
+              "Readiness and downstream capacity must govern wave size",
+              "A device is not Done at handoff; old-asset disposition closes the loop",
+              "Specialized personas and remote returns need explicit capacity and earlier discovery"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

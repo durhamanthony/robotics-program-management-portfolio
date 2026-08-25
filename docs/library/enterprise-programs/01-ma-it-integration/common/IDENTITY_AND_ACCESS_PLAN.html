@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M&amp;A Identity and Access Integration Plan | Anthony Durham</title><meta name="description" content="Technology program leadership portfolio spanning robotics, M&amp;A integration, and enterprise endpoint transformation by Anthony Durham.">
+<link rel="stylesheet" href="../../../../styles.css"><script defer src="../../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../../index.html">⌂ Home</a><a href="../../../../index.html#cases">Scenarios</a><a href="../../../../artifacts.html">Artifacts</a><a href="../../../../videos.html">Demos</a><a href="../../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../../artifacts.html">← Back to artifact library</a><div><span class="tag">M&amp;A IT integration — Shared controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../../index.html">⌂ Home</a><a class="button" href="../../../../downloads/source/enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="ma-identity-and-access-integration-plan">M&amp;A Identity and Access Integration Plan</h1>
+<blockquote>
+<p><strong>Portfolio case study — Filled example + reusable template.</strong> Company ABC and Company XYZ are fictional. Dates, headcounts, costs, performance, and decisions are scenario assumptions unless explicitly identified as verified experience or a public source. As of 2026-08-25.</p>
+</blockquote>
+<h2 id="purpose">Purpose</h2>
+<p>Establish a controlled identity bridge, converge accounts and entitlements, and remove temporary access after acceptance.</p>
+<h2 id="filled-example">Filled example</h2>
+<p class="table-title"><strong>Table 1. M&amp;A Identity and Access Integration Plan — evidence and confidence are stated in the artifact truth boundary</strong></p><table>
+<thead>
+<tr class="header">
+<th>Work package</th>
+<th>Scenario baseline</th>
+<th>Accountable owner</th>
+<th>Evidence / gate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identity source</td>
+<td>Company ABC HR/IAM becomes authoritative after approved roster cut</td>
+<td>HR + IAM</td>
+<td>Joiner/mover/leaver reconciliation</td>
+</tr>
+<tr class="even">
+<td>Coexistence</td>
+<td>Cross-tenant or federation bridge limited to approved groups for 90 days</td>
+<td>IAM Architect</td>
+<td>Access package + expiry</td>
+</tr>
+<tr class="odd">
+<td>Authentication</td>
+<td>MFA and device-compliance controls; break-glass accounts excluded and monitored</td>
+<td>Security</td>
+<td>Policy test and logs</td>
+</tr>
+<tr class="even">
+<td>Privileges</td>
+<td>Named admin accounts, just-in-time elevation, no shared credentials</td>
+<td>Security + system owner</td>
+<td>Privileged access review</td>
+</tr>
+<tr class="odd">
+<td>Deprovisioning</td>
+<td>Source access removed only after destination validation and legal approval</td>
+<td>IAM Operations</td>
+<td>Disablement evidence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="execution-sequence">Execution sequence</h2>
+<ol type="1">
+<li>Inventory directories, domains, identity providers, account types, groups, roles, service principals, keys, and emergency accounts.</li>
+<li>Normalize unique identity keys; resolve duplicate email addresses and contractor ownership before migration.</li>
+<li>Map personas to least-privilege role bundles and separate birthright, requestable, privileged, and service access.</li>
+<li>Pilot with 25 non-privileged and five privileged personas; review logs, token lifetime, conditional access, and recovery.</li>
+<li>Stage identities before application/data cutovers; reconcile entitlements after each wave.</li>
+<li>Disable the bridge and orphaned accounts only after business owner, IAM, and Security acceptance.</li>
+</ol>
+<h2 id="acceptance-evidence">Acceptance evidence</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />680 roster records reconcile to a unique destination identity or an approved exception.</label></li>
+<li><label><input type="checkbox" />100% of privileged roles have named owners, approval, MFA, logging, and expiry where applicable.</label></li>
+<li><label><input type="checkbox" />No orphaned service principal, unmanaged shared account, or unresolved duplicate identity remains at closure.</label></li>
+<li><label><input type="checkbox" />Access-review evidence shows source, destination, exception, and approver for each critical entitlement.</label></li>
+</ul>
+<h2 id="exception-rollback-and-escalation">Exception, rollback, and escalation</h2>
+<p>If authentication failure exceeds 2% in a wave, privileged-role mapping differs from approval, or logging is incomplete, stop the wave. Re-enable the approved source route for that cohort, preserve logs, and correct mapping before retry. Security incidents use the enterprise incident process, not the project issue log alone.</p>
+<h2 id="reporting">Reporting</h2>
+<p>Report total scope, completed, passed, failed, deferred with approved reason, and unknown. Percentages always show the numerator and denominator. Owners update the control source before the dashboard is refreshed.</p>
+<h2 id="reusable-template-fields">Reusable template fields</h2>
+<p>Copy this artifact and replace the scenario values with approved project evidence:</p>
+<ul>
+<li><code>authoritative sources</code></li>
+<li><code>unique identity key</code></li>
+<li><code>domain strategy</code></li>
+<li><code>persona bundles</code></li>
+<li><code>MFA / conditional access</code></li>
+<li><code>privileged access</code></li>
+<li><code>service identities</code></li>
+<li><code>coexistence expiry</code></li>
+<li><code>reconciliation queries</code></li>
+<li><code>decommission approval</code></li>
+</ul>
+<h2 id="control-note">Control note</h2>
+<p>The project manager owns document currency and traceability, not every technical decision. Accountable technical, security, privacy, legal, finance, procurement, HR, and business owners approve decisions in their domains. A blank approval, untested rollback, or unverified user/device count remains open; it is never converted into a green status by narrative.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

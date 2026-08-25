@@ -5,9 +5,9 @@
 
 ## Transaction flow
 
-Inbound: receiving schedule → truck/pallet identifier → forklift mission → pallet-stable confirmation → forklift parked/zone-clear signal → humanoid stocking missions → rack-location scans → inventory/event update.
+Inbound: receiving schedule → truck/pallet identifier → loaded-forklift unload → center-zone placement → forklift return into truck → pallet-stable/zone-clear signal → humanoid stocking missions → rack-location scans → inventory/event update.
 
-Fulfillment: associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → courtesy drop-off scan → inventory/event update → telemetry and support case when required.
+Fulfillment: associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → courtesy drop-off scan → robot turn-away → human service-window collection → package-removal confirmation → inventory/custody close → telemetry and support case when required.
 
 ## Interface controls
 
@@ -16,11 +16,12 @@ Fulfillment: associate tablet → identity service → request service → inven
 | Interface | Request/response | Timeout/retry | Failure behavior | Evidence |
 |---|---|---|---|---|
 | Dock/pallet receipt | truck, dock, pallet, arrival, stability | one active unload mission; no silent retry | hold forklift and humanoids; notify dock lead | 20 normal/fault unload cases |
-| Zone interlock | forklift parked and receiving zone clear → release stocking | positive confirmation required | keep humanoid missions inhibited | 20 witnessed clear/release cycles |
+| Zone interlock | forklift returned into truck and receiving zone clear → release stocking | positive confirmation required | keep humanoid missions inhibited | 20 witnessed clear/release cycles |
 | Tablet/identity | user, store, role, item, drop-off point | 5 seconds; one retry | no anonymous mission; show explicit error | authentication and revocation tests |
 | Inventory service | SKU, size, color → bin/rail location | 3 seconds; two retries | no movement without valid location; human search queue | 20 normal/error cases |
 | Mission service | validated request → route/item mission | idempotency key; no duplicate mission | safe hold and operator alert | duplicate/replay test |
 | Stock/pick/drop-off scan | pallet, item, rack, pick, and courtesy-table confirmation | scan at each custody change | reject mismatch; return to exception point | transaction reconciliation |
+| Human service-window pickup | drop-off complete, robots turned away, package collected, custody closed | collection must follow two-package drop confirmation | keep mission open and notify associate if either package remains | 20 witnessed drop/turn/collect cycles |
 | Telemetry/support | robot, mission, event, fault, configuration | buffer during outage; ordered resend | local safe state; correlated case | network-loss and case drill |
 
 ## Data ownership and retention
@@ -29,7 +30,7 @@ Meridian owns requests, inventory, employee identity, and business measures. The
 
 ## Data-quality rules
 
-- Truck, pallet, carton, rack, SKU, size, color, request, mission, and courtesy-drop-off identifiers must reconcile one-to-one.
+- Truck, pallet, carton, rack, SKU, size, color, request, mission, courtesy-drop-off, human-collection, and custody-close identifiers must reconcile one-to-one.
 - Times use synchronized Universal Time Coordinated (UTC) plus displayed local time.
 - Missing or low-confidence location data blocks autonomous retrieval.
 - Dashboard measures are produced from versioned queries; the animation never supplies KPI data.

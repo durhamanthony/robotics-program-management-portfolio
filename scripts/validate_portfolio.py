@@ -221,7 +221,7 @@ def check_retail_story(errors: list[str]) -> None:
     if data.get("capability_demos"):
         errors.append("Standalone capability card remains after retail-story consolidation")
     retail_demo = data["scenarios"][0]["demo"]
-    required_copy = ("Unload truck", "raised racks", "courtesy drop-off table")
+    required_copy = ("Unload truck", "raised racks", "courtesy drop-off table", "service window")
     searchable = f"{retail_demo.get('caption', '')} {' '.join(retail_demo.get('sequence', []))}".lower()
     for phrase in required_copy:
         if phrase.lower() not in searchable:
@@ -333,6 +333,13 @@ def check_operating_system_and_qc(errors: list[str]) -> None:
     )
     for item in required:
         path = ROOT / item
+        if not path.exists() and item.startswith("quality-control/") and item.endswith("_QC_PACKAGE.zip"):
+            # The published, reusable package is intentionally stored in the
+            # generated download tree to avoid a second multi-megabyte binary
+            # copy in the source directory.
+            published = DOCS / "downloads" / "source" / item
+            if published.exists() and published.stat().st_size:
+                continue
         if not path.exists() or (path.is_file() and path.stat().st_size == 0):
             errors.append(f"Missing reusable operating-system/QC deliverable: {item}")
 

@@ -1,0 +1,6 @@
+table_title,cohort,population,identity_ready,device_ready,collaboration_ready,support_ready,fully_ready,exceptions,owner,workaround,status,evidence_class,confidence,source_or_validation
+M&A Day 1 readiness by cohort — filled example,HQ Site A,280,279,274,277,280,272,8,Site A Lead,Loaners + temporary approved access,Amber,Scenario assumption,Low,Replace with approved project records
+M&A Day 1 readiness by cohort — filled example,Office Site B,190,189,187,188,190,186,4,Site B Lead,On-site runner and spare devices,Amber,Scenario assumption,Low,Replace with approved project records
+M&A Day 1 readiness by cohort — filled example,Office Site C,110,109,108,109,110,107,3,Site C Lead,Concierge appointments,Amber,Scenario assumption,Low,Replace with approved project records
+M&A Day 1 readiness by cohort — filled example,Remote,100,97,100,99,100,100,0,Remote Lead,Courier and virtual support,Green,Scenario assumption,Low,Replace with approved project records
+M&A Day 1 readiness by cohort — filled example,TOTAL,680,674,669,673,680,665,15,Day 1 Lead,All 15 have owner and expiry,Amber,Scenario assumption,Low,Replace with approved project records

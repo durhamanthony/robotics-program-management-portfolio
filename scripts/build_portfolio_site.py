@@ -17,7 +17,8 @@ DOCS = ROOT / "docs"
 LIBRARY = DOCS / "library"
 DOWNLOADS = DOCS / "downloads" / "source"
 DATA_FILE = ROOT / "portfolio" / "scenario_dashboard_data.json"
-SOURCE_DIRS = ("scenarios", "tools", "pm-operating-system", "quality-control")
+ENTERPRISE_DATA_FILE = ROOT / "portfolio" / "enterprise_dashboard_data.json"
+SOURCE_DIRS = ("scenarios", "enterprise-programs", "tools", "pm-operating-system", "quality-control")
 SOURCE_FILES = (
     "portfolio/EXECUTIVE_PORTFOLIO.md",
     "simulations/README.md",
@@ -92,6 +93,22 @@ def lifecycle_for(name: str) -> str:
 
 def scenario_name(path: Path) -> str:
     rel = path.relative_to(ROOT)
+    if rel.parts[0] == "enterprise-programs":
+        section = rel.parts[1] if len(rel.parts) > 1 else ""
+        method = rel.parts[2] if len(rel.parts) > 2 else ""
+        section_name = {
+            "01-ma-it-integration": "M&A IT integration",
+            "02-hardware-refresh": "Enterprise hardware refresh",
+        }.get(section, section.replace("-", " ").title())
+        method_name = {
+            "common": "Shared controls",
+            "agile": "Agile",
+            "predictive": "Predictive / Waterfall",
+            "kanban": "Kanban",
+            "scrum": "Scrum",
+            "hybrid": "Hybrid",
+        }.get(method, method.replace("-", " ").title())
+        return f"{section_name} — {method_name}" if method_name else section_name
     if rel.parts[0] != "scenarios":
         return "Portfolio controls"
     return {
@@ -156,12 +173,29 @@ def markdown_fragment(path: Path) -> str:
         result.stdout,
         flags=re.IGNORECASE,
     )
-    return re.sub(
+    fragment = re.sub(
         r"<p><strong>(Table\s+[^<]+)</strong></p>\s*(?=<table>)",
         r'<p class="table-title"><strong>\1</strong></p>',
         fragment,
         flags=re.IGNORECASE,
     )
+    # Many enterprise playbooks use a plain Markdown table directly beneath a
+    # descriptive section heading. Give every rendered table its own visible,
+    # accessible caption while preserving any explicit Table title above it.
+    pieces: list[str] = []
+    cursor = 0
+    table_number = 0
+    for match in re.finditer(r"<table(?:\s|>)", fragment, flags=re.IGNORECASE):
+        pieces.append(fragment[cursor:match.start()])
+        preceding = fragment[max(0, match.start() - 400):match.start()]
+        if not re.search(r'class="table-title"[^>]*>.*?</p>\s*$', preceding, flags=re.IGNORECASE | re.DOTALL):
+            table_number += 1
+            caption = f"Table {table_number}. {title_for(path)} — evidence and confidence are stated in the artifact truth boundary"
+            pieces.append(f'<p class="table-title"><strong>{esc(caption)}</strong></p>')
+        pieces.append(fragment[match.start():match.end()])
+        cursor = match.end()
+    pieces.append(fragment[cursor:])
+    return "".join(pieces)
 
 
 def csv_fragment(path: Path) -> str:
@@ -187,7 +221,7 @@ def csv_fragment(path: Path) -> str:
 
 def shell(title: str, body: str, depth: int = 0, description: str = "") -> str:
     prefix = "../" * depth
-    desc = esc(description or "Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.")
+    desc = esc(description or "Technology program leadership portfolio spanning robotics, M&A integration, and enterprise endpoint transformation by Anthony Durham.")
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} | Anthony Durham</title><meta name="description" content="{desc}">
@@ -197,8 +231,8 @@ def shell(title: str, body: str, depth: int = 0, description: str = "") -> str:
 <div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="{prefix}index.html">← Back</button>
 <div class="nav-links"><a class="home-link" href="{prefix}index.html">⌂ Home</a><a href="{prefix}index.html#cases">Scenarios</a><a href="{prefix}artifacts.html">Artifacts</a><a href="{prefix}videos.html">Demos</a><a href="{prefix}about.html">About</a></div></div></nav></header>
 {body}
-<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
-These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
 </body></html>"""
 
 
@@ -310,12 +344,19 @@ def build_dashboard(scenario: dict) -> None:
     )
     accept = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["acceptance"])
     lessons = "".join(f"<li>{esc(item)}</li>" for item in scenario["closure"]["lessons"])
+    demo = scenario.get("demo")
+    demo_tab = '<button data-tab-target="demo">Demo</button>' if demo else ""
+    demo_panel = (
+        f'<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable operations evidence</h2></div></div>{demo_markup(scenario)}</section>'
+        if demo else ""
+    )
+    home_anchor = scenario.get("home_anchor", "cases")
     body = f"""<main id="main">
-<section class="scenario-hero"><div class="container"><div class="scenario-links"><a class="back-link" href="../index.html#cases">← All scenarios</a><a class="back-link" href="../index.html">⌂ Home</a></div><div class="scenario-eyebrow">{esc(scenario['code'])} · {esc(scenario['program_type'])}</div>
+<section class="scenario-hero"><div class="container"><div class="scenario-links"><a class="back-link" href="../index.html#{esc(home_anchor)}">← All scenarios</a><a class="back-link" href="../index.html">⌂ Home</a></div><div class="scenario-eyebrow">{esc(scenario['code'])} · {esc(scenario['program_type'])}</div>
 <h1>{esc(scenario['title'])}</h1><p class="lead">{esc(scenario['client'])} · {esc(scenario['role'])}</p>
 <div class="status-row"><span class="status status-{esc(scenario['health'].lower())}">{esc(scenario['status'])}</span><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(scenario['tco'])}</span></div></div></section>
 <div class="dashboard-nav-wrap"><nav class="dashboard-nav container" aria-label="Scenario sections">
-<button class="active" data-tab-target="overview">Overview</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button>{perspective_tab}<button data-tab-target="artifacts">Artifacts</button><button data-tab-target="demo">Demo</button><button data-tab-target="closeout">Closeout</button>
+<button class="active" data-tab-target="overview">Overview</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button>{perspective_tab}<button data-tab-target="artifacts">Artifacts</button>{demo_tab}<button data-tab-target="closeout">Closeout</button>
 </nav></div>
 <div class="container dashboard-shell">
 <section id="overview" class="dashboard-panel active"><div class="panel-heading"><div><span class="panel-kicker">Executive view</span><h2>Program outcome and acceptance</h2></div><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div>
@@ -327,26 +368,36 @@ def build_dashboard(scenario: dict) -> None:
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 {perspective_panel}
 <section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
-<section id="demo" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Visual evidence</span><h2>Browser-playable operations evidence</h2></div></div>{demo_markup(scenario)}</section>
+{demo_panel}
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
 </div></main>"""
     write(DOCS / "scenarios" / f"{scenario['slug']}.html", shell(scenario["title"], body, depth=1, description=scenario["summary"]))
 
 
-def build_index(data: dict, count: int) -> None:
+def scenario_card(scenario: dict) -> str:
+    metric = scenario["metrics"][0]
+    method = scenario.get("methodology")
+    method_fact = f"<span>{esc(method)}</span>" if method else ""
+    return f"""<article class="case-card"><div class="case-top"><span>{esc(scenario['code'])}</span><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div><h3>{esc(scenario['title'])}</h3><p>{esc(scenario['summary'])}</p><div class="case-facts">{method_fact}<span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(metric['label'])}: {esc(metric['value'])}</span></div><a class="card-link" href="scenarios/{esc(scenario['slug'])}.html">Open program dashboard →</a></article>"""
+
+
+def build_index(data: dict, enterprise_data: dict, count: int) -> None:
     scenario_count = len(data["scenarios"])
-    cards = []
-    for scenario in data["scenarios"]:
-        metric = scenario["metrics"][0]
-        cards.append(f"""<article class="case-card"><div class="case-top"><span>{esc(scenario['code'])}</span><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div><h3>{esc(scenario['title'])}</h3><p>{esc(scenario['summary'])}</p><div class="case-facts"><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(metric['label'])}: {esc(metric['value'])}</span></div><a class="card-link" href="scenarios/{esc(scenario['slug'])}.html">Open program dashboard →</a></article>""")
-    body = f"""<section class="hero"><div class="hero-grid"><div><div class="eyebrow">Robotics deployment · product introduction · service operations</div>
-<h1>Turning complex robotics into reliable operations.</h1><p class="lead">A project and program management portfolio showing how Anthony Durham turns a robotics concept or customer order into a governed, measurable operating outcome.</p>
-<div class="button-row"><a class="button" href="#cases">Explore {scenario_count} scenarios</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
+    cards = [scenario_card(scenario) for scenario in data["scenarios"]]
+    enterprise_sections = []
+    for section in enterprise_data.get("sections", []):
+        section_cards = "".join(scenario_card(scenario) for scenario in section["scenarios"])
+        enterprise_sections.append(f"""<section id="{esc(section['id'])}" class="enterprise-section"><div class="section-heading"><div><span class="panel-kicker">{esc(section['eyebrow'])}</span><h2>{esc(section['title'])}</h2></div><span class="tag">{len(section['scenarios'])} playbooks</span></div><p class="section-intro">{esc(section['intro'])}</p><div class="truth-banner">{esc(section['notice'])}</div><div class="case-grid">{section_cards}</div></section>""")
+    total_dashboards = scenario_count + sum(len(section["scenarios"]) for section in enterprise_data.get("sections", []))
+    body = f"""<section class="hero"><div class="hero-grid"><div><div class="eyebrow">Robotics · M&amp;A integration · digital workplace transformation</div>
+<h1>Turning complex technology into reliable operations.</h1><p class="lead">A project and program management portfolio showing how Anthony Durham turns a strategy, acquisition, or deployment mandate into a governed, measurable operating outcome.</p>
+<div class="button-row"><a class="button" href="#cases">Explore {total_dashboards} dashboards</a><a class="button secondary" href="artifacts.html">Open completed artifacts</a></div></div>
 <img class="hero-photo" src="media/images/anthony-cstu-humanoid.jpeg" alt="Anthony Durham beside a humanoid robot during hands-on robotics training"></div></section>
-<main id="main" class="container"><section><h2>Enterprise experience applied to robotics</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
-<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Portfolio work</span><h2>{scenario_count} complete operating scenarios</h2></div><span class="tag">{count} public artifacts</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div>{evidence_legend()}<p class="section-intro">Each scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable operations evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
-<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open completed charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records.</p></article><article><span>03</span><strong>Watch or run evidence</strong><p>Play browser videos or inspect the data-only support workflow; no terminal is required for website review.</p></article></div></section></main>"""
-    write(DOCS / "index.html", shell("Robotics Program Management Portfolio", body))
+<main id="main" class="container"><section><h2>Enterprise experience applied to complex programs</h2><div class="metrics"><div class="metric"><strong>45 people</strong><span>Five-team technology portfolio</span></div><div class="metric"><strong>$14M</strong><span>Portfolio financial ownership</span></div><div class="metric"><strong>37,000</strong><span>Endpoints scaled from about 1,000</span></div><div class="metric"><strong>$2M</strong><span>Annual savings delivered</span></div></div></section>
+<section id="cases"><div class="section-heading"><div><span class="panel-kicker">Robotics program leadership</span><h2>{scenario_count} complete robotics operating scenarios</h2></div><span class="tag">{count} public artifacts across the portfolio</span></div><div class="truth-banner">{esc(data['portfolio_notice'])}</div>{evidence_legend()}<p class="section-intro">Each robotics scenario opens to a decision-oriented dashboard with scope, status, schedule, financials, risks, team accountability, browser-playable operations evidence, completed artifacts, and formal closeout.</p><div class="case-grid">{''.join(cards)}</div></section>
+{''.join(enterprise_sections)}
+<section class="how-section"><div><span class="panel-kicker">How to review</span><h2>One operating story, with evidence behind every decision</h2></div><div class="review-steps"><article><span>01</span><strong>Open a dashboard</strong><p>See the executive outcome, current status, cost, schedule, and acceptance results.</p></article><article><span>02</span><strong>Inspect the evidence</strong><p>Open filled charters, schedules, budgets, risks, requirements, acceptance plans, and closeout records—plus reusable template fields.</p></article><article><span>03</span><strong>Compare delivery systems</strong><p>Review the same business problem through Agile, Kanban, Scrum, Predictive, and Hybrid controls.</p></article></div></section></main>"""
+    write(DOCS / "index.html", shell("Technology Program Management Portfolio", body))
 
 
 def build_artifact_page(paths: list[Path]) -> None:
@@ -367,7 +418,7 @@ def build_artifact_page(paths: list[Path]) -> None:
 def build_about(scenario_count: int) -> None:
     body = f"""<main id="main" class="container"><article class="article about-article"><div class="eyebrow dark">About Anthony Durham</div><h1>Program leadership at the boundary of technology and operations</h1>
 <p>Anthony led a 45-person, five-team Walmart technology portfolio spanning engineering, Level 2 support, remote-support tools, telemetry, and call-center technology. He managed a $14 million portfolio, delivered $2 million in annual savings, scaled a platform from approximately 1,000 to 37,000 endpoints, and supported telemetry strategy across 300,000 Windows devices.</p>
-<p>He is applying that experience to robotics deployment and service operations through hands-on robotics training, advanced online coursework, Project Management Professional exam preparation, and the {scenario_count} operating scenarios in this portfolio.</p>
+<p>The {scenario_count} portfolio dashboards apply that experience to robotics deployment, M&amp;A IT integration, and enterprise endpoint refresh programs. The M&amp;A and hardware-refresh cases are anonymized, experience-informed fictional scenarios with assumptions clearly separated from verified career outcomes.</p>
 <h2>Robotics and project-management development</h2><ul><li>CSTU and Robofix five-day hands-on robotics bootcamp — completed August 2026.</li><li>Mangates Learn Robotics one-day hands-on training — completed July 30, 2026; eight professional development units.</li><li>AI Robotics Edu Advanced Robotics Training with Ray Tang, PhD — ten-week online program in progress.</li><li>Project Management Academy Project Management Professional exam-preparation course — completed; exam preparation in progress.</li></ul>
 <h2>Recent AI project work</h2><p>Mercor — AI Data Annotation Contributor / IT Management Subject Matter Expert, December 2025–January 2026. Assigned contributor applying IT-management expertise to confidential evaluation scenarios and image-labeling work.</p>
 <p><a class="button" href="https://www.linkedin.com/in/anthonydurham">View LinkedIn profile</a></p></article></main>"""
@@ -410,7 +461,7 @@ def build_videos(data: dict) -> None:
 
 def copy_binary_assets() -> None:
     allowed = {".docx", ".xlsx", ".zip", ".json", ".txt"}
-    for directory in ("scenarios", "pm-operating-system", "quality-control"):
+    for directory in ("scenarios", "enterprise-programs", "pm-operating-system", "quality-control"):
         base = ROOT / directory
         if not base.exists():
             continue
@@ -431,6 +482,8 @@ def main() -> None:
     LIBRARY.mkdir(parents=True)
     DOWNLOADS.mkdir(parents=True)
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    enterprise_data = json.loads(ENTERPRISE_DATA_FILE.read_text(encoding="utf-8")) if ENTERPRISE_DATA_FILE.exists() else {"sections": []}
+    enterprise_scenarios = [scenario for section in enterprise_data.get("sections", []) for scenario in section["scenarios"]]
     paths = collect_sources()
     build_register(paths)
     for path in paths:
@@ -445,15 +498,15 @@ def main() -> None:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(image, target)
     write(DOCS / ".nojekyll", "")
-    build_index(data, len(paths))
-    for scenario in data["scenarios"]:
+    build_index(data, enterprise_data, len(paths))
+    for scenario in [*data["scenarios"], *enterprise_scenarios]:
         build_dashboard(scenario)
     build_artifact_page(paths)
-    build_about(len(data["scenarios"]))
+    build_about(len(data["scenarios"]) + len(enterprise_scenarios))
     build_videos(data)
     search = [{"title": title_for(p), "path": (Path("library") / p.relative_to(ROOT).with_suffix(".html")).as_posix()} for p in paths]
     write(DOCS / "search-index.json", json.dumps(search, indent=2))
-    print(f"Built public GitHub Pages site: {len(data['scenarios'])} dashboards, {len(paths)} artifacts")
+    print(f"Built public GitHub Pages site: {len(data['scenarios']) + len(enterprise_scenarios)} dashboards, {len(paths)} artifacts")
 
 
 if __name__ == "__main__":

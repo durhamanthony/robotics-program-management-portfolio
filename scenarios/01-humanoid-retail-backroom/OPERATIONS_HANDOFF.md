@@ -20,11 +20,11 @@ Meridian Store Operations owns the inbound dock window, forklift-to-humanoid zon
 
 ## Daily controls
 
-Opening inspection; receiving-zone, forklift-park, route, stair, fire-door, courtesy-table, charger/battery, test-request, and open-defect checks. During operation, the dock lead releases stocking only after the forklift is parked and the receiving zone is clear; supervisors can pause or recall the fleet. Closing includes unresolved mission reconciliation, exception-zone count, cleaning/inspection, charge, and shift handoff log.
+Opening inspection; receiving-zone, forklift return path, route, stair, fire-door, courtesy-table, staffed service window, charger/battery, test-request, and open-defect checks. During operation, the dock lead releases stocking only after the forklift has returned into the truck and the receiving zone is clear. At fulfillment handoff, robots place both packages, turn toward the shelves, and hold while the associate bends both arms to collect through the service window, turns around, and walks away; the mission closes only after both packages are removed. Supervisors can pause or recall the fleet. Closing includes unresolved mission reconciliation, exception-zone count, cleaning/inspection, charge, and shift handoff log.
 
 ## Mandatory case evidence
 
-Robot or forklift, store, truck/pallet/carton, mission, item, request, rack/drop-off point, configuration, software version, timestamps, fault code, safety state, zone-clear state, last commands, telemetry bundle, photo/video if permitted, operator observation, attempted action, and current fallback.
+Robot or forklift, store, truck/pallet/carton, mission, item, request, rack/drop-off point, service-window pickup, package-removal/custody-close state, configuration, software version, timestamps, fault code, safety state, zone-clear state, last commands, telemetry bundle, photo/video if permitted, operator observation, attempted action, and current fallback.
 
 ## Residual risks and owners
 

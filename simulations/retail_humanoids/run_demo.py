@@ -25,9 +25,22 @@ def mocap_id(model: mujoco.MjModel, body_name: str) -> int:
     return int(model.body_mocapid[body_id])
 
 
-def set_pose(data: mujoco.MjData, index: int, x: float, y: float, z: float, yaw: float = 0.0) -> None:
-    data.mocap_pos[index] = (x, y, z)
-    data.mocap_quat[index] = (math.cos(yaw / 2), 0.0, 0.0, math.sin(yaw / 2))
+def geom_id(model: mujoco.MjModel, geom_name: str) -> int:
+    result = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, geom_name)
+    if result < 0:
+        raise RuntimeError(f"retail.xml is missing required geometry {geom_name!r}")
+    return int(result)
+
+
+def set_pose(data: mujoco.MjData, index: int, *pose: float) -> None:
+    data.mocap_pos[index] = pose[:3]
+    if len(pose) == 4:
+        yaw = pose[3]
+        data.mocap_quat[index] = (math.cos(yaw / 2), 0.0, 0.0, math.sin(yaw / 2))
+    elif len(pose) == 7:
+        data.mocap_quat[index] = pose[3:]
+    else:
+        raise ValueError(f"Unsupported mocap pose with {len(pose)} values")
 
 
 def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
@@ -35,6 +48,19 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
     data = mujoco.MjData(model)
     robot_ids = [mocap_id(model, "robot_1"), mocap_id(model, "robot_2")]
     item_ids = [mocap_id(model, "shoe_box_1"), mocap_id(model, "shoe_box_2")]
+    human_ids = [
+        mocap_id(model, "sales_associate"),
+        mocap_id(model, "sales_associate_left_upper_arm"),
+        mocap_id(model, "sales_associate_left_forearm"),
+        mocap_id(model, "sales_associate_right_upper_arm"),
+        mocap_id(model, "sales_associate_right_forearm"),
+    ]
+    item_geom_ids = [geom_id(model, "shoe_box_1_geom"), geom_id(model, "shoe_box_2_geom")]
+    human_geom_ids = [
+        index
+        for index in range(model.ngeom)
+        if (mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_GEOM, index) or "").startswith("human_")
+    ]
     rows: list[dict[str, object]] = []
     start = time.monotonic()
     elapsed = 0.0
@@ -76,6 +102,18 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
                         "confidence": "Low",
                         "source_or_validation": "Deterministic scripted MuJoCo workflow; not production autonomy evidence",
                     })
+            for human_id, pose in zip(human_ids, (
+                frame.human_pose,
+                frame.human_left_upper_arm_pose,
+                frame.human_left_forearm_pose,
+                frame.human_right_upper_arm_pose,
+                frame.human_right_forearm_pose,
+            )):
+                set_pose(data, human_id, *pose)
+            for human_geom_id in human_geom_ids:
+                model.geom_rgba[human_geom_id][3] = 1.0 if frame.human_visible else 0.0
+            model.geom_rgba[item_geom_ids[0]][3] = 1.0 if frame.blue_item_visible else 0.0
+            model.geom_rgba[item_geom_ids[1]][3] = 1.0 if frame.green_item_visible else 0.0
             last_sample = int(elapsed)
             mujoco.mj_forward(model, data)
             if viewer:
@@ -102,16 +140,17 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
     states = sorted({str(row["state"]) for row in rows})
     required_states = {
         "blue_walk_stair_route", "blue_verify_and_pick", "blue_carry_to_courtesy_table",
-        "blue_courtesy_dropoff", "blue_inventory_confirmed",
+        "blue_courtesy_dropoff", "blue_turn_toward_shelves", "blue_wait_for_human_pickup",
         "green_receive_pick_request", "green_walk_to_ground_stock",
         "green_pick_requested_carton", "green_carry_to_courtesy_table",
-        "green_courtesy_dropoff", "green_inventory_confirmed",
+        "green_courtesy_dropoff", "green_turn_toward_shelves", "green_wait_for_human_pickup",
     }
     clearance = route_clearance_report()
     inbound = inbound_validation_report()
+    final_frame = frame_at(1.0)
     summary = {
         "scenario": "Retail backroom inbound receiving and fulfillment",
-        "models": ["retail_backroom_inbound_receiving_v1", "retail_backroom_humanoid_fulfillment_v4"],
+        "models": ["retail_backroom_inbound_receiving_v2", "retail_backroom_humanoid_fulfillment_v6"],
         "duration_seconds": duration,
         "robots": 2,
         "scope": "workflow visualization only",
@@ -121,6 +160,9 @@ def run(duration: float, viewer_enabled: bool, output_dir: Path) -> None:
             "both_robots_sampled": {int(row["robot"]) for row in rows} == {1, 2},
             "blue_item_carry_observed": any(row["robot"] == 1 and row["carrying"] for row in rows),
             "green_item_carry_observed": any(row["robot"] == 2 and row["carrying"] for row in rows),
+            "human_service_window_pickup_complete": final_frame.human_state == "human_departed",
+            "human_turn_walk_and_exit_complete": final_frame.human_state == "human_departed" and not final_frame.human_visible,
+            "packages_removed_after_pickup": not final_frame.blue_item_visible and not final_frame.green_item_visible,
             "inbound_story_checks_passed": all(value for value in inbound.values() if isinstance(value, bool)),
             "inbound_story": inbound,
             **clearance,

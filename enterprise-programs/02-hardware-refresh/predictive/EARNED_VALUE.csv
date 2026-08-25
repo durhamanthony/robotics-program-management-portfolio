@@ -1,0 +1,3 @@
+table_title,period,bac_usd,pv_usd,ev_usd,ac_usd,sv_usd,cv_usd,spi,cpi,eac_usd,vac_usd,forecast,interpretation,evidence_class,confidence,source_or_validation
+Hardware Predictive earned value status — filled example,End Week 10,792000,612000,598000,586000,-14000,12000,0.98,1.02,776000,16000,Week 18,Small schedule watch; cost favorable; no quality reduction,Scenario assumption,Low,Replace with approved project records
+Hardware Predictive earned value status — filled example,End Week 15,792000,730000,708000,689000,-22000,19000,0.97,1.03,748400,43600,Week 18 with exception closure,Wave 4 +1 week uses planned closure window; 16 exceptions visible,Scenario assumption,Low,Replace with approved project records

@@ -1,0 +1,4 @@
+table_title,period,planned_points,done_points,throughput_items,median_cycle_days,p85_cycle_days,escaped_defects,blocked_items,outcome_measure,interpretation,evidence_class,confidence,source_or_validation
+M&A Agile delivery and outcome metrics — filled example,Sprint 1,62,58,17,4.1,8.6,1,3,Roster confidence 96.4%,Split legal-dependent work earlier,Scenario assumption,Low,Replace with approved project records
+M&A Agile delivery and outcome metrics — filled example,Sprint 2,64,61,19,3.8,7.2,2,2,Day 1 ready 97.8%,Device exceptions need earlier logistics trigger,Scenario assumption,Low,Replace with approved project records
+M&A Agile delivery and outcome metrics — filled example,Sprint 3,60,57,18,3.5,6.9,1,1,Pilot reconciliation 99.7%,Keep identity-first sequencing,Scenario assumption,Low,Replace with approved project records

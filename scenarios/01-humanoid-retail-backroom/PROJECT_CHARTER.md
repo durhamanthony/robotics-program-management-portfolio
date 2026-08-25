@@ -27,7 +27,7 @@ During a 30-day employee-only pilot:
 
 ## In scope
 
-Full-pallet truck unloading by a robot-operated forklift; stable-pallet verification; forklift-to-humanoid zone release; carton stocking at lower and raised racks; tablet request; Stock-Keeping Unit (SKU), size, and color validation; shoe-box and already-hung-garment retrieval; existing aisle, door, and short-stair navigation; courtesy drop-off table; return put-away; cycle counts; charging; identity and inventory integration; telemetry; training; Factory Acceptance Test (FAT); Site Acceptance Test (SAT); User Acceptance Testing (UAT); support drill; 30-day pilot; closeout.
+Full-pallet truck unloading by a robot-operated forklift; loaded-pallet visibility; center-zone placement; forklift return into the truck; stable-pallet verification; forklift-to-humanoid zone release; carton stocking at lower and raised racks; tablet request; Stock-Keeping Unit (SKU), size, and color validation; shoe-box and already-hung-garment retrieval; existing aisle, door, and short-stair navigation; courtesy drop-off table; robot turn-away; staffed service-window collection; human pickup confirmation; return put-away; cycle counts; charging; identity and inventory integration; telemetry; training; Factory Acceptance Test (FAT); Site Acceptance Test (SAT); User Acceptance Testing (UAT); support drill; 30-day pilot; closeout.
 
 ## Out of scope
 

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M&amp;A Network and Infrastructure Integration Plan | Anthony Durham</title><meta name="description" content="Technology program leadership portfolio spanning robotics, M&amp;A integration, and enterprise endpoint transformation by Anthony Durham.">
+<link rel="stylesheet" href="../../../../styles.css"><script defer src="../../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../../index.html">⌂ Home</a><a href="../../../../index.html#cases">Scenarios</a><a href="../../../../artifacts.html">Artifacts</a><a href="../../../../videos.html">Demos</a><a href="../../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../../artifacts.html">← Back to artifact library</a><div><span class="tag">M&amp;A IT integration — Shared controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../../index.html">⌂ Home</a><a class="button" href="../../../../downloads/source/enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="ma-network-and-infrastructure-integration-plan">M&amp;A Network and Infrastructure Integration Plan</h1>
+<blockquote>
+<p><strong>Portfolio case study — Filled example + reusable template.</strong> Company ABC and Company XYZ are fictional. Dates, headcounts, costs, performance, and decisions are scenario assumptions unless explicitly identified as verified experience or a public source. As of 2026-08-25.</p>
+</blockquote>
+<h2 id="purpose">Purpose</h2>
+<p>Create secure, observable connectivity without introducing route, DNS, segmentation, or perimeter failures.</p>
+<h2 id="filled-example">Filled example</h2>
+<p class="table-title"><strong>Table 1. M&amp;A Network and Infrastructure Integration Plan — evidence and confidence are stated in the artifact truth boundary</strong></p><table>
+<thead>
+<tr class="header">
+<th>Work package</th>
+<th>Scenario baseline</th>
+<th>Accountable owner</th>
+<th>Evidence / gate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Discovery</td>
+<td>Three sites, two cloud environments, four overlapping subnets identified</td>
+<td>Network Lead</td>
+<td>Validated L2/L3, WAN, DNS, DHCP, firewall, Wi-Fi, VoIP inventory</td>
+</tr>
+<tr class="even">
+<td>Interconnect</td>
+<td>Redundant IPsec/IKE site-to-site tunnels with restricted routes</td>
+<td>Network Architect</td>
+<td>Tunnel, failover, latency, throughput tests</td>
+</tr>
+<tr class="odd">
+<td>Collision remediation</td>
+<td>NAT/renumber plan for four conflicts; no overlapping routes advertised</td>
+<td>Network Lead</td>
+<td>Approved address plan</td>
+</tr>
+<tr class="even">
+<td>Segmentation</td>
+<td>Default deny; user, server, management, guest, voice, and migration zones</td>
+<td>Security</td>
+<td>Firewall rule review</td>
+</tr>
+<tr class="odd">
+<td>Observability</td>
+<td>Flow, DNS, firewall, VPN, and availability telemetry routed to Company ABC</td>
+<td>Network Operations</td>
+<td>Dashboard and alert test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="execution-sequence">Execution sequence</h2>
+<ol type="1">
+<li>Discover topology, circuits, public IPs, routes, subnets, VLANs, DNS zones/forwarders, firewalls, Wi-Fi, voice, certificates, and cloud gateways.</li>
+<li>Classify required flows by application, source, destination, port/protocol, data class, owner, duration, and removal date.</li>
+<li>Resolve address collisions before route exchange; validate forward and reverse DNS and split-horizon behavior.</li>
+<li>Build redundant tunnels and deny-by-default rules in a non-production path; enable monitoring before traffic.</li>
+<li>Pilot business flows, failure/failback, bandwidth, packet loss, name resolution, and security detections.</li>
+<li>Enable production by site; reconcile rules and routes; remove temporary migration access after acceptance.</li>
+</ol>
+<h2 id="acceptance-evidence">Acceptance evidence</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Zero unresolved overlapping routes at go/no-go; all four collision plans are tested.</label></li>
+<li><label><input type="checkbox" />Tier 0/Tier 1 flows pass functional, failover, logging, and owner acceptance tests.</label></li>
+<li><label><input type="checkbox" />Every temporary firewall rule has an owner, ticket, purpose, expiry, and removal evidence.</label></li>
+<li><label><input type="checkbox" />Network Operations accepts diagrams, configurations, monitoring, backup, vendor, and incident procedures.</label></li>
+</ul>
+<h2 id="exception-rollback-and-escalation">Exception, rollback, and escalation</h2>
+<p>Immediately withdraw new routes and disable the affected tunnel/rule set for asymmetric routing, unapproved lateral movement, unresolved DNS corruption, or Sev 1 performance impact. Restore the prior path, keep evidence, and reconvene the technical design authority. Rollback checkpoints are defined per site and per rule group—not as one all-or-nothing instruction.</p>
+<h2 id="reporting">Reporting</h2>
+<p>Report total scope, completed, passed, failed, deferred with approved reason, and unknown. Percentages always show the numerator and denominator. Owners update the control source before the dashboard is refreshed.</p>
+<h2 id="reusable-template-fields">Reusable template fields</h2>
+<p>Copy this artifact and replace the scenario values with approved project evidence:</p>
+<ul>
+<li><code>topology / circuit inventory</code></li>
+<li><code>IP address and collision plan</code></li>
+<li><code>required flow matrix</code></li>
+<li><code>DNS/DHCP design</code></li>
+<li><code>segmentation</code></li>
+<li><code>firewall rules and expiry</code></li>
+<li><code>VPN/SD-WAN design</code></li>
+<li><code>monitoring</code></li>
+<li><code>test scripts</code></li>
+<li><code>rollback and operations acceptance</code></li>
+</ul>
+<h2 id="control-note">Control note</h2>
+<p>The project manager owns document currency and traceability, not every technical decision. Accountable technical, security, privacy, legal, finance, procurement, HR, and business owners approve decisions in their domains. A blank approval, untested rollback, or unverified user/device count remains open; it is never converted into a green status by narrative.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

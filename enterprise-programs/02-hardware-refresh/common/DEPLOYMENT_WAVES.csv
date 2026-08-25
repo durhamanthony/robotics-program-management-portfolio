@@ -1,0 +1,7 @@
+table_title,wave,site,planned_devices,ready_t_minus_5,deployed,first_time_right,data_pass,compliant_24h,old_returns,open_exceptions,go_no_go,owner,status,evidence_class,confidence,source_or_validation
+Hardware refresh deployment wave dashboard source — filled example,Pilot,Site A,20,20,20,19,20,20,20,0,Go,Pilot Lead,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh deployment wave dashboard source — filled example,Wave 1,Site A,95,94,94,92,94,93,92,1,Conditional go,Site A Lead,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh deployment wave dashboard source — filled example,Wave 2,Site B,90,87,87,85,86,86,84,3,Conditional go,Site B Lead,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh deployment wave dashboard source — filled example,Wave 3,Site C,75,71,71,69,71,70,68,4,Conditional go,Site C Lead,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh deployment wave dashboard source — filled example,Wave 4,Remote / all sites,80,72,72,71,71,70,70,8,Partial release,Remote Lead,In progress,Scenario assumption,Low,Replace with approved project records
+Hardware refresh deployment wave dashboard source — filled example,TOTAL,Four sites,360,344,344,336,342,339,334,16,N/A,Project Manager,Amber,Scenario assumption,Low,Replace with approved project records

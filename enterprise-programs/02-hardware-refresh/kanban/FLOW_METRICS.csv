@@ -1,0 +1,5 @@
+table_title,week,throughput_devices,wip,median_cycle_days,p85_cycle_days,oldest_item_age_days,blocked_items,first_time_right_pct,compliant_24h_pct,returns_reconciled_pct,management_action,evidence_class,confidence,source_or_validation
+Hardware Kanban flow and outcome metrics — filled example,W10,34,82,4.2,7.4,9,7,96.8,98.1,96.5,Lower Scheduled WIP; swarm app blockers,Scenario assumption,Low,Replace with approved project records
+Hardware Kanban flow and outcome metrics — filled example,W11,37,73,3.9,6.8,8,5,97.2,98.4,97.0,Maintain WIP; add return courier slots,Scenario assumption,Low,Replace with approved project records
+Hardware Kanban flow and outcome metrics — filled example,W12,39,66,3.6,6.4,7,4,97.5,98.6,97.3,Keep capacity split; monitor accessibility queue,Scenario assumption,Low,Replace with approved project records
+Hardware Kanban flow and outcome metrics — filled example,W13,42,61,3.4,6.2,6,4,97.7,98.5,97.1,Forecast remaining standard work; isolate 16 exceptions,Scenario assumption,Low,Replace with approved project records

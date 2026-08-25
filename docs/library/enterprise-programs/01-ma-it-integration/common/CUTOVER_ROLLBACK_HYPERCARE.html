@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M&amp;A Integrated Cutover, Rollback, and Hypercare Runbook | Anthony Durham</title><meta name="description" content="Technology program leadership portfolio spanning robotics, M&amp;A integration, and enterprise endpoint transformation by Anthony Durham.">
+<link rel="stylesheet" href="../../../../styles.css"><script defer src="../../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../../index.html">⌂ Home</a><a href="../../../../index.html#cases">Scenarios</a><a href="../../../../artifacts.html">Artifacts</a><a href="../../../../videos.html">Demos</a><a href="../../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../../artifacts.html">← Back to artifact library</a><div><span class="tag">M&amp;A IT integration — Shared controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../../index.html">⌂ Home</a><a class="button" href="../../../../downloads/source/enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="ma-integrated-cutover-rollback-and-hypercare-runbook">M&amp;A Integrated Cutover, Rollback, and Hypercare Runbook</h1>
+<blockquote>
+<p><strong>Portfolio case study — Filled example + reusable template.</strong> Company ABC and Company XYZ are fictional. Dates, headcounts, costs, performance, and decisions are scenario assumptions unless explicitly identified as verified experience or a public source. As of 2026-08-25.</p>
+</blockquote>
+<h2 id="purpose">Purpose</h2>
+<p>Provide a time-stamped control path from final readiness through go/no-go, execution, validation, rollback, and operations acceptance.</p>
+<h2 id="gate-criteria">Gate criteria</h2>
+<p class="table-title"><strong>Table 1. M&amp;A Integrated Cutover, Rollback, and Hypercare Runbook — evidence and confidence are stated in the artifact truth boundary</strong></p><table>
+<thead>
+<tr class="header">
+<th>Gate</th>
+<th>Entry evidence</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T-10 readiness</td>
+<td>Roster, inventory, design, vendor plan, communications, test status</td>
+<td>Continue, recover, or de-scope</td>
+</tr>
+<tr class="even">
+<td>T-3 go/no-go</td>
+<td>No open Sev 1; Tier 0 tests pass; rollback viable; staffing confirmed</td>
+<td>Go, conditional go, hold</td>
+</tr>
+<tr class="odd">
+<td>T-0 release</td>
+<td>Backups/snapshots, freeze, monitoring, bridge, approvals</td>
+<td>Start cutover</td>
+</tr>
+<tr class="even">
+<td>Wave validation</td>
+<td>Counts, samples, permissions, business workflow, support health</td>
+<td>Accept wave or rollback cohort</td>
+</tr>
+<tr class="odd">
+<td>Hypercare exit</td>
+<td>SLA stable, aged defects dispositioned, knowledge/ownership accepted</td>
+<td>Transfer to operations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="command-log-excerpt--filled-example">Command log excerpt — filled example</h2>
+<p class="table-title"><strong>Table 2. M&amp;A Integrated Cutover, Rollback, and Hypercare Runbook — evidence and confidence are stated in the artifact truth boundary</strong></p><table>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Action / checkpoint</th>
+<th>Owner</th>
+<th>Result</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fri 18:00</td>
+<td>Freeze approved collaboration changes</td>
+<td>Collaboration Lead</td>
+<td>Passed; three emergency changes logged</td>
+<td>Continue</td>
+</tr>
+<tr class="even">
+<td>Fri 19:00</td>
+<td>Confirm source backups/export and destination capacity</td>
+<td>Data Lead</td>
+<td>Passed</td>
+<td>Continue</td>
+</tr>
+<tr class="odd">
+<td>Fri 20:00</td>
+<td>Enable restricted identity/network bridge</td>
+<td>IAM + Network</td>
+<td>Passed; telemetry visible</td>
+<td>Continue</td>
+</tr>
+<tr class="even">
+<td>Sat 02:00</td>
+<td>Run priority user/data delta and reconciliation</td>
+<td>Migration Lead</td>
+<td>99.7% initial; 19 objects retried</td>
+<td>Continue with watch</td>
+</tr>
+<tr class="odd">
+<td>Sat 06:00</td>
+<td>Persona and business workflow tests</td>
+<td>Business Owners</td>
+<td>All Tier 0/1 passed</td>
+<td>Release communications</td>
+</tr>
+<tr class="even">
+<td>Mon 10:00</td>
+<td>Day 1 checkpoint</td>
+<td>Command Lead</td>
+<td>665 ready; 15 controlled exceptions</td>
+<td>Remain in hypercare</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rollback-decision">Rollback decision</h2>
+<p>Rollback is assessed per identity cohort, network route/rule group, application, site, and data batch. Trigger examples: security control failure; permission variance above tolerance; data reconciliation below 99.5%; identity failure above 2%; Tier 0 workflow failure; or inability to restore within the approved recovery objective. The command lead calls the decision; accountable technical/business owners approve domain actions; the PM records time, rationale, evidence, and communication.</p>
+<h2 id="hypercare-exit">Hypercare exit</h2>
+<p>Exit after five consecutive business days with no Sev 1, priority services inside the agreed service objective, fewer than ten aged migration defects, accepted knowledge/monitoring/on-call, documented residual risks, and business/service-owner signatures.</p>
+<h2 id="reusable-template-fields">Reusable template fields</h2>
+<p>Copy this artifact and replace the scenario values with approved project evidence:</p>
+<ul>
+<li><code>cutover scope and batch</code></li>
+<li><code>freeze window</code></li>
+<li><code>command roles</code></li>
+<li><code>prechecks</code></li>
+<li><code>time-stamped tasks and dependencies</code></li>
+<li><code>validation scripts</code></li>
+<li><code>rollback triggers/actions/latest-safe-time</code></li>
+<li><code>communications</code></li>
+<li><code>incident model</code></li>
+<li><code>hypercare exit and handoff</code></li>
+</ul>
+<h2 id="control-note">Control note</h2>
+<p>The project manager owns document currency and traceability, not every technical decision. Accountable technical, security, privacy, legal, finance, procurement, HR, and business owners approve decisions in their domains. A blank approval, untested rollback, or unverified user/device count remains open; it is never converted into a green status by narrative.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

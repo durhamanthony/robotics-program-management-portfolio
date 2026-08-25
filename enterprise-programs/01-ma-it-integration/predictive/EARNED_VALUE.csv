@@ -1,0 +1,3 @@
+table_title,status_period,bac_usd,pv_usd,ev_usd,ac_usd,sv_usd,cv_usd,spi,cpi,eac_usd,vac_usd,milestone_forecast,management_interpretation,evidence_class,confidence,source_or_validation
+M&A Predictive earned value status — filled example,End Week 8,1860000,710000,682000,668000,-28000,14000,0.96,1.02,1824000,36000,Final Week 24 unchanged; collaboration +1 week recovered in float,Schedule watch; cost favorable; validate quality and do not trade control for SPI,Scenario assumption,Low,Replace with approved project records
+M&A Predictive earned value status — filled example,End Week 12,1860000,1080000,1048000,1029000,-32000,19000,0.97,1.02,1782000,78000,Final Week 24,Jira scope held; reserve remains protected,Scenario assumption,Low,Replace with approved project records

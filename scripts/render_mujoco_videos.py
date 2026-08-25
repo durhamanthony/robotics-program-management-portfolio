@@ -73,11 +73,24 @@ def geom_id(model: mujoco.MjModel, name: str) -> int:
     return int(result)
 
 
-def set_mocap(model: mujoco.MjModel, data: mujoco.MjData, name: str, pose: tuple[float, float, float, float]) -> None:
-    x_pos, y_pos, z_pos, yaw = pose
+def set_mocap(model: mujoco.MjModel, data: mujoco.MjData, name: str, pose: tuple[float, ...]) -> None:
     index = body_mocap_id(model, name)
-    data.mocap_pos[index] = (x_pos, y_pos, z_pos)
-    data.mocap_quat[index] = (math.cos(yaw / 2.0), 0.0, 0.0, math.sin(yaw / 2.0))
+    data.mocap_pos[index] = pose[:3]
+    if len(pose) == 4:
+        yaw = pose[3]
+        data.mocap_quat[index] = (math.cos(yaw / 2.0), 0.0, 0.0, math.sin(yaw / 2.0))
+    elif len(pose) == 7:
+        data.mocap_quat[index] = pose[3:]
+    else:
+        raise ValueError(f"Unsupported mocap pose with {len(pose)} values")
+
+
+def set_named_geom_visibility(model: mujoco.MjModel, prefix: str, visible: bool) -> None:
+    alpha = 1.0 if visible else 0.0
+    for index in range(model.ngeom):
+        name = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_GEOM, index)
+        if name and name.startswith(prefix):
+            model.geom_rgba[index][3] = alpha
 
 
 @dataclass(frozen=True)
@@ -95,6 +108,14 @@ def retail_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
     set_mocap(model, data, "shoe_box_1", frame.blue_item_pose)
     set_mocap(model, data, "robot_2", frame.green_pose)
     set_mocap(model, data, "shoe_box_2", frame.green_item_pose)
+    set_mocap(model, data, "sales_associate", frame.human_pose)
+    set_mocap(model, data, "sales_associate_left_upper_arm", frame.human_left_upper_arm_pose)
+    set_mocap(model, data, "sales_associate_left_forearm", frame.human_left_forearm_pose)
+    set_mocap(model, data, "sales_associate_right_upper_arm", frame.human_right_upper_arm_pose)
+    set_mocap(model, data, "sales_associate_right_forearm", frame.human_right_forearm_pose)
+    set_named_geom_visibility(model, "human_", frame.human_visible)
+    model.geom_rgba[geom_id(model, "shoe_box_1_geom")][3] = 1.0 if frame.blue_item_visible else 0.0
+    model.geom_rgba[geom_id(model, "shoe_box_2_geom")][3] = 1.0 if frame.green_item_visible else 0.0
     return frame.camera
 
 
@@ -106,10 +127,10 @@ def inbound_update(model: mujoco.MjModel, data: mujoco.MjData, t: float) -> str:
     set_mocap(model, data, "stock_carton_low", frame.low_carton_pose)
     set_mocap(model, data, "stock_worker_high", frame.high_worker_pose)
     set_mocap(model, data, "stock_carton_high", frame.high_carton_pose)
-    model.geom_rgba[geom_id(model, "inbound_stack_7")][3] = 1.0 if t < 0.51 else 0.0
-    model.geom_rgba[geom_id(model, "inbound_stack_6")][3] = 1.0 if t < 0.54 else 0.0
-    model.geom_rgba[geom_id(model, "stock_carton_low_geom")][3] = 1.0 if t >= 0.51 else 0.0
-    model.geom_rgba[geom_id(model, "stock_carton_high_geom")][3] = 1.0 if t >= 0.54 else 0.0
+    model.geom_rgba[geom_id(model, "inbound_stack_7")][3] = 1.0 if t < 0.56 else 0.0
+    model.geom_rgba[geom_id(model, "inbound_stack_6")][3] = 1.0 if t < 0.59 else 0.0
+    model.geom_rgba[geom_id(model, "stock_carton_low_geom")][3] = 1.0 if t >= 0.56 else 0.0
+    model.geom_rgba[geom_id(model, "stock_carton_high_geom")][3] = 1.0 if t >= 0.59 else 0.0
     return frame.camera
 
 
@@ -164,18 +185,20 @@ FONT_REGULAR = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 
 def stage_label(segment: str, progress: float) -> tuple[str, str]:
     if segment == "inbound":
-        if progress < 0.31:
-            return "01  UNLOAD THE TRUCK", "Robot-operated forklift brings the full pallet out to receiving"
-        if progress < 0.58:
-            return "02  OPEN THE PALLET", "Humanoids take cartons only after the forklift clears the work zone"
-        if progress < 0.70:
-            return "03  STOCK THE LOWER RACK", "Carton remains visibly attached to the teal robot"
+        if progress < 0.27:
+            return "01  UNLOAD THE TRUCK", "Loaded pallet stays visibly supported on the forklift"
+        if progress < 0.44:
+            return "02  STAGE PALLET & RETURN FORKLIFT", "Pallet stays on the floor while the empty forklift returns into the truck"
+        if progress < 0.68:
+            return "03  OPEN PALLET & STOCK LOWER RACK", "Humanoids begin only after the forklift clears the work zone"
         return "04  STOCK THE UPPER RACK", "Blue robot climbs each visible stair tread while carrying a carton"
-    if progress < 0.40:
+    if progress < 0.35:
         return "05  PULL THE ORDERS", "Robots retrieve merchandise from lower and raised storage"
-    if progress < 0.76:
+    if progress < 0.66:
         return "06  RETURN THROUGH THE AISLES", "Both requested cartons remain visibly attached in transit"
-    return "07  COURTESY DROP-OFF TABLE", "Sales associates collect requested merchandise here"
+    if progress < 0.78:
+        return "07  COURTESY DROP-OFF TABLE", "Robots place both packages, then turn back toward the shelves"
+    return "08  HUMAN PICKUP COMPLETES THE CYCLE", "Associate bends both arms, collects the packages, turns, and walks away"
 
 
 def add_stage_overlay(frame: np.ndarray, segment: str, progress: float) -> np.ndarray:

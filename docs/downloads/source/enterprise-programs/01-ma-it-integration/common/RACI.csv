@@ -1,0 +1,8 @@
+table_title,deliverable,sponsor,program_manager,corp_dev,hr,security,iam,network,collaboration,app_owners,service_desk,finance_legal,evidence_class,confidence,source_or_validation
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Charter / integration outcomes,A,R,C,C,C,I,I,I,C,I,C,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Day 1 employee readiness,A,R,I,R,C,R,R,R,R,R,C,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Identity / privileged access,I,C,I,C,A,R,I,C,C,I,I,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Network interconnect,I,C,I,I,A,C,R,C,C,I,I,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Collaboration migration,I,R,I,C,C,R,C,A/R,C,C,C,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Application disposition / retirement,A,R,C,I,C,C,C,C,R,C,C,Scenario assumption,Low,Replace with approved project records
+"M&A shared RACI — A accountable, R responsible, C consulted, I informed",Go/no-go / rollback,A,R,I,C,A,R,R,R,R,R,C,Scenario assumption,Low,Replace with approved project records

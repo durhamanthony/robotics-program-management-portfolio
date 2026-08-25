@@ -14,7 +14,7 @@
       "duration": "20 weeks including 30-day pilot",
       "budget": "$640K pilot installed",
       "tco": "$1.730M five-year TCO",
-      "summary": "Deploy two humanoid robots across the employee-only retail backroom flow. During inbound receiving, a robot-operated forklift removes a full pallet from the delivery truck and clears the work zone; humanoids then carry cartons to lower and raised storage racks, using the visible stair route where required. During fulfillment, a sales associate submits a stock-keeping unit, size, and color request from a tablet; robots pull the requested merchandise and place it on the courtesy drop-off table. Tangled hangers, damaged packaging, ladders, electrical work, and customer-floor operation remain human tasks.",
+      "summary": "Deploy two humanoid robots across the employee-only retail backroom flow. During inbound receiving, a robot-operated forklift visibly carries a loaded pallet from the delivery truck, places it in the center receiving zone, and returns into the truck; humanoids then carry cartons to lower and raised storage racks, using the visible stair route where required. During fulfillment, a sales associate submits a stock-keeping unit, size, and color request from a tablet; robots pull the requested merchandise, place it on the courtesy drop-off table, and turn toward the shelves while a human associate bends connected arms to collect both packages through the staffed service window, turns around, and walks away. Tangled hangers, damaged packaging, ladders, electrical work, and customer-floor operation remain human tasks.",
       "decision": "The 30-day pilot passed the safety, retrieval, wait-time, inventory-accuracy, damage, intervention, and inbound zone-handoff gates, so Meridian accepted the operating procedure and support handoff. Finance did not authorize chain rollout: modeled annual gross value was $148,258 versus the $346,000 annual value required for five-year payback at the current planning cost. A second-site decision requires a binding vendor quote and either lower recurring cost or independently measured value at or above $346,000 per year.",
       "metrics": [
         {
@@ -204,7 +204,7 @@
           "risk": "Forklift unloading and humanoid stocking overlap in the receiving zone",
           "score": 20,
           "status": "Closed with control",
-          "response": "Time-separate the tasks; interlock the receiving zone; release humanoid missions only after the forklift parks and the pallet is verified stable"
+          "response": "Time-separate the tasks; interlock the receiving zone; release humanoid missions only after the forklift returns into the truck and the pallet is verified stable"
         }
       ],
       "team": [
@@ -308,16 +308,17 @@
       "demo": {
         "title": "MuJoCo Retail Backroom Humanoid Simulation",
         "filename": "retail-humanoid-fulfillment.mp4",
-        "caption": "A 40-second, seven-stage MuJoCo retail-backroom story. A robot-operated forklift backs a full pallet out of the delivery truck and parks it in receiving. After the forklift clears the zone, two humanoids carry cartons to lower and raised storage racks; the upper-route robot visibly climbs each of four physical treads. The scene then cuts to order fulfillment: both robots pull requested merchandise and place it on the courtesy drop-off table for a sales associate. On-video stage labels make the workflow explicit. Scripted motion is not locomotion, grasp, forklift-control, collision-avoidance, or safety-performance validation. [DC-L; Low confidence]",
+        "caption": "A 40-second, eight-stage MuJoCo retail-backroom story. A robot-operated forklift visibly carries a loaded pallet out of the delivery truck, places it in the center receiving zone, and returns into the truck. After the forklift clears the zone, two humanoids carry cartons to lower and raised storage racks; the upper-route robot visibly climbs each of four physical treads. The scene then cuts to order fulfillment: both robots pull requested merchandise, place it on the courtesy drop-off table, and turn toward the shelves. A clearly human sales associate reaches through the staffed service window with connected upper arms and visibly bending elbows, collects both packages, turns around, walks away, and disappears from view to close the custody cycle. On-video stage labels make the workflow explicit. Scripted motion is not locomotion, grasp, forklift-control, collision-avoidance, or safety-performance validation. [DC-L; Low confidence]",
         "model_source": "simulations/retail_humanoids/README.md",
         "sequence": [
-          "Unload truck: robot-operated forklift removes full pallet",
-          "Clear receiving zone and verify stable pallet",
+          "Unload truck: robot-operated forklift visibly carries the loaded pallet",
+          "Place pallet in center receiving zone and return forklift into truck",
           "Stock lower and raised racks; use visible stairs where required",
           "Receive tablet order and confirm item location",
           "Pull requested merchandise from both stock levels",
-          "Place merchandise on courtesy drop-off table",
-          "Update inventory and accept next mission"
+          "Place merchandise on courtesy drop-off table and turn toward shelves",
+          "Human associate bends connected arms and collects both packages through staffed service window",
+          "Human turns, walks away, disappears with the packages, and closes custody"
         ],
         "type": "MuJoCo operations visualization"
       },

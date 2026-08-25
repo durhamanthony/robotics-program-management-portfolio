@@ -1,0 +1,4 @@
+table_title,validation_id,user_id,wave,precheck,source_data_gb,destination_data_gb,file_sample,critical_apps,user_acceptance,old_device_release,owner,status,evidence_class,confidence,source_or_validation
+Hardware refresh user-data validation — representative filled rows,UDV-001,USER-0001,Pilot,Pass,42.6,42.6,20/20 pass,Pass,Accepted,Yes,Migration Tech,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh user-data validation — representative filled rows,UDV-002,USER-0002,Pilot,Pass,18.2,18.2,20/20 pass,Pass,Accepted,Yes,Migration Tech,Complete,Scenario assumption,Low,Replace with approved project records
+Hardware refresh user-data validation — representative filled rows,UDV-003,USER-0003,Wave 2,Warning — local app data,67.4,65.9,18/20; two app files pending,Conditional,Pending,No — custody hold,Data Lead,Exception,Scenario assumption,Low,Replace with approved project records

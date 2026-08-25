@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Integration and Data Plan — Retail Backroom Pilot | Anthony Durham</title><meta name="description" content="Robotics deployment, new-product introduction, and service-operations portfolio by Anthony Durham.">
+<title>Integration and Data Plan — Retail Backroom Pilot | Anthony Durham</title><meta name="description" content="Technology program leadership portfolio spanning robotics, M&amp;A integration, and enterprise endpoint transformation by Anthony Durham.">
 <link rel="stylesheet" href="../../../styles.css"><script defer src="../../../app.js"></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html">Anthony Durham</a>
@@ -13,8 +13,8 @@
 <p><strong>Evidence-confidence key:</strong> [PB-H] public benchmark or authoritative source/high confidence; [RBE-M] range-based estimate/medium confidence; [SA-L] scenario assumption/low confidence; [DC-L] disclosed derived calculation/confidence inherits the weakest input; [UPV] unverified production value/block commitment until approved.</p>
 </blockquote>
 <h2 id="transaction-flow">Transaction flow</h2>
-<p>Inbound: receiving schedule → truck/pallet identifier → forklift mission → pallet-stable confirmation → forklift parked/zone-clear signal → humanoid stocking missions → rack-location scans → inventory/event update.</p>
-<p>Fulfillment: associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → courtesy drop-off scan → inventory/event update → telemetry and support case when required.</p>
+<p>Inbound: receiving schedule → truck/pallet identifier → loaded-forklift unload → center-zone placement → forklift return into truck → pallet-stable/zone-clear signal → humanoid stocking missions → rack-location scans → inventory/event update.</p>
+<p>Fulfillment: associate tablet → identity service → request service → inventory-location lookup → mission orchestrator → robot/fleet service → pick scan → courtesy drop-off scan → robot turn-away → human service-window collection → package-removal confirmation → inventory/custody close → telemetry and support case when required.</p>
 <h2 id="interface-controls">Interface controls</h2>
 <p class="table-title"><strong>Table 1. Interface controls — Evidence: disclosed row/source notes; Confidence: see evidence key and row/source notes</strong></p><table>
 <thead>
@@ -36,7 +36,7 @@
 </tr>
 <tr class="even">
 <td>Zone interlock</td>
-<td>forklift parked and receiving zone clear → release stocking</td>
+<td>forklift returned into truck and receiving zone clear → release stocking</td>
 <td>positive confirmation required</td>
 <td>keep humanoid missions inhibited</td>
 <td>20 witnessed clear/release cycles</td>
@@ -70,6 +70,13 @@
 <td>transaction reconciliation</td>
 </tr>
 <tr class="odd">
+<td>Human service-window pickup</td>
+<td>drop-off complete, robots turned away, package collected, custody closed</td>
+<td>collection must follow two-package drop confirmation</td>
+<td>keep mission open and notify associate if either package remains</td>
+<td>20 witnessed drop/turn/collect cycles</td>
+</tr>
+<tr class="even">
 <td>Telemetry/support</td>
 <td>robot, mission, event, fault, configuration</td>
 <td>buffer during outage; ordered resend</td>
@@ -82,7 +89,7 @@
 <p>Meridian owns requests, inventory, employee identity, and business measures. The vendor owns robot diagnostic data subject to contract. Video is limited to navigation/manipulation evidence in employee-only zones; no facial recognition. Operational clips retain 7 days unless attached to an incident; incident evidence retains 90 days or the legal schedule. Access is role-based, logged, reviewed monthly, and revoked at role termination.</p>
 <h2 id="data-quality-rules">Data-quality rules</h2>
 <ul>
-<li>Truck, pallet, carton, rack, SKU, size, color, request, mission, and courtesy-drop-off identifiers must reconcile one-to-one.</li>
+<li>Truck, pallet, carton, rack, SKU, size, color, request, mission, courtesy-drop-off, human-collection, and custody-close identifiers must reconcile one-to-one.</li>
 <li>Times use synchronized Universal Time Coordinated (UTC) plus displayed local time.</li>
 <li>Missing or low-confidence location data blocks autonomous retrieval.</li>
 <li>Dashboard measures are produced from versioned queries; the animation never supplies KPI data.</li>
@@ -91,6 +98,6 @@
 <h2 id="cutover-and-rollback">Cutover and rollback</h2>
 <p>Run interfaces in shadow mode for 100 requests. If wrong-item rate exceeds 0.5%, duplicate missions occur, security logs fail, or safe-state evidence is missing, disable robot mission creation, retain the tablet as a human pick queue, reconcile open transactions, and restore only after change approval and regression testing.</p>
 </article></main>
-<footer><div class="container"><strong>Anthony Durham — Robotics Program Leadership</strong><br>
-These simulations are fictitious generic scenarios for demonstration purposes only. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
 </body></html>

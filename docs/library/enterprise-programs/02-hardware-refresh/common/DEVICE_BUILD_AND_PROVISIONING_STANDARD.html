@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardware Refresh Device Build and Provisioning Standard | Anthony Durham</title><meta name="description" content="Technology program leadership portfolio spanning robotics, M&amp;A integration, and enterprise endpoint transformation by Anthony Durham.">
+<link rel="stylesheet" href="../../../../styles.css"><script defer src="../../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../../index.html">⌂ Home</a><a href="../../../../index.html#cases">Scenarios</a><a href="../../../../artifacts.html">Artifacts</a><a href="../../../../videos.html">Demos</a><a href="../../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../../artifacts.html">← Back to artifact library</a><div><span class="tag">Enterprise hardware refresh — Shared controls</span> <span class="tag muted-tag">Govern / Reference</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../../index.html">⌂ Home</a><a class="button" href="../../../../downloads/source/enterprise-programs/02-hardware-refresh/common/DEVICE_BUILD_AND_PROVISIONING_STANDARD.md" download>Download MD</a></div></div>
+<article class="article"><h1 id="hardware-refresh-device-build-and-provisioning-standard">Hardware Refresh Device Build and Provisioning Standard</h1>
+<blockquote>
+<p><strong>Portfolio case study — Filled example + reusable template.</strong> Company ABC and Company XYZ are fictional. Dates, headcounts, costs, performance, and decisions are scenario assumptions unless explicitly identified as verified experience or a public source. As of 2026-08-25.</p>
+</blockquote>
+<h2 id="purpose">Purpose</h2>
+<p>Define a reproducible business-ready configuration and evidence path for laptops, desktops, and phones.</p>
+<h2 id="filled-example">Filled example</h2>
+<p class="table-title"><strong>Table 1. Hardware Refresh Device Build and Provisioning Standard — evidence and confidence are stated in the artifact truth boundary</strong></p><table>
+<thead>
+<tr class="header">
+<th>Work package</th>
+<th>Scenario baseline</th>
+<th>Accountable owner</th>
+<th>Evidence / gate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows laptops/desktops</td>
+<td>OEM image transformed through Windows Autopilot/Intune where feasible; SCCM/MECM task sequence for approved reimage path</td>
+<td>Endpoint Engineering</td>
+<td>Enrollment, policy, app, update, compliance and user test</td>
+</tr>
+<tr class="even">
+<td>Mobile phones</td>
+<td>Corporate enrollment, required apps, configuration/compliance and number/line validation</td>
+<td>Mobility Lead</td>
+<td>MDM and call/data test</td>
+</tr>
+<tr class="odd">
+<td>Identity</td>
+<td>Microsoft Entra join or approved existing-state transition; standard user by default</td>
+<td>IAM + Security</td>
+<td>Join, MFA, conditional access test</td>
+</tr>
+<tr class="even">
+<td>Security</td>
+<td>Encryption, supported OS/patch, Defender/EDR, firewall, screen lock, local-admin control</td>
+<td>InfoSec</td>
+<td>Compliance and risk report</td>
+</tr>
+<tr class="odd">
+<td>Supportability</td>
+<td>Asset tag, warranty, owner/site, remote support, monitoring, knowledge and recovery</td>
+<td>Service Operations</td>
+<td>CMDB/inventory and support acceptance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="execution-sequence">Execution sequence</h2>
+<ol type="1">
+<li>Approve persona and model standards, hardware minimums, accessories, warranty, and exception process.</li>
+<li>Freeze versioned provisioning profiles, required/available apps, scripts, policies, updates, drivers, and dependencies.</li>
+<li>Run clean-device, upgrade/reimage, remote, executive, accessibility, and shared-device pilots.</li>
+<li>Capture automated deployment and compliance reports plus manual business workflow evidence.</li>
+<li>Release build version only after Endpoint, Security, application owners, Service Desk, and Change approval.</li>
+<li>Track build drift; change version and retest affected personas before the next wave.</li>
+</ol>
+<h2 id="acceptance-evidence">Acceptance evidence</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Required apps/configuration install successfully or have approved post-login path and owner.</label></li>
+<li><label><input type="checkbox" />Device reports encryption, supported OS/update, EDR, firewall, and compliance before business release.</label></li>
+<li><label><input type="checkbox" />Standard user, executive/delegate, shared-device, remote/VPN, accessibility, and Tier 1 app personas pass.</label></li>
+<li><label><input type="checkbox" />Asset tag/serial/user/site/warranty/build version and management identifiers reconcile.</label></li>
+</ul>
+<h2 id="exception-rollback-and-escalation">Exception, rollback, and escalation</h2>
+<p>Quarantine any device with identity mismatch, missing encryption/EDR, failed critical app, unknown custody, or unsupported configuration. Reissue the prior device where safe, use a validated spare, or re-run the approved build. Do not bypass compliance to meet an appointment metric.</p>
+<h2 id="reporting">Reporting</h2>
+<p>Report total scope, completed, passed, failed, deferred with approved reason, and unknown. Percentages always show the numerator and denominator. Owners update the control source before the dashboard is refreshed.</p>
+<h2 id="reusable-template-fields">Reusable template fields</h2>
+<p>Copy this artifact and replace the scenario values with approved project evidence:</p>
+<ul>
+<li><code>personas/models</code></li>
+<li><code>OS/build/version</code></li>
+<li><code>join/enrollment</code></li>
+<li><code>security policies</code></li>
+<li><code>apps/scripts</code></li>
+<li><code>updates/drivers</code></li>
+<li><code>accessories</code></li>
+<li><code>test matrix</code></li>
+<li><code>release approval</code></li>
+<li><code>exception/quarantine</code></li>
+</ul>
+<h2 id="control-note">Control note</h2>
+<p>The project manager owns document currency and traceability, not every technical decision. Accountable technical, security, privacy, legal, finance, procurement, HR, and business owners approve decisions in their domains. A blank approval, untested rollback, or unverified user/device count remains open; it is never converted into a green status by narrative.</p>
+</article></main>
+<footer><div class="container"><strong>Anthony Durham — Technology Program Leadership</strong><br>
+Portfolio case studies use fictional, anonymized scenario data for demonstration; verified career outcomes are identified separately. <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a></div></footer>
+</body></html>

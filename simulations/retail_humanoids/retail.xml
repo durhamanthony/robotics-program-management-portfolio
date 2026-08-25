@@ -1,4 +1,4 @@
-<mujoco model="retail_backroom_humanoid_fulfillment_v4">
+<mujoco model="retail_backroom_humanoid_fulfillment_v6">
   <compiler angle="degree"/>
   <option timestep="0.01" gravity="0 0 -9.81"/>
   <statistic center="0 0 1.1" extent="10"/>
@@ -18,6 +18,11 @@
     <material name="garment" rgba="0.66 0.12 0.34 1"/>
     <material name="white" rgba="0.92 0.95 0.96 1"/>
     <material name="rail" rgba="0.74 0.78 0.82 1"/>
+    <material name="skin" rgba="0.78 0.52 0.36 1"/>
+    <material name="human_shirt" rgba="0.55 0.10 0.18 1"/>
+    <material name="hair" rgba="0.08 0.045 0.025 1"/>
+    <material name="eye" rgba="0.03 0.025 0.02 1"/>
+    <material name="mouth" rgba="0.55 0.05 0.07 1"/>
   </asset>
   <worldbody>
     <light pos="-2 -3 9" dir="0.2 0.15 -1" diffuse="0.9 0.9 0.9"/>
@@ -36,7 +41,16 @@
     <geom type="box" pos="-5.15 1.20 0.48" size="0.09 0.09 0.48" material="shelf"/>
     <geom name="courtesy_table_edge" type="box" pos="-4.88 0 1.06" size="0.035 1.55 0.035" material="teal"/>
     <geom name="tablet" type="box" pos="-5.55 0 1.08" size="0.20 0.30 0.035" material="teal"/>
-    <geom type="box" pos="-6.9 0 1.4" size="0.08 5.2 1.4" material="white"/>
+    <!-- Staffed service window behind the courtesy table. The segmented wall
+         leaves a real opening for the human associate's face, torso, and arms. -->
+    <geom type="box" pos="-6.9 -3.45 1.4" size="0.08 1.75 1.4" material="white"/>
+    <geom type="box" pos="-6.9 3.45 1.4" size="0.08 1.75 1.4" material="white"/>
+    <geom type="box" pos="-6.9 0 0.43" size="0.08 1.70 0.43" material="white"/>
+    <geom type="box" pos="-6.9 0 2.58" size="0.08 1.70 0.22" material="white"/>
+    <geom name="service_window_sill" type="box" pos="-6.72 0 0.90" size="0.18 1.70 0.06" material="wood"/>
+    <geom type="box" pos="-6.72 -1.64 1.62" size="0.16 0.06 0.72" material="rail"/>
+    <geom type="box" pos="-6.72 1.64 1.62" size="0.16 0.06 0.72" material="rail"/>
+    <geom type="box" pos="-6.72 0 2.34" size="0.16 1.70 0.06" material="rail"/>
     <geom type="box" pos="0 5.2 1.4" size="6.9 0.08 1.4" material="white"/>
 
     <!-- A coherent raised stock platform with a real four-step stair and guarded landing. -->
@@ -92,7 +106,46 @@
       <geom type="capsule" fromto="0 -0.11 0.90 0 -0.15 0.10" size="0.085" material="white"/>
       <geom type="capsule" fromto="0 0.11 0.90 0 0.15 0.10" size="0.085" material="white"/>
     </body>
-    <body name="shoe_box_1" mocap="true" pos="3.20 -1.55 1.32"><geom type="box" size="0.30 0.22 0.13" material="box"/></body>
-    <body name="shoe_box_2" mocap="true" pos="3.15 2.92 1.52"><geom type="box" size="0.30 0.22 0.13" material="box"/></body>
+    <body name="shoe_box_1" mocap="true" pos="3.20 -1.55 1.32"><geom name="shoe_box_1_geom" type="box" size="0.30 0.22 0.13" material="box"/></body>
+    <body name="shoe_box_2" mocap="true" pos="3.15 2.92 1.52"><geom name="shoe_box_2_geom" type="box" size="0.30 0.22 0.13" material="box"/></body>
+
+    <!-- A recognizably human sales associate appears only for final pickup.
+         The face is retained while four articulated mocap segments keep both
+         upper arms and forearms joined at visible elbows throughout pickup. -->
+    <body name="sales_associate" mocap="true" pos="-7.20 0 -2.20">
+      <geom name="human_torso" type="capsule" fromto="0 0 0.72 0 0 1.48" size="0.28" material="human_shirt"/>
+      <geom name="human_shoulders" type="capsule" fromto="0 -0.34 1.43 0 0.34 1.43" size="0.14" material="human_shirt"/>
+      <geom name="human_neck" type="cylinder" pos="0 0 1.68" size="0.085 0.13" material="skin"/>
+      <geom name="human_head" type="sphere" pos="0.02 0 1.96" size="0.23" material="skin"/>
+      <geom name="human_hair" type="ellipsoid" pos="-0.08 0 2.10" size="0.18 0.23 0.13" material="hair"/>
+      <geom name="human_left_ear" type="sphere" pos="0.02 -0.235 1.98" size="0.045" material="skin"/>
+      <geom name="human_right_ear" type="sphere" pos="0.02 0.235 1.98" size="0.045" material="skin"/>
+      <geom name="human_left_eye" type="sphere" pos="0.225 -0.075 2.02" size="0.022" material="eye"/>
+      <geom name="human_right_eye" type="sphere" pos="0.225 0.075 2.02" size="0.022" material="eye"/>
+      <geom name="human_nose" type="sphere" pos="0.245 0 1.96" size="0.032" material="skin"/>
+      <geom name="human_mouth" type="capsule" fromto="0.225 -0.065 1.88 0.225 0.065 1.88" size="0.014" material="mouth"/>
+    </body>
+    <body name="sales_associate_left_upper_arm" mocap="true" pos="-8.0 -0.34 1.43">
+      <geom name="human_left_upper_arm" type="capsule" fromto="0 0 0 0.64 0 0" size="0.115" material="human_shirt"/>
+      <geom name="human_left_elbow" type="sphere" pos="0.64 0 0" size="0.105" material="skin"/>
+    </body>
+    <body name="sales_associate_left_forearm" mocap="true" pos="-7.4 -0.55 1.3">
+      <geom name="human_left_forearm" type="capsule" fromto="0 0 0 0.78 0 0" size="0.082" material="skin"/>
+      <geom name="human_left_hand" type="sphere" pos="0.86 0 0" size="0.105" material="skin"/>
+      <geom name="human_left_finger_1" type="capsule" fromto="0.82 -0.06 -0.01 1.00 -0.06 -0.01" size="0.023" material="skin"/>
+      <geom name="human_left_finger_2" type="capsule" fromto="0.83 0 -0.04 1.02 0 -0.04" size="0.023" material="skin"/>
+      <geom name="human_left_finger_3" type="capsule" fromto="0.82 0.06 -0.01 1.00 0.06 -0.01" size="0.023" material="skin"/>
+    </body>
+    <body name="sales_associate_right_upper_arm" mocap="true" pos="-8.0 0.34 1.43">
+      <geom name="human_right_upper_arm" type="capsule" fromto="0 0 0 0.64 0 0" size="0.115" material="human_shirt"/>
+      <geom name="human_right_elbow" type="sphere" pos="0.64 0 0" size="0.105" material="skin"/>
+    </body>
+    <body name="sales_associate_right_forearm" mocap="true" pos="-7.4 0.55 1.3">
+      <geom name="human_right_forearm" type="capsule" fromto="0 0 0 0.78 0 0" size="0.082" material="skin"/>
+      <geom name="human_right_hand" type="sphere" pos="0.86 0 0" size="0.105" material="skin"/>
+      <geom name="human_right_finger_1" type="capsule" fromto="0.82 -0.06 -0.01 1.00 -0.06 -0.01" size="0.023" material="skin"/>
+      <geom name="human_right_finger_2" type="capsule" fromto="0.83 0 -0.04 1.02 0 -0.04" size="0.023" material="skin"/>
+      <geom name="human_right_finger_3" type="capsule" fromto="0.82 0.06 -0.01 1.00 0.06 -0.01" size="0.023" material="skin"/>
+    </body>
   </worldbody>
 </mujoco>

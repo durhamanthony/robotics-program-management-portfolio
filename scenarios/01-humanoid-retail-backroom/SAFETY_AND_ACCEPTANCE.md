@@ -29,7 +29,7 @@ Employee-only backroom; approved truck and pallet interface; time-separated fork
 
 | Test | Witnessed criterion | Result |
 |---|---|---|
-| SAT-001 truck unload and work-zone handoff | 20/20 full-pallet unloads end stable in receiving; forklift parked and zone clear before humanoid release | pass |
+| SAT-001 truck unload and work-zone handoff | 20/20 visibly loaded pallet unloads end stable in center receiving; forklift returned into truck and zone clear before humanoid release | pass |
 | SAT-002 inbound stocking | 20/20 approved cartons reach the assigned lower or raised rack with scan reconciliation | pass |
 | FAT-010 approved-item handling | 100 varied picks with at least 97% success and no uncontrolled drop | pass |
 | FAT-020 exception handling | 10/10 tangled/damaged/unsupported cases reject without grasp | pass |

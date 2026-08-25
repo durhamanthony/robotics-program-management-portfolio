@@ -7,7 +7,7 @@ These small, explainable simulations support project/program discussions by expo
 
 ## Demonstrations
 
-- `retail_inbound` + `retail_humanoids` — one retail story begins with a robot-operated forklift unloading a full pallet from a truck. After the forklift clears receiving, humanoids stock lower and raised racks, visibly using four physical stair treads where required. The video then cuts to tablet-driven retrieval and delivery to a courtesy drop-off table.
+- `retail_inbound` + `retail_humanoids` — one retail story begins with a robot-operated forklift visibly carrying a loaded pallet from a truck, placing it in the center receiving zone, and returning into the truck. After the forklift clears receiving, humanoids stock lower and raised racks, visibly using four physical stair treads where required. The video then cuts to tablet-driven retrieval, delivery to a courtesy drop-off table, both robots turning toward the shelves, and a human associate bending connected arms to collect the packages through a staffed service window before turning and walking away.
 - `quadruped_security` — three quadruped visual agents move through a fenced industrial site with pavement, rough ground, steps, a loading platform, a vehicle gate, and charging docks. Abstract colored route lines are intentionally excluded.
 - `open_quadruped_raas` — a generic open-source-derived quadruped fleet moves through source intake, calibration, functional test, fault capture, replacement rotation, and service-release states. It is not a digital twin of a named platform.
 - `restroom_cleaning` — a humanoid visual agent follows a restroom servicing route across toilets, sinks, mirrors, floors, paper supplies, and trash. Electrical work and light-bulb replacement are excluded.
@@ -25,4 +25,4 @@ python tools/support-operations-lab/build_cases.py
 python simulations/test_models.py
 ```
 
-To regenerate the case-study videos on Windows, double-click `RENDER_ALL_MUJOCO_VIDEOS_WINDOWS.bat`. The retail renderer composes the inbound and order-fulfillment models into one 40-second clip. The support animation is rebuilt from its synthetic data workflow by the same script. Use interactive viewers only on a graphical desktop. Website visitors need no terminal, Python, or simulator installation.
+To regenerate the case-study videos on Windows, double-click `RENDER_ALL_MUJOCO_VIDEOS_WINDOWS.bat`. The retail renderer composes the inbound and order-fulfillment models into one 40-second, eight-stage clip. The support animation is rebuilt from its synthetic data workflow by the same script. Use interactive viewers only on a graphical desktop. Website visitors need no terminal, Python, or simulator installation.

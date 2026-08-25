@@ -1,0 +1,6 @@
+table_title,sprint,done_points,accepted_devices,first_time_right_pct,compliant_24h_pct,data_pass_pct,returns_reconciled_pct,escaped_defects,sprint_goal,goal_result,interpretation,evidence_class,confidence,source_or_validation
+Hardware Scrum outcome and delivery metrics — filled example,3,64,20,95.0,100.0,100.0,100.0,1,Pilot,Met,Pre-cache content and retain validation,Scenario assumption,Low,Replace with approved project records
+Hardware Scrum outcome and delivery metrics — filled example,4,69,94,97.9,98.9,100.0,97.9,2,Site A,Met,Improve delivery buffer,Scenario assumption,Low,Replace with approved project records
+Hardware Scrum outcome and delivery metrics — filled example,5,68,87,97.7,98.9,98.9,96.6,2,Site B,Partially met,Returned PBIs remain visible; fix Finance package,Scenario assumption,Low,Replace with approved project records
+Hardware Scrum outcome and delivery metrics — filled example,6,66,71,97.2,98.6,100.0,95.8,1,Site C,Met with exceptions,Refine specialized personas earlier,Scenario assumption,Low,Replace with approved project records
+Hardware Scrum outcome and delivery metrics — filled example,7,61,72,98.6,97.2,98.6,97.2,1,Remote cohort,Partially met,Courier/self-scheduling constraint,Scenario assumption,Low,Replace with approved project records
