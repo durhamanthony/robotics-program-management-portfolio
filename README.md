@@ -21,7 +21,7 @@ Below the robotics work, two enterprise transformation sections show additional 
 6. An anonymized M&A IT integration modeled in Agile and Predictive / Waterfall delivery, covering Day 1 onboarding, identity, network, collaboration-platform migration, application rationalization, cutover, hypercare, and closeout.
 7. A 360-device, four-site hardware refresh modeled in Kanban, Scrum, Predictive / Waterfall, and Hybrid delivery, covering procurement, build, data and application readiness, deployment waves, security, asset custody, sanitization, service transition, and benefits.
 
-The enterprise cases include six interactive dashboards, 90+ editable source artifacts, two polished field guides, and two formula-driven control workbooks. Company ABC and Company XYZ, project results, dates, quantities, and costs are explicitly labeled as fictional assumptions; verified experience and primary-source research are identified separately.
+The enterprise cases include six interactive dashboards, 100+ editable source artifacts, two polished field guides, and two formula-driven control workbooks. The M&A dashboards operate as five-workstream command centers, with executive status, accountable teams, next decisions, color/evidence legends, and sectioned plans and registers for onboarding, network/server/cloud infrastructure, collaboration platforms, application/data consolidation, and vendor/MSP governance. Company ABC and Company XYZ, project results, dates, quantities, and costs are explicitly labeled as fictional assumptions; verified experience and primary-source research are identified separately.
 
 ## Repository map
 

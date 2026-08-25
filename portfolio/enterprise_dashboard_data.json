@@ -3,26 +3,26 @@
   "sections": [
     {
       "id": "ma-integration",
-      "eyebrow": "Real-world technology transformation \u00b7 Scenario 01",
-      "title": "M&A IT Integration \u2014 Two Complete Delivery Playbooks",
-      "intro": "A full IT-integration control pack from deal restrictions and Day 1 through identity, network, collaboration migrations, application rationalization, hypercare, decommissioning, and benefits\u2014shown once in Agile and once in Predictive / Waterfall.",
+      "eyebrow": "Real-world technology transformation · Scenario 01",
+      "title": "M&A IT Integration — Two Complete Delivery Playbooks",
+      "intro": "Two recruiter-ready M&A IT command centers—Agile and Predictive / Waterfall—organized into five executive workstreams with filled plans, registers and reusable templates for Day 1, network/server/cloud infrastructure, collaboration platforms, application/data consolidation, and vendor/MSP governance.",
       "notice": "PMBOK Guide Eighth Edition is approach-neutral. The Predictive / Waterfall playbook is PMBOK 8 aligned; the Agile playbook uses iterative value delivery while retaining fixed legal, security, data, and Day 1 gates.",
       "scenarios": [
         {
           "code": "M&A 01A",
           "slug": "ma-it-integration-agile",
-          "title": "M&A IT Integration \u2014 Agile Playbook",
+          "title": "M&A IT Integration — Agile Playbook",
           "methodology": "Agile",
           "home_anchor": "ma-integration",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "M&A IT Technical Project Manager \u2014 Agile integration lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "M&A IT Technical Project Manager — Agile integration lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "20 weeks / 10 two-week sprints",
           "budget": "$1.860M modeled authorization",
           "tco": "Modeled forecast: $1.782M",
-          "summary": "Integrate Company XYZ into Company ABC through outcome-based releases: secure Day 1 employee experience, identity and network bridges, Google Workspace/Slack/Asana/Jira migration, application rationalization, hypercare, and controlled convergence.",
+          "summary": "Integrate Company XYZ into Company ABC through outcome-based releases across Day 1 onboarding, identity and endpoints, site/data-center/server/cloud infrastructure, Google/Slack/Asana/Jira/GitHub/Microsoft collaboration, application/data rationalization, vendor/MSP control, cutover, hypercare and controlled convergence.",
           "decision": "Continue the migration release plan; hold the Jira production cohort until automation regression passes, close 15 Day 1 exceptions, and preserve source retention until legal-hold validation is accepted.",
           "metrics": [
             {
@@ -204,109 +204,256 @@
           ],
           "artifacts": [
             {
-              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
-              "category": "Guide",
-              "label": "Download the two-playbook Word guide"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
-              "category": "Workbook",
-              "label": "Download the M&A control workbook"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
-              "category": "Orientation",
-              "label": "Portfolio guide and truth boundary"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
-              "category": "Initiate",
-              "label": "Project charter"
+              "path": "enterprise-programs/01-ma-it-integration/common/CHANGE_COMMUNICATIONS_AND_TRAINING.md",
+              "category": "Change",
+              "label": "Change, communications and training plan",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/DAY_1_EMPLOYEE_EXPERIENCE_PLAN.md",
               "category": "Day 1",
-              "label": "Employee experience plan"
+              "label": "Employee experience plan",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.md",
               "category": "Identity",
-              "label": "Identity and access plan"
+              "label": "Identity and access plan",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DAY1_READINESS.csv",
+              "category": "Readiness",
+              "label": "Day 1 readiness register",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_EMPLOYEE_EXPERIENCE_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Onboarding and employee experience command plan",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_READINESS_REGISTER.csv",
+              "category": "Command register",
+              "label": "Onboarding readiness register",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.md",
               "category": "Network",
-              "label": "Network and infrastructure plan"
+              "label": "Network and infrastructure plan",
+              "workstream": "Network & Infrastructure Integration"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Network, server, cloud, Wi‑Fi and VoIP command plan",
+              "workstream": "Network & Infrastructure Integration"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_SERVER_CLOUD_READINESS_REGISTER.csv",
+              "category": "Command register",
+              "label": "Network, server and cloud readiness register",
+              "workstream": "Network & Infrastructure Integration"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/COLLABORATION_MIGRATION_PLAN.md",
               "category": "Migration",
-              "label": "Collaboration migration plan"
+              "label": "Collaboration migration plan",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/MIGRATION_VALIDATION.csv",
+              "category": "Validation",
+              "label": "Migration validation register",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_WORKSPACE_MIGRATION_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Google, Slack, Asana, Jira, GitHub and Microsoft migration plan",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_MIGRATION_REGISTER.csv",
+              "category": "Command register",
+              "label": "Cross-platform collaboration migration register",
+              "workstream": "Collaboration & Workspace Migrations"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_RATIONALIZATION_AND_DATA_PLAN.md",
               "category": "Applications",
-              "label": "Application rationalization and data plan"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
-              "category": "Assurance",
-              "label": "Security, privacy, and legal-hold plan"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
-              "category": "Cutover",
-              "label": "Cutover, rollback, and hypercare runbook"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
-              "category": "Controls",
-              "label": "RAID register"
+              "label": "Application rationalization and data plan",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_PORTFOLIO.csv",
               "category": "Inventory",
-              "label": "Application portfolio and dispositions"
+              "label": "Application portfolio and dispositions",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_REPORTING_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Application, shadow IT, data and reporting command plan",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_CONTROL_REGISTER.csv",
+              "category": "Command register",
+              "label": "Application and data control register",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the two-playbook Word guide",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the M&A control workbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/ASSUMPTIONS_AND_EXPERIENCE_MAP.md",
+              "category": "Truth boundary",
+              "label": "Assumptions and experience map",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/GOVERNANCE_AND_DECISION_RIGHTS.md",
+              "category": "Governance",
+              "label": "Governance and decision rights",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RACI.csv",
+              "category": "Accountability",
+              "label": "RACI matrix",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DEPENDENCY_MATRIX.csv",
+              "category": "Controls",
+              "label": "Dependency matrix",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/BUDGET.csv",
+              "category": "Financials",
+              "label": "Budget and forecast register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/VENDOR_PROCUREMENT_AND_BUDGET.md",
+              "category": "Vendors",
+              "label": "Vendor, procurement and budget plan",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/SOURCE_REGISTER.csv",
               "category": "Research",
-              "label": "Authoritative source register"
+              "label": "Authoritative source register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
+              "category": "Assurance",
+              "label": "Security, privacy and legal-hold plan",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
+              "category": "Cutover",
+              "label": "Cutover, rollback and hypercare runbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/05_GOVERNANCE_VENDOR_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Governance, vendor and MSP command plan",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/05_VENDOR_GOVERNANCE_REGISTER.csv",
+              "category": "Command register",
+              "label": "Vendor and governance register",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/PLAYBOOK.md",
               "category": "Method",
-              "label": "Agile delivery playbook"
+              "label": "Agile delivery playbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/ARTIFACT_INDEX.md",
+              "category": "Index",
+              "label": "Agile artifact index",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/OUTCOME_ROADMAP.csv",
               "category": "Roadmap",
-              "label": "Outcome and release roadmap"
+              "label": "Outcome and release roadmap",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/PRODUCT_BACKLOG.csv",
               "category": "Backlog",
-              "label": "Prioritized integration backlog"
+              "label": "Prioritized integration backlog",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/SPRINT_PLAN.csv",
               "category": "Delivery",
-              "label": "Sprint plan and review record"
+              "label": "Sprint plan and review record",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/agile/WORKING_AGREEMENT_AND_CEREMONIES.md",
+              "category": "Team system",
+              "label": "Working agreement and ceremonies",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/DEFINITION_OF_READY_DONE.md",
               "category": "Quality",
-              "label": "Definition of Ready and Done"
+              "label": "Definition of Ready and Done",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/AGILE_METRICS.csv",
               "category": "Metrics",
-              "label": "Flow, quality, and outcome metrics"
+              "label": "Flow, quality and outcome metrics",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/agile/EXECUTIVE_STATUS.md",
               "category": "Reporting",
-              "label": "Agile executive status"
+              "label": "Agile executive status",
+              "workstream": "Project Governance & Vendor Management"
             }
           ],
           "closure": {
@@ -323,23 +470,192 @@
               "Fixed gates and adaptive discovery can coexist",
               "Completion requires business, data, permission, and support evidence"
             ]
-          }
+          },
+          "command_center": [
+            {
+              "id": "onboarding",
+              "number": "01",
+              "name": "Onboarding & Employee Experience",
+              "health": "Amber",
+              "summary": "Day 1 is operational with controlled exceptions; identity, hardware, critical applications, communications, support and exception expiry remain visible.",
+              "metrics": [
+                {
+                  "label": "Fully ready",
+                  "value": "665 / 680",
+                  "state": "watch"
+                },
+                {
+                  "label": "Authentication",
+                  "value": "674 / 680",
+                  "state": "pass"
+                },
+                {
+                  "label": "Kits delivered",
+                  "value": "672 / 680",
+                  "state": "watch"
+                },
+                {
+                  "label": "Exceptions",
+                  "value": "15",
+                  "state": "watch"
+                }
+              ],
+              "owner": "HR Integration + IAM/Endpoint/Service Desk",
+              "next_decision": "Close named exceptions by Day 3; no silent bypasses.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_EMPLOYEE_EXPERIENCE_COMMAND_PLAN.md"
+            },
+            {
+              "id": "infrastructure",
+              "number": "02",
+              "name": "Network & Infrastructure Integration",
+              "health": "Amber",
+              "summary": "Secure connectivity is staged across sites, data centers and cloud while servers, routes, backups, Wi‑Fi, VoIP and monitoring are accepted before convergence.",
+              "metrics": [
+                {
+                  "label": "Sites connected",
+                  "value": "2 / 3",
+                  "state": "watch"
+                },
+                {
+                  "label": "Subnet conflicts",
+                  "value": "4 / 4",
+                  "state": "pass"
+                },
+                {
+                  "label": "Servers classified",
+                  "value": "186 / 214",
+                  "state": "watch"
+                },
+                {
+                  "label": "Restore tests",
+                  "value": "11 / 12",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Network + Cloud + Compute + Security",
+              "next_decision": "Approve final-site cutover only after flow, failover, E911 and restore evidence.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.md"
+            },
+            {
+              "id": "collaboration",
+              "number": "03",
+              "name": "Collaboration & Workspace Migrations",
+              "health": "Amber",
+              "summary": "Google, Slack, Asana, Jira, GitHub and Microsoft workloads are managed through identity, content, permission, retention, integration and reconciliation controls.",
+              "metrics": [
+                {
+                  "label": "Google pilot",
+                  "value": "99.7%",
+                  "state": "pass"
+                },
+                {
+                  "label": "Slack identities",
+                  "value": "512 / 520",
+                  "state": "watch"
+                },
+                {
+                  "label": "Slack channels",
+                  "value": "286 / 286",
+                  "state": "pass"
+                },
+                {
+                  "label": "Bots/webhooks",
+                  "value": "16 / 18",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Collaboration + Developer Platform + Records",
+              "next_decision": "Keep Jira and affected Slack waves on hold until regressions pass.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_WORKSPACE_MIGRATION_COMMAND_PLAN.md"
+            },
+            {
+              "id": "applications",
+              "number": "04",
+              "name": "Application Rationalization & Data/Reporting Consolidation",
+              "health": "Amber",
+              "summary": "Application, shadow-IT, license, data-lineage and reporting decisions distinguish discovery from ownership, acceptance, retirement and realized benefit.",
+              "metrics": [
+                {
+                  "label": "Apps discovered",
+                  "value": "142",
+                  "state": "pass"
+                },
+                {
+                  "label": "Owner/disposition",
+                  "value": "128 / 142",
+                  "state": "watch"
+                },
+                {
+                  "label": "Overlaps targeted",
+                  "value": "22 / 37",
+                  "state": "watch"
+                },
+                {
+                  "label": "Feeds reconciled",
+                  "value": "9 / 12",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Business Architecture + Data + Finance",
+              "next_decision": "Resolve 14 dispositions and three reporting-feed defects before retirement claims.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_REPORTING_COMMAND_PLAN.md"
+            },
+            {
+              "id": "governance",
+              "number": "05",
+              "name": "Project Governance & Vendor Management",
+              "health": "Amber",
+              "summary": "One control system connects value, schedule, budget, RAID, decisions, change, quality, vendors/MSPs, cutover, handoff and benefits.",
+              "metrics": [
+                {
+                  "label": "Forecast",
+                  "value": "$1.782M",
+                  "state": "pass"
+                },
+                {
+                  "label": "Vendor deliverables",
+                  "value": "14 / 17",
+                  "state": "watch"
+                },
+                {
+                  "label": "MSP SLA",
+                  "value": "98.6%",
+                  "state": "watch"
+                },
+                {
+                  "label": "Gates accepted",
+                  "value": "3 / 7",
+                  "state": "info"
+                }
+              ],
+              "owner": "M&A IT PM + Steering Committee + Vendor Manager",
+              "next_decision": "Decide Jira wave, final site and source-retention release.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/05_GOVERNANCE_VENDOR_COMMAND_PLAN.md"
+            }
+          ],
+          "artifact_group_order": [
+            "Onboarding & Employee Experience",
+            "Network & Infrastructure Integration",
+            "Collaboration & Workspace Migrations",
+            "Application Rationalization & Data/Reporting Consolidation",
+            "Project Governance & Vendor Management"
+          ]
         },
         {
           "code": "M&A 01P",
           "slug": "ma-it-integration-predictive",
-          "title": "M&A IT Integration \u2014 Predictive / Waterfall Playbook",
-          "methodology": "Predictive / Waterfall \u2014 PMBOK 8 aligned",
+          "title": "M&A IT Integration — Predictive / Waterfall Playbook",
+          "methodology": "Predictive / Waterfall — PMBOK 8 aligned",
           "home_anchor": "ma-integration",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "M&A IT Technical Project Manager \u2014 Predictive integration lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "M&A IT Technical Project Manager — Predictive integration lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "24 weeks / seven stage gates",
           "budget": "$1.860M modeled BAC",
           "tco": "Modeled EAC: $1.782M",
-          "summary": "Deliver the same Company ABC/XYZ integration through formal scope, WBS, schedule and cost baselines; staged design, Day 1, migration, decommission, and closeout gates; integrated change control; quality assurance; and earned value reporting.",
+          "summary": "Integrate Company XYZ into Company ABC through a baselined, stage-gated plan covering Day 1 onboarding, identity and endpoints, site/data-center/server/cloud infrastructure, Google/Slack/Asana/Jira/GitHub/Microsoft collaboration, application/data rationalization, vendor/MSP control, cutover, hypercare and verified closure.",
           "decision": "Maintain the Week 24 baseline and hold Jira production release. Use available schedule float for the collaboration recovery plan; do not reduce validation, rollback, or legal-hold controls to improve SPI.",
           "metrics": [
             {
@@ -527,121 +843,263 @@
           ],
           "artifacts": [
             {
-              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
-              "category": "Guide",
-              "label": "Download the two-playbook Word guide"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
-              "category": "Workbook",
-              "label": "Download the M&A control workbook"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
-              "category": "Orientation",
-              "label": "Portfolio guide and truth boundary"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
-              "category": "Initiate",
-              "label": "Project charter"
+              "path": "enterprise-programs/01-ma-it-integration/common/CHANGE_COMMUNICATIONS_AND_TRAINING.md",
+              "category": "Change",
+              "label": "Change, communications and training plan",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/DAY_1_EMPLOYEE_EXPERIENCE_PLAN.md",
               "category": "Day 1",
-              "label": "Employee experience plan"
+              "label": "Employee experience plan",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/IDENTITY_AND_ACCESS_PLAN.md",
               "category": "Identity",
-              "label": "Identity and access plan"
+              "label": "Identity and access plan",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DAY1_READINESS.csv",
+              "category": "Readiness",
+              "label": "Day 1 readiness register",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_EMPLOYEE_EXPERIENCE_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Onboarding and employee experience command plan",
+              "workstream": "Onboarding & Employee Experience"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_READINESS_REGISTER.csv",
+              "category": "Command register",
+              "label": "Onboarding readiness register",
+              "workstream": "Onboarding & Employee Experience"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/NETWORK_INFRASTRUCTURE_PLAN.md",
               "category": "Network",
-              "label": "Network and infrastructure plan"
+              "label": "Network and infrastructure plan",
+              "workstream": "Network & Infrastructure Integration"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Network, server, cloud, Wi‑Fi and VoIP command plan",
+              "workstream": "Network & Infrastructure Integration"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_SERVER_CLOUD_READINESS_REGISTER.csv",
+              "category": "Command register",
+              "label": "Network, server and cloud readiness register",
+              "workstream": "Network & Infrastructure Integration"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/COLLABORATION_MIGRATION_PLAN.md",
               "category": "Migration",
-              "label": "Collaboration migration plan"
+              "label": "Collaboration migration plan",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/MIGRATION_VALIDATION.csv",
+              "category": "Validation",
+              "label": "Migration validation register",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_WORKSPACE_MIGRATION_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Google, Slack, Asana, Jira, GitHub and Microsoft migration plan",
+              "workstream": "Collaboration & Workspace Migrations"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_MIGRATION_REGISTER.csv",
+              "category": "Command register",
+              "label": "Cross-platform collaboration migration register",
+              "workstream": "Collaboration & Workspace Migrations"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_RATIONALIZATION_AND_DATA_PLAN.md",
               "category": "Applications",
-              "label": "Application rationalization and data plan"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
-              "category": "Assurance",
-              "label": "Security, privacy, and legal-hold plan"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
-              "category": "Cutover",
-              "label": "Cutover, rollback, and hypercare runbook"
-            },
-            {
-              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
-              "category": "Controls",
-              "label": "RAID register"
+              "label": "Application rationalization and data plan",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/APPLICATION_PORTFOLIO.csv",
               "category": "Inventory",
-              "label": "Application portfolio and dispositions"
+              "label": "Application portfolio and dispositions",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_REPORTING_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Application, shadow IT, data and reporting command plan",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_CONTROL_REGISTER.csv",
+              "category": "Command register",
+              "label": "Application and data control register",
+              "workstream": "Application Rationalization & Data/Reporting Consolidation"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_IT_INTEGRATION_PLAYBOOKS.docx",
+              "category": "Guide",
+              "label": "Download the two-playbook Word guide",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/M_AND_A_INTEGRATION_CONTROL_WORKBOOK.xlsx",
+              "category": "Workbook",
+              "label": "Download the M&A control workbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PORTFOLIO_GUIDE.md",
+              "category": "Orientation",
+              "label": "Portfolio guide and truth boundary",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/PROJECT_CHARTER.md",
+              "category": "Initiate",
+              "label": "Project charter",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/ASSUMPTIONS_AND_EXPERIENCE_MAP.md",
+              "category": "Truth boundary",
+              "label": "Assumptions and experience map",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/GOVERNANCE_AND_DECISION_RIGHTS.md",
+              "category": "Governance",
+              "label": "Governance and decision rights",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RACI.csv",
+              "category": "Accountability",
+              "label": "RACI matrix",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/RAID_REGISTER.csv",
+              "category": "Controls",
+              "label": "RAID register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/DEPENDENCY_MATRIX.csv",
+              "category": "Controls",
+              "label": "Dependency matrix",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/BUDGET.csv",
+              "category": "Financials",
+              "label": "Budget and forecast register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/VENDOR_PROCUREMENT_AND_BUDGET.md",
+              "category": "Vendors",
+              "label": "Vendor, procurement and budget plan",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/common/SOURCE_REGISTER.csv",
               "category": "Research",
-              "label": "Authoritative source register"
+              "label": "Authoritative source register",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/SECURITY_PRIVACY_AND_LEGAL_HOLD.md",
+              "category": "Assurance",
+              "label": "Security, privacy and legal-hold plan",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/CUTOVER_ROLLBACK_HYPERCARE.md",
+              "category": "Cutover",
+              "label": "Cutover, rollback and hypercare runbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/05_GOVERNANCE_VENDOR_COMMAND_PLAN.md",
+              "category": "Command plan",
+              "label": "Governance, vendor and MSP command plan",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/common/05_VENDOR_GOVERNANCE_REGISTER.csv",
+              "category": "Command register",
+              "label": "Vendor and governance register",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/PLAYBOOK.md",
               "category": "Method",
-              "label": "Predictive / Waterfall playbook"
+              "label": "Predictive / Waterfall playbook",
+              "workstream": "Project Governance & Vendor Management"
+            },
+            {
+              "path": "enterprise-programs/01-ma-it-integration/predictive/ARTIFACT_INDEX.md",
+              "category": "Index",
+              "label": "Predictive artifact index",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/PMBOK8_ALIGNMENT.md",
               "category": "PMBOK 8",
-              "label": "PMBOK 8 alignment matrix"
+              "label": "PMBOK 8 alignment matrix",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/WBS.csv",
               "category": "Scope",
-              "label": "Work breakdown structure"
+              "label": "Work breakdown structure",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/INTEGRATED_MASTER_SCHEDULE.csv",
               "category": "Schedule",
-              "label": "Integrated master schedule"
+              "label": "Integrated master schedule",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/STAGE_GATES_AND_CHANGE_CONTROL.md",
               "category": "Governance",
-              "label": "Stage gates and change control"
+              "label": "Stage gates and change control",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/QUALITY_MANAGEMENT_PLAN.md",
               "category": "Quality",
-              "label": "Quality management plan"
+              "label": "Quality management plan",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/EARNED_VALUE.csv",
               "category": "Metrics",
-              "label": "Earned value status"
+              "label": "Earned value status",
+              "workstream": "Project Governance & Vendor Management"
             },
             {
               "path": "enterprise-programs/01-ma-it-integration/predictive/EXECUTIVE_STATUS.md",
               "category": "Reporting",
-              "label": "Predictive executive status"
+              "label": "Predictive executive status",
+              "workstream": "Project Governance & Vendor Management"
             }
           ],
           "closure": {
             "schedule": "Baseline and forecast Week 24",
             "budget": "EAC $1.782M vs BAC $1.860M",
             "acceptance": [
-              "Gates G0\u2013G6 have documented decisions",
+              "Gates G0–G6 have documented decisions",
               "WBS deliverables trace to quality and acceptance evidence",
               "Changes update affected baselines and stakeholders",
               "Operations, risks, contracts, financials, and benefits transferred"
@@ -651,27 +1109,196 @@
               "EVM needs acceptance-based earning rules",
               "Decommission is a governed deliverable, not an administrative afterthought"
             ]
-          }
+          },
+          "command_center": [
+            {
+              "id": "onboarding",
+              "number": "01",
+              "name": "Onboarding & Employee Experience",
+              "health": "Amber",
+              "summary": "Day 1 is operational with controlled exceptions; identity, hardware, critical applications, communications, support and exception expiry remain visible.",
+              "metrics": [
+                {
+                  "label": "Fully ready",
+                  "value": "665 / 680",
+                  "state": "watch"
+                },
+                {
+                  "label": "Authentication",
+                  "value": "674 / 680",
+                  "state": "pass"
+                },
+                {
+                  "label": "Kits delivered",
+                  "value": "672 / 680",
+                  "state": "watch"
+                },
+                {
+                  "label": "Exceptions",
+                  "value": "15",
+                  "state": "watch"
+                }
+              ],
+              "owner": "HR Integration + IAM/Endpoint/Service Desk",
+              "next_decision": "Close named exceptions by Day 3; no silent bypasses.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_EMPLOYEE_EXPERIENCE_COMMAND_PLAN.md"
+            },
+            {
+              "id": "infrastructure",
+              "number": "02",
+              "name": "Network & Infrastructure Integration",
+              "health": "Amber",
+              "summary": "Secure connectivity is staged across sites, data centers and cloud while servers, routes, backups, Wi‑Fi, VoIP and monitoring are accepted before convergence.",
+              "metrics": [
+                {
+                  "label": "Sites connected",
+                  "value": "2 / 3",
+                  "state": "watch"
+                },
+                {
+                  "label": "Subnet conflicts",
+                  "value": "4 / 4",
+                  "state": "pass"
+                },
+                {
+                  "label": "Servers classified",
+                  "value": "186 / 214",
+                  "state": "watch"
+                },
+                {
+                  "label": "Restore tests",
+                  "value": "11 / 12",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Network + Cloud + Compute + Security",
+              "next_decision": "Approve final-site cutover only after flow, failover, E911 and restore evidence.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.md"
+            },
+            {
+              "id": "collaboration",
+              "number": "03",
+              "name": "Collaboration & Workspace Migrations",
+              "health": "Amber",
+              "summary": "Google, Slack, Asana, Jira, GitHub and Microsoft workloads are managed through identity, content, permission, retention, integration and reconciliation controls.",
+              "metrics": [
+                {
+                  "label": "Google pilot",
+                  "value": "99.7%",
+                  "state": "pass"
+                },
+                {
+                  "label": "Slack identities",
+                  "value": "512 / 520",
+                  "state": "watch"
+                },
+                {
+                  "label": "Slack channels",
+                  "value": "286 / 286",
+                  "state": "pass"
+                },
+                {
+                  "label": "Bots/webhooks",
+                  "value": "16 / 18",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Collaboration + Developer Platform + Records",
+              "next_decision": "Keep Jira and affected Slack waves on hold until regressions pass.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_WORKSPACE_MIGRATION_COMMAND_PLAN.md"
+            },
+            {
+              "id": "applications",
+              "number": "04",
+              "name": "Application Rationalization & Data/Reporting Consolidation",
+              "health": "Amber",
+              "summary": "Application, shadow-IT, license, data-lineage and reporting decisions distinguish discovery from ownership, acceptance, retirement and realized benefit.",
+              "metrics": [
+                {
+                  "label": "Apps discovered",
+                  "value": "142",
+                  "state": "pass"
+                },
+                {
+                  "label": "Owner/disposition",
+                  "value": "128 / 142",
+                  "state": "watch"
+                },
+                {
+                  "label": "Overlaps targeted",
+                  "value": "22 / 37",
+                  "state": "watch"
+                },
+                {
+                  "label": "Feeds reconciled",
+                  "value": "9 / 12",
+                  "state": "watch"
+                }
+              ],
+              "owner": "Business Architecture + Data + Finance",
+              "next_decision": "Resolve 14 dispositions and three reporting-feed defects before retirement claims.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_REPORTING_COMMAND_PLAN.md"
+            },
+            {
+              "id": "governance",
+              "number": "05",
+              "name": "Project Governance & Vendor Management",
+              "health": "Amber",
+              "summary": "One control system connects value, schedule, budget, RAID, decisions, change, quality, vendors/MSPs, cutover, handoff and benefits.",
+              "metrics": [
+                {
+                  "label": "Forecast",
+                  "value": "$1.782M",
+                  "state": "pass"
+                },
+                {
+                  "label": "Vendor deliverables",
+                  "value": "14 / 17",
+                  "state": "watch"
+                },
+                {
+                  "label": "MSP SLA",
+                  "value": "98.6%",
+                  "state": "watch"
+                },
+                {
+                  "label": "Gates accepted",
+                  "value": "3 / 7",
+                  "state": "info"
+                }
+              ],
+              "owner": "M&A IT PM + Steering Committee + Vendor Manager",
+              "next_decision": "Decide Jira wave, final site and source-retention release.",
+              "artifact": "enterprise-programs/01-ma-it-integration/common/05_GOVERNANCE_VENDOR_COMMAND_PLAN.md"
+            }
+          ],
+          "artifact_group_order": [
+            "Onboarding & Employee Experience",
+            "Network & Infrastructure Integration",
+            "Collaboration & Workspace Migrations",
+            "Application Rationalization & Data/Reporting Consolidation",
+            "Project Governance & Vendor Management"
+          ]
         }
       ]
     },
     {
       "id": "hardware-refresh",
-      "eyebrow": "Real-world digital workplace delivery \u00b7 Scenario 02",
-      "title": "Desktop, Laptop, and Phone Refresh \u2014 Four Complete Delivery Playbooks",
+      "eyebrow": "Real-world digital workplace delivery · Scenario 02",
+      "title": "Desktop, Laptop, and Phone Refresh — Four Complete Delivery Playbooks",
       "intro": "One 360-device, four-site program with a shared technical/control pack and four distinct operating systems: Kanban, Scrum, Predictive / Waterfall, and Hybrid. Each has its own dashboard, planning artifacts, metrics, and executive status.",
-      "notice": "All four methods use the same mandatory endpoint, data, security, asset, sanitization, procurement, user, support, and closeout controls. Method selection changes how work is planned and governed\u2014not whether those controls exist.",
+      "notice": "All four methods use the same mandatory endpoint, data, security, asset, sanitization, procurement, user, support, and closeout controls. Method selection changes how work is planned and governed—not whether those controls exist.",
       "scenarios": [
         {
           "code": "HW 02K",
           "slug": "hardware-refresh-kanban",
-          "title": "Enterprise Hardware Refresh \u2014 Kanban Playbook",
+          "title": "Enterprise Hardware Refresh — Kanban Playbook",
           "methodology": "Kanban",
           "home_anchor": "hardware-refresh",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "Technical Project Manager \u2014 Kanban hardware refresh lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "Technical Project Manager — Kanban hardware refresh lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "18 weeks / four sites / 360 devices",
           "budget": "$792K modeled authorization",
@@ -976,13 +1603,13 @@
         {
           "code": "HW 02S",
           "slug": "hardware-refresh-scrum",
-          "title": "Enterprise Hardware Refresh \u2014 Scrum Playbook",
+          "title": "Enterprise Hardware Refresh — Scrum Playbook",
           "methodology": "Scrum",
           "home_anchor": "hardware-refresh",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "Technical Project Manager \u2014 Scrum hardware refresh lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "Technical Project Manager — Scrum hardware refresh lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "18 weeks / four sites / 360 devices",
           "budget": "$792K modeled authorization",
@@ -1043,7 +1670,7 @@
           "timeline_max": 18,
           "phases": [
             {
-              "name": "Sprints 1\u20132: foundation and pilot-ready build",
+              "name": "Sprints 1–2: foundation and pilot-ready build",
               "start": 1,
               "end": 4,
               "status": "Complete"
@@ -1055,13 +1682,13 @@
               "status": "Complete"
             },
             {
-              "name": "Sprints 4\u20137: site/wave Increments",
+              "name": "Sprints 4–7: site/wave Increments",
               "start": 7,
               "end": 14,
               "status": "344 accepted"
             },
             {
-              "name": "Sprints 8\u20139: exceptions, transition, closure",
+              "name": "Sprints 8–9: exceptions, transition, closure",
               "start": 15,
               "end": 18,
               "status": "Active"
@@ -1287,13 +1914,13 @@
         {
           "code": "HW 02P",
           "slug": "hardware-refresh-predictive",
-          "title": "Enterprise Hardware Refresh \u2014 Predictive / Waterfall Playbook",
-          "methodology": "Predictive / Waterfall \u2014 PMBOK 8 aligned",
+          "title": "Enterprise Hardware Refresh — Predictive / Waterfall Playbook",
+          "methodology": "Predictive / Waterfall — PMBOK 8 aligned",
           "home_anchor": "hardware-refresh",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "Technical Project Manager \u2014 Predictive / Waterfall \u2014 PMBOK 8 aligned hardware refresh lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "Technical Project Manager — Predictive / Waterfall — PMBOK 8 aligned hardware refresh lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "18 weeks / four sites / 360 devices",
           "budget": "$792K modeled authorization",
@@ -1608,13 +2235,13 @@
         {
           "code": "HW 02H",
           "slug": "hardware-refresh-hybrid",
-          "title": "Enterprise Hardware Refresh \u2014 Hybrid Playbook",
-          "methodology": "Hybrid \u2014 recommended operating model",
+          "title": "Enterprise Hardware Refresh — Hybrid Playbook",
+          "methodology": "Hybrid — recommended operating model",
           "home_anchor": "hardware-refresh",
           "program_type": "Experience-informed enterprise transformation case study",
-          "client": "Company ABC / Company XYZ \u2014 anonymized fictional scenario",
-          "role": "Technical Project Manager \u2014 Hybrid \u2014 recommended operating model hardware refresh lead",
-          "status": "Illustrative checkpoint \u2014 Amber",
+          "client": "Company ABC / Company XYZ — anonymized fictional scenario",
+          "role": "Technical Project Manager — Hybrid — recommended operating model hardware refresh lead",
+          "status": "Illustrative checkpoint — Amber",
           "health": "Amber",
           "duration": "18 weeks / four sites / 360 devices",
           "budget": "$792K modeled authorization",

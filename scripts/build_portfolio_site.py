@@ -277,6 +277,37 @@ def metric_cards(scenario: dict) -> str:
     )
 
 
+def command_center_markup(scenario: dict) -> str:
+    workstreams = scenario.get("command_center", [])
+    if not workstreams:
+        return ""
+    cards = []
+    for item in workstreams:
+        measures = "".join(
+            f'<div class="workstream-metric {esc(metric.get("state", "info"))}"><span>{esc(metric["label"])}</span><strong>{esc(metric["value"])}</strong></div>'
+            for metric in item.get("metrics", [])
+        )
+        cards.append(f"""<article class="workstream-card" id="workstream-{esc(item['id'])}">
+<div class="workstream-top"><span class="workstream-number">{esc(item['number'])}</span><span class="health health-{esc(item['health'].lower())}">{esc(item['health'])}</span></div>
+<h3>{esc(item['name'])}</h3><p>{esc(item['summary'])}</p><div class="workstream-metrics">{measures}</div>
+<div class="workstream-control"><span><strong>Accountable team:</strong> {esc(item['owner'])}</span><span><strong>Next decision:</strong> {esc(item['next_decision'])}</span></div>
+<a class="workstream-link" href="{artifact_url(item['artifact'])}">Open section command plan →</a></article>""")
+    return f"""<section class="command-center" aria-labelledby="command-center-title">
+<div class="command-center-heading"><div><span class="panel-kicker">Five-workstream operating view</span><h2 id="command-center-title">M&amp;A integration command center</h2></div><p>Each workstream shows the denominator, evidence-backed status, accountable team and next executive decision. Open its command plan for the filled example and reusable template.</p></div>
+<div class="workstream-grid">{''.join(cards)}</div></section>"""
+
+
+def status_legend() -> str:
+    return """<section class="dashboard-legend" aria-labelledby="status-legend-title"><div><span class="panel-kicker">Plain-English guide</span><h2 id="status-legend-title">How to read this command center</h2></div>
+<div class="legend-grid">
+<div class="legend-item"><span class="legend-swatch legend-green"></span><p><strong>Green — On track.</strong> The work meets its current acceptance rule and evidence exists.</p></div>
+<div class="legend-item"><span class="legend-swatch legend-amber"></span><p><strong>Amber — Attention needed.</strong> A controlled exception, variance, risk or decision needs action.</p></div>
+<div class="legend-item"><span class="legend-swatch legend-red"></span><p><strong>Red — Blocked or unsafe.</strong> Stop, hold or roll back until the issue is resolved or risk is accepted.</p></div>
+<div class="legend-item"><span class="legend-swatch legend-blue"></span><p><strong>Blue — Planned or in progress.</strong> Work is active or informational but is not yet accepted.</p></div>
+<div class="legend-item"><span class="legend-swatch legend-gray"></span><p><strong>Gray — Unknown or not started.</strong> Evidence is missing, validation is pending or work has not begun.</p></div>
+</div><div class="evidence-key"><strong>Evidence labels:</strong> Scenario assumption = fictional planning input; Derived calculation = math from scenario inputs; Public benchmark = outside authoritative guidance; Verified experience = supported career evidence. Low confidence means replace the example with approved project evidence. Color never replaces the acceptance record.</div></section>"""
+
+
 def gantt(scenario: dict) -> str:
     max_value = scenario["timeline_max"]
     rows = []
@@ -308,10 +339,27 @@ def risk_rows(scenario: dict) -> str:
 
 
 def artifact_cards(scenario: dict) -> str:
-    return "".join(
-        f'<a class="artifact-card" href="{artifact_url(item["path"])}"><span>{esc(item["category"])}</span><strong>{esc(item["label"])}</strong><small>Open completed artifact →</small></a>'
-        for item in scenario["artifacts"]
-    )
+    artifacts = scenario["artifacts"]
+    if not any(item.get("workstream") for item in artifacts):
+        return '<div class="artifact-grid">' + "".join(
+            f'<a class="artifact-card" href="{artifact_url(item["path"])}"><span>{esc(item["category"])}</span><strong>{esc(item["label"])}</strong><small>Open completed artifact →</small></a>'
+            for item in artifacts
+        ) + '</div>'
+    groups = {}
+    for item in artifacts:
+        groups.setdefault(item.get("workstream", "Program-wide"), []).append(item)
+    order = scenario.get("artifact_group_order", list(groups))
+    sections = []
+    for number, group in enumerate(order, 1):
+        items = groups.get(group, [])
+        if not items:
+            continue
+        cards = "".join(
+            f'<a class="artifact-card" href="{artifact_url(item["path"])}"><span>{esc(item["category"])}</span><strong>{esc(item["label"])}</strong><small>Open completed artifact →</small></a>'
+            for item in items
+        )
+        sections.append(f'<section class="artifact-group"><div class="artifact-group-heading"><span>{number:02d}</span><div><h3>{esc(group)}</h3><p>{len(items)} completed plans, registers, templates or controls</p></div></div><div class="artifact-grid">{cards}</div></section>')
+    return "".join(sections)
 
 
 def demo_markup(scenario: dict) -> str:
@@ -356,20 +404,21 @@ def build_dashboard(scenario: dict) -> None:
 <h1>{esc(scenario['title'])}</h1><p class="lead">{esc(scenario['client'])} · {esc(scenario['role'])}</p>
 <div class="status-row"><span class="status status-{esc(scenario['health'].lower())}">{esc(scenario['status'])}</span><span>{esc(scenario['duration'])}</span><span>{esc(scenario['budget'])}</span><span>{esc(scenario['tco'])}</span></div></div></section>
 <div class="dashboard-nav-wrap"><nav class="dashboard-nav container" aria-label="Scenario sections">
-<button class="active" data-tab-target="overview">Overview</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button>{perspective_tab}<button data-tab-target="artifacts">Artifacts</button>{demo_tab}<button data-tab-target="closeout">Closeout</button>
+<button class="active" data-tab-target="overview">{esc("Command Center" if scenario.get("command_center") else "Overview")}</button><button data-tab-target="schedule">Schedule</button><button data-tab-target="financials">Financials</button><button data-tab-target="risks">Risks</button><button data-tab-target="team">Team</button>{perspective_tab}<button data-tab-target="artifacts">Artifacts</button>{demo_tab}<button data-tab-target="closeout">Closeout</button>
 </nav></div>
 <div class="container dashboard-shell">
-<section id="overview" class="dashboard-panel active"><div class="panel-heading"><div><span class="panel-kicker">Executive view</span><h2>Program outcome and acceptance</h2></div><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div>
-<div class="overview-grid"><article class="summary-card"><h3>Scope</h3><p>{esc(scenario['summary'])}</p></article><article class="decision-card"><h3>Closeout decision</h3><p>{esc(scenario['decision'])}</p></article></div>
-<div class="kpi-grid">{metric_cards(scenario)}</div></section>
+<section id="overview" class="dashboard-panel active"><div class="panel-heading"><div><span class="panel-kicker">{esc("Executive command center" if scenario.get("command_center") else "Executive view")}</span><h2>{esc("Program outcome, decisions and workstream health" if scenario.get("command_center") else "Program outcome and acceptance")}</h2></div><span class="health health-{esc(scenario['health'].lower())}">{esc(scenario['health'])}</span></div>
+<div class="overview-grid"><article class="summary-card"><h3>Scope</h3><p>{esc(scenario['summary'])}</p></article><article class="decision-card"><h3>Current executive decision</h3><p>{esc(scenario['decision'])}</p></article></div>
+<div class="kpi-grid">{metric_cards(scenario)}</div>{command_center_markup(scenario)}</section>
 <section id="schedule" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Integrated plan</span><h2>Schedule and stage gates</h2></div><span class="tag">{esc(scenario['duration'])}</span></div>{gantt(scenario)}</section>
 <section id="financials" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Decision economics</span><h2>Budget and Total Cost of Ownership</h2></div></div>{evidence_legend()}<div class="finance-chart">{financial_chart(scenario)}</div><div class="callout"><strong>Decision rule and confidence limits</strong><p>{esc(scenario['financial_note'])}</p></div></section>
 <section id="risks" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Program controls</span><h2>Top risks and disposition</h2></div></div><p class="table-title"><strong>Table: Top scenario risks and closeout controls</strong></p><div class="table-wrap"><table><thead><tr><th>ID</th><th>Risk</th><th>Score</th><th>Closeout status</th><th>Response / control</th></tr></thead><tbody>{risk_rows(scenario)}</tbody></table></div></section>
 <section id="team" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Governance</span><h2>Accountability and delivery team</h2></div></div><div class="team-grid">{team}</div><p class="caption">Detailed Responsible, Accountable, Consulted, and Informed assignments are available in the scenario artifact package.</p></section>
 {perspective_panel}
-<section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence</span><h2>Project and program artifacts</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">These are completed scenario documents—not empty templates. Open a rendered page or download its source file.</p><div class="artifact-grid">{artifact_cards(scenario)}</div></section>
+<section id="artifacts" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Completed evidence by workstream</span><h2>Plans, playbooks, registers, templates and controls</h2></div><span class="tag">{len(scenario['artifacts'])} highlighted</span></div><p class="section-intro">Every item is grouped under the accountable M&amp;A workstream. Each source is a filled fictional example; the new command plans also contain reusable template fields.</p><div class="artifact-groups">{artifact_cards(scenario)}</div></section>
 {demo_panel}
 <section id="closeout" class="dashboard-panel"><div class="panel-heading"><div><span class="panel-kicker">Formal closure</span><h2>Acceptance, handoff, and lessons</h2></div></div><div class="closure-summary"><article><span>Schedule</span><strong>{esc(scenario['closure']['schedule'])}</strong></article><article><span>Budget</span><strong>{esc(scenario['closure']['budget'])}</strong></article></div><div class="two-columns"><article><h3>Acceptance and handoff evidence</h3><ul class="check-list">{accept}</ul></article><article><h3>Lessons carried forward</h3><ul>{lessons}</ul></article></div></section>
+{status_legend()}
 </div></main>"""
     write(DOCS / "scenarios" / f"{scenario['slug']}.html", shell(scenario["title"], body, depth=1, description=scenario["summary"]))
 

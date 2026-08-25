@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network &amp; Infrastructure Integration — Command Plan | Anthony Durham</title><meta name="description" content="Anonymized M&amp;A IT integration command-center plan, register, template and filled example by Anthony Durham.">
+<link rel="stylesheet" href="../../../../styles.css"><script defer src="../../../../app.js"></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../../index.html">Anthony Durham</a>
+<div class="nav-actions"><button class="nav-back" type="button" data-go-back data-fallback="../../../../index.html">← Back</button>
+<div class="nav-links"><a class="home-link" href="../../../../index.html">⌂ Home</a><a href="../../../../index.html#ma-integration">M&amp;A dashboards</a><a href="../../../../artifacts.html">Artifacts</a><a href="../../../../about.html">About</a></div></div></nav></header>
+<main id="main" class="container"><div class="artifact-tools"><div class="artifact-context"><a class="context-back" href="../../../../artifacts.html">← Back to artifact library</a><div><span class="tag">M&amp;A IT integration — Command center</span> <span class="tag muted-tag">Filled example + template</span></div></div>
+<div class="artifact-actions"><a class="button secondary-light" href="../../../../index.html#ma-integration">Open M&amp;A dashboards</a><a class="button" href="../../../../downloads/source/enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.md" download>Download MD</a></div></div>
+<article class="article"><h1>Network &amp; Infrastructure Integration — Command Plan</h1>
+<blockquote><p><strong>Portfolio truth boundary:</strong> Company ABC and Company XYZ are fictional placeholders. Inventory, counts, progress and results are scenario assumptions with low confidence pending discovery and signed test evidence.</p></blockquote>
+<h2>Executive intent</h2>
+<p>Connect the two companies safely enough to enable approved business flows while keeping untrusted, conflicting, or unassessed environments isolated. “Infrastructure” includes networks, data centers, servers and virtual machines, storage, databases, backup, cloud services, DNS/DHCP/IPAM, Wi‑Fi, VoIP, observability, certificates, service accounts and disaster recovery.</p>
+<h2>Scenario checkpoint</h2>
+<table><thead><tr><th>Control</th><th>Modeled checkpoint</th><th>Acceptance evidence</th><th>Status</th></tr></thead><tbody><tr class="odd"><td>Sites securely interconnected</td><td>2 / 3</td><td>Dual-path reachability, monitoring and failover test</td><td>Amber</td></tr><tr class="even"><td>Subnet collisions resolved</td><td>4 / 4</td><td>Approved IPAM/NAT/renumber record and route test</td><td>Green</td></tr><tr class="odd"><td>Tier 0/1 application flows passed</td><td>94 / 97</td><td>Source/destination/port test tied to business owner</td><td>Amber</td></tr><tr class="even"><td>Servers/VMs classified</td><td>186 / 214</td><td>Owner, criticality, dependency, backup, disposition</td><td>Amber</td></tr><tr class="odd"><td>Cloud environments inventoried</td><td>2 / 2</td><td>Account/subscription/project inventory and owner</td><td>Green</td></tr><tr class="even"><td>Critical restore tests passed</td><td>11 / 12</td><td>Restore evidence within RTO/RPO</td><td>Amber</td></tr><tr class="odd"><td>Critical network integrations tested</td><td>16 / 18</td><td>Jira, Slack and monitoring integrations pending</td><td>Amber</td></tr></tbody></table>
+<h2>Discovery and target-state controls</h2>
+<p>Build a current-state inventory covering sites, circuits, carriers, routers, firewalls, SD‑WAN edges, wireless controllers/APs, SSIDs, NAC/802.1X, switches, VLANs, subnets, IPAM, DNS zones/forwarders, DHCP, proxies, load balancers, VPNs, public IPs, certificates, VoIP/PSTN/SBCs, E911, data-center racks, hypervisors, servers, storage, databases, backup, monitoring and cloud resources. Link every item to an owner, location, business service, lifecycle state, contract and disposition.</p>
+<p>The architecture decision record selects <strong>coexist, migrate, consolidate, retire or replace</strong> for each domain. Default posture is deny-by-default and least privilege. Cross-entity traffic is enabled only from an approved flow matrix after asset, vulnerability, identity and logging prerequisites are met.</p>
+<h2>Network integration runbook</h2>
+<ol>
+<li>Freeze authoritative topology and IP address data; identify overlapping routes and unknown networks.</li>
+<li>Approve target routing, segmentation, NAT/renumber strategy, DNS trust/forwarding, firewall zones and rollback.</li>
+<li>Establish redundant IPsec/IKE or SD‑WAN paths with separate failure domains where practical.</li>
+<li>Apply explicit firewall rules from a business-flow matrix; time-box temporary rules.</li>
+<li>Validate routing, MTU, latency, packet loss, DNS, NTP, proxy, identity, application flows and monitoring.</li>
+<li>Test path failover and route withdrawal. Record before/after configurations and restore points.</li>
+<li>Move sites in controlled waves; maintain command bridge, telemetry, incident thresholds and rollback authority.</li>
+<li>Standardize hardware, Wi‑Fi and telephony only after coverage, compatibility and business testing.</li>
+<li>Remove temporary NAT, tunnels, rules, DNS forwarding and admin accounts after convergence approval.</li>
+</ol>
+<h2>Server, data-center and compute plan</h2>
+<p>For every physical server, VM, appliance, database and storage service, record OS/version, CPU/memory/storage, hypervisor/cluster, IP/DNS, owner, application dependencies, identity/service accounts, data classification, criticality, monitoring, patch/vulnerability state, backup policy, last restore test, RTO/RPO, HA/DR design, license/support end, certificate/secrets, CMDB record and target disposition.</p>
+<p>Migration waves use discovery → dependency confirmation → remediation → replication/backup → rehearsal → change approval → cutover → functional/performance/security validation → rollback window → decommission certificate. No server is retired until the business owner, application owner, security, backup and CMDB/asset owners sign the evidence.</p>
+<h2>Cloud services integration</h2>
+<p>Inventory AWS accounts, Azure tenants/subscriptions, Google Cloud organizations/folders/projects, SaaS control planes, regions, data residency, connectivity, identity federation, privileged roles, service principals, keys/secrets, KMS, certificates, policies, logs, SIEM feeds, backups, budgets, reservations/commitments, tags, support plans, marketplace contracts and external sharing.</p>
+<p>Decide account-by-account whether to isolate, federate, transfer, rebuild, migrate or retire. Align landing zones, guardrails, centralized logging, vulnerability management, network hubs, DNS, identity, backup, incident response, cost allocation and policy-as-code. Test business workloads against security, reliability, performance, operational excellence, cost and sustainability criteria; keep coexistence where transfer risk exceeds value.</p>
+<h2>Wi‑Fi, SD‑WAN and VoIP</h2>
+<ul>
+<li><strong>Wi‑Fi:</strong> site survey, RF/capacity baseline, approved AP/controller versions, target SSIDs, 802.1X/NAC, guest isolation, certificates, roaming, warehouse/special-device testing and monitoring.</li>
+<li><strong>SD‑WAN:</strong> carrier/circuit inventory, overlay design, segmentation, application policy, QoS, HA, orchestrator access, telemetry, failover and hardware lifecycle.</li>
+<li><strong>VoIP:</strong> DID inventory, carrier porting, SBC/call-manager compatibility, E911/location records, emergency calling, contact-center/call queues, voicemail, recording/retention, QoS, softphones, analog/special devices and rollback.</li>
+</ul>
+<h2>Go/no-go and rollback</h2>
+<p>Go only with signed topology/flow changes, approved security controls, validated monitoring, current backups/config exports, available carrier/vendor support, application-owner test scripts, incident bridge and explicit rollback trigger. Roll back for uncontrolled security exposure, routing instability, critical flow failure, material performance degradation, loss of monitoring, E911 impact or restore failure.</p>
+<h2>Reusable template fields</h2>
+<p><strong>Sites/data centers/clouds in scope:</strong> [list] <strong>Critical services and RTO/RPO:</strong> [list] <strong>Subnet collision strategy:</strong> [NAT/renumber/other] <strong>Interconnect pattern:</strong> [IPsec/SD‑WAN/private circuit] <strong>Flow approval authority:</strong> [role] <strong>Server/cloud disposition options:</strong> [list] <strong>Wi‑Fi/VoIP target standards:</strong> [details] <strong>Test plan and thresholds:</strong> [details] <strong>Rollback triggers/steps:</strong> [details] <strong>Decommission evidence:</strong> [details]</p></article></main>
+<footer><div class="container">© 2026 Anthony Durham · <a href="https://www.linkedin.com/in/anthonydurham">LinkedIn</a> · <a href="mailto:a1durham@wadainc.com">Contact</a></div></footer></body></html>

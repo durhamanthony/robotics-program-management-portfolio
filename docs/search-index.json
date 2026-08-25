@@ -1,10 +1,10 @@
 [
   {
-    "title": "Artifact Index \u2014 Retail Backroom Humanoid Deployment",
+    "title": "Artifact Index — Retail Backroom Humanoid Deployment",
     "path": "library/scenarios/01-humanoid-retail-backroom/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Basis of Estimate and Sensitivity \u2014 Retail Backroom Pilot",
+    "title": "Basis of Estimate and Sensitivity — Retail Backroom Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
@@ -12,31 +12,31 @@
     "path": "library/scenarios/01-humanoid-retail-backroom/BUDGET.html"
   },
   {
-    "title": "Business Case and Total Cost of Ownership \u2014 Retail Backroom Humanoids",
+    "title": "Business Case and Total Cost of Ownership — Retail Backroom Humanoids",
     "path": "library/scenarios/01-humanoid-retail-backroom/BUSINESS_CASE_AND_TCO.html"
   },
   {
-    "title": "Case Study 1 \u2014 Retail Backroom Humanoid Fulfillment",
+    "title": "Case Study 1 — Retail Backroom Humanoid Fulfillment",
     "path": "library/scenarios/01-humanoid-retail-backroom/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Benefits Report \u2014 Retail Backroom Humanoid Pilot",
+    "title": "Closeout and Benefits Report — Retail Backroom Humanoid Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/CLOSEOUT_AND_BENEFITS.html"
   },
   {
-    "title": "Deployment Runbook \u2014 Retail Backroom Humanoid Pilot",
+    "title": "Deployment Runbook — Retail Backroom Humanoid Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/DEPLOYMENT_RUNBOOK.html"
   },
   {
-    "title": "Integration and Data Plan \u2014 Retail Backroom Pilot",
+    "title": "Integration and Data Plan — Retail Backroom Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/INTEGRATION_AND_DATA_PLAN.html"
   },
   {
-    "title": "Operations Handoff \u2014 Retail Backroom Pilot",
+    "title": "Operations Handoff — Retail Backroom Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/OPERATIONS_HANDOFF.html"
   },
   {
-    "title": "Project Charter \u2014 Two Humanoids for Retail Backroom Fulfillment",
+    "title": "Project Charter — Two Humanoids for Retail Backroom Fulfillment",
     "path": "library/scenarios/01-humanoid-retail-backroom/PROJECT_CHARTER.html"
   },
   {
@@ -52,11 +52,11 @@
     "path": "library/scenarios/01-humanoid-retail-backroom/REQUIREMENTS_TRACEABILITY.html"
   },
   {
-    "title": "Research and Assumptions \u2014 Retail Backroom Humanoid Pilot",
+    "title": "Research and Assumptions — Retail Backroom Humanoid Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/RESEARCH_AND_ASSUMPTIONS.html"
   },
   {
-    "title": "Safety and Acceptance Plan \u2014 Retail Backroom Humanoids",
+    "title": "Safety and Acceptance Plan — Retail Backroom Humanoids",
     "path": "library/scenarios/01-humanoid-retail-backroom/SAFETY_AND_ACCEPTANCE.html"
   },
   {
@@ -64,27 +64,27 @@
     "path": "library/scenarios/01-humanoid-retail-backroom/SCHEDULE.html"
   },
   {
-    "title": "Site Readiness Checklist \u2014 Meridian Store 214",
+    "title": "Site Readiness Checklist — Meridian Store 214",
     "path": "library/scenarios/01-humanoid-retail-backroom/SITE_READINESS_CHECKLIST.html"
   },
   {
-    "title": "Statement of Work \u2014 Retail Backroom Humanoid Pilot",
+    "title": "Statement of Work — Retail Backroom Humanoid Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/STATEMENT_OF_WORK.html"
   },
   {
-    "title": "Training and Change Plan \u2014 Retail Backroom Pilot",
+    "title": "Training and Change Plan — Retail Backroom Pilot",
     "path": "library/scenarios/01-humanoid-retail-backroom/TRAINING_AND_CHANGE_PLAN.html"
   },
   {
-    "title": "Weekly Status Report \u2014 Week 20 Closeout",
+    "title": "Weekly Status Report — Week 20 Closeout",
     "path": "library/scenarios/01-humanoid-retail-backroom/WEEKLY_STATUS_REPORT.html"
   },
   {
-    "title": "Artifact Index \u2014 Quadruped Night-Security Deployment",
+    "title": "Artifact Index — Quadruped Night-Security Deployment",
     "path": "library/scenarios/02-quadruped-security-deployment/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Basis of Estimate and Sensitivity \u2014 Quadruped Security",
+    "title": "Basis of Estimate and Sensitivity — Quadruped Security",
     "path": "library/scenarios/02-quadruped-security-deployment/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
@@ -92,23 +92,23 @@
     "path": "library/scenarios/02-quadruped-security-deployment/BUDGET.html"
   },
   {
-    "title": "Business Case and TCO (Total Cost of Ownership) \u2014 Quadruped Night Security",
+    "title": "Business Case and TCO (Total Cost of Ownership) — Quadruped Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/BUSINESS_CASE_AND_TCO.html"
   },
   {
-    "title": "Case Study 2 \u2014 Three Quadrupeds for Night Security",
+    "title": "Case Study 2 — Three Quadrupeds for Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Benefits \u2014 Quadruped Night Security",
+    "title": "Closeout and Benefits — Quadruped Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/CLOSEOUT_AND_BENEFITS.html"
   },
   {
-    "title": "Incident and Escalation Plan \u2014 Night Security",
+    "title": "Incident and Escalation Plan — Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/INCIDENT_AND_ESCALATION_PLAN.html"
   },
   {
-    "title": "Integration and Data Plan \u2014 Night Security",
+    "title": "Integration and Data Plan — Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/INTEGRATION_AND_DATA_PLAN.html"
   },
   {
@@ -136,7 +136,7 @@
     "path": "library/scenarios/02-quadruped-security-deployment/REQUIREMENTS_TRACEABILITY.html"
   },
   {
-    "title": "Research and Assumptions \u2014 Quadruped Night Security",
+    "title": "Research and Assumptions — Quadruped Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/RESEARCH_AND_ASSUMPTIONS.html"
   },
   {
@@ -144,19 +144,19 @@
     "path": "library/scenarios/02-quadruped-security-deployment/SCHEDULE.html"
   },
   {
-    "title": "Site Readiness Checklist \u2014 Night Security",
+    "title": "Site Readiness Checklist — Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/SITE_READINESS_CHECKLIST.html"
   },
   {
-    "title": "Statement of Work \u2014 Three-Quadruped Security Deployment",
+    "title": "Statement of Work — Three-Quadruped Security Deployment",
     "path": "library/scenarios/02-quadruped-security-deployment/STATEMENT_OF_WORK.html"
   },
   {
-    "title": "Training and Change Plan \u2014 Night Security",
+    "title": "Training and Change Plan — Night Security",
     "path": "library/scenarios/02-quadruped-security-deployment/TRAINING_AND_CHANGE_PLAN.html"
   },
   {
-    "title": "Weekly Status Report \u2014 Quadruped Deployment",
+    "title": "Weekly Status Report — Quadruped Deployment",
     "path": "library/scenarios/02-quadruped-security-deployment/WEEKLY_STATUS_REPORT.html"
   },
   {
@@ -252,11 +252,11 @@
     "path": "library/scenarios/03-open-source-quadruped-raas-productization/WEEKLY_STATUS_REPORT.html"
   },
   {
-    "title": "Artifact Index \u2014 Robotics Support Operations",
+    "title": "Artifact Index — Robotics Support Operations",
     "path": "library/scenarios/04-robotics-support-operations/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Basis of Estimate and Sensitivity \u2014 Robotics Support Operations",
+    "title": "Basis of Estimate and Sensitivity — Robotics Support Operations",
     "path": "library/scenarios/04-robotics-support-operations/BASIS_OF_ESTIMATE_AND_SENSITIVITY.html"
   },
   {
@@ -264,19 +264,19 @@
     "path": "library/scenarios/04-robotics-support-operations/BUDGET.html"
   },
   {
-    "title": "Business Continuity \u2014 Robotics Support",
+    "title": "Business Continuity — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/BUSINESS_CONTINUITY.html"
   },
   {
-    "title": "Case Study 4 \u2014 Build Robotics Support Operations",
+    "title": "Case Study 4 — Build Robotics Support Operations",
     "path": "library/scenarios/04-robotics-support-operations/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Maturity Roadmap \u2014 Robotics Support",
+    "title": "Closeout and Maturity Roadmap — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/CLOSEOUT_AND_MATURITY_ROADMAP.html"
   },
   {
-    "title": "Customer Communications \u2014 Robotics Support",
+    "title": "Customer Communications — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/CUSTOMER_COMMUNICATIONS.html"
   },
   {
@@ -292,7 +292,7 @@
     "path": "library/scenarios/04-robotics-support-operations/INCIDENT_PROBLEM_CHANGE.html"
   },
   {
-    "title": "Knowledge Management \u2014 Robotics Support",
+    "title": "Knowledge Management — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/KNOWLEDGE_MANAGEMENT.html"
   },
   {
@@ -300,11 +300,11 @@
     "path": "library/scenarios/04-robotics-support-operations/KPI_SCORECARD.html"
   },
   {
-    "title": "Observability and Data Plan \u2014 Robotics Support",
+    "title": "Observability and Data Plan — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/OBSERVABILITY_AND_DATA_PLAN.html"
   },
   {
-    "title": "Operating Baseline and Cost Assumptions \u2014 Robotics Support",
+    "title": "Operating Baseline and Cost Assumptions — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/OPERATING_BASELINE_AND_COST_ASSUMPTIONS.html"
   },
   {
@@ -320,7 +320,7 @@
     "path": "library/scenarios/04-robotics-support-operations/RMA_AND_PARTS.html"
   },
   {
-    "title": "Security and Remote Access \u2014 Robotics Support",
+    "title": "Security and Remote Access — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/SECURITY_AND_REMOTE_ACCESS.html"
   },
   {
@@ -332,7 +332,7 @@
     "path": "library/scenarios/04-robotics-support-operations/SEVERITY_SLA.html"
   },
   {
-    "title": "Staffing and Capacity Plan \u2014 Robotics Support",
+    "title": "Staffing and Capacity Plan — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/STAFFING_AND_CAPACITY_PLAN.html"
   },
   {
@@ -340,11 +340,11 @@
     "path": "library/scenarios/04-robotics-support-operations/SUPPORT_READINESS_CHECKLIST.html"
   },
   {
-    "title": "Tool Selection and Cost Model \u2014 Robotics Support",
+    "title": "Tool Selection and Cost Model — Robotics Support",
     "path": "library/scenarios/04-robotics-support-operations/TOOL_SELECTION_AND_COST.html"
   },
   {
-    "title": "Final Status Report \u2014 Support Operations Build",
+    "title": "Final Status Report — Support Operations Build",
     "path": "library/scenarios/04-robotics-support-operations/WEEKLY_STATUS_REPORT.html"
   },
   {
@@ -356,7 +356,7 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/AIRPORT_OWNER_IMPLEMENTATION_PLAN.html"
   },
   {
-    "title": "Artifact Index \u2014 Airport Restroom Humanoid Pilot",
+    "title": "Artifact Index — Airport Restroom Humanoid Pilot",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/ARTIFACT_INDEX.html"
   },
   {
@@ -376,11 +376,11 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/BUSINESS_CASE_AND_TCO.html"
   },
   {
-    "title": "Case 05 \u2014 Airport Restroom Humanoid Cleaning Pilot",
+    "title": "Case 05 — Airport Restroom Humanoid Cleaning Pilot",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/CASE_STUDY.html"
   },
   {
-    "title": "Closeout and Handoff \u2014 Airport Restroom Humanoid Pilot",
+    "title": "Closeout and Handoff — Airport Restroom Humanoid Pilot",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/CLOSEOUT_AND_HANDOFF.html"
   },
   {
@@ -396,7 +396,7 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_MASTER_SCHEDULE.html"
   },
   {
-    "title": "Integrated Program Charter \u2014 Airport Restroom Humanoid Pilot",
+    "title": "Integrated Program Charter — Airport Restroom Humanoid Pilot",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/INTEGRATED_PROGRAM_CHARTER.html"
   },
   {
@@ -428,7 +428,7 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/REQUIREMENTS_TRACEABILITY.html"
   },
   {
-    "title": "Research and Assumptions \u2014 Airport Restroom Humanoid Pilot",
+    "title": "Research and Assumptions — Airport Restroom Humanoid Pilot",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/RESEARCH_AND_ASSUMPTIONS.html"
   },
   {
@@ -440,7 +440,7 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/SELLER_INTEGRATOR_PROJECT_PLAN.html"
   },
   {
-    "title": "Statement of Work \u2014 Seller and System Integrator",
+    "title": "Statement of Work — Seller and System Integrator",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/STATEMENT_OF_WORK.html"
   },
   {
@@ -448,7 +448,7 @@
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/TRAINING_CHANGE_AND_WORKFORCE_PLAN.html"
   },
   {
-    "title": "Weekly Status Report \u2014 Week 28 / Final",
+    "title": "Weekly Status Report — Week 28 / Final",
     "path": "library/scenarios/05-airport-restroom-humanoid-deployment/WEEKLY_STATUS_REPORT.html"
   },
   {
@@ -456,7 +456,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/hybrid/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Hardware Hybrid Executive Status \u2014 Illustrative Checkpoint",
+    "title": "Hardware Hybrid Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/02-hardware-refresh/hybrid/EXECUTIVE_STATUS.html"
   },
   {
@@ -472,7 +472,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/hybrid/INTEGRATED_PLAN.html"
   },
   {
-    "title": "Enterprise Hardware Refresh \u2014 Hybrid Playbook",
+    "title": "Enterprise Hardware Refresh — Hybrid Playbook",
     "path": "library/enterprise-programs/02-hardware-refresh/hybrid/PLAYBOOK.html"
   },
   {
@@ -484,7 +484,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/kanban/ARTIFACT_INDEX.html"
   },
   {
-    "title": "Hardware Kanban Executive Status \u2014 Illustrative Checkpoint",
+    "title": "Hardware Kanban Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/02-hardware-refresh/kanban/EXECUTIVE_STATUS.html"
   },
   {
@@ -500,7 +500,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/kanban/KANBAN_BOARD.html"
   },
   {
-    "title": "Enterprise Hardware Refresh \u2014 Kanban Playbook",
+    "title": "Enterprise Hardware Refresh — Kanban Playbook",
     "path": "library/enterprise-programs/02-hardware-refresh/kanban/PLAYBOOK.html"
   },
   {
@@ -516,7 +516,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/predictive/EARNED_VALUE.html"
   },
   {
-    "title": "Hardware Predictive Executive Status \u2014 Illustrative Checkpoint",
+    "title": "Hardware Predictive Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/02-hardware-refresh/predictive/EXECUTIVE_STATUS.html"
   },
   {
@@ -524,7 +524,7 @@
     "path": "library/enterprise-programs/02-hardware-refresh/predictive/INTEGRATED_MASTER_SCHEDULE.html"
   },
   {
-    "title": "Enterprise Hardware Refresh \u2014 Predictive / Waterfall Playbook",
+    "title": "Enterprise Hardware Refresh — Predictive / Waterfall Playbook",
     "path": "library/enterprise-programs/02-hardware-refresh/predictive/PLAYBOOK.html"
   },
   {
@@ -552,11 +552,11 @@
     "path": "library/enterprise-programs/02-hardware-refresh/scrum/DEFINITION_OF_DONE.html"
   },
   {
-    "title": "Hardware Scrum Executive Status \u2014 Illustrative Checkpoint",
+    "title": "Hardware Scrum Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/02-hardware-refresh/scrum/EXECUTIVE_STATUS.html"
   },
   {
-    "title": "Enterprise Hardware Refresh \u2014 Scrum Playbook",
+    "title": "Enterprise Hardware Refresh — Scrum Playbook",
     "path": "library/enterprise-programs/02-hardware-refresh/scrum/PLAYBOOK.html"
   },
   {
@@ -668,7 +668,7 @@
     "path": "library/enterprise-programs/01-ma-it-integration/agile/DEFINITION_OF_READY_DONE.html"
   },
   {
-    "title": "M&A Agile Executive Status \u2014 Illustrative Checkpoint",
+    "title": "M&A Agile Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/01-ma-it-integration/agile/EXECUTIVE_STATUS.html"
   },
   {
@@ -676,7 +676,7 @@
     "path": "library/enterprise-programs/01-ma-it-integration/agile/OUTCOME_ROADMAP.html"
   },
   {
-    "title": "M&A IT Integration \u2014 Agile Delivery Playbook",
+    "title": "M&A IT Integration — Agile Delivery Playbook",
     "path": "library/enterprise-programs/01-ma-it-integration/agile/PLAYBOOK.html"
   },
   {
@@ -700,7 +700,7 @@
     "path": "library/enterprise-programs/01-ma-it-integration/predictive/EARNED_VALUE.html"
   },
   {
-    "title": "M&A Predictive Executive Status \u2014 Illustrative Checkpoint",
+    "title": "M&A Predictive Executive Status — Illustrative Checkpoint",
     "path": "library/enterprise-programs/01-ma-it-integration/predictive/EXECUTIVE_STATUS.html"
   },
   {
@@ -708,7 +708,7 @@
     "path": "library/enterprise-programs/01-ma-it-integration/predictive/INTEGRATED_MASTER_SCHEDULE.html"
   },
   {
-    "title": "M&A IT Integration \u2014 Predictive / Waterfall Playbook",
+    "title": "M&A IT Integration — Predictive / Waterfall Playbook",
     "path": "library/enterprise-programs/01-ma-it-integration/predictive/PLAYBOOK.html"
   },
   {
@@ -924,15 +924,15 @@
     "path": "library/simulations/README.html"
   },
   {
-    "title": "Public Restroom Humanoid Cleaning \u2014 MuJoCo Capability Demo v4.4",
+    "title": "Public Restroom Humanoid Cleaning — MuJoCo Capability Demo v4.4",
     "path": "library/simulations/restroom_cleaning/README.html"
   },
   {
-    "title": "MuJoCo Demo \u2014 Retail Backroom Inbound and Fulfillment",
+    "title": "MuJoCo Demo — Retail Backroom Inbound and Fulfillment",
     "path": "library/simulations/retail_humanoids/README.html"
   },
   {
-    "title": "Retail Backroom Inbound Receiving \u2014 MuJoCo Story Segment",
+    "title": "Retail Backroom Inbound Receiving — MuJoCo Story Segment",
     "path": "library/simulations/retail_inbound/README.html"
   },
   {
@@ -954,5 +954,45 @@
   {
     "title": "Robotics Support and Troubleshooting Tool Comparison",
     "path": "library/tools/TOOL_COMPARISON.html"
+  },
+  {
+    "title": "Onboarding & Employee Experience — Command Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_EMPLOYEE_EXPERIENCE_COMMAND_PLAN.html"
+  },
+  {
+    "title": "Network & Infrastructure Integration — Command Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/02_NETWORK_INFRASTRUCTURE_COMMAND_PLAN.html"
+  },
+  {
+    "title": "Collaboration & Workspace Migrations — Command Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_WORKSPACE_MIGRATION_COMMAND_PLAN.html"
+  },
+  {
+    "title": "Application Rationalization & Data/Reporting Consolidation — Command Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_REPORTING_COMMAND_PLAN.html"
+  },
+  {
+    "title": "Project Governance & Vendor Management — Command Plan",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/05_GOVERNANCE_VENDOR_COMMAND_PLAN.html"
+  },
+  {
+    "title": "01 Onboarding Readiness Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/01_ONBOARDING_READINESS_REGISTER.html"
+  },
+  {
+    "title": "02 Network Server Cloud Readiness Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/02_NETWORK_SERVER_CLOUD_READINESS_REGISTER.html"
+  },
+  {
+    "title": "03 Collaboration Migration Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/03_COLLABORATION_MIGRATION_REGISTER.html"
+  },
+  {
+    "title": "04 Application Data Control Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/04_APPLICATION_DATA_CONTROL_REGISTER.html"
+  },
+  {
+    "title": "05 Vendor Governance Register",
+    "path": "library/enterprise-programs/01-ma-it-integration/common/05_VENDOR_GOVERNANCE_REGISTER.html"
   }
 ]
